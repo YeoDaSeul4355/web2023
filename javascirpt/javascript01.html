@@ -11,8 +11,7 @@
 
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png"> 
-    
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">     
 </head>
 <body>
     <header id="header">
@@ -41,12 +40,22 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
-                    <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
-                    <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
-                    <li><a href="#">01. 상수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 배열 : 데이터 저장</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장</a></li>
+                    <li><a href="#">00. 변수 : 데이터 저장</a></li>
+                    <li><a href="#">00. 변수 : 데이터 저장 + 데이터 변경</a></li>
+                    <li><a href="#">00. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+                    <li><a href="#">00. 상수 : 데이터 저장</a></li>
+                    <li><a href="#">00. 배열 : 데이터 저장(여러개): 표현방법1</a></li>
+                    <li><a href="#">00. 배열 : 데이터 저장(여러개): 표현방법2</a></li>
+                    <li><a href="#">00. 배열 : 데이터 저장(여러개): 표현방법3</a></li>
+                    <li><a href="#">00. 배열 : 데이터 저장(여러개): 표현방법4</a></li>
+                    <li><a href="#">00. 객체 : 데이터 저장(키와값): 표현방법1</a></li>
+                    <li><a href="#">00. 객체 : 데이터 저장(키와값): 표현방법2</a></li>
+                    <li><a href="#">00. 객체 : 데이터 저장(키와값): 표현방법3</a></li>
+                    <li><a href="#">00. 객체 : 데이터 저장(키와값): 표현방법4</a></li>
+                    <li><a href="#">00. 객체 : 데이터 저장(키와값): 표현방법5</a></li>
+                    <li><a href="#">00. 객체 : 데이터 저장(키와값): 표현방법6</a></li>
+                    <li><a href="#">00. 객체 : 데이터 저장(키와값): 표현방법7</a></li>
+                    <li><a href="#">00. 객체 : 데이터 저장(키와값): 표현방법8</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -126,7 +135,7 @@
                 </div>
                 <!-- //sample03 -->
                 <div id="sample04" class="sample">
-                    <h3>00. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
+                    <h3>03. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
                     <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다.
                         상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정할 수도 없습니다.</p>
                     <div class="script">
@@ -152,12 +161,73 @@
                     </div>
                 </div>
                 <!-- //sample04 -->
-                <div id="sample05" class="sample"></div>
-                <div id="sample06" class="sample"></div>
-                <div id="sample07" class="sample"></div>
+                <div id="sample05" class="sample">
+                    <h3>05. 배열 : 데이터 저장(여러개)_표현방법1</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    const arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+}
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <!-- //sample05 -->
+                <div id="sample06" class="sample">
+                    <h3>06. 배열 : 데이터 저장(여러개)_표현방법2</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    const arr = new Array(100, 200, "javascript");
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascript
+                    </div>
+                </div>
+                <!-- //sample06 -->
+                <div id="sample07" class="sample">
+                    <h3>07. 배열 : 데이터 저장(여러개)_표현방법3</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>
+{
+    const arr = [];
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+    
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+}
+
+</code></pre>
+                    </div>
+                </div>
                 <div id="sample08" class="sample"></div>
                 <div id="sample09" class="sample"></div>
                 <div id="sample10" class="sample"></div>    
+                <div id="sample11" class="sample"></div>    
+                <div id="sample12" class="sample"></div>    
             </div>
         </div>
     </main>
@@ -221,13 +291,121 @@
             const y = 200;
             const z = "javascript";
 
-            x = 300;         //Assignment to constant variable.
-            y = 400;
-            z = 'react';
+            // x = 300;         //Assignment to constant variable.
+            // y = 400;
+            // z = 'react';
 
             // console.log(x);
             // console.log(y);
             // console.log(z);
+        }
+
+        // 변수
+        {
+            // const a = 10000;
+            // const b = 20000;
+
+            // // 연산자
+            // console.log(a + b)
+            // console.log(a - b)
+            // console.log(a > b)
+            // console.log(a * b)
+            // console.log(a / b)
+            // console.log(a % b)
+
+            // let c = 10;
+            // c = "100"
+            // c = 1000;
+            // c += 1000;
+            
+            // console.log(c)
+        }
+
+        // 05. 배열 : 데이터 저장(여러개)_표현방법1
+        {
+            const arr = new Array();
+            arr[0] = 100;
+            arr[1] = 200;
+            arr[2] = "javascript";
+
+            console.log(arr[0]);
+            console.log(arr[1]);
+            console.log(arr[2]);
+        }
+
+        // 06. 배열 : 데이터 저장(여러개)_표현방법2
+        {
+            const arr = new Array(100, 200, "javascript");
+            
+            console.log(arr[0]);
+            console.log(arr[1]);
+            console.log(arr[2]);
+        }
+
+        // 07. 배열 : 데이터 저장(여러개)_표현방법3
+        {
+            const arr = [];
+            arr[0] = 100;
+            arr[1] = 200;
+            arr[2] = "javascript";
+            
+            console.log(arr[0]);
+            console.log(arr[1]);
+            console.log(arr[2]);
+        }
+
+        // 08. 배열 : 데이터 저장(여러개)_표현방법4
+        {
+            const arr = [100, 200, "javascript"];
+
+            console.log(arr[0]);
+            console.log(arr[1]);
+            console.log(arr[2]);
+        }
+
+        // 09. 객체 : 데이터 저장(키와 값)_표현방법1
+        {
+            const obj = new Object();
+            obj[0] = 100;
+            obj[1] = 200;
+            obj[2] = "javascript";
+
+            console.log(obj[0]);
+            console.log(obj[1]);
+            console.log(obj[2]);
+        }
+
+        // 10. 객체 : 데이터 저장(키와 값)_표현방법2
+        {
+            const obj = new Object();
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";
+
+            console.log(obj.a);
+            console.log(obj.b);
+            console.log(obj.c);
+        }
+
+        // 11. 객체 : 데이터 저장(키와 값)_표현방법3
+        {
+            const obj = {}
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript"
+
+            console.log(obj.a);
+            console.log(obj.b);
+            console.log(obj.c);
+        }
+        
+        // 12. 객체 : 데이터 저장(키와 값)_표현방법4
+        {
+            const obj = {a:100, b:200, c:"javascript"};
+
+            console.log(obj.a);
+            console.log(obj.b);
+            console.log(obj.c);
         }
     </script>
 </body>
