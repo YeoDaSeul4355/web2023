@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/img/javascript.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/javascript-180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/javascript-180.png">
+    
+    <!-- 웹폰트 -->
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        * {
+             margin: 0;
+             padding: 0
+        }
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: "GmarketSans";
+            text-align: center;
+            border: 8px solid #0243f1;
+            box-sizing: border-box;
+            position: relative;
+            border-radius: 20px;
+        }
+        main::before {
+            content: "";
+            border: 8px solid #50b5f9;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            z-index: -1;
+            border-radius: 4px;
+        }
+        h1 {
+            color:  #0243f1;
+            font-size:  5vw;
+            margin-bottom: 4vw;
+        }
+        nav ul li {
+            list-style: none;
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #0243f1;
+            /* border-width: 1px;
+            border-style: dashed;
+            border-color: #0243f1; */
+            border: 1px dashed #0243f1;
+            /* padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            padding-left: 20px; */
+            padding: 10px 20px;
+            /* margin-top: 6px;
+            margin-right: 3px;
+            margin-bottom: 6px;
+            margin-left: 3px; */
+            /* margin: 6px 3px 6px 3px; */
+            margin: 6px 3px;
+            /* border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px; */
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #0243f1;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px;
+            }
+            nav {
+                margin: 16px;
+            }
+        }
+
+        /* dog */
+        .dog .wrap {
+            width: 300px;
+            height: 300px;
+            background: #0066FF;
+            position: relative;
+            box-shadow: 0 -10px 0 0 #0057D9;
+            border-radius: 50%
+        }
+        .dog .body {
+            width: 150px;
+            height: 60px;
+            background: #fff;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 75px);
+            border-radius: 40px 40px 0 0;
+            z-index: 4;
+            -webkit-animation: squiggly-anim 0.4s infinite;
+            animation: squiggly-anim 0.4s infinite;
+        }
+        @-webkit-keyframes squiggly-anim {
+            0% {
+                filter: url("#squiggly-0");
+            }
+            25% {
+                filter: url("#squiggly-1");
+            }
+            50% {
+                -webkit-filter: url("#squiggly-2");
+            }
+            75% {
+                filter: url("#squiggly-3");
+            }
+            100% {
+                filter: url("#squiggly-4");
+            }
+        }
+        @keyframes squiggly-anim {
+            0% {
+                filter: url("#squiggly-0");
+            }
+            25% {
+                filter: url("#squiggly-1");
+            }
+            50% {
+                -webkit-filter: url("#squiggly-2");
+            }
+            75% {
+                filter: url("#squiggly-3");
+            }
+            100% {
+                filter: url("#squiggly-4");
+            }
+        }
+        .dog .body .leg {
+            width: 45px;
+            height: 60px;
+            position: absolute;
+            background: #fff;
+            transform-style: preserve-3d;
+            z-index: 2;
+            left: -15px;
+            transform: translateZ(3px);
+            border-radius: 60px 30px 30px 30px;
+            transform-origin: 130% 0%;
+            top: 0px;
+        }
+        .dog .body .leg.r {
+            left: auto;
+            right: -15px;
+            border-radius: 30px 60px 30px 30px;
+            transform-origin: -30% 0%;
+        }
+        .dog .body .leg.r .paw {
+            transform-origin: 100% 0%;
+        }
+        .dog .body .leg .paw {
+            width: 45px;
+            height: 40px;
+            position: absolute;
+            background: #E6E6E6;
+            border-radius: 15px;
+            bottom: 0px;
+            overflow: hidden;
+            left: -2.5px;
+            transform-origin: 0% 0%;
+        }
+        .dog .body .leg .paw:before {
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 15px;
+            background: #010101;
+            bottom: 0;
+            left: 12.5px;
+            border-radius: 50px 50px 0 0;
+            box-shadow: 15px 0 0 #010101;
+        }
+        .dog .body .head {
+            position: absolute;
+            width: 150px;
+            height: 130px;
+            top: -120px;
+            z-index: 3;
+            border-radius: 1600px 1600px 1500px 1500px/2400px 2400px 1200px 1200px;
+            transform-style: preserve-3d;
+            transform: translateZ(1px);
+        }
+        .dog .body .head .inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 1600px 1600px 1500px 1500px/2400px 2400px 1200px 1200px;
+            transform: translateZ(-2px);
+            overflow: hidden;
+        }
+        .dog .body .head .inner .spot {
+            position: absolute;
+            background: #252510;
+            width: 100px;
+            height: 110px;
+            border-radius: 100%;
+            left: -25px;
+            top: -25px;
+            box-shadow: 0 0 0 150px #fff;
+        }
+        .dog .body .head .ear {
+            position: absolute;
+            width: 65px;
+            height: 100px;
+            background: #131308;
+            box-shadow: inset -5px 0 0 15px #252510;
+            top: -50px;
+            z-index: -5;
+            left: -10px;
+            transform-style: preserve-3d;
+            transform: translateZ(-2px);
+            transform-origin: 100% 100%;
+            border-radius: 100px 300px 50px 150px/100px 600px 50px 350px;
+        }
+        .dog .body .head .ear:before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 55px;
+            background: #252510;
+            z-index: -1;
+            transform: translateZ(-3px) rotate(-20deg);
+            border-radius: 0 0 100% 100%;
+            bottom: -35px;
+            left: 20px;
+        }
+        .dog .body .head .ear.right {
+            left: auto;
+            right: -10px;
+            border-radius: 300px 100px 150px 50px/600px 100px 350px 50px;
+            background: #131308;
+            box-shadow: inset 5px 0 0 15px #fff;
+            transform-origin: 0% 100%;
+        }
+        .dog .body .head .ear.right:before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 55px;
+            background: #fff;
+            z-index: -1;
+            transform: translateZ(-3px) rotate(20deg);
+            border-radius: 0 0 100% 100%;
+            bottom: -35px;
+            left: auto;
+            right: 20px;
+        }
+        .dog .body .head .eyes {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: black;
+            border-radius: 100%;
+            top: 35px;
+            left: 30px;
+            overflow: hidden;
+            transform: translateZ(2px);
+        }
+        .dog .body .head .eyes:before,
+        .dog .body .head .eyes:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background: #252510;
+            top: 0;
+            left: 0;
+            transform: translateY(-120%);
+            -webkit-animation: blink 5s ease-in-out infinite;
+            animation: blink 5s ease-in-out infinite;
+        }
+        @-webkit-keyframes blink {
+            90% {
+                transform: translateY(-120%);
+            }
+            92% {
+                transform: translateY(0);
+            }
+            94% {
+                transform: translateY(-120%);
+            }
+            96% {
+                transform: translateY(0);
+            }
+            98% {
+                transform: translateY(-120%);
+            }
+        }
+        @keyframes blink {
+            90% {
+                transform: translateY(-120%);
+            }
+            92% {
+                transform: translateY(0);
+            }
+            94% {
+                transform: translateY(-120%);
+            }
+            96% {
+                transform: translateY(0);
+            }
+            98% {
+                transform: translateY(-120%);
+            }
+        }
+        .dog .body .head .eyes:after {
+            top: auto;
+            bottom: 0;
+            transform: translateY(120%);
+            -webkit-animation: blink2 5s ease-in-out infinite;
+            animation: blink2 5s ease-in-out infinite;
+        }
+        @-webkit-keyframes blink2 {
+            90% {
+                transform: translateY(120%);
+            }
+            92% {
+                transform: translateY(0);
+            }
+            94% {
+                transform: translateY(120%);
+            }
+            96% {
+                transform: translateY(0);
+            }
+            98% {
+                transform: translateY(120%);
+            }
+        }
+        @keyframes blink2 {
+            90% {
+                transform: translateY(120%);
+            }
+            92% {
+                transform: translateY(0);
+            }
+            94% {
+                transform: translateY(120%);
+            }
+            96% {
+                transform: translateY(0);
+            }
+            98% {
+                transform: translateY(120%);
+            }
+        }
+        .dog .body .head .eyes:nth-of-type(2) {
+            left: auto;
+            right: 30px;
+        }
+        .dog .body .head .eyes:nth-of-type(2):before,
+        .dog .body .head .eyes:nth-of-type(2):after {
+            background: #fff;
+        }
+        .dog .body .head .snout {
+            position: absolute;
+            width: 80px;
+            height: 70px;
+            background: #fff;
+            border-radius: 45%;
+            left: calc(50% - 40px);
+            bottom: 20px;
+            transform: translateZ(2px);
+        }
+        .dog .body .head .snout .nose {
+            width: 30px;
+            height: 25px;
+            position: absolute;
+            background: black;
+            left: calc(50% - 15px);
+            bottom: 30px;
+            border-radius: 10px;
+        }
+        .dog .body .head .snout .nose:before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background: black;
+            bottom: -8px;
+            left: calc(50% + 1px);
+        }
+        .dog .body .head .snout .nose:after {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 20px;
+            border: 2px solid;
+            border-color: black transparent transparent transparent;
+            bottom: -30px;
+            left: 15%;
+            border-radius: 50%;
+        }
+        @media (max-height: 700px) {
+            main::before {
+                display: none;
+            }
+        }
+        @media (max-width: 800px) {
+            main {
+                min-height: 700px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            nav ul:nth-child(2) {
+                display: none;
+            }
+        }   
+    </style>
+</head>
+<body>
+    <main>
+        <!-- dog -->
+        <div class="dog">
+            <div class="wrap">
+                <div class="body">
+                    <div class="leg l">
+                        <div class="paw"></div>
+                    </div>
+                    <div class="leg r">
+                        <div class="paw"></div>
+                    </div>
+                    <div class="spots"></div>
+                    <div class="head">
+                        <div class="snout">
+                            <div class="nose"></div>
+                        </div>
+                        <div class="eyes"></div>
+                        <div class="ear"></div>
+                        <div class="ear right"></div>
+                        <div class="inner">
+                            <div class="spot"></div>
+                        </div>
+                        <div class="eyes"></div>
+                        <div class="ear"></div>
+                        <div class="ear right"></div>
+                        <div class="inner">
+                            <div class="spot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+                <defs>
+                    <filter id="squiggly-0">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+                        <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
+                    </filter>
+                    <filter id="squiggly-1">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+                    </filter>
+                    <filter id="squiggly-2">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+                    </filter>
+                    <filter id="squiggly-3">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+                    </filter>
+                    <filter id="squiggly-4">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <!-- //dog  -->
+        <h1>Javascript</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script>
+        var $eyes = $('.eyes'),
+            $snout = $('.snout'),
+            $spot = $('.spot'),
+            $nose = $('.nose'),
+            $ear = $('.ear'),
+            $rightear = $('.right'),
+            $leftleg = $('.l'),
+            $rightleg = $('.r'),
+            $leftpaw = $('.l .paw'),
+            $rightpaw = $('.r .paw'),
+            $container = $('.wrap'),
+            $outer = $('body'),
+            container_w = $container.width(),
+            container_h = $container.height();
+        $('body').on('mousemove.parallax', function (event) {
+            var pos_x = event.pageX,
+                pos_y = event.pageY,
+                left = 0,
+                bottom = 0,
+                top = 0;
+            left = container_w / 0.5 - pos_x;
+            top = container_h / 2 - pos_y;
+            bottom = container_h / 0.25 - (pos_y * 2.5);
+            TweenMax.to(
+                $snout,
+                1,
+                {
+                    css: {
+                        transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -26 + 'px) translateZ(1px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $spot,
+                1,
+                {
+                    css: {
+                        transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -56 + 'px) translateZ(1px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $eyes,
+                1,
+                {
+                    css: {
+                        transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -40 + 'px) translateZ(0px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $nose,
+                1,
+                {
+                    css: {
+                        transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -50 + 'px) translateZ(0px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $ear,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + bottom / -60 + 'deg) translatex(' + left / 60 + 'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $rightear,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + bottom / 60 + 'deg) translatex(' + left / 60 + 'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $leftleg,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 + 'px) translateZ(-2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $rightleg,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 + 'px) translateZ(-2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $leftpaw,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 + 'px) translatex(' + left / -50 + 'px) translateZ(2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $rightpaw,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 + 'px) translatex(' + left / -50 + 'px) translateZ(2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+        });
+    </script>
+</body>
+</html>

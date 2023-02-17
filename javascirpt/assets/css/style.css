@@ -1,0 +1,100 @@
+/* 웹폰트 */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+        
+        /* 여백 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: "NexonLv1Gothic";
+        }
+
+        /* 링크 초기화 */
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        /* 제목 초기화 */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+
+        /* 목록 초기화 */
+        ul, li, ol {
+            list-style: none;
+        }
+
+        /* 전체 영역 */
+        body {
+            padding: 40px;
+        }
+
+        /* 헤더 영역 */
+        #header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 1px dashed #dcdcdc;
+        }
+        #header h1 a {
+            font-size: 80px;
+            font-weight: 800;
+            color: #0243f1;
+        }
+        #header nav ul li {
+            display: inline;
+        }
+        #header nav ul li a {
+            border: 1px dashed #0243f1;
+            color: #0243f1;
+            padding: 10px 20px;
+            margin: 6px 3px;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s
+        }
+        #header nav ul li a:hover {
+            background-color: #0243f1;
+            color: #fff;
+        }
+        #header nav ul li.active a {
+            background-color: #0243f1;
+            color: #fff;
+        }
+
+        /* 메인 영역 */
+        #main {
+            padding: 40px 0;
+            border-bottom: 1px dashed #dcdcdc;
+        }
+        .main__menu {
+            padding-bottom: 40px;
+            border-bottom: 1px dashed #dcdcdc;
+        }
+        .main__sample {
+            padding-top: 40px;
+        }
+        .main__sample .sample {
+            margin-top: 100px;
+        }
+        .main__sample .sample:first-child {
+            margin-top: 0;
+        }
+        .main__sample .sample h3 {
+            font-size: 20px;
+        }
+        .main__sample .sample p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .main__sample .result {
+            margin-top: 10px;
+            background-color: #f3f3f3;
+            padding: 1em;
+        }
+
+        /* 푸터 영역 */
+        #footer {
+            padding: 40px;
+            text-align: center;
+        }

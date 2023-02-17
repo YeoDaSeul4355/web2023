@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>여다슬 | Webstoryboy | Class</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="../assets/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../assets/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FFFFFF">
+    
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://dsy1943.dothome.co.kr/assets/ico/icon.jpg" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://dsy1943.dothome.co.kr/assets/ico/icon.jpg" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">YDS &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://codepen.io/webstoryboy">Codepen</a></li>
+                    <li><a href="https://github.com/webstoryboy/dothome1">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs1" id="content">
+        <div class="container">
+            <h1>Class v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://webstoryboy.co.kr" target="_blank">webstoryboy.co.kr</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <h2>(디지털컨버전스)JAVA기반 스마트웹&앱 개발자 양성_A</h2>
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/ico/icon01.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/ico/icon02.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/ico/icon03.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/ico/icon04.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/ico/icon05.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/ico/icon06.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="https://youtu.be/cGNUpsevAk4" class="thumbnail">
+                            <img src="../assets/ico/icon07.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="https://blog.naver.com/claykim999/222935187450" class="thumbnail">
+                            <img src="../assets/ico/icon08.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/ico/icon09.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="https://kr.dstrict.com/" class="thumbnail">
+                            <img src="../assets/ico/icon10.jpg">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="https://youtu.be/SzhMQyNs1aI" class="thumbnail">
+                            <img src="../assets/ico/icon11.jpg">
+                        </a>
+                    </div>
+
+                    
+                </div>
+                <!-- //row -->
+
+                <h2>웹쓰</h2>
+                <div class="row">
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://richclub9.dothome.co.kr" target="_blank" class="thumbnail">
+                            <img src="http://richclub9.dothome.co.kr/assets/ico/icon8.jpg" alt="웹쓰" title="웹쓰">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://tldusrkrk.dothome.co.kr" target="_blank" class="thumbnail">
+                            <img src="http://tldusrkrk.dothome.co.kr/assets/ico/icon.jpg" alt="김시연" title="김시연">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://gp2617.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://gp2617.dothome.co.kr/assets/ico/icon.jpg" alt="천설희" title="천설희">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://kebab00.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://kebab00.dothome.co.kr/assets/ico/icon01.jpg" alt="이요셉" title="이요셉">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://dlscks0930.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://dlscks0930.dothome.co.kr/assets/ico/icon01.jpg" alt="황인찬" title="황인찬">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://ebmdols.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://ebmdols.dothome.co.kr/assets/ico/icon01.jpg" alt="장진용" title="장진용">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://jhanmi93.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://jhanmi93.dothome.co.kr/assets/ico/icon01.jpg" alt="조한미" title="조한미">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://kshkmn0929.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://kshkmn0929.dothome.co.kr/assets/ico/icon.jpg" alt="김도현" title="김도현">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://ghkddn132.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://ghkddn132.dothome.co.kr/assets/ico/icon.jpg" alt="정황우" title="정황우">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://dsy1943.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://dsy1943.dothome.co.kr/assets/ico/icon01.jpg" alt="여다슬" title="여다슬">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://hyejeong3283.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://hyejeong3283.dothome.co.kr/assets/ico/icon%2001.jpg" alt="이혜정" title="이혜정">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://zany1346.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://zany1346.dothome.co.kr/assets/ico/icon.jpg" alt="이승연" title="이승연">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://lee3ll.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://lee3ll.dothome.co.kr/assets/ico/icon01.jpg" alt="이은지" title="이은지">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://jo0132.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://jo0132.dothome.co.kr/assets/ico/icon.jpg" alt="노지영" title="노지영">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://dlgnsrb227.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://dlgnsrb227.dothome.co.kr/assets/ico/icon.jpg" alt="이훈규" title="이훈규">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://dongjin6539.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://dongjin6539.dothome.co.kr/assets/ico/icon.jpg" alt="신동진" title="신동진">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://icon.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://icon.dothome.co.kr/assets/ico/icon.jpg" alt="김현빈" title="김현빈">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://dkwnajsquf.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://dkwnajsquf.dothome.co.kr/assets/ico/icon.jpg" alt="정유나" title="정유나">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://ehcjswo.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://ehcjswo.dothome.co.kr/assets/ico/icon.jpg" alt="김도현" title="김도현">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://fiatlux.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://fiatlux.dothome.co.kr/assets/ico/icon01.jpg" alt="변우현" title="변우현">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://xlsak2.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://xlsak2.dothome.co.kr/assets/ico/icon.jpg" alt="안교남" title="안교남">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://dkzmfla1215.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://dkzmfla1215.dothome.co.kr/assets/ico/icon.jpg" alt="진현미" title="진현미">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://daanbi12.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://daanbi12.dothome.co.kr/assets/ico/icon11.jpg" alt="조은경" title="조은경">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://getgrovy.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://getgrovy.dothome.co.kr/assets/ico/icon01.jpg" alt="정희석" title="정희석">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://ture403.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://ture403.dothome.co.kr/assets/ico/icon.jpg" alt="전윤기" title="전윤기">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://leeyanggoo.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://leeyanggoo.dothome.co.kr/assets/ico/icon1.jpg" alt="이양구" title="이양구">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://aimee0000418.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://aimee0000418.dothome.co.kr/assets/ico/icon.jpg" alt="권현정" title="권현정">
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href="http://yuna5845.dothome.co.kr/" target="_blank" class="thumbnail">
+                            <img src="http://yuna5845.dothome.co.kr/assets/ico/icon01.jpg" alt="이유나" title="이유나">
+                        </a>
+                    </div>
+                </div>
+                <!-- //row -->
+
+                <h2>훈련과정 국가직무능력표준 분류</h2>
+                <table class="table table-bordered">
+                    <tr>
+                        <th class="ce">대분류</th>
+                        <th class="ce">중분류</th>
+                        <th class="ce">소분류</th>
+                        <th class="ce">세분류</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="4" class="va" >20. 정보통신</td>
+                        <td rowspan="4" class="va">01. 정보기술</td>
+                        <td rowspan="4" class="va">02. 정보기술개발</td>
+                        <td>02. 응용SW엔지니어링 (주)</td>
+                    </tr>
+                    <tr>
+                        <td>04. DB엔지니어링</td>
+                    </tr>
+                    <tr>
+                        <td>05. NW엔지니어링</td>
+                    </tr>
+                    <tr>
+                        <td>07. UIUX엔지니어링</td>
+                    </tr>
+                </table>
+
+                <h2>평가 방법</h2>
+                <h3>NCS 전공교과(총 900시간)</h3>
+                <table class="table table-bordered">
+                    <tr>
+                        <th rowspan="2" class="va ce">교과목명</th>
+                        <th rowspan="2" class="va ce">능력단위명</th>
+                        <th colspan="2" class="ce">능력단위요소</th>
+                        <th rowspan="2" class="va ce">교수학습 방법</th>
+                        <th rowspan="2" class="va ce">평가방법</th>
+                        <th rowspan="2" class="va ce">평가시기</th>
+                    </tr>
+                    <tr>
+                        <th class="va ce">요소명</th>
+                        <th class="ce">시간</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="8" class="va ce">프로그래밍 기술 활용</td>
+                        <td rowspan="3" class="va ce">프로그래밍 언어 활용</td>
+                        <td class="ce">구조적 프로그래밍 언어</td>
+                        <td rowspan="3" class="va ce">50</td>
+                        <td rowspan="3" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="3" class="va ce">문제해결 시나리오</td>
+                        <td rowspan="3" class="va ce">능력단위 종료 시점 23.05.11(목)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">객체지향 프로그래밍 언어 활용하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">스크립트 활용하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="va ce">응용SW 기초 기술 활용</td>
+                        <td class="ce">네트워크 기초 활용하기</td>
+                        <td rowspan="3" class="va ce">40</td>
+                        <td rowspan="3" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="3" class="va ce">문제해결 시나리오</td>
+                        <td rowspan="3" class="va ce">능력단위 종료 시점 23.04.20(목) </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">미들웨어 기초 활용하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">데이터베이스 기초 활용하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="va ce">프로그래밍 언어 응용</td>
+                        <td class="ce">언어특성 활용하기</td>
+                        <td rowspan="2" class="va ce">50</td>
+                        <td rowspan="2" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="2" class="va ce">문제해결 시나리오</td>
+                        <td rowspan="2" class="va ce">능력단위 종료 시점 23.05.22(월) </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">라이브러리 활용하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5" class="va ce">개발환경 구축 및 지원</td>
+                        <td rowspan="2" class="va ce">개발자 환경 구축</td>
+                        <td class="ce">운영체제 기초 활용하기</td>
+                        <td rowspan="2" class="va ce">30</td>
+                        <td rowspan="2" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="2" class="va ce">문제해결 시나리오</td>
+                        <td rowspan="2" class="va ce">능력단위 종료 시점 23.04.26(수)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">기본 개발환경 구축하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="va ce">개발 환경 운영 지원</td>
+                        <td class="ce">소스코드 관리하기</td>
+                        <td rowspan="3" class="va ce">30</td>
+                        <td rowspan="3" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="3" class="va ce">문제해결 시나리오</td>
+                        <td rowspan="3" class="va ce">능력단위 종료 시점 23.05.02(화)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">개발 환경 백업하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">개발 환경 복원하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="va ce">웹&앱 개발</td>
+                        <td rowspan="2" class="va ce">화면 구현</td>
+                        <td class="ce">UI 설계 확인하기</td>
+                        <td rowspan="2" class="va ce">40</td>
+                        <td rowspan="2" class="va ce">목표도달학습</td>
+                        <td rowspan="2" class="va ce">포트폴리오</td>
+                        <td rowspan="2" class="va ce">능력단위 종료 시점 23.03.07(화)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">UI 설계하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="6" class="va ce">애플리케이션 테스트 및 배포</td>
+                        <td rowspan="2" class="va ce">애플리케이션 테스트 수행</td>
+                        <td class="ce">애플리케이션 테스트 수행하기</td>
+                        <td rowspan="2" class="va ce">30</td>
+                        <td rowspan="2" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="2" class="va ce">문제해결 시나리오</td>
+                        <td rowspan="2" class="va ce">능력단위 종료 시점 23.07.31(월)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">애플리케이션 결함 조치 하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4" class="va ce">애플리케이션 배포</td>
+                        <td class="ce">애플리케이션 배포 환경 구성하기</td>
+                        <td rowspan="4" class="va ce">25</td>
+                        <td rowspan="4" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="4" class="va ce">평가자 체크리스트</td>
+                        <td rowspan="4" class="va ce">능력단위 종료 시점 23.08.02(수)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">애플리케이션 소스 검증하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">애플리케이션 빌드하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">애플리케이션 배포하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5" class="va ce">웹&앱 개발</td>
+                        <td rowspan="3" class="va ce">요구사항 확인</td>
+                        <td class="ce">현행 시스템 분석하기</td>
+                        <td rowspan="3" class="va ce">40</td>
+                        <td rowspan="3" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="3" class="va ce">평가자체크리스트</td>
+                        <td rowspan="3" class="va ce">능력단위 종료 시점 23.02.20(월)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요구사항 확인하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">분석모델 확인하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="va ce">화면 설계</td>
+                        <td class="ce">UI 요구사항 확인하기</td>
+                        <td rowspan="2" class="va ce">40</td>
+                        <td rowspan="2" class="va ce">목표도달학습</td>
+                        <td rowspan="2" class="va ce">포트폴리오</td>
+                        <td rowspan="2" class="va ce">능력단위 종료 시점 23.02.27(월)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">UI 설계하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="va ce">데이터융합애플리케이션 구현</td>
+                        <td rowspan="3" class="va ce">통합 구현</td>
+                        <td class="ce">연계 데이터 구성하기</td>
+                        <td rowspan="3" class="va ce">50</td>
+                        <td rowspan="3" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="3" class="va ce">평가자체크리스트</td>
+                        <td rowspan="3" class="va ce">능력단위 종료 시점 23.05.31(수)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">연계 메커니즘 구성하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">내외부 연계 모듈 구성하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="7" class="va ce">네트워크 서버 인터페이스 구현</td>
+                        <td rowspan="4" class="va ce">서버프로그램 구현</td>
+                        <td class="ce">개발환경 구축하기</td>
+                        <td rowspan="4" class="va ce">80</td>
+                        <td rowspan="4" class="va ce">목표도달학습</td>
+                        <td rowspan="4" class="va ce">포트폴리오</td>
+                        <td rowspan="4" class="va ce">능력단위 종료 시점 23.06.29(목)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">공통모듈 구현하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">서버프로그램 구현하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">배치 프로그램 구현하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="va ce">인터페이스 구현</td>
+                        <td class="ce">인터페이스 설계서 확인하기</td>
+                        <td rowspan="3" class="va ce">50</td>
+                        <td rowspan="3" class="va ce">강의법+목표도달학습</td>
+                        <td rowspan="3" class="va ce">평가자 체크리스트</td>
+                        <td rowspan="3" class="va ce">능력단위 종료 시점 23.07.10(월)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">인터페이스 기능 구현하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">인터페이스 구현 검증하기</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="va ce">UI구현 및 테스트</td>
+                        <td rowspan="3" class="va ce">UI 테스트</td>
+                        <td class="ce">사용성 테스트 계획하기</td>
+                        <td rowspan="3" class="va ce">40</td>
+                        <td rowspan="3" class="va ce">목표도달학습</td>
+                        <td rowspan="3" class="va ce">포트폴리오</td>
+                        <td rowspan="3" class="va ce">능력단위 종료 시점 23.04.13(목)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">사용성 테스트 수행하기</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">테스트 결과 보고하기</td>
+                    </tr>
+                 </table>
+                
+                
+            </div>
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li><a href="http://webstoryboy.co.kr">webstoryboy</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+
+</html>

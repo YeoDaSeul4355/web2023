@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript : 데이터 저장하기</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+
+    <link rel="shortcut icon" href="assets/ico/javascript.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png"> 
+    
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">javascript</a></h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="container">
+            <div class="main__menu">
+                <ul>
+                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
+                    <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
+                    <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+                    <li><a href="#">01. 상수 : 데이터 저장</a></li>
+                    <li><a href="#">01. 배열 : 데이터 저장</a></li>
+                    <li><a href="#">01. 객체 : 데이터 저장</a></li>
+                </ul>
+            </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>01. 변수 : 데이터 저장</h3>
+                    <p>변수는 데이터를 저장하는 저장소입니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    var x = 100;                //변수 x에 숫자 100을 저장함
+    var y = 200;                //변수 y에 문자 200을 저장함
+    var z = "javascript";     //변수 z에 문자 "javascript"를 저장함
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascript
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. 변수 : 데이터 저장 + 데이터 변경</h3>
+                    <p>변수는 데이터를 저장할 수도 있지만 변경도 가능합니다.</p>
+                    <div class="script">
+<pre><code>{ 
+    let x = 100;
+    let y = 200;
+    let z = "javascript"
+
+    x = 300;
+    y = 400;
+    z = "react"
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        300<br>
+                        400<br>
+                        react
+                    </div>
+                </div>
+                <!-- //sample02 -->
+                <div id="sample03" class="sample">
+                    <h3>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</h3>
+                    <p>변수는 데이터를 저장하고, 변경하고, 추가할 수 있습니다.</p>
+                    <div class="script">
+<pre><code>{
+    let x = 100;
+    let y = 200;
+    let z = "javascript";
+
+    x += 300;     // x = x + 300
+    y += 400;     // y = y + 400
+    z += "react";
+    
+    console.log(x);
+    console.log(y);
+    console.log(z); 
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        400<br>
+                        600<br>
+                        javascriptreact
+                    </div>
+                </div>
+                <!-- //sample03 -->
+                <div id="sample04" class="sample">
+                    <h3>00. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
+                    <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다.
+                        상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정할 수도 없습니다.</p>
+                    <div class="script">
+<pre><code>{
+    const x = 100;
+    const y = 200;
+    const z = "javascript";
+
+    //x = 300;      //Assignment to constant variable.
+    //y = 400;
+    //z = "react";
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}
+</code></pre>                            
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascript
+                    </div>
+                </div>
+                <!-- //sample04 -->
+                <div id="sample05" class="sample"></div>
+                <div id="sample06" class="sample"></div>
+                <div id="sample07" class="sample"></div>
+                <div id="sample08" class="sample"></div>
+                <div id="sample09" class="sample"></div>
+                <div id="sample10" class="sample"></div>    
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        // 01. 변수 : 데이터 저장
+        {
+            var x = 100;     //변수 x에 숫자 100을 저장함
+            var y = 200;     //변수 y에 문자 200을 저장함
+            var z = "javascript";     //변수 z에 문자 "javascript"를 저장함
+
+            // console.log(x);
+            // console.log(y);
+            // console.log(z);
+        }
+
+        // 02. 변수 : 데이터 저장 + 데이터 변경
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript"
+
+            x = 300;
+            y = 200;
+            z = "react"
+
+            // console.log(x);
+            // console.log(y);
+            // console.log(z);
+        }
+
+        // 03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+
+            x += 300;     // x = x + 300
+            y += 400;     // y = y + 400
+            z += "react";
+            
+            // console.log(x);
+            // console.log(y);
+            // console.log(z);
+        }
+
+        // 00. 상수 : 데이터 저장 + 데이터 변경(X)
+        // 상수는 데이터 저장은 가능하나 변경은 불가능합니다.
+        // 상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 
+        // 상수의 값을 재지정할 수도 없습니다.
+        {
+            const x = 100;
+            const y = 200;
+            const z = "javascript";
+
+            x = 300;         //Assignment to constant variable.
+            y = 400;
+            z = 'react';
+
+            // console.log(x);
+            // console.log(y);
+            // console.log(z);
+        }
+    </script>
+</body>
+</html>
