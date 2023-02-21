@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃03 - flex방식</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #E1F5FE;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #B3E5FC;
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: #81D4FA;
+        }
+        #main {
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: 780px;
+        }
+        #aside {
+            width: 300px;
+            height: 780px;
+            background-color: #4FC3F7;
+        }
+        #article1 {
+            width: 900px;
+            height: 260px;
+            background-color: #29B6F6;
+
+        }
+        #article2 {
+            width: 900px;
+            height: 260px;
+            background-color: #03A9F4;
+        }
+        #article3 {
+            width: 900px;
+            height: 260px;
+            background-color: #039BE5;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #0288D1;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside id="aside"></aside>
+            <section id="section">
+                <article id="article1"></article>
+                <article id="article2"></article>
+                <article id="article3"></article>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

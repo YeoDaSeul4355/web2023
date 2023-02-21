@@ -4,89 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃5</title>
+    <title>레이아웃 연습</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        #wrap {
-            width: 100%;
-            overflow: hidden;
-        }
         #header {
-            width: 100%;
             height: 100px;
             background-color: #EEEBE9;
         }
         #nav {
-            width: 100%;
             height: 100px;
             background-color: #B9AAA5;
         }
-        #section {
-            width: 100%;
+        #main {
             height: 780px;
             background-color: #886F65;
         }
+        #main .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #article1 {
+            width: 1200px;
+            height: 100px;
+            background-color: #74574A;
+        }
+        #article2 {
+            width: 1200px;
+            height: 200px;
+            background-color: #684D43;
+        }
+        #article3 {
+            width: 600px;
+            height: 480px;
+            background-color: #594139;
+        }
+        #article4 {
+            width: 600px;
+            height: 480px;
+            background-color: #4A352F;
+        }
         #footer {
-            width: 100%;
             height: 100px;
             background-color: #4E342E;
         }
         .container {
             width: 1200px;
             height: inherit;
-            margin: 0 auto;
             background-color: rgba(0, 0, 0, 0.2);
-        }
-        #container1 {
-            width: 1200px;
-            height: 100px;
-            background-color: #74574A;
             margin: 0 auto;
-        }
-        #container2 {
-            width: 1200px;
-            height: 200px;
-            background-color: #684D43;
-            margin: 0 auto;
-        }
-        #container3 {
-            width: 600px;
-            height: 480px;
-            background-color: #594139;
-            margin: 0 auto;
-            float: left;
-        }
-        #container4 {
-            width: 600px;
-            height: 480px;
-            background-color: #4A352F;
-            margin: 0 auto;
-            float: left;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header">
+        <header id="header">
             <div class="container"></div>
-        </div>
-        <div id="nav">
+        </header>
+        <nav id="nav">
             <div class="container"></div>
-        </div>
-        <div id="section">
+        </nav>
+        <main id="main">
             <div class="container">
-                <div class="container1"></div>
-                <div class="container2"></div>
-                <div class="container3"></div>
-                <div class="container4"></div>
+                <div class="article1"></div>
+                <div class="article2"></div>
+                <div class="article3"></div>
+                <div class="article4"></div>
             </div>
-        </div>
-        <div id="footer">
+        </main>
+        <footer id="footer">
             <div class="container"></div>
-        </div>
-    </div>
+        </footer>
+    </div>    
 </body>
 </html>

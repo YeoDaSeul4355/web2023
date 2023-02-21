@@ -109,6 +109,18 @@
             background-color: #f3f3f3;
             padding: 1em;
             border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .main__sample .notice {
+            border-left: 5px solid #0243f1;
+            padding: 13px 10px 10px 15px;
+            background-color: #f6f6f6;
+        }
+        .main__sample .notice h4 {
+            margin-bottom: 5px;
+        }
+        .main__sample .notice p {
+            margin-bottom: 0;
         }
 
         /* 푸터 영역 */
