@@ -4,79 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃05 - flex방식</title>
+    <title>레이아웃</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+        #wrap {}
         #header {
-            height: 100px;
-            background-color: #EEEBE9;
-        }
-        #nav {
-            height: 100px;
-            background-color: #B9AAA5;
-        }
-        #main {
-            height: 780px;
-            background-color: #886F65;
-        }
-        #main .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        #article1 {
             width: 1200px;
             height: 100px;
-            background-color: #74574A;
+            background-color: #ffa0a0;
         }
-        #article2 {
+        .header1 {
+            width: 400px;
+            height: 100px;
+            background-color: #362e2e;
+        }
+        #banner {
             width: 1200px;
-            height: 200px;
-            background-color: #684D43;
+            height: 580px;
+            background-color: #500909;
         }
-        #article3 {
-            width: 600px;
-            height: 480px;
-            background-color: #594139;
+        #contents {
+            width: 1200px;
+            height: 300px;
+            background-color: #693c3c;
         }
-        #article4 {
-            width: 600px;
-            height: 480px;
-            background-color: #4A352F;
+        .cont1{
+            width: 400px;
+            height: 300px;
+            background-color: #292323;
+            float: left;
+        }
+        .cont2{
+            width: 400px;
+            height: 300px;
+            background-color: #663434;
+            float: left;
         }
         #footer {
-            height: 100px;
-            background-color: #4E342E;
-        }
-        .container {
             width: 1200px;
-            height: inherit;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.2);
+            height: 100px;
+            background-color: #383333;
+        }
+        .footer1{
+            width: 400px;
+            height: 100px;
+            background-color: #cec3c3;
+            float: left;
+        }
+        .footer2{
+            width: 400px;
+            height: 100px;
+            background-color: #3d0606;
+            float: left;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <div class="container"></div>
-        </header>
-        <nav id="nav">
-            <div class="container"></div>
-        </nav>
-        <main id="main">
-            <div class="container">
-                <div id="article1"></div>
-                <div id="article2"></div>
-                <div id="article3"></div>
-                <div id="article4"></div>
-            </div>
-        </main>
-        <footer id="footer">
-            <div class="container"></div>
-        </footer>
-    </div>    
+        <div id="header">
+            <div class="header1"></div>
+        </div>
+        <div id="banner"></div>
+        <div id="contents">
+            <div class="cont1"></div>
+            <div class="cont2"></div>
+        </div>
+        <div id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+        </div>
+    </div>
 </body>
 </html>
