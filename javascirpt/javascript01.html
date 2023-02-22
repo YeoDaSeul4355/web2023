@@ -538,6 +538,12 @@
         c : "javascript",
         d : function(){
             console.log("javascript가 실행되었습니다.");
+        },
+        e : function(){
+            console.log(obj.c + "가 실행되었습니다.");      //객체의 키 값(혹은 변수)을 적고 + 를 쓰면 값이 출력된다.
+        },
+        f : function(){
+            console.log(this.c + "가 실행되었습니다.");     //this는 자기 자신을 표현합니다.
         }
     }
 
@@ -548,6 +554,8 @@
     console.log(obj.c);
     //console.log(obj.d);             //(X) 실행 되지 않음
     obj.d();
+    obj.e();
+    obj.f();
 }
 </code></pre>
                     </div>
@@ -560,6 +568,8 @@
                                 300<br>
                                 undefined<br>
                                 javascript<br>
+                                javascript가 실행되었습니다.<br>
+                                javascript가 실행되었습니다.<br>
                                 javascript가 실행되었습니다.
                             </div>
                         </details>
@@ -696,10 +706,10 @@
                     console.log("javascript가 실행되었습니다.");
                 },
                 e : function(){
-                    console.log(obj.c + "가 실행되었습니다."); //변수를 부르는 키 값을 적고 + 를 쓰면 값이 출력된다.
+                    console.log(obj.c + "가 실행되었습니다."); //변수의 키 값(혹은 변수)을 적고 + 를 쓰면 값이 출력된다.
                 },
                 f : function(){
-                    console.log(this.c + "가 실행되었습니다."); //자기 자신을 표현하는 this
+                    console.log(this.c + "가 실행되었습니다."); //this는 자기 자신을 표현합니다.
                 }
             }
 
