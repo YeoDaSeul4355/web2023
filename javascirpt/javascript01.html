@@ -412,7 +412,6 @@
     console.log(obj.b);
     console.log(obj.c);
 }
-
 </code></pre>
                     </div>
                     <div class="result">
@@ -589,9 +588,9 @@
             obj[1] = 200;
             obj[2] = "javascript";
 
-            console.log(obj[0]);
-            console.log(obj[1]);
-            console.log(obj[2]);
+            // console.log(obj[0]);
+            // console.log(obj[1]);
+            // console.log(obj[2]);
         }
         
         // 객체 : 데이터 저장(키와값): 표현방법2
@@ -603,9 +602,9 @@
             obj.b = 200;
             obj.c = "javascript";
 
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
+            // console.log(obj.a);
+            // console.log(obj.b);
+            // console.log(obj.c);
         }
         
         // 객체 : 데이터 저장(키와값): 표현방법3
@@ -617,18 +616,18 @@
             obj.b = 200;
             obj.c = "javascript";
 
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
+            // console.log(obj.a);
+            // console.log(obj.b);
+            // console.log(obj.c);
         }
         // 객체 : 데이터 저장(키와값): 표현방법4
         // 이 방법을 가장 많이 쓴다.
         {
             const obj = {a:100, b:200, c:"javascript"};
 
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
+            // console.log(obj.a);
+            // console.log(obj.b);
+            // console.log(obj.c);
         }
         // 객체 : 데이터 저장(키와값): 표현방법5
         // 배열 안에 객체가 있는 구조는 이런 방법으로 불러온다.
@@ -638,9 +637,9 @@
                 {c:"javascript"}
             ];
 
-            console.log(obj[0].a);
-            console.log(obj[0].b);
-            console.log(obj[1].c);
+            // console.log(obj[0].a);
+            // console.log(obj[0].b);
+            // console.log(obj[1].c);
 
             //100
             //200
@@ -657,12 +656,12 @@
                 d : "javascript"
             }
 
-            console.log(obj.a);
-            console.log(obj.b[0]);
-            console.log(obj.b[1]);
-            console.log(obj.c.x);
-            console.log(obj.c.y);
-            console.log(obj.d);
+            // console.log(obj.a);
+            // console.log(obj.b[0]);
+            // console.log(obj.b[1]);
+            // console.log(obj.c.x);
+            // console.log(obj.c.y);
+            // console.log(obj.d);
 
             //100
             //200
@@ -680,30 +679,39 @@
 
             const obj = {a, b, c};
 
-            console.log(a);
-            console.log(b);
-            console.log(c);
+            // console.log(a);
+            // console.log(b);
+            // console.log(c);
         }
         // 객체 : 데이터 저장(키와값): 표현방법8
         // 객체 안에는 실행문이 들어갈 수 있는데, 실행문을 실행시켜줄 때 쓰는 방법이다.
-        {
+        {   
+            const j = "javascript";
+
             const obj = {
                 a : 100,
                 b : [200, 300],
                 c : "javascript",
                 d : function(){
                     console.log("javascript가 실행되었습니다.");
+                },
+                e : function(){
+                    console.log(obj.c + "가 실행되었습니다."); //변수를 부르는 키 값을 적고 + 를 쓰면 값이 출력된다.
+                },
+                f : function(){
+                    console.log(this.c + "가 실행되었습니다."); //자기 자신을 표현하는 this
                 }
             }
 
             console.log(obj.a);
             console.log(obj.b[0]);
             console.log(obj.b[1]);
-            console.log(obj.b[2]);          //undefined
+            // console.log(obj.b[2]);          //undefined
             console.log(obj.c);
-            console.log(obj.d);             //(X)
+            // console.log(obj.d);             //(X)
             obj.d();
-
+            obj.e();
+            obj.f();
         }
 
 
