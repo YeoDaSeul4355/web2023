@@ -66,7 +66,7 @@
                     <li><a href="#">03. 배열 : 데이터 불러오기_배열구조분해할당</a></li>
 
                     <li><a href="#">04. 객체 : 데이터 불러오기_기본</a></li>
-                    <li><a href="#">04. 객체 : 데이터 불러오기_object</a></li>
+                    <li><a href="#">0. 객체 : 데이터 불러오기_object</a></li>
                     <li><a href="#">04. 객체 : 데이터 불러오기_변수</a></li>
                     <li><a href="#">04. 객체 : 데이터 불러오기_for in</a></li>
                     <li><a href="#">04. 객체 : 데이터 불러오기_map()</a></li>
@@ -272,7 +272,7 @@
         {
             let x = 100, y = 200, z = "javascript";
 
-            console.log(x, y, z);
+            // console.log(x, y, z);
         }
 
         // 02. 상수 : 데이터 불러오기
@@ -280,32 +280,32 @@
         {
             const x = 100, y = 200, z = "javascript";
 
-            console.log(x, y, z);
+            // console.log(x, y, z);
         }
         // 03. 배열 : 데이터 불러오기
         {
             const arr = [100, 200, "javascript"];
 
-            console.log(arr[0])
-            console.log(arr[1])
-            console.log(arr[2])
+            // console.log(arr[0])
+            // console.log(arr[1])
+            // console.log(arr[2])
         }
         // 04. 배열 : 데이터 불러오기_2차 배열
         // 
         {
             const arr = [100, 200, ["javascript","react"]];
 
-            console.log(arr[0]);
-            console.log(arr[1]);
-            console.log(arr[2][0]);
-            console.log(arr[2][1]);
+            // console.log(arr[0]);
+            // console.log(arr[1]);
+            // console.log(arr[2][0]);
+            // console.log(arr[2][1]);
         }
         // 05. 배열 : 데이터 불러오기_갯수 구하기
         // length를 이용해 데이터의 갯수를 구하는 방법입니다.
         {
             const arr = [100, 200, "javascript"];
 
-            console.log(arr.length)
+            // console.log(arr.length)
         }
         // 06. 배열 : 데이터 불러오기_for()문
         //대입은 초기값, 조건식, 실행문, 증감식 순입니다.
@@ -326,9 +326,9 @@
             //     //실행문
             // }
 
-            for(let i=0; i<9; i++){
-                console.log(arr[i]);
-            }
+            // for(let i=0; i<9; i++){
+            //     console.log(arr[i]);
+            // }
             // i=0; 0<9; console.log(arr[0]); i++   //100
             // i=1; 1<9; console.log(arr[1]); i++   //200
             // i=2; 2<9; console.log(arr[2]); i++   //300
@@ -339,6 +339,37 @@
             // i=7; 7<9; console.log(arr[7]); i++   //800
             // i=8; 8<9; console.log(arr[8]); i++   //900
             // i=9; 9<9; END
+        }
+        
+        {
+            const A = [1,2,3,4,5,6,7,8,9,10];
+
+            // console.log(A.length);  //10
+            
+            // for( let i=0; i<A.length; i++ ){
+            //     console.log(A[i]);  //length를 사용해 개수를 구하고 1부터 10까지 출력할 수 있음
+                // i=0; 0<10; A[0]=1; i=1;
+                // i=1; 1<10; A[1]=2; i=2;
+                // i=2; 2<10; A[2]=3; i=3;
+                // i=3; 3<10; A[3]=4; i=4;
+                // i=4; 4<10; A[4]=5; i=5;
+                // i=5; 5<10; A[5]=6; i=6;
+                // i=6; 6<10; A[6]=7; i=7;
+                // i=7; 7<10; A[7]=8; i=8;
+                // i=8; 8<10; A[8]=9; i=9;
+                // i=9; 9<10; A[9]=10; i=10;
+                // i=10; 10<10;     //i의 끝나는 값 잘 살펴보기
+            // }
+        }
+
+        // 07. 배열 : 데이터 불러오기_중첩 for()문
+        {
+            for( let i=1; i<=10; i++ ){
+                console.log("i : "+i);
+                for( let j=1; j<=10; j++ ){
+                    console.log("j : "+j);
+                }
+            }
         }
     </script>
 
