@@ -9,79 +9,75 @@
         * {
             margin: 0;
             padding: 0;
+        }
+        #wrap {
+            width: 1200px;
             margin: 0 auto;
+            overflow: hidden;
         }
-        #header {
-            width: 1200px;
-            height: 100px;
-            background-color: #ffa0a0;
+        #aside {
+            width: 300px;
+            height: 1000px;
+            float: left;
         }
-        .header1 {
-            width: 400px;
-            height: 100px;
-            background-color: #362e2e;
+        .side1 {
+            height: 300px;
+            background-color: #111;
         }
-        #banner {
-            width: 1200px;
-            height: 580px;
-            background-color: #500909;
+        .side2 {
+            height: 300px;
+            background-color: #222;
+        }
+        .side3 {
+            height: 400px;
+            background-color: #333;
         }
         #contents {
-            width: 1200px;
+            width: 900px;
+            float: left;
+        }
+        .banner {
+            height: 500px;
+            background-color: #444;
+        }
+        .content {
             height: 300px;
-            background-color: #693c3c;
+            background-color: #555;
         }
-        .cont1{
-            width: 400px;
-            height: 300px;
-            background-color: #292323;
-            float: left;
+        .footer {
+            height: 200px;
+            background-color: #666;
         }
-        .cont2{
-            width: 400px;
-            height: 300px;
-            background-color: #663434;
-            float: left;
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
         }
-        #footer {
-            width: 1200px;
-            height: 100px;
-            background-color: #383333;
-        }
-        .footer1{
-            width: 200px;
-            height: 100px;
-            background-color: #cec3c3;
-            float: left;
-        }
-        .footer2{
-            width: 800px;
-            height: 100px;
-            background-color: #3d0606;
-            float: left;
-        }
-        .footer3{
-            width: 200px;
-            height: 100px;
-            background-color: #4c9464;
-            float: left;
+        .clearfix::after {
+            clear: both;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header">
-            <div class="header1"></div>
+        <div id="aside">
+            <div class="side1"></div>
+            <div class="side2"></div>
+            <div class="side3"></div>
         </div>
-        <div id="banner"></div>
         <div id="contents">
-            <div class="cont1"></div>
-            <div class="cont2"></div>
-        </div>
-        <div id="footer">
-            <div class="footer1"></div>
-            <div class="footer2"></div>
-            <div class="footer3"></div>
+            <div class="banner"></div>
+            <div class="content clearfix">
+                <div class="c1"></div>
+                <div class="c2"></div>
+                <div class="c3"></div>
+            </div>
+            <div class="footer clearfix">
+                <div class="f1"></div>
+                <div class="f2"></div>
+                <div class="f3"></div>
+            </div>
         </div>
     </div>
 </body>
