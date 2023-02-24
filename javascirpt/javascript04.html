@@ -73,7 +73,7 @@
                        조건이 참일 경우 실행할 코드를 작성합니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
-    // false : 0, null, undefined, flase, ""(빈 문자열)
+    // false : 0, null, undefined, false, ""(빈 문자열)
     // true : 1, 2, "0", "1", "ABC", [], {}, true
 
     if(0){
@@ -378,7 +378,7 @@
         // }
         // document.write("<br>");
         
-        // const arr = [1,2,3,4,5,6,7,8,9];
+        const arr = [1,2,3,4,5,6,7,8,9];
 
         // for(let i=1; i<arr.length; i+=2){
         //     document.write(arr[i]);
@@ -403,7 +403,13 @@
         //         document.write(`<span style='color:blue'>${i}</span>`);
         //     }
         // }
-        
+        for(let i=1; i<=arr.length; i++){
+            if(i % 2 ==0){
+                document.write("<span style='color:red'>"+i+"<span>");
+            } else {
+                document.write(`<span style='color:blue'>${i}</span>`);
+            }
+        }
         // 10. 중첩for문
         //table 5칸짜리 만들기
         
@@ -416,11 +422,10 @@
         //     }        
         //     table += "</tr>";
         // }
-
         // table += "</table>";
 
         // document.write(table);
-
+        // 
         // document.write("<br>");
 
         // //1부터 25까지 출력
