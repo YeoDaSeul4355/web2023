@@ -10,92 +10,99 @@
 pre code.hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em
+  padding: 20px;
+  font-family: 'NexonLv1Gothic';
+  line-height: 1.6;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
-
 code.hljs {
   padding: 3px 5px
 }
-
 .hljs {
-  background: #f3f3f3;
-  color: #444
+  color: #E9E9F4;
+  background: #282936
 }
-
+.hljs ::selection,
+.hljs::selection {
+  background-color: #4D4F68;
+  color: #E9E9F4
+}
 .hljs-comment {
-  color: #697070
+  color: #626483
 }
-
-.hljs-punctuation,
 .hljs-tag {
-  color: #444a
+  color: #62D6E8
 }
-
-.hljs-tag .hljs-attr,
-.hljs-tag .hljs-name {
-  color: #444
-}
-
-.hljs-attribute,
-.hljs-doctag,
-.hljs-keyword,
-.hljs-meta .hljs-keyword,
-.hljs-name,
-.hljs-selector-tag {
-  font-weight: 700
-}
-
-.hljs-deletion,
-.hljs-number,
-.hljs-quote,
-.hljs-selector-class,
-.hljs-selector-id,
-.hljs-string,
-.hljs-template-tag,
-.hljs-type {
-  color: #800
-}
-
-.hljs-section,
-.hljs-title {
-  color: #800;
-  font-weight: 700
-}
-
-.hljs-link,
 .hljs-operator,
-.hljs-regexp,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-symbol,
+.hljs-punctuation,
+.hljs-subst {
+  color: #E9E9F4
+}
+.hljs-operator {
+  opacity: .7
+}
+.hljs-bullet,
+.hljs-deletion,
+.hljs-name,
+.hljs-selector-tag,
 .hljs-template-variable,
 .hljs-variable {
-  color: #ab5656
+  color: #EA51B2
 }
-
-.hljs-literal {
-  color: #695
+.hljs-attr,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-symbol,
+.hljs-variable.constant_ {
+  color: #B45BCF
 }
-
+.hljs-class .hljs-title,
+.hljs-title,
+.hljs-title.class_ {
+  color: #00F769
+}
+.hljs-strong {
+  font-weight: 700;
+  color: #00F769
+}
 .hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+  color: #EBFF87
+}
 .hljs-built_in,
-.hljs-bullet,
-.hljs-code {
-  color: #397300
+.hljs-doctag,
+.hljs-keyword.hljs-atrule,
+.hljs-quote,
+.hljs-regexp {
+  color: #A1EFE4
 }
-
-.hljs-meta {
-  color: #1f7199
+.hljs-attribute,
+.hljs-function .hljs-title,
+.hljs-section,
+.hljs-title.function_,
+.ruby .hljs-property {
+  color: #62D6E8
 }
-
-.hljs-meta .hljs-string {
-  color: #38a
+.diff .hljs-meta,
+.hljs-keyword,
+.hljs-template-tag,
+.hljs-type {
+  color: #B45BCF
 }
-
 .hljs-emphasis {
+  color: #B45BCF;
   font-style: italic
 }
-
-.hljs-strong {
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string {
+  color: #00F769
+}
+.hljs-meta .hljs-keyword,
+.hljs-meta-keyword {
   font-weight: 700
 }
