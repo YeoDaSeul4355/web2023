@@ -107,7 +107,7 @@
         .main__sample .result {
             margin-top: 10px;
             background-color: #282936;
-            color: #a5a5a5;
+            color: #f6f6f6;
             padding: 1em;
             border-radius: 5px;
             margin-bottom: 10px;
@@ -120,9 +120,11 @@
         }
         .main__sample .notice h4 {
             margin-bottom: 5px;
+            color: #f5f5f5;
         }
         .main__sample .notice p {
             margin-bottom: 0;
+            color: #a5a5a5;
         }
 
         /* 푸터 영역 */

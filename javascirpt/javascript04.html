@@ -73,9 +73,6 @@
                        조건이 참일 경우 실행할 코드를 작성합니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
-    // false : 0, null, undefined, false, ""(빈 문자열)
-    // true : 1, 2, "0", "1", "ABC", [], {}, true
-
     if(0){
         document.write("실행되었습니다. (true)");
     } else {
@@ -194,6 +191,9 @@
                                 실행되었습니다.(num == 100)
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                         <p>num을 100으로 정하고 난 뒤, 첫 번째 조건에 충족하지 못하여 건너뛰고,다음 두 번째 조건에 충족하여 값을 출력하였습니다.</p>
                     </div>
                 </div>
                 <!-- //sample04 -->
@@ -413,19 +413,67 @@
         // 10. 중첩for문
         //table 5칸짜리 만들기
         
-        // let table = "<table border='1'>";
+        let table = "<table border='1'>";
+        let num = 0;
         
-        // for(let i=1; i<=5; i++){
-        //     table += "<tr>";
+        for(let i= 1; i<=5; i++){
+            table += "<tr>";    
+            for(let j=1; j<=5; j++){
+                num++;
+                table += "<td>"+num+"</td>"
+            }
+            table += "</tr>";
+        }
+            
+        table += "</table>";
+        
+        document.write(table);
+        document.write("<br>");
+        document.write("색깔 넣는거 모르겠음 ㅜㅜ");
+        //
+        // 색 넣어보기
+        // let table = "<table border='1'>";
+        // let num = 0;
+        
+        // for(let i= 1; i<=5; i++){
+        //     table += "<tr>";    
         //     for(let j=1; j<=5; j++){
-        //         table += "<td>"+j+"</td>";
-        //     }        
+        //         num++;
+        //         table += "<td>"+num+"</td>"
+                // if(num % 2 ==0){
+                //     document.write("<span style='color:red'>"+num+"<span>");
+                // } else {
+                //     document.write(`<span style='color:blue'>${num}</span>`);
+                // }
+        //     }
         //     table += "</tr>";
         // }
+            
         // table += "</table>";
-
+        
         // document.write(table);
-        // 
+        // let table = "<table border='1'>";
+        // let num = 0;
+        
+        // for(let i= 1; i<=5; i++){
+        //     table += "<tr>";    
+        //     for(let j=1; j<=5; j++){
+        //         num++;
+        //         if(num % 2 ==0){
+        //             table +=("<span style='color:red'>"+num+"<span>");
+        //         } else {
+        //             table +=(`<span style='color:blue'>${num}</span>`);
+        //         }
+        //         table += "<td>"+num+"</td>"
+        //     }
+        //     table += "</tr>";
+        // }
+            
+        // table += "</table>";
+        
+        // document.write(table);
+        
+        
         // document.write("<br>");
 
         // //1부터 25까지 출력
