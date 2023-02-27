@@ -49,14 +49,14 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. 선언적 함수</a></li>
-                    <li><a href="#">01. 익명 함수</a></li>
-                    <li><a href="#">01. 매개변수 함수</a></li>
-                    <li><a href="#">01. 리턴값 함수</a></li>
-                    
-                    <li><a href="#">01. 화살표 함수 : 선언적 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 익명 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 매개변수 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 리턴값 함수</a></li>
+                    <li><a href="#">02. 익명 함수</a></li>
+                    <li><a href="#">03. 매개변수 함수</a></li>
+                    <li><a href="#">04. 리턴값 함수</a></li>
+                    <li><a href="#">05. 화살표 함수 : 선언적 함수</a></li>
+                    <li><a href="#">06. 화살표 함수 : 익명 함수</a></li>
+                    <li><a href="#">07. 화살표 함수 : 매개변수 함수</a></li>
+                    <li><a href="#">08. 화살표 함수 : 리턴값 함수</a></li>
+
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
@@ -92,7 +92,238 @@
     </footer>
     <!-- //footer -->
 
-    <script>      
+    <script>
+        // //  변수, 상수, 배열, 객체 : 데이터 저장
+        // //  함수 : 데이터 실행
+        
+        // // 선언적 함수
+        // {
+        //     function func(){
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+        
+        // // 익명 함수
+        // {
+        //     const func = function(){
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+
+        // // 매개변수 함수 ㅣ 변수를 저장하고 전달하여 함수에 출력시킬 때
+        // {
+        //     function func(str){
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다.<br>");
+        // }
+
+        // // 리턴값(결과/끝) 함수
+        // {
+        //     function func(){
+        //         const str ="실행되었습니다.";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+
+        // document.write("<br><br>");
+
+        // // 05. 화살표 함수 : 선언적 함수
+        // // 함수와 화살표 함수는 똑같지만 function을 약식으로 표현한 것이다.
+        // {
+        //     func = () => {
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+        
+        // // 06. 화살표 함수 : 익명 함수
+        // {
+        //     const func = () => {
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func();
+        // }
+
+        // // 07. 화살표 함수 : 매개변수 함수
+        // {
+        //     func = (str) => {
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다. <br>");
+        // }
+
+        // // 08. 화살표 함수 : 리턴값 함수
+        // {
+        //     func = () => {
+        //         const str = "실행되었습니다 <br>";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+
+        
+        // 10~88까지 짝수만 출력하세요
+        for(let i=10; i<=88; i+=2){
+            document.write(i);
+        }
+
+        document.write("<br><br>");
+
+        // 구구단
+        for(let i=2; i<=9; i++){
+            document.write(i+"단","<br>");
+            for(let j=1; j<=9; j++){
+                document.write(i+"*"+j+"="+i*j);
+                document.write("<br>");
+            }
+        }
+
+        document.write("<br><br>");
+
+        // 테이블 100칸
+
+        // let table = "<table border='1'>";
+        // let num = 1;
+        
+        // for(let i=1; i<=10; i++){
+        //     table += "<tr>"
+
+        //     for(let j=1; j<=10; j++){
+        //         table += "<td>"+num+"</td>";
+        //         num++;
+        //     }
+        //     table += "</tr>"
+        // }
+        //     table += "</table>";
+
+        // document.write(table);
+        
+        // // 선언적 함수
+        // {
+        //     function func(){
+        //         document.write("실행");
+        //     }
+        //     func();
+        // }
+
+        // // 익명 함수
+        // {
+        //     const func = function(){
+        //         document.write("실행"); 
+        //     }
+        //     func();
+        // }
+
+        // // 매개변수 함수
+        // {
+        //     function func(str){
+        //         document.write(str);
+        //     }
+        //     func("실행");
+        // }
+
+        // // 리턴값 함수
+        // {
+        //     function func(){
+        //         const str = "실행";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+        // document.write("<br>");
+
+        // for(let i=1; i<=10; i++){
+        //     document.write(i);
+        // }
+
+        // for(let i=2; i<=9; i++){
+        //     document.write(i+"단","<br>");
+        //     for(let j=1; j<=9; j++){
+        //         document.write(i+"*"+j+"="+i*j);
+        //         document.write("<br>");
+        //     }
+        // }
+        // document.write("<br>");
+
+        // let table = "<table border='1'>";
+        // let num = 1;
+        
+        //     for(let i=1; i<=10; i++){
+        //         table += "<tr>";
+        //         for(let j=1; j<=10; j++){
+        //             table += "<td>"+num+"</td>";
+        //             num++;
+        //         }    
+        //         table += "</tr>";
+        //     }
+        //     table += "</table>";
+
+        // document.write(table);
+        // document.write("<br>");
+        
+        // // 선언적 함수
+        // {
+        //     func = () => {
+        //         document.write("시험");
+        //     }
+        //     func();
+        // }
+        // document.write("<br>");
+        // // 익명 함수
+        // {
+        //     const func = () => {
+        //         document.write("ㅅㅎ");
+        //     }
+        //     func();
+        // }
+        // document.write("<br>");
+        // // 매개변수 함수
+        // {
+        //     func = (str) => {
+        //         document.write(str);
+        //     }
+        //     func("ㅅㅎ");
+        // }
+        // document.write("<br>");
+        // // 리턴값 함수
+        // {
+        //     func = () => {
+        //         const str = "ㅅㅎ";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+
+        // let table = "<table border='1'>";
+        // let num = 1;
+
+        //     for(let i=1; i<=10; i++){
+        //         table += "<tr>";
+        //         for(let j=1; j<=10; j++){
+        //             table += "<td>"+num+"</td>";
+        //             num++;
+        //         }
+        //         table += "</tr>";
+        //     }
+        //     table += "</table>";
+
+        // document.write(table);
+
+        // for(let i=1; i<=10; i++){
+        //     if(i % 2 ==0){
+        //         document.write("<span style='color:red'>"+i+"<span>");
+        //     } else {
+        //         document.write(`<span style='color:blue'>${i}</span>`);
+        //     }
+        // }
+
+        // for(let i=0; i<=10; i+=2){
+        //     document.write("<span style='color:red'>"+i+"</span>");
+        // }
     </script>
 
 </body>
