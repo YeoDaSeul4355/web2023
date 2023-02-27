@@ -7,6 +7,8 @@
     <title>Javascript : 데이터 실행하기</title>
         
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+    
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png"> 
@@ -83,6 +85,208 @@
                     <li><a href="#">01. 클래스 상속</a></li>
                 </ul>
             </div>
+            <div class="main__sample">
+                <!-- //sample01 -->
+                <div id="sample01" class="sample">
+                    <h3>01. 선언적 함수</h3>
+                    <p>선언적 함수는 함수를 선언할 때 함수 이름과 함수 내용을 함께 작성하는 방식입니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    function func(){
+        document.write("실행되었습니다.<br>");
+    }
+    func();
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>호이스팅</h4>
+                         <p>변수나 함수를 선언하지 않고 호출하였을 때는 에러가 발생해야 하는 것이 맞지만, var로 선언한 변수와 선언적 함수는 변수, 함수 선언 이전에 호출하여도 에러를 발생시키지 않습니다.</p>   
+                    </div>
+                </div>
+                <!-- //sample01 -->
+                <!-- //sample02 -->
+                <div id="sample02" class="sample">
+                    <h3>02. 익명 함수</h3>
+                    <p>익명 함수란 이름이 없는 함수를 의미합니다.<br>
+                       보통 함수를 정의할 때 함수 이름을 지정하는데, 익명 함수는 이러한 이름이 없습니다.<br>
+                       대신 변수에 함수 자체를 할당하여 사용합니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    const func = function(){
+        document.write("실행되었습니다.<br>");
+    }
+    func();
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample02 -->
+                <!-- //sample03 -->
+                <div id="sample03" class="sample">
+                    <h3>03. 매개변수 함수</h3>
+                    <p>매개변수 함수는 입력값을 받아 처리하는 함수를 의미합니다.<br>
+                       함수를 정의할 때 매개변수를 정의하여 함수 내부에서 사용할 수 있도록 할 수 있습니다.<br>
+                       매개변수 함수는 다른 함수와 함께 사용하여 더욱 유용하게 사용될 수 있습니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    function func(str){
+        document.write(str);
+    }
+    func("실행되었습니다.<br>");
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample03 -->
+                <!-- //sample04 -->
+                <div id="sample04" class="sample">
+                    <h3>04. 리턴값 함수</h3>
+                    <p>함수는 입력값을 받아서 처리하고 결과를 출력하는 기능을 수행합니다.<br>
+                       이때, 함수에서 처리한 결과값을 호출한 곳으로 전달하는데, 이를 리턴값이라고 합니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    function func(){
+        const str ="실행되었습니다.";
+        return str;
+    }
+    document.write(func());
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample04 -->
+                <!-- //sample05 -->
+                <div id="sample05" class="sample">
+                    <h3>05. 화살표 함수 : 선언적 함수</h3>
+                    <p>함수와 화살표 함수는 똑같지만 function을 약식으로 표현한 것입니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    func = () => {
+        document.write("실행되었습니다.<br>");
+    }
+    func();
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>화살표 함수 표현 방식</h4>
+                         <p>function 키워드를 생략하고 부등호 '='과 '>'을 합쳐 약식으로 표현합니다. </p>   
+                    </div>
+                </div>
+                <!-- //sample05 -->
+                <!-- //sample06 -->
+                <div id="sample06" class="sample">
+                    <h3>06. 화살표 함수 : 익명 함수</h3>
+                    <p>함수와 화살표 함수는 똑같지만 function을 약식으로 표현한 것이다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    const func = () => {
+        document.write("실행되었습니다.<br>");
+    }
+    func();
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample06 -->
+                <!-- //sample07 -->
+                <div id="sample07" class="sample">
+                    <h3>07. 화살표 함수 : 매개변수 함수</h3>
+                    <p>함수와 화살표 함수는 똑같지만 function을 약식으로 표현한 것이다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    func = (str) => {
+        document.write(str);
+    }
+    func("실행되었습니다. <br>");
+}
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample07 -->
+                <!-- //sample08 -->
+                <div id="sample08" class="sample">
+                    <h3>08. 화살표 함수 : 리턴값 함수</h3>
+                    <p>함수와 화살표 함수는 똑같지만 function을 약식으로 표현한 것이다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    func = () => {
+        const str = "실행되었습니다 <br>";
+        return str;
+    }
+    document.write(func());
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample08 -->
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -91,6 +295,9 @@
         <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
     </footer>
     <!-- //footer -->
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
     <script>
         // //  변수, 상수, 배열, 객체 : 데이터 저장
@@ -205,7 +412,7 @@
         // // 선언적 함수
         // {
         //     function func(){
-        //         document.write("실행");
+        //         document.write("실행되었습니다.");
         //     }
         //     func();
         // }
