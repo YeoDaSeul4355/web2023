@@ -1,0 +1,113 @@
+/* header */
+#header {}
+/* main */
+#main {}
+/* main > box__wrap */
+.box__wrap {
+    width: 90%;
+    margin: 5% auto;
+    height: 800px;
+    background-color: #fff;
+    border: 0.3vw solid #000;
+    border-top-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+    box-shadow: 1vw 1vw 0px #000;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+}
+.box__wrap:hover {
+    box-shadow: 0.5vw 0.5vw 0px #000;
+}
+.box__wrap__header {
+    border-bottom: 0.3vw solid #000;
+    padding: 0 0 0 3vw;
+    background-color: #AF6EE3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box__wrap__header::before {
+    content: "";
+    width: 90%;
+    height: 0.3vw;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-10px);
+    border-radius: 5px;
+}
+.box__wrap__header::after {
+    content: "";
+    width: 90%;
+    height: 0.3vw;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(4px);
+    border-radius: 5px;
+}
+.box__wrap__header .title {
+    position: relative;
+}
+.box__wrap__header .title span {
+    background: #AF6EE3;
+    position: relative;
+    z-index: 10;
+    padding-right: 35px;
+}
+.box__wrap__header .btn {
+    display: flex;
+}
+.box__wrap__header .btn span {
+    display: block;
+    width: 3vw;
+    height: 3vw;
+    text-indent: -9999px;
+    position: relative;
+    z-index: 10;
+    border-left: 0.3vw solid #000;
+    box-sizing: content-box;
+}
+.box__wrap__header .btn span:nth-child(1){
+    background-color: #AF6EE3;
+}
+.box__wrap__header .btn span:nth-child(2){
+    background-color: #FFEF4A;
+}
+.box__wrap__header .btn span:nth-child(3){
+    background-color: #F76ECE;
+}
+.box__wrap__cont {}
+.box__wrap__footer {}
+/* footer */
+#footer {}
+
+@media(max-width: 1200px){
+    .box__wrap__header .btn span {
+        width: 4vw;
+        height: 4vw;
+    }
+    .box__wrap__header .title {
+        font-size: 20px;
+    }
+}
+@media(max-width: 960px){
+    .box__wrap__header .btn span {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media(max-width: 600px){
+    .box__wrap,
+    .box__wrap__header,
+    .box__wrap__header .btn span {
+        border-width: 3px;
+    }
+    .box__wrap__header::before,
+    .box__wrap__header::after {
+        display: none;
+    }
+}
