@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃10 - float 반응형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #main {
+            width: 100%;
+            height: 780px;
+            background-color: #886F65;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+        .article1 {
+            width: 100%;
+            height: 100px;
+            background-color: #74574A;
+            float: left;
+        }
+        .article2 {
+            width: 100%;
+            height: 200px;
+            background-color: #684D43;
+            float: left;
+        }
+        .article3 {
+            width: 50%;
+            height: 480px;
+            background-color: #594139;
+            float: left;
+        }
+        .article4 {
+            width: 50%;
+            height: 480px;
+            background-color: #4A352F;
+            float: left;
+        }
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+        @media (max-width: 1220px) {
+            .article1 {
+                width: 30%;
+                height: 780px;
+            }
+            .article2 {
+                width: 70%;
+                height: 390px;
+            }
+            .article3 {
+                width: 35%;
+                height: 390px;
+            }
+            .article4 {
+                width: 35%;
+                height: 390px;
+            }
+        }
+        @media (max-width: 768px) {
+            .article1 {
+                width: 40%;
+                height: 780px;
+            }
+            .article2 {
+                width: 60%;
+                height: 260px;
+            }
+            .article3 {
+                width: 60%;
+                height: 260px;
+            }
+            .article4 {
+                width: 60%;
+                height: 260px;
+            }
+        }
+        @media (max-width: 480px) {
+            .article1 {
+                width: 100%;
+                height: 150px;
+            }
+            .article2 {
+                width: 100%;
+                height: 210px;
+            }
+            .article3 {
+                width: 100%;
+                height: 210px;
+            }
+            .article4 {
+                width: 100%;
+                height: 210px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main" class="clearfix">
+            <div class="container">
+                <article class="article1"></article>
+                <article class="article2"></article>
+                <article class="article3"></article>
+                <article class="article4"></article>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>
