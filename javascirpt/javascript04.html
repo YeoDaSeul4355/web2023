@@ -166,7 +166,7 @@
                 <div id="sample04" class="sample">
                     <h3>04. 다중if문</h3>
                     <p>if문은 가장 기본적인 조건문입니다.<br>
-                       if문을 여러 개 쓸 수 있습니다. 하나의 값을 실행하면 나머지 if문을 종료합니다.</p>
+                       다중if문은 if문을 여러 개 쓸 수 있습니다. 하나의 값을 실행하면 나머지 if문을 종료합니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
     const num = 100;
@@ -186,7 +186,7 @@
 </code></pre>
                     </div>
                     <div class="result">
-                        <details>
+                        <details> 
                             <summary>결과 확인하기</summary>
                             <div>
                                 실행되었습니다.(num == 100)
@@ -275,13 +275,17 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4></h4>
+                         <p>조건에 맞는 값이 있으면 break를 써서 끝냅니다. break를 쓰지 않을 시 case를 실행하면서 무한에 빠집니다.</p>   
+                    </div>
                 </div>
                 <!-- //sample06 -->
                 <!-- //sample07 -->
                 <div id="sample07" class="sample">
                     <h3>07. while문</h3>
-                    <p>while 문은 소스 코드를 입력한 배열 혹은 객체의 속성에 맞게 반복하여 실행하는 역활을 합니다.<br>
-                       for문과 같은 반복문이지만 표현 방식이 다릅니다.</p>
+                    <p>while 문은 소스 코드를 입력한 배열 혹은 객체의 속성에 맞게 반복하여 실행하는 역할을 합니다.<br>
+                       for문과 같은 반복문이지만 표현 방식이 다릅니다.(for문으로 변경 가능)</p>
                     <div class="script">
 <pre><code class="Language-js">{
     for(let i=0; i&lt;5; i++){
@@ -370,14 +374,20 @@
                     <div class="script">
 <pre><code class="Language-js">{
     let table = "&lt;table border='1'&gt;";
+    let num = 1;
         
-        for(let i=1; i&lt;=5; i++){
-            table += "&lt;tr&gt;";
-            for(let j=1; j&lt;=5; j++){
-                table += "&lt;td&gt;"+j+"&lt;/td&gt;";
-            }        
-            table += "&lt;/tr&gt;";
-        }
+    for(let i=1; i&lt;=5; i++){
+        table += "&lt;tr&gt;";
+        for(let j=1; j&lt;=5; j++){
+            table += "&lt;td&gt;"+num+"&lt;/td&gt;";
+            num++;
+        }        
+        table += "&lt;/tr&gt;";
+    }
+
+    table += "&lt;/table&gt;";
+
+    document.write(table);
 }
 </code></pre>
                     </div>
@@ -385,7 +395,23 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                               <script>
+                                    let table = "<table border='1'>";
+                                    let num = 1;
+        
+                                    for(let i=1; i<=5; i++){
+                                        table += "<tr>";
+                                        for(let j=1; j<=5; j++){
+                                            table += "<td>"+num+"</td>";
+                                            num++;
+                                        }        
+                                        table += "</tr>";
+                                    }
                                 
+                                    table += "</table>";
+                                
+                                    document.write(table);
+                               </script> 
                             </div>
                         </details>
                     </div>
@@ -397,7 +423,7 @@
                     <p>반복문 안에서 위와 같은 break 문을 만나면 실행의 흐름은 반복문을 빠져나가서 반복문 다음으로 이동하게 됩니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
-    for(let i=1; i$lt;20; i++){
+    for(let i=1; i&lt;20; i++){
         if(i == 10){
             break;
         }
@@ -416,7 +442,7 @@
                     </div>
                     <div class="notice">
                         <h4></h4>
-                         <p>document.write(i)의 위치에 따라 출력되는 값이 달라진다.</p>
+                         <p>document.write(i)의 위치에 따라 출력되는 값이 달라집니다.</p>
                     </div>
                 </div>
                 <!-- //sample11 -->
@@ -426,7 +452,7 @@
                     <p>continue가 실행되면 continue문 아래의 코드를 실행하지 않고 건너뛰고 반복문의 처음으로 돌아가서 다음 반복을 시작합니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
-    for(let i=1; i%lt;20; i++){
+    for(let i=1; i&lt;20; i++){
         if(i == 10){
             continue;
         }
@@ -445,7 +471,7 @@
                     </div>
                     <div class="notice">
                         <h4></h4>
-                         <p>document.write(i)의 위치에 따라 출력되는 값이 달라진다.</p>
+                         <p>document.write(i)의 위치에 따라 출력되는 값이 달라집니다.</p>
                     </div>
                 </div>
                 <!-- //sample12 -->
@@ -559,24 +585,24 @@
                 
         //     1~25 (3의 배수 25칸(5의 배수는 빨간색))
 
-        //     let table = "<table border='1'>";
-        //     let count = 0;
-            
-        //     for(let i=0; i<5; i++){
-        //         table += "<tr>";
-        //             for(let j=0; j<5; j++){
-        //             count++;
-        //             if(count % 2 ==0){
-        //                 table += "<td style='color:red'>"+count+"</td>";
-        //             } else {
-        //                 table += "<td style='color:blue'>"+count+"</td>";
-        //             }
+        // let table = "<table border='1'>";
+        // let count = 0;
+        
+        // for(let i=0; i<5; i++){
+        //     table += "<tr>";
+        //         for(let j=0; j<5; j++){
+        //         count++;
+        //         if(count % 2 ==0){
+        //             table += "<td style='color:red'>"+count+"</td>";
+        //         } else {
+        //             table += "<td style='color:blue'>"+count+"</td>";
         //         }
-        //         table += "</tr>";
         //     }
-        //     table += "</table>";
+        //     table += "</tr>";
+        // }
+        // table += "</table>";
 
-        //     document.write(table);
+        // document.write(table);
         // }
 
         // 11. break문

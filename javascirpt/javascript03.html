@@ -137,6 +137,13 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4>즉시 실행 함수</h4>
+                         <p>익명 함수 중에는 필요에 따라 일회성으로 사용되는 함수도 있습니다.<br>
+                            '즉시 실행 함수'는 선언과 동시에 함수가 실행되며 함수명이 없기 때문에 재호출 할 수 없습니다.<br>
+                            보통 처음 한 번만 실행하는 초기화 코드에 사용됩니다.
+                        </p>   
+                    </div>
                 </div>
                 <!-- //sample02 -->
                 <!-- //sample03 -->
@@ -312,7 +319,7 @@
                 <!-- //sample09 -->
                 <div id="sample09" class="sample">
                     <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
-                    <p>내용</p>
+                    <p>화살표 함수 방식을 이용해 익명 함수와 매개변수, 리턴값을 같이 쓸 수 있습니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
     const func = (str) => {
@@ -335,7 +342,8 @@
                 <!-- //sample10 -->
                 <div id="sample10" class="sample">
                     <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
-                    <p>내용</p>
+                    <p>화살표 함수 방식을 이용해 익명 함수와 매개변수, 리턴값을 같이 쓸 수 있습니다.<br>
+                       여기서 괄호를 생략할 수 있습니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
     const func = str => {
@@ -358,7 +366,8 @@
                 <!-- //sample11 -->
                 <div id="sample11" class="sample">
                     <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴값 생략</h3>
-                    <p>내용</p>
+                    <p>화살표 함수 방식을 이용해 익명 함수와 매개변수, 리턴값을 같이 쓸 수 있습니다.<br>
+                        여기서 괄호와 리턴을 생략할 수 있습니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
     const func = str => str;
@@ -377,6 +386,33 @@
                     </div>
                 </div>
                 <!-- //sample11 -->
+                <!-- //sample12 -->
+                <div id="sample12" class="sample">
+                    <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴값 생략</h3>
+                    <p>화살표 함수 방식을 이용해 선언적 함수와 매개변수, 리턴값을 같이 쓸 수 있습니다.<br>
+                        여기서 괄호와 리턴을 생략할 수 있습니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    func = str => str;
+
+    document.write(func("실행되었습니다."));
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                         <p>react에서 가장 많이 사용되는 방식입니다. 하지만 this를 못쓴다는 단점이 있습니다.</p>   
+                    </div>
+                </div>
+                <!-- //sample12 -->
             </div>
         </div>
     </main>
