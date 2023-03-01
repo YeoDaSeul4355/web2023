@@ -206,6 +206,34 @@ document.write(table);
 </code></pre>
                 </div>
                 <!-- sample08 -->
+                <!-- sample08 -->
+                <div id="sample09" Class="sample">
+                    <h3>09. 데이터 이펙트 : 테이블 25칸(3의 배수(5의 배수는 빨간색))</h3>
+                    <p>for문과 if문을 이용해 테이블을 짜는 예제입니다.</p>
+<pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
+let num = 0;
+
+    for(let i=0; i&lt;5; i++){
+        table += "&lt;tr&gt;";
+        for(let j=0; j&lt;5; j++){
+            num++;
+            let sum = num*3
+            if(sum % 3 == 0 && sum % 5 == 0){
+                table += "&lt;td style='color:red'&gt;"+sum+"&lt;/td&gt;";
+            } else if(sum&lt;80){
+                table += "&lt;td&gt;"+sum+"&lt;/td&gt;";
+            } else {
+
+            }
+        }
+        table += "&lt;/tr&gt;";
+    }
+table += "&lt;/table&gt;";
+
+document.write(table);
+</code></pre>
+                </div>
+                <!-- sample09 -->
             </div>
         </div>
     </main>
@@ -298,19 +326,27 @@ document.write(table);
         //     document.write("<br><br>");
         // }
 
+        let table = "<table border='1'>";
+        let num = 0;
+
+            for(let i=0; i<5; i++){
+                table += "<tr>";
+                for(let j=0; j<5; j++){
+                    num++;
+                    let sum = num*3
+                    if(sum % 3 == 0 && sum % 5 == 0){
+                        table += "<td style='color:red'>"+sum+"</td>";
+                    } else if(sum<80){
+                        table += "<td>"+sum+"</td>";
+                    } else {
+
+                    }
+                }
+                table += "</tr>";
+            }
+        table += "</table>";
         
-
-        // let table = "<table border='1'>";
-            
-        //     for(let i=1; i<=10; i++);
-        //         table += "<tr>";
-
-        //         for(let j=1; j<=12; j++);
-        //         table += "<td>"+j+"</td>"
-
-        //         table += "</tr>";
-
-        //     table += "</table>";
+        document.write(table);
     </script>
 
 </body>
