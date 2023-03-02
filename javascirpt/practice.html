@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내일 시험 연습</title>
+</head>
+<body>
+    <script>
+        {
+            function func(){
+                document.write("선언적 함수");
+            }
+            func();
+        }
+        document.write("<br><br>");
+        {
+            const func = function(){
+                document.write("익명 함수");
+            }
+            func();
+        }
+        document.write("<br><br>");
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("매개변수 함수");
+        }
+        document.write("<br><br>");
+        {
+            function func(){
+                const str = "리턴 함수";
+                return str;
+            }
+            document.write(func());
+        }
+        document.write("<br><br>");
+        {
+            func = () => {
+                document.write("선언적 함수_화살표");
+            }
+            func();
+        }
+        document.write("<br><br>");
+        {
+            const func = () => {
+                document.write("익명 함수_화살표");
+            }
+            func();
+        }
+        document.write("<br><br>");
+        {
+            func = (str) => {
+                document.write(str);
+            }
+            func("매개변수 함수_화살표");
+        }
+        document.write("<br><br>");
+        {
+            func = () => {
+                const str = "리턴 함수_화살표";
+                return str;
+            }
+            document.write(func());
+        }
+        document.write("<br><br>");
+        {
+            const func = (str) => {
+                return str;
+            }
+            document.write(func("화살표 함수 + 매개변수 + 익명 + 리턴값"))
+        }
+        document.write("<br><br>");
+        {
+            const func = str => {
+                return str;
+            }
+            document.write(func("화살표 함수 + 매개변수 + 익명 + 리턴값 + 괄호 생략"))
+        }
+        document.write("<br><br>");
+        {
+            const func = str => str;
+
+            document.write(func("화살표 함수 + 매개변수 + 익명 + 리턴값 + 괄호 생략 + 리턴값 생략"))
+        }
+        document.write("<br><br>");
+        {
+            func = str => str;
+            
+            document.write(func("화살표 함수 + 매개변수 + 선언적 함수 + 리턴값 + 괄호 생략 + 리턴값 생략"))
+        }
+    </script>   
+</body>
+</html>
