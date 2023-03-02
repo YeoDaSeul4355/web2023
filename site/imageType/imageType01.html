@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+        }
+        /* image__wrap */
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image__inner .image {
+            width: 570px;
+            height: 370px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .image__body {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            text-align: left;
+            padding: 30px;
+        }
+        .image__body .title {
+            margin-bottom: 15px;
+            font-size: 32px;
+            line-height: 1;
+        }
+        .image__body .desc {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            padding-right: 20%;
+        }
+        .image__body .btn {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 30px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <section class="image__wrap section nexon">
+        <div class="container">
+            <h2 class="section__h2">향수, 그 날의 기분</h2>
+            <p class="section__desc">여러 가지 향을 조향하여 자신만의 향수를 만들 수 있습니다.</p>
+            <div class="image__inner">
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="../asset/img/imageType01_01.jpg" alt="자신이 원하는 향 ">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">자신이 원하는 향</h3>
+                        <p class="desc">좋아하는 향의 이미지를 떠올려보세요.그리고 그 이미지와 관련된 계열을 생각해봅시다.</p>
+                        <a href="#" class="btn">자세히보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="../asset/img/imageType01_02.jpg" alt="비슷한 이미지의 향">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">비슷한 이미지의 향</h3>
+                        <p class="desc">서로 비슷한 계열의 향을 섞어보세요.이미지가 어우러지면서 원하는 향을 만들 수 있습니다.</p>
+                        <a href="#" class="btn">자세히보기</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

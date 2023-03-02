@@ -191,16 +191,25 @@ document.write(table);
                 <div id="sample08" Class="sample">
                     <h3>08. 데이터 이펙트 : 테이블 25칸(짝수: 빨간색, 홀수: 파란색)</h3>
                     <p>for문과 if문을 이용해 테이블을 짜는 예제입니다.</p>
-<pre data-line="1-2, 4-7" class="line-numbers"><code class="language-js">for(let i=2; i&lt;=9; i++){    //i의 초기값을 2로 지정하고 9번 반복함.
-    document.write(i + "단","&lt;br&gt;");
+<pre data-line="1-2, 4-7" class="line-numbers"><code class="language-js">
+let table = "&lt;table border='1'&gt;";
+let count = 0;
 
-    for(let j=1; j&lt;=9; j++){     //j의 초기값을 1로 지정하고 9번 반복함.
-        document.write(i + "*" + j + "=" + i*j);
-        document.write("&lt;br&gt;");
+for(let i=0; i&lt;5; i++){
+    table += "&lt;tr&gt;";
+        for(let j=0; j&lt;5; j++){
+        count++;
+        if(count % 2 ==0){
+            table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
+        } else {
+            table += "&lt;td style='color:blue'&gt;"+count+"&lt;/td&gt;";
+        }
     }
-    
-    document.write("&lt;br&gt;&lt;br&gt;");
+    table += "&lt;/tr&gt;";
 }
+table += "&lt;/table&gt;";
+
+document.write(table);
 
 //결과값: 25칸 테이블(홀수: 파란색, 짝수: 빨간색)이 만들어짐
 </code></pre>
