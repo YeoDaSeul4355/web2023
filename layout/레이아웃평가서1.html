@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 평가서 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #ffdad0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "aside article1"
+                "aside article2"
+                "footer footer"
+            ;
+            grid-template-columns: 300px 900px;
+            grid-template-rows: 100px 100px  390px 390px 100px;
+        }
+        #header {
+            background-color: #fda2a2;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #d36666;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #ff8282;
+            grid-area: aside;
+        }
+        #article1 {
+            background-color: #9b4242;
+            grid-area: article1;
+        }
+        #article2 {
+            background-color: #a05858;
+            grid-area: article2;
+        }
+        #footer {
+            background-color: #814646;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

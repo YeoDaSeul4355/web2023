@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 평가서 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f0ceff;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "aside article1 article2"
+                "aside article3 article3"
+                "aside article4 article4"
+                "footer footer footer"
+            ;
+            grid-template-columns: 200px 500px 500px;
+            grid-template-rows: 100px 100px 260px 260px 260px 100px;
+
+        }
+        #header {
+            background-color: #d561ff;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #9d3dc0;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #4c1660;
+            grid-area: aside;
+        }
+        #article1 {
+            background-color: #8c659a;
+            grid-area: article1;
+        }
+        #article2 {
+            background-color: #47075e;
+            grid-area: article2;
+        }
+        #article3 {
+            background-color: #95839b;
+            grid-area: article3;
+        }
+        #article4 {
+            background-color: #d8a2eb;
+            grid-area: article4;
+        }
+        #footer {
+            background-color: #8d50a4;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <article id="article3"></article>
+        <article id="article4"></article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
