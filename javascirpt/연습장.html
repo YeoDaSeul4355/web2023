@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습장</title>
+</head>
+<body>
+    <script>
+        // 선언적 함수
+        {
+            function func(){
+                document.write("선언적 함수");
+            }
+            func();
+        }
+        document.write("<br>");
+        // 익명 함수
+        {
+            const func = function(){
+                document.write("익명 함수");
+            }
+            func();
+        }
+        document.write("<br>");
+        // 매개변수 함수
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("매개변수 함수");
+        }
+        document.write("<br>");
+        // 리턴값 함수
+        {
+            function func(){
+                const str = "리턴값 함수";
+                return str;
+            }
+            document.write(func());
+        }
+        document.write("<br>");
+        // 화살표 함수 (선언적 함수)
+        {
+            func = () => {document.write("선언적 함수이지만 화살표 함수를 곁들인.");}
+            func();
+        }
+        document.write("<br>");
+        // 화살표 함수 (익명 함수)
+        {
+            const func = () => {document.write("익명 함수이지만 화살표 함수를 곁들인.");}
+            func();
+        }
+        document.write("<br>");
+        // 화살표 함수 (매개변수 함수)
+        {
+            func = (str) => {document.write(str);}
+            func("매개변수 함수이지만 화살표 함수를 곁들인.");
+        }
+        document.write("<br>");
+        // 화살표 함수 (리턴값 함수)
+        {
+            func = () => {
+                const str = "리턴값 함수이지만 화살표 함수를 곁들인.";
+                return str;
+            }
+            document.write(func());
+        }
+        document.write("<br>");
+        // 화살표 함수 : 익명 함수, 매개변수 함수, 리턴값 함수
+        {
+            const func = (str) => {
+                return str;
+            }
+            document.write(func("짬뽕함수 ㅋ"));
+        }
+        document.write("<br>");
+        // 화살표 함수 : 익명 함수, 매개변수 함수, 리턴값 함수, 괄호 생략
+        {
+            const func = str => {
+                return str;
+            }
+            document.write(func("짬뽕함수 ㅋ인데 괄호를 생략함~"));
+        }
+        document.write("<br>");
+        // 화살표 함수 : 익명 함수, 매개변수 함수, 리턴값 함수, 괄호 생략, 리턴값 생략
+        {
+            const func = str => str;
+            document.write(func("짬뽕함수 ㅋ인데 리턴값과 괄호를 생략함~"));
+        }
+        document.write("<br>");
+        // 화살표 함수 : 선언적 함수, 매개변수 함수, 리턴값 함수, 괄호 생략, 리턴값 생략
+        {
+            func = str => str;
+            document.write(func("짬뽕함수 ㅋ인데 리턴값과 괄호를 생략함~ 그리고 익명함수를 선언적 함수로."));
+        }
+        document.write("<br>");
+        // for문을 이용해 1부터 35까지 뽑아내보장
+        for(let i=1; i<=35; i++){
+            document.write(i);
+        }
+        document.write("<br>");
+        // for문을 이용해 1부터 35까지 짝수만 뽑아내보장
+        for(let i=2; i<=35; i+=2){
+            document.write(i);
+        }
+        document.write("<br>");
+        // if 문을 이용해 1부터 35까지 홀수만 뽑아내보장
+        for(let i=1; i<=35; i++){
+            if(i % 2 == 1){
+                document.write(i);
+            }
+        }
+        document.write("<br>");
+        // 1부터 35까지 홀수는 빨간색 짝수는 파란색
+        for(let i=1; i<=35; i++){
+            if(i % 2 == 0){
+                document.write("<span style = 'color:blue'>"+i+"</span>")
+            } else {
+                document.write("<span style = 'color:red'>"+i+"</span>")
+            }
+        }
+        // 35칸 테이블 만들깅
+        {
+            let table = "<table border = '1'>";
+            let num =  0;
+
+            for(let i=0; i<5; i++){
+                table += "<tr>";
+                for(let j=0; j<7; j++){
+                    num++;
+                    if(num % 2 == 0){
+                        table += "<td style = 'color:red'>"+num+"</td>";
+                    } else {
+                        table += "<td style = 'color:blue'>"+num+"</td>";
+                    }
+                }
+                table += "</tr>";
+            }
+            table += "</table>";
+            document.write(table);
+        }
+        document.write("<br>");
+        // 1부터 50까지 합
+        {
+            let odd = 0;
+            let even = 0;
+
+            for(i=1; i<=50; i++){
+                if (i%2 == 0){
+                    even += i;
+                } else {
+                    odd += i;
+                }
+            }
+
+            document.write(odd);
+            document.write(even);
+            document.write(odd + even);
+        }
+    </script>
+</body>
+</html>

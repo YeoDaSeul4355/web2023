@@ -198,17 +198,16 @@ let count = 0;
 for(let i=0; i&lt;5; i++){
     table += "&lt;tr&gt;";
         for(let j=0; j&lt;5; j++){
-        count++;
-        if(count % 2 ==0){
-            table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
-        } else {
-            table += "&lt;td style='color:blue'&gt;"+count+"&lt;/td&gt;";
-        }
-    }
+            count++;
+            if(count % 2 ==0){
+                table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
+            } else {
+                table += "&lt;td style='color:blue'&gt;"+count+"&lt;/td&gt;";
+            }
+        s}
     table += "&lt;/tr&gt;";
 }
 table += "&lt;/table&gt;";
-
 document.write(table);
 
 //결과값: 25칸 테이블(홀수: 파란색, 짝수: 빨간색)이 만들어짐
