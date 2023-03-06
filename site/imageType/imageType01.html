@@ -8,19 +8,23 @@
 
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
+        /* reset */
         * {
             margin: 0;
             padding: 0;
         }
         a {
             text-decoration: none;
+            color: #000;
         }
         h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
         }
         img {
             vertical-align: top;
+            width: 100%;
         }
+        /* common */
         .container {
             width: 1160px;
             margin: 0 auto;
@@ -35,6 +39,9 @@
             padding: 120px 0;
             text-align: center;
         }
+        .section.center {
+            text-align: center;
+        }
         .section__h2 {
             font-size: 50px;
             font-weight: 400;
@@ -46,8 +53,9 @@
             color: #666;
             margin-bottom: 70px;
             font-weight: 300;
+            line-height: 1.5;
         }
-        /* image__wrap */
+        /* image__type */
         .image__inner {
             display: flex;
             justify-content: space-between;
@@ -85,7 +93,7 @@
     </style>
 </head>
 <body>
-    <section class="image__wrap section nexon">
+    <section class="image__wrap section center nexon">
         <div class="container">
             <h2 class="section__h2">향수, 그 날의 기분</h2>
             <p class="section__desc">여러 가지 향을 조향하여 자신만의 향수를 만들 수 있습니다.</p>
