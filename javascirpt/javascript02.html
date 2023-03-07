@@ -50,7 +50,6 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">00. 형변환, typeof</a></li>
                     <li><a href="#">01. 변수 : 데이터 불러오기</a></li>
                     <li><a href="#">02. 상수 : 데이터 불러오기</a></li>
                     <li><a href="#">03. 배열 : 데이터 불러오기</a></li>
@@ -77,57 +76,6 @@
                 </ul>
             </div>
             <div class="main__sample">
-                <!-- //sample00 -->
-                <div id="sample00" class="sample">
-                    <h3>00. 형변환, typeof</h3>
-                    <p>함수와 연산자에 전달되는 값은 대부분 적절한 자료형으로 자동 변환됩니다.<br>
-                       이런 과정을 "형 변환(type conversion)"이라고 합니다.<br>
-                       typeof() : 자료형의 성질을 알 수 있다.</p>
-                    <div class="script">
-<pre><code class="Language-js">{
-    let x = 100, y = "200", z;
-    const func = function(){}
-
-    document.write(x);
-    document.write(typeof(x));
-    document.write(y);
-
-    y = "200";
-    document.write(typeof(y));
-
-    y = Number(y);
-    document.write(typeof(y));
-
-    document.write(z);
-    document.write(typeof(z));
-    document.write(func);
-    document.write(typeof(func));       
-}
-</code></pre>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                100<br>
-                                number<br>
-                                200<br>
-                                string<br>
-                                number<br>
-                                undefined<br>
-                                undefined<br>
-                                function(){}<br>
-                                function<br>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="notice">
-                        <p><b>문자형으로 변환</b>은 무언가를 출력할 때 주로 일어납니다. String(value)을 사용하면 문자형으로 명시적 변환이 가능합니다.<br>
-                        <b>숫자형으로 변환</b>은 수학 관련 연산시 주로 일어납니다. Number(value)로도 형 변환을 할 수 있습니다.<br>
-                        <b>불린형으로 변환</b>은 논리 연산 시 발생합니다. Boolean(value)으로도 변환할 수 있습니다.</p>
-                    </div>
-                </div>
-                <!-- //sample00 -->
                 <!-- //sample01 -->
                 <div id="sample01" class="sample">
                     <h3>01. 변수 : 데이터 불러오기</h3>
