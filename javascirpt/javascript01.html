@@ -647,19 +647,24 @@
                 <!-- //sample++1 -->
                 <div id="sample++1" class="sample">
                     <h3>식별자, 예약자</h3>
-                    <p></p>
+                    <p>자바스크립트 식별자(Identifier)는 변수, 함수, 객체, 속성 등을 구분하는 데 사용되는 이름입니다.<br>
+                        자바스크립트 예약어(Reserved Keywords)는 이미 JavaScript에서 특별한 의미를 가지는 키워드입니다. 
+                        이러한 키워드는 변수, 함수, 클래스 이름 등의 식별자로 사용할 수 없습니다.</p>
                     <div class="script">
 <pre><code class="Language-js">{
+    // 식별자 규칙
+    -식별자는 대소문자를 구분합니다.
+    -식별자는 밑줄(_), 달러 기호($) 및 문자로 시작해야합니다. 숫자로 시작하는 것은 허용하지 않습니다.
+    -식별자는 예약어(reserved keywords)를 사용할 수 없습니다.
+    -식별자는 공백을 포함해서는 안 됩니다.
+    -식별자는 가능한한 의미 있는 이름으로 지어야합니다.
 
+    // 예약어 목록
+    abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, export, extends,<br> 
+    false, final, finally, float, for, function, goto, if, implements, import, in, instanceof, int, interface, let, long, native, new, null, package,<br>
+    private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, void, volatile, while, with, yield
 }
 </code></pre>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                            </div>
-                        </details>
                     </div>
                 </div>
                 <!-- //sample++1 -->
@@ -700,7 +705,7 @@
                 </div>
                 <!-- //sample++2 -->
                 <!-- //sample++3 -->
-                <div id="sample00" class="sample">
+                <div id="sample+33" class="sample">
                     <h3>형변환, typeof</h3>
                     <p>함수와 연산자에 전달되는 값은 대부분 적절한 자료형으로 자동 변환됩니다.<br>
                        이런 과정을 "형 변환(type conversion)"이라고 합니다.<br>
