@@ -784,64 +784,6 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-
-        // 연산자
-        {
-            // let hap, j, k, l;
-            // j = k = l = 1;
-            // hap = ++j + k++ + ++l;
-
-            // console.log(hap);
-            // console.log(j);
-            // console.log(k);
-            // console.log(l);
-
-            // let a = 1, b = 2, c = 3, result;
-            // result = ++a + b++ + ++c;
-
-            // console.log(result);    //8
-            // console.log(a);     //2
-            // console.log(b);     //3
-            // console.log(c);     //4
-
-            // let x = 7, y = 7, result;
-
-            // result = x > y ? ++x : y--;
-
-            // console.log(result);
-            // console.log(x);
-            // console.log(y);
-
-            // let a, b, c, result;
-            // a = 20, b = 30, c = 30;
-
-            // result = a < b ? b++ : --c;
-
-            // console.log(result); //30
-            // console.log(a);     //20
-            // console.log(b + c);   //61 
-            // console.log(c); //30
-        }
-        // 04. 변수 : 지역 변수 + 전역 변수
-        {
-            let x = 100;    //전역 변수
-            let y = 200;    //전역 변수
-
-            function func(){
-                x = 300;        //전역 변수
-                let y = 400;    //지역 변수
-                z = "javascript"; //전역 변수
-                
-                console.log("함수안"+x);
-                console.log("함수안"+y);
-                console.log("함수안"+z);
-            }
-            func();
-            
-            console.log("함수밖"+x);
-            console.log("함수밖"+y);
-            console.log("함수밖"+z);
-        }
     </script>
 </body>
 </html>

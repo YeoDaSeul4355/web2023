@@ -251,7 +251,7 @@ document.write(table);
                 <!-- sample10 -->
                 <div id="sample10" Class="sample">
                     <h3>10. 데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</h3>
-                    <p>for문과 if문을 이용해 테이블을 짜는 예제입니다.</p>
+                    <p>for문과 if문을 이용해 주어진 배열 데이터에서 10보다 큰 수를 찾는 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">const arr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
     
 for(let i=0; &lt;=arr.length; i++){	
@@ -267,7 +267,7 @@ for(let i=0; &lt;=arr.length; i++){
                 <!-- sample11 -->
                 <div id="sample11" Class="sample">
                     <h3>11. 데이터 이펙트 : 1부터 100까지 합 구하기</h3>
-                    <p>for문과 if문을 이용해 테이블을 짜는 예제입니다.</p>
+                    <p>for문과 이용해 1부터 100까지의 합을 구하는 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">let num = 0;
 
 for(let i=1; &lt;=100; i++){
@@ -293,116 +293,6 @@ document.write(num);
 
     <script src="assets/js/prism.js"></script>
     <script>
-        // 01. 1부터 100까지 출력하기
-        // for(let i=1; i<=100; i++){
-        //     console.log(i);
-        // }
-
-        // 02. 0부터 50까지 출력하기
-        // for(let i=0; i<=50; i++){ //i = i + 1
-        //     console.log(i);
-        // }
-
-        // 03. 0부터 100까지 짝수만 출력하기
-        // for(let i=0; i<=100; i+=2){ //i = i + 2
-        //     console.log(i);
-        // }
-
-        // 04. 1부터 100까지 5의 배수 출력하기
-        // for(let i=0; i<=100; i+=5){ //i = i + 5
-        //     console.log(i);
-        // }
-        
-        //    1부터 100까지 2의 배수 출력하기
-        // for(let i=1; i<=100; i++){
-        //     if(i % 2 == 0){
-        //         console.log(i);
-        //     }
-        // }
-
-        // for문을 이용해서 1부터 99까지 출력
-        // for(let i=1; i<=99; i++){
-        //      console.log(i);
-        //     }
-
-
-        // 05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기
-        // for(let i=1; i<99; i++){
-        //         if(i % 2 == 0){
-        //     document.write("<span style='color:blue'>"+i+"</span>")
-        // }
-        // if(i % 2 == 1){
-        //         document.write("<span style='color:red'>"+i+"</span>")
-        //     }  
-        // }
-
-        // 06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기
-        // {
-        //     let table = "<table border='1'>";
-
-        //         for(let i=1; i<=10; i++){
-        //             table += "<tr>";
-
-        //                 for(let j=1; j<=10; j++){
-        //                     table += "<td>1</td>"
-        //                 }
-        //             table += "</tr>";
-        //         }
-        //     document.write(table);    
-        // }
-
-        // 07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기
-        // for(let i=2; i<=9; i++){
-        //     document.write(i + "단","<br>");
-
-        //     for(let j=1; j<=9; j++){
-        //         document.write(i + "*" + j + "=" + i*j);
-        //         document.write("<br>");
-        //     }
-            
-        //     document.write("<br><br>");
-        // }
-
-        // for(let i=1; i<=9; i++){
-        //     document.write(i+"단","<br>");
-
-        //     for(let j=1; j<=9; j++){
-        //         document.write(i+"*"+j+"="+i*j);
-        //         document.write("<br>");
-        //     }
-        //     document.write("<br><br>");
-        // }
-
-        // let table = "<table border='1'>";
-        // let num = 0;
-
-        //     for(let i=0; i<5; i++){
-        //         table += "<tr>";
-        //         for(let j=0; j<5; j++){
-        //             num++;
-        //             let sum = num*3
-        //             if(sum % 3 == 0 && sum % 5 == 0){
-        //                 table += "<td style='color:red'>"+sum+"</td>";
-        //             } else if(sum<80){
-        //                 table += "<td>"+sum+"</td>";
-        //             } else {
-
-        //             }
-        //         }
-        //         table += "</tr>";
-        //     }
-        // table += "</table>";
-        
-        // document.write(table);
-        // {
-        //     let num = 0;
-
-        //     for(let i=1; i<=100; i++){
-        //         num += i;
-        //     }
-
-        //     document.write(num);
-        // }
     </script>
 
 </body>
