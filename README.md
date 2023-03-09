@@ -11,6 +11,7 @@
 데이터 저장하기: https://yeodaseul4355.github.io/web2023/javascirpt/javascript04.html      
 
 퀴즈 게임 01: https://yeodaseul4355.github.io/web2023/javascirpt/quiz/quizEffect01.html   
+퀴즈 게임 02: https://yeodaseul4355.github.io/web2023/javascirpt/quiz/quizEffect02.html   
 
 # 사이트
 이미지 유형 01: https://yeodaseul4355.github.io/web2023/site/imageType/imageType01.html   
