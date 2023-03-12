@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃30 - grid반응형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%
+
+        }
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #main {
+            height: 780px;
+            background-color: #886F65;
+        }
+        #main .container {
+            display: grid;
+            grid-template-areas: 
+                "header__container header__container"
+                "nav__container nav__container"
+                "section__container footer__container"
+            ;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100px 200px 480px;
+        }
+        .header__container {
+            background-color: #74574A;
+            grid-area: header__container;
+        }
+        .nav__container {
+            background-color: #684D43;
+            grid-area: nav__container;
+        }
+        .section__container {
+            background-color: #594139;
+            grid-area: section__container;
+        }
+        .footer__container {
+            background-color: #4A352F;
+            grid-area: footer__container;
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 100%;
+            }
+            .container {
+                width: 96%;
+            }
+            #main .container {
+                grid-template-areas: 
+                    "header__container nav__container nav__container"
+                    "header__container section__container footer__container"
+                ;
+                grid-template-columns: 33.3333% 33.3333% 33.3333%;
+                grid-template-rows: 390px 390px;
+            }
+        }
+        @media (max-width: 768px){
+            .container {
+                width: 100%;
+            }
+            #main .container {
+                grid-template-areas: 
+                    "header__container nav__container"
+                    "header__container section__container"
+                    "header__container footer__container"
+                ;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 260px 260px 260px;
+            }
+        }
+        @media (max-width: 480px){
+            #main .container {
+                grid-template-areas: 
+                    "header__container"
+                    "nav__container"
+                    "section__container"
+                    "footer__container"
+                ;
+                grid-template-columns: 100%;
+                grid-template-rows: 150px 210px 210px 210px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main">
+            <div class="container">
+                <div class="header__container"></div>
+                <div class="nav__container"></div>
+                <div class="section__container"></div>
+                <div class="footer__container"></div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>

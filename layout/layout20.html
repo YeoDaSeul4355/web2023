@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,81 +12,118 @@
             padding: 0;
         }
         #header {
-            width: 100%;
             height: 100px;
             background-color: #EEEBE9;
         }
         #nav {
-            width: 100%;
             height: 100px;
             background-color: #B9AAA5;
         }
         #main {
-            width: 100%;
             height: 780px;
             background-color: #886F65;
         }
+        #main .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #article1 {
+            width: 1200px;
+            height: 100px;
+            background-color: #74574A;
+        }
+        #section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #article2 {
+            width: 1200px;
+            height: 200px;
+            background-color: #684D43;
+        }
+        #article3 {
+            width: 600px;
+            height: 480px;
+            background-color: #594139;
+        }
+        #article4 {
+            width: 600px;
+            height: 480px;
+            background-color: #4A352F;
+        }
         #footer {
-            width: 100%;
             height: 100px;
             background-color: #4E342E;
         }
         .container {
-            margin: 0 auto;
             width: 1200px;
             height: inherit;
             background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
         }
-        .section1 {
-            width: 100%;
-            height: 100px;
-            background-color: #74574A;
-        }
-        .section2 {
-            width: 100%;
-            height: 200px;
-            background-color: #684D43;
-        }
-        .section3 {
-            width: 100%;
-            height: 480px;
-            background-color: #fff;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
-        .article1 {
-            width: 50%;
-            height: 480px;
-            background-color: #594139;
-        }
-        .article2 {
-            width: 50%;
-            height: 480px;
-            background-color: #4A352F;
-        }
-        @media (max-width: 1220px){
+        @media (max-width:1220px){
+            #wrap {
+                width: 100%;
+            }
             .container {
                 width: 96%;
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
             }
-            .section1 {
+            #article1 {
                 width: 30%;
                 height: 780px;
             }
-            .section2 {
+            #section {
                 width: 70%;
+            }
+            #article2 {
+                width: 100%;
                 height: 390px;
             }
-            .article1 {
+            #article3 {
                 width: 50%;
                 height: 390px;
             }
-            .article2 {
+            #article4 {
                 width: 50%;
                 height: 390px;
+            }
+        }
+        @media (max-width: 768px){
+            .container {
+                width: 100%;
+            }
+            #article2 {
+                width: 100%;
+                height: 260px;
+            }
+            #article3 {
+                width: 100%;
+                height: 260px;
+            }
+            #article4 {
+                width: 100%;
+                height: 260px;
+            }
+        }
+        @media (max-width: 480px){
+            #article1 {
+                width: 100%;
+                height: 150px;
+            }
+            #section {
+                width: 100%;
+            }
+            #article2 {
+                width: 100%;
+                height: 210px;
+            }
+            #article3 {
+                width: 100%;
+                height: 210px;
+            }
+            #article4 {
+                width: 100%;
+                height: 210px;
             }
         }
     </style>
@@ -100,12 +138,12 @@
         </nav>
         <main id="main">
             <div class="container">
-                <div class="section1"></div>
-                <div class="section2"></div>
-                <div class="section3">
-                    <div class="article1"></div>
-                    <div class="article2"></div>
-                </div>
+                <article id="article1"></article>
+                <section id="section">
+                    <article id="article2"></article>
+                    <article id="article3"></article>
+                    <article id="article4"></article>
+                </section>                
             </div>
         </main>
         <footer id="footer">
