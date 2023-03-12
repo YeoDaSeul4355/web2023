@@ -8,141 +8,15 @@
 </head>
 <body>
     <script>
-        //01 1-50까지 for문으로 출력
         {
-            for(let i=1; i<=50; i++){
-                document.write(i);
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
             }
-        }
-        document.write("<br><br>");
-        //02 1-50까지 while문으로 출력
-        {
-            let num=1;
-            while(num<=50){
-                document.write(num);
-                num++;
-            }
-        }
-        document.write("<br><br>");
-        //03 1-100까지 짝수로 출력(if문 사용X)
-        {
-            for(let i=2; i<=100; i+=2){
-                document.write(i);
-            }
-        }
-        document.write("<br><br>");
-        //04 1-100까지 홀수로 출력(if문 사용)
-        {
-            for(let i=1; i<=100; i++){
-                if(i % 2 == 1){
-                    document.write(i);
-                }
-            }
-        }
-        document.write("<br><br>");
-        //05 테이블 50칸 출력(1-50숫자 출력)
-        {
-            let table = "<table border='1'>";
-            let num = 1;
-
-                for(let i=1; i<=5; i++){
-                    table += "<tr>";
-                    for(let j=1; j<=10; j++){
-                        table += "<td>"+num+"</td>";
-                        num ++;
-                    }
-                    table += "</tr>";
-                }
-
-            table += "</table>";
-            document.write(table);
-        }
-        document.write("<br><br>");
-        //06 1-10까지 합 출력
-        {
-            let num = 0;
-
-            for(let i=1; i<=10; i++){
-                num += i;
-            }
-            
-            document.write(num);
-        }
-        document.write("<br><br>");
-        //07 구구단 출력
-        {
-            for(let i=2; i<=9; i++){
-                document.write(i+"단","<br>");
-                for(let j=1; j<=9; j++){
-                    document.write(i+"*"+j+"="+i*j);
-                    document.write("<br>");
-                }
-            }
-        }
-        document.write("<br><br>");
-        //08 함수 유형 4가지 작성
-        {
-            function func(){
-                document.write("선언적 함수");
-            }
-            func();
-        }
-        document.write("<br><br>");
-        {
-            const func = function(){
-                document.write("익명 함수");
-            }
-            func();
-        }
-        document.write("<br><br>");
-        {
-            function func(str){
-                document.write(str);
-            }
-            func("매개변수 함수");
-        }
-        document.write("<br><br>");
-        {
-            function func(){
-                const str = "리턴 함수";
-                return str;
-            }
-            document.write(func());
-        }
-        document.write("<br><br>");
-        //09 화살표 함수유형 4가지 작성
-        {
-            func = () =>{
-                document.write("선언적 함수_화살표");
-            }
-            func();
-        }
-        document.write("<br><br>");
-        {
-            const func = () => {
-                document.write("익명 함수_화살표");
-            }
-            func();
-        }
-        document.write("<br><br>");
-        {
-            func = (str) => {
-                document.write(str);
-            }
-            func("매개변수 함수_화살표");
-        }
-        document.write("<br><br>");
-        {
-            func = () => {
-                const str = "리턴 함수_화살표";
-                return str;
-            }
-            document.write(func());
-        }
-        document.write("<br><br>");
-        //10 스크립트하면서 제일 어려운 부분과 이해 안되는 부분 서술
-        {
-            document.write("개념은 이해가 가는데 막상 응용해서 푸는 문제를 잘 못풀어요!! <br> 제일 헷갈리는 부분은 데이터 제어하기 페이지...")
+            console.log(Object.keys(obj)); //키의 값만 불러옴.
+            console.log(Object.values(obj)); //인덱스 값만 불러옴.
+            console.log(Object.entries(obj));
         }
     </script>
 </body>
