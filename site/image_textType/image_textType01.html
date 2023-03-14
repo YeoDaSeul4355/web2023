@@ -76,6 +76,40 @@
             font-weight: 300;
             line-height: 1.5;
         }
+        .imagetext__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .imagetext {
+            width: 32.3333%;
+            height: 500px;
+        }
+        .imagetext__body .title {
+            font-size: 50px;
+            line-height: 1.2;
+            margin-right: 50px;
+            margin-bottom: 15px;
+        }
+        .imagetext__body .desc {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        .imagetext__body .nav {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-left: 15px;
+        }
+        .imagetext__header {
+            border-radius: 10px;
+        }
+        .imagetext__body .desc2 {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 25px;
+        }
         </style>
 </head>
 <body>
@@ -87,7 +121,7 @@
                         <span class="section__small">notice</span>
                         <h3 class="title">향수의 다양한 원료들</h3>
                         <p class="desc">향수의 원료는 여러 가지가 있습니다. 이 중 몇 가지를 예로 들어보면 다음과 같습니다.</p>
-                        <ul>
+                        <ul class="nav">
                             <li>꽃: 장미, 라벤더, 철쭉, 백합, 오렌지 꽃</li>
                             <li>나무: 삼나무, 향나무, 피나무, 쟁반나무, 코나쥬</li>
                             <li>향신료: 고추, 크로뮴, 페퍼민트, 카르다몸</li>
@@ -95,16 +129,21 @@
                             <li>즙: 베르가못, 오크 모스, 라벤더</li>
                             <li>동물 원료: 머스크, 캐스토리움, 비버, 미네랄</li>
                         </ul>
+                        <p class="desc2">물론 이 외에도 다양한 향기 원료가 있으며, 이러한 향기 원료를 조합하여 다양한 종류의 향수를 만들어 낼 수 있습니다.</p>
                     </div>
                 </article>
                 <article class="imagetext">
                     <div class="imagetext__body">
-                        
+                        <figure class="imagetext__header">
+                            <img src="../asset/img/image_textType01_01@2x.jpg" alt="코튼">
+                        </figure>
                     </div>
                 </article>
                 <article class="imagetext">
                     <div class="imagetext__body">
-                       
+                        <figure class="imagetext__header">
+                            <img src="../asset/img/image_textType01_02@2x.jpg" alt="시트러스">
+                        </figure>
                     </div>
                 </article>
             </div>
