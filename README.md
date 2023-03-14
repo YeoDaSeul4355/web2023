@@ -18,4 +18,5 @@
 카드 유형 01: https://yeodaseul4355.github.io/web2023/site/cardType/cardType01.html   
 텍스트 유형 01: https://yeodaseul4355.github.io/web2023/site/textType/textType01.html   
 슬라이드 유형 01: https://yeodaseul4355.github.io/web2023/site/sliderType/sliderType01.html   
-헤더 유형 01: https://yeodaseul4355.github.io/web2023/site/textType/textType01.html
+헤더 유형 01: https://yeodaseul4355.github.io/web2023/site/textType/textType01.html   
+이미지텍스트 유형 01: https://yeodaseul4355.github.io/web2023/site/image_textType/image_textType01.html   
