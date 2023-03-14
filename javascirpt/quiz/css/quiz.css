@@ -170,6 +170,47 @@
     color: #F5534F;
     font-weight: bold;
 }
+.quiz__choice {
+    padding: 20px;
+    border-bottom: 6px ridge #cacaca;
+    font-family: 'SCoreDream';
+}
+.quiz__choice label {
+    display: flex;
+}
+.quiz__choice label input {
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+}
+.quiz__choice label span {
+    font-size: 20px;
+    line-height: 1.3;
+    padding: 6px;
+    display: flex;
+    cursor: pointer;
+    margin: 2px 0;
+}
+.quiz__choice label span::before {
+    content: '';
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background: #fff;
+    box-shadow: inset 0 0 0 4px rgb(255, 142, 197);
+    transition: all 0.2s;
+}
+.quiz__choice label input:checked + span {
+    background-color: #fff6cc;
+    border-radius: 50px;
+}
+.quiz__choice label input:checked + span::before {
+    box-shadow: inset 0 0 0 8px rgb(255, 108, 179);
+}
 /* dog__wrap */
 .dog .tail, 
 .dog .chin, 
