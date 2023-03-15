@@ -88,7 +88,7 @@
         <a href="mailto:yds43557340@gmail.com">yds43557340@gmail.com</a>
     </footer>
     <!-- //footer -->
-
+    
     <script>
         // 문제 정보
         const quizInfo = [
@@ -196,9 +196,685 @@
                 },
                 infoAnswer: "1",
                 infoDesc: "<br>마스크 연산이란 특정 부분을 삭제하는 연산을 말합니다.<br> AND 게이트를 이용하여 특정 부분을 삭제 할수 있습니다."
-            }
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070109",
+                infoQuestion: "1bit 기억장치로 가장 적합한 것은?",
+                infoChoice: {
+                    1: "레지스터",
+                    2: "누산기",
+                    3: "계전기",
+                    4: "플립플롭"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>플립플롭은 1비트 기억 장치 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070110",
+                infoQuestion: "16진수 FF를 10진수로 나타낸 것은?",
+                infoChoice: {
+                    1: "265",
+                    2: "256",
+                    3: "255",
+                    4: "245"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>16진수 FF를 10진수로 표현하는 방법은 일단 2진수(4자리씩 확장)로 표현한뒤 10진수로 바꾸는 것이 빠릅니다.<br>일단 16진수 FF를 2진수로 표현해 보면 1111 1111 이 됩니다.<br>이를 10진수로 변환하면 255가 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070111",
+                infoQuestion: "다음 그림은 어떤 회로를 나타낸 것인가?<br><img src='../assets/img/정보처리11.JPG'>",
+                infoChoice: {
+                    1: "AND 회로",
+                    2: "Half Adder",
+                    3: "NOT 회로",
+                    4: "OR 회로"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>A, B 모두 연결 되어야 꼬마전구에 불이 들어 오므로 둘다 참이어야 참인 AND 게이트에 관한 그림입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070112",
+                infoQuestion: "자외선을 이용하여 메모리를 지우고 Writer로 다시 프로그램을 입력할 수 있는 기억소자는?",
+                infoChoice: {
+                    1: "ROM",
+                    2: "EEPROM",
+                    3: "CMOS",
+                    4: "EPROM"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>EPROM : 자외선을 이용 , EEPROM : 전기를 이용 읽고 쓰기 여러번 가능."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070113",
+                infoQuestion: "A(AB+C)를 간단히 한 결과로 옳은 것은?",
+                infoChoice: {
+                    1: "A(B+C)",
+                    2: "A",
+                    3: "B",
+                    4: "C"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>일단 분배법칙으로 풀어 내게 되면 A(AB+C) = AAB +AC 입니다.<br>이때 AA=A 이므로 AB + AC 인데, 이때 A를 묶어 내면 A(B+C) 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070114",
+                infoQuestion: "그림과 같은 논리회로에서 A=1,B=1, C=0 일 때 X로 출력되는 값은?<br><img src='../assets/img/정보처리14.JPG'>",
+                infoChoice: {
+                    1: "0",
+                    2: "1",
+                    3: "10",
+                    4: "11"
+                },
+                infoAnswer: "2",
+                infoDesc: "<br>위 그림을 식으로 나타나면 AB +C 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070115",
+                infoQuestion: "명령어 형식 중 주소부분이 없어 연산자만 존재하는 형식은?",
+                infoChoice: {
+                    1: "0-주소 형식",
+                    2: "1-주소 형식",
+                    3: "2-주소 형식",
+                    4: "3-주소 형식"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>주소부분이 없다는 말은 0 주소라는 말입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070116",
+                infoQuestion: "컴퓨터에 의하여 다음에 수행될 명령어의 주소가 저장되어 있는 기억장소는?",
+                infoChoice: {
+                    1: "프로그램카운트(Program Counter)",
+                    2: "메모리 레지스터(Memory Register)",
+                    3: "명령어 레지스터(Instruction Register)",
+                    4: "인덱스 레지스터(Index Register)"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>프로그램카운트(Program Counter) : 다음 수행 명령 번지 기억 , IR : 현재 수행중인 명령어 기억"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070117",
+                infoQuestion: "동시에 여러 개의 입/출력장치가 작동되도록 설계된 것은?",
+                infoChoice: {
+                    1: "Simples channel",
+                    2: "Multiplexer channel",
+                    3: "Select channel",
+                    4: "Register channel"
+                },
+                infoAnswer: "2",
+                infoDesc: "<br>동시에 여러개라는 단어를 통해서 멀티 플랙서 임을 알수 있습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070118",
+                infoQuestion: "디스크 팩이 6장으로 구성되었을 때 사용하여 기록할 수 있는 면 수는?",
+                infoChoice: {
+                    1: "6",
+                    2: "8",
+                    3: "10",
+                    4: "12"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>사용가능한 면수 구하는 공식은 2면 * 디스크장수 - 2면(못쓰는부분) 의 공식이 성립합니다.<br>총 6장이므로 2면 * 6장 -2면은 총 10면 사용 가능 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070119",
+                infoQuestion: "JK플립플롭(flipflop)에서 보수가 출력되기 위한 J, K의 입력 상태는?",
+                infoChoice: {
+                    1: "J =1, K = 0",
+                    2: "J =0, K = 1",
+                    3: "J =1, K = 1",
+                    4: "J =0, K = 0"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>JK 플립플롭에서 입력신호가 1,1 이면 보수가 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070120",
+                infoQuestion: "명령어의 구성 중 연산자 부분(operation code)의 구성요소에 해당되지 않은 것은?",
+                infoChoice: {
+                    1: "인스트럭션 형식",
+                    2: "동작코드",
+                    3: "데이터 종류",
+                    4: "명령어 순서"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>연산자 부분에 명령어 순서는 나타나지 않습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070121",
+                infoQuestion: "데이터베이스관리시스템(DBMS)의 필수 기능에 해당하지 않는 것은?",
+                infoChoice: {
+                    1: "제어기능",
+                    2: "정의기능",
+                    3: "조작기능",
+                    4: "처리기능"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>DBL은 3가지로 나누어 집니다.<br>DDL(정의어), DML(조작어), DCL(제어어)"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070122",
+                infoQuestion: "프레젠테이션의 구성요소 중 프레젠테이션을 구성하는 하나의 화면 단위를 무엇이라고 하는가?",
+                infoChoice: {
+                    1: "슬라이드",
+                    2: "개체",
+                    3: "시나리오",
+                    4: "개요"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>프리젠테이션의 기본단위는 슬라이드 이며 스프레드시트의 기본단위는 셀입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070123",
+                infoQuestion: "스프레드시트 작업에서 반복되거나 복잡한 단계를 수행하는 작업을 일괄적으로 자동화시켜 처리하는 방법에 해당하는 것은?",
+                infoChoice: {
+                    1: "매크로",
+                    2: "정렬",
+                    3: "검색",
+                    4: "필터"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>매크로 : 반복되는 작업을 자동으로 처리해 주는 기능입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070124",
+                infoQuestion: "테이블 삭제시 사용하는 SQL 명령은?",
+                infoChoice: {
+                    1: "CRATE TABLE",
+                    2: "DELETE TABLE",
+                    3: "DROP TABLE",
+                    4: "ALTER TABLE"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>DROP 은 데이터베이스, 테이블 삭제명령어입니다.<br>DELETE도 삭제 명령어 이지만 DELETE는 튜플(레코드) 삭제 명령어 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070125",
+                infoQuestion: "다음 SQL문을 실행한 결과 검색되지 않는 주문 수량은?<br><img src='../assets/img/정보처리25.JPG'>",
+                infoChoice: {
+                    1: "150",
+                    2: "200",
+                    3: "300",
+                    4: "350"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>주문 수량이 150이상, 그리고 주문 수량이 300이하이므로 350이 오답입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070126",
+                infoQuestion: "SQL SELECT 문에서 특정 열의 값을 기준으로 정렬할 때 사용하는 절은?",
+                infoChoice: {
+                    1: "SORT BY 절",
+                    2: "ORDER BY 절",
+                    3: "ORDER TO 절",
+                    4: "SORT 절"
+                },
+                infoAnswer: "2",
+                infoDesc: "<br>암기 방법: 정렬은 오도바이(ORDER BY)를 타고 합니다!! "
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070127",
+                infoQuestion: "사원(사원번호, 이름) 테이블에서 “사원번호”가 “200”인 튜플을 삭제하는 SQL 문은?",
+                infoChoice: {
+                    1: "REMOVE TABLE 사원 WHERE 사원번호=200;",
+                    2: "KILL 사원번호, 이름 FROM 사원 WHERE 사원번호=200;",
+                    3: "DELETE FROM 사원 WHERE 사원번호=200;",
+                    4: "DROP TABLE 사원 WHERE 사원번호=200;"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>DROP는 데이터 베이스, 테이블 삭제 명령이며 DELETE는 튜플(레코드)삭제 명령어 입니다.<br>삭제할 조건이 사원번호가 200인 사암이므로 WHERE 사원번호=200 을 하면 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070128",
+                infoQuestion: "각종 보고서나 논문 자료를 여러 사람 앞에서 설명하고자 할 때 가장 적당한 것은?",
+                infoChoice: {
+                    1: "스프레드시트",
+                    2: "DBMS",
+                    3: "프레젠테이션",
+                    4: "언어번역 프로그램"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>발표회에 등에 사용하는 것이므로 프리젠테이션이 가장 적당합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070129",
+                infoQuestion: "데이터베이스 구조를 3단계의 스키마로 나눌 경우 포함되지 않는 것은?",
+                infoChoice: {
+                    1: "외부스키마",
+                    2: "개념스키마",
+                    3: "논리스키마",
+                    4: "내부스키마"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>암기 방법 : 외 개 내 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070130",
+                infoQuestion: "다음 <질의>를 SQL 문으로 옳게 표기한 것은?<br><img src='../assets/img/정보처리30.JPG'>",
+                infoChoice: {
+                    1: "SELECT 상품명, 단가, 수량 FROM 상품 WHERE 단가 >=5000;",
+                    2: "SELECT 상품 FROM 상품명, 단가, 수량 WHERE 단가 >=5000;",
+                    3: "SELECT 상품명, 단가, 수량 FROM 상품 WHERE 수량 >=5000;",
+                    4: "SELECT 상품명, 단가, 수량 FROM 상품 IF 단가>=5000;"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>SELECT 상품명, 단가, 수량을 하면 되고 검색 테이블이 상품 테이블이므로 FROM 상품 을 하여야 하며 조건이 단가가 5000 이상이므로 WHERE 단가>=5000 이면 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070131",
+                infoQuestion: "'윈도98'에 대한 설명으로 옳지 않은 것은?",
+                infoChoice: {
+                    1: "데이터를 한 번에 16비트 단위로 처리한다.",
+                    2: "Plug and Play 기능을 지원한다.",
+                    3: "네트워크와 인터넷을 지원한다.",
+                    4: "멀티태스킹(Multi-tasking)을 지원한다."
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>윈도우 98은 32비트 운영체제 입니다..데이터를 32비트 단위로 처리를 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070132",
+                infoQuestion: "'윈도98'에서 사용자를 변경하려면 시작 단추에 있는 어떤 메뉴를 클릭하는가?",
+                infoChoice: {
+                    1: "실행",
+                    2: "프로그램",
+                    3: "설정",
+                    4: "로그오프"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>사용자를 변경한다는 것을 사용자를 로그아웃 시키고 새로운 사용자로 로그인 한다는 것입니다.<br>로그아웃과 같은 로그 오프가 답입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070133",
+                infoQuestion: "도스(MS-DOS)에서 감추어진 파일의 속성을 해제하는 명령은?",
+                infoChoice: {
+                    1: "ATTRIB /+A",
+                    2: "ATTRIB /-A",
+                    3: "ATTRIB /-H",
+                    4: "ATTRIB /+H"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>H 는 숨김 속성이며 R은 읽기 전용 속성입니다.<br>+는 속성을 부여하는 옵션이며 -는 속성을 해제 하는 옵션입니다.<br>감춤 속성을 해제해야 하므로 -H 가 답이 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070134",
+                infoQuestion: "다음의 설명이 가장 적합한 것은?<br><img src='../assets/img/정보처리34.JPG'>",
+                infoChoice: {
+                    1: "Booting",
+                    2: "Backup",
+                    3: "File store",
+                    4: "Formating"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>디스크에 데이터를 저장하기 전에 섹터를 만들어 주는 작업에 관한 이야기 이므로 FORMAT가 답이 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070135",
+                infoQuestion: "'윈도98'의 탐색기에서 이웃하는 파일들을 선택할 때 사용하는 키와 이웃하지 않는 파일들을 선택할 때 사용하는 키의 나열이 순서적으로 옳은 것은?",
+                infoChoice: {
+                    1: "Ctrl, Alt",
+                    2: "Shift, Alt",
+                    3: "Alt, Ctrl",
+                    4: "Shift, Ctrl"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>연속된 데이터는 SHIFT 키로 선택 하며 불연속 데이터는 CTRL 키를 이용하면 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070136",
+                infoQuestion: "'윈도98'에서 '시스템 도구' 메뉴에 포함되지 않는 것은?",
+                infoChoice: {
+                    1: "디스크 검사",
+                    2: "디스크 조각 모음",
+                    3: "디스크 정리",
+                    4: "디스크 포맷"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>디스크 포맷은 포함되어 있지 않습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070137",
+                infoQuestion: "유닉스(UNIX) 명령어 'rm'의 설명으로 옳은 것은?",
+                infoChoice: {
+                    1: "파일 삭제",
+                    2: "디렉토리 생성",
+                    3: "디렉토리 이동",
+                    4: "디스크 포맷"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>RM은 REMOVE의 약자로써 삭제의 의미를 가집니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070138",
+                infoQuestion: "'윈도98'에서 한 번의 마우스 조작만으로 현재 실행 중인 응용프로그램 사이를 오가며 작업할 수 있는 환경을 제공하는 것은?",
+                infoChoice: {
+                    1: "바탕화면",
+                    2: "내 컴퓨터",
+                    3: "시작 버튼",
+                    4: "작업 표시"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>작업 표시줄에 관한 설명 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070139",
+                infoQuestion: "유닉스(UNIX)에서 네트워크상의 문제를 진단할 수 있는 명령어는?",
+                infoChoice: {
+                    1: "ping",
+                    2: "cd",
+                    3: "pwd",
+                    4: "who"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>PING : 네트워크의 연결상태를 점검할수 있는 명령어 입니다.<br>흔히들 PING 테스트 라고 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070140",
+                infoQuestion: "다음 ( ) 안의 내용으로 가장 적절한 것은?<br><img src='../assets/img/정보처리40.JPG'>",
+                infoChoice: {
+                    1: "GUI",
+                    2: "compiler",
+                    3: "file system",
+                    4: "operating system"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>BETWEEN, USER, HARDWARE 단어를 통하여 유저(USER)와 하드웨어 사이에 존재한다고 하였으므로 운영체제(OS)에 관한 이야기 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070141",
+                infoQuestion: "다중 프로그래밍 환경에서 하나 또는 그 이상의 프로세서가 가능하지 못한 특정 사건(Event)을 무한정 기다리는 상태를 무엇이라고 하는가?",
+                infoChoice: {
+                    1: "Swapping",
+                    2: "Overlay",
+                    3: "Pipelining",
+                    4: "Dead Lock"
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>Dead Lock : 교착상태에 관한 내용입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070142",
+                infoQuestion: "도스(MS-DOS)에서 외부명령어에 대한 설명으로 옳은 것은?",
+                infoChoice: {
+                    1: "독립된 파일의 형태로 DIR 명령으로 확인이 가능하다.",
+                    2: "COMMAND.COM이 주기억장치에 올려 져야 사용할 수 있다.",
+                    3: "주기억장치에 항상 올려져 있는 명령어이다.",
+                    4: "DIR은 외부명령어 이다."
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>외부 명령어는 COMMAND.COM에서 지원해주는 명령어가 아니므로 실행 파일이 별도로 존재 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070143",
+                infoQuestion: "유닉스(UNIX) 운영체제의 기초가 되는 컴퓨터 언어는?",
+                infoChoice: {
+                    1: "C",
+                    2: "COBOL",
+                    3: "PASCAL",
+                    4: "BASIC"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>유닉스 커널의 90%는 C언어(이식성 향상)로 작성되어 있으며 10%는 어셈블리어(고속동작)로 작성되어 있습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070144",
+                infoQuestion: "유닉스(UNIX) 명령어 중 DOS의 DIR과 같은 역할을 하는 명령은?",
+                infoChoice: {
+                    1: "ls",
+                    2: "cd",
+                    3: "pwd",
+                    4: "cp"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>LS : LIST 약자로 파일 목록을 보여 달라는 뜻입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070145",
+                infoQuestion: "'윈도98'에서 바탕화면에 있는 아이콘들을 정렬하려고 할 때 기본적으로 제공하는 아이콘 정렬 방식이 아닌 것은?",
+                infoChoice: {
+                    1: "종류별 정렬",
+                    2: "자동 정렬",
+                    3: "계단식 정렬",
+                    4: "크기순 정렬"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>계단식 정렬은 없습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070146",
+                infoQuestion: "도스(MS-DOS)에서 실행파일이 존재하지 않고 'COMMAND.COM'이 메모리에 상주하고 있을 경우 항상 사용할 수 있는 명령어를 의미하는 것은?",
+                infoChoice: {
+                    1: "내부명령어",
+                    2: "외부명령어",
+                    3: "배치명령어",
+                    4: "실행명령어"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>COMMAND.COM과 관련이 있으므로 내부 명령어에 관한 이야기 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070147",
+                infoQuestion: "단말장치 사용자가 일정한 시간간격(Time Slice) 동안 CPU를 사용함으로써 단독으로 중앙처리장치를 이용하는 것과 같은 효과를 가지는 시스템은?",
+                infoChoice: {
+                    1: "시분할 시스템",
+                    2: "다중프로그래밍 시스템",
+                    3: "일괄처리 시스템",
+                    4: "분산처리 시스템"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>시간간격(Time Slice)란 시간을 조각내어 쓴다는 뜻입니다.<br>시분할 처리에 관한 내용입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070148",
+                infoQuestion: "도스(MS-DOS)에서 'config.sys' 파일에 'break=on'을 설정하는 이유는?",
+                infoChoice: {
+                    1: "중첩 확장 메모리 영역의 사용을 위하여",
+                    2: "ctrl + c에 의한 작업 중지 명령을 위하여",
+                    3: "숨김(hidden) 파일을 만들기 위하여",
+                    4: "드라이브를 읽기 전용(read only)로 만들기 위하여"
+                },
+                infoAnswer: "2",
+                infoDesc: "<br>break=on 설정을 하며 ctrl + c 버튼을 눌러서 작업 중지 요청을 할수 있습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070149",
+                infoQuestion: "'윈도98'에서 ‘디스크 조각 모음’에 관한 설명으로 옳은 것은?",
+                infoChoice: {
+                    1: "디스크의 논리적 영역을 할당한다.",
+                    2: "디스크의 삭제된 파일을 복구한다.",
+                    3: "디스크의 물리적 손상부분을 제거한다.",
+                    4: "디스크를 효율적으로 사용하기 위해 파일을 정리한다."
+                },
+                infoAnswer: "4",
+                infoDesc: "<br>디스크안의 파일들이 조각나 있을경우 데이터 읽는데 오랜 시간이 걸리므로 이를 모아주는 디스크조각모으기 기능을 통하여 디스크의 데이터를 좀더 빨리 읽을수 있습니다"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070150",
+                infoQuestion: "하드디스크의 분할을 설정하고 논리적 드라이브 번호를 할당하는 DOS의 외부명령어는?",
+                infoChoice: {
+                    1: "FDISK",
+                    2: "CHKDSK",
+                    3: "RECOVER",
+                    4: "DISKCOMP"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>하드디스크를 분할하고 설정하는것을 파티션을 나눈다고 합니다.<br>파티션 디스크의 약자인 FDISK가 답이 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070151",
+                infoQuestion: "다음 중 리얼타임시스템(real time system)으로 처리하는데 가장 적합한 것은?",
+                infoChoice: {
+                    1: "급여계산",
+                    2: "월간판매 분석",
+                    3: "좌석예약",
+                    4: "성적관리"
+                },
+                infoAnswer: "3",
+                infoDesc: "<br>좌석예약업무는 즉시 즉시 처리 해야할 일이므로 실시간처리인 리얼타임처리를 해야 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070152",
+                infoQuestion: "다음 중 LAN과 가장 관계가 없는 것은?",
+                infoChoice: {
+                    1: "DSU",
+                    2: "CSMA/CD",
+                    3: "Token ring",
+                    4: "FDDI"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>DSU : 디지털 신호를 디지털로 전송해 주는 장비명 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070153",
+                infoQuestion: "전송선로의 조건 중 선로의 감쇄량이 최소로 되는 경우는?(단, R : 선로의 저항 L : 선로의 인덕턴스 C : 선로의 커패시턴스 G : 선로의 누설컨덕턴스)",
+                infoChoice: {
+                    1: "RL = GC",
+                    2: "LG = RC",
+                    3: "LC = GR",
+                    4: "LR = CR"
+                },
+                infoAnswer: "2",
+                infoDesc: "<br>무조건 암기해줍시다! 엘지알씨~"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070154",
+                infoQuestion: "국제표준화기구인 ISO에서 제시한 프로토콜 모델은?",
+                infoChoice: {
+                    1: "OSI 7계층",
+                    2: "ITU-X 시리즈",
+                    3: "IBM의 BSC",
+                    4: "ANSI의 HDLC"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>OSI 7계층은 ISO에서 제시한 프로토콜 모델 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070155",
+                infoQuestion: "광섬유 케이블은 코어와 클래드로 구성된다. 케이블에서 빛이 통과하는 주 통로는?",
+                infoChoice: {
+                    1: "코어",
+                    2: "클래드",
+                    3: "코어와 클래드 양쪽 모두",
+                    4: "코어와 클래드의 중심"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>빛이 주로 통과하는 부분은 코어이며 빛이 반사되는 부분이 클래드 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070156",
+                infoQuestion: "정보통신시스템에서 디지털 신호를 아날로그 신호로, 아날로그 신호를 디지털 신호로 변환시켜주는 것은?",
+                infoChoice: {
+                    1: "변복조기",
+                    2: "단말기",
+                    3: "다중화기",
+                    4: "접속기"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>변조 : 디지털 신호를 아날로그로 변환하는것<br>복조 : 아날로그 신호를 디지털 신호로 복원하는것"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070157",
+                infoQuestion: "에러(error)를 검출하기 위하여 1개의 체크 비트(check bit)를 가지는데 이것을 무엇이라 하는가?",
+                infoChoice: {
+                    1: "바이너리 비트(binary bit)",
+                    2: "패리티 비트(parity bit)",
+                    3: "캐리 비트(carry bit)",
+                    4: "체크 디지트(check digit)"
+                },
+                infoAnswer: "2",
+                infoDesc: "<br>패리티 비트(parity bit)는 1개의 비트를 이용하여 에러를 검출하는 방식으로 홀수체크, 짝수체크방식이 있습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070158",
+                infoQuestion: "메시지통신시스템(MHS)의 설명으로 적합하지 않은 것은?",
+                infoChoice: {
+                    1: "전자메일 서비스의 일종이다.",
+                    2: "패킷교환방식으로 운용된다.",
+                    3: "컴퓨터의 축적처리 기능을 이용한 것이다.",
+                    4: "메시지의 양방향 송/수신이 가능하다."
+                },
+                infoAnswer: "2",
+                infoDesc: "<br>메시지통신시스템이라고 하였으므로 패킷 교환은 적당하지 않습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070159",
+                infoQuestion: "RS-232C용 케이블 커넥터인 25핀에서 DTE와 DCE간에 데이터의 송신과 수신용 핀 번호가 순서대로 옳은 것은?",
+                infoChoice: {
+                    1: "2, 3번",
+                    2: "7, 8번",
+                    3: "14, 16번",
+                    4: "20, 21번"
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>2번 : 송신, 3번 : 수신"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2007년 1회",
+                infoNumber: "20070160",
+                infoQuestion: "다음 중 데이터통신의 목적으로 가장 적합한 것은?",
+                infoChoice: {
+                    1: "통신서비스의 표준화",
+                    2: "신속 정확한 정보의 전달과 정보지원의 공유 및 이용",
+                    3: "정보통신기기의 개발 및 발전 촉진",
+                    4: "정보에 대한 비밀 보장"
+                },
+                infoAnswer: "2",
+                infoDesc: "<br>신속 정확한 정보의 전달과 정보지원의 공유 및 이용 등이 데이터 통신의 목적 입니다."
+            },
         ];
-
+        
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
         let quizScore = 0;
