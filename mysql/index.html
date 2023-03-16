@@ -354,7 +354,7 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES
 <pre><code class="language-js">SELECT youName  FROM member WHERE youAge >=25 OR youName LIKE '김%';</code></pre>
                     <h4>나이가 25세 이상이고 아이디가 2또는 아이디가 9인 사람 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE (memberID = 2 OR memberID = 9) AND youAge >= 25;
-SELECT * FROM member where memberID in (2,9) AND youAge >= 25;
+SELECT * FROM member WHERE memberID IN (2,9) AND youAge >= 25;
 </code></pre>
                     <h4>회원 데이터를 5개만 불러오기(1~5)</h4>
 <pre><code class="language-js">SELECT * FROM member LIMIT 5;</code></pre>
