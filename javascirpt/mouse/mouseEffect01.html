@@ -207,14 +207,14 @@
 
 
         // forEach()
-        // document.querySelectorAll(".mouse__text span").forEach(function(span, num){
-            // span.addEventListener("mouseover", function(){
-            //     cursor.classList.add("s"+(num+1));
-            // });
-            // span.addEventListener("mouseout", function(){
-            //     cursor.classList.remove("s"+(num+1));
-            // });
-        // });
+        document.querySelectorAll(".mouse__text span").forEach(function(span, num){
+            span.addEventListener("mouseover", function(){
+                cursor.classList.add("s"+(num+1));
+            });
+            span.addEventListener("mouseout", function(){
+                cursor.classList.remove("s"+(num+1));
+            });
+        });
 
         // getAttribute();
         // document.querySelectorAll(".mouse__text span").forEach(function(span){
