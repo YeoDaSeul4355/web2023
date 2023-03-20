@@ -207,26 +207,26 @@
 
 
         // forEach()
-        document.querySelectorAll(".mouse__text span").forEach(function(span, num){
-            span.addEventListener("mouseover", function(){
-                cursor.classList.add("s"+(num+1));
-            });
-            span.addEventListener("mouseout", function(){
-                cursor.classList.remove("s"+(num+1));
-            });
-        });
-
-        // getAttribute();
-        // document.querySelectorAll(".mouse__text span").forEach(function(span){
-        //     let attr = span.getAttribute("class");
-        //     // attr = s1 s2 s3 s4 s5 s6
+        // document.querySelectorAll(".mouse__text span").forEach(function(span, num){
         //     span.addEventListener("mouseover", function(){
-        //         cursor.classList.add(attr);
+        //         cursor.classList.add("s"+(num+1));
         //     });
         //     span.addEventListener("mouseout", function(){
-        //         cursor.classList.remove(attr);
+        //         cursor.classList.remove("s"+(num+1));
         //     });
         // });
+
+        // getAttribute();
+        document.querySelectorAll(".mouse__text span").forEach(function(span){
+            let attr = span.getAttribute("class");
+            // attr = s1 s2 s3 s4 s5 s6
+            span.addEventListener("mouseover", function(){
+                cursor.classList.add(attr);
+            });
+            span.addEventListener("mouseout", function(){
+                cursor.classList.remove(attr);
+            });
+        });
     </script>
 </body>
 </html>
