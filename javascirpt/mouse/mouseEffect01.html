@@ -153,7 +153,6 @@
             cursor.style.top = e.clientY - 25 + "px";
         });
 
-        const mouseInfo = document.querySelectorAll(".mouse__text ul li span");
         // document.querySelector(".s1").addEventListener("mouseover", function(){
         //     cursor.classList.add("s1");
         // });
@@ -198,12 +197,12 @@
 
         // for문
         // for(let i=1; i<=6; i++){
-            // document.querySelector(".s"+i).addEventListener("mouseover", function(){
-            //     cursor.classList.add("s"+i);
-            // });
-            // document.querySelector(".s"+i).addEventListener("mouseout", function(){
-            //     cursor.classList.remove("s"+i);
-            // });
+        //     document.querySelector(".s"+i).addEventListener("mouseover", function(){
+        //         cursor.classList.add("s"+i);
+        //     });
+        //     document.querySelector(".s"+i).addEventListener("mouseout", function(){
+        //         cursor.classList.remove("s"+i);
+        //     });
         // }
 
 
@@ -218,16 +217,16 @@
         // });
 
         // getAttribute();
-        document.querySelectorAll(".mouse__text span").forEach(function(span){
-            let attr = span.getAttribute("class");
-            // attr = s1 s2 s3 s4 s5 s6
-            span.addEventListener("mouseover", function(){
-                cursor.classList.add(attr);
-            });
-            span.addEventListener("mouseout", function(){
-                cursor.classList.remove(attr);
-            });
-        });
+        // document.querySelectorAll(".mouse__text span").forEach(function(span){
+        //     let attr = span.getAttribute("class");
+        //     // attr = s1 s2 s3 s4 s5 s6
+        //     span.addEventListener("mouseover", function(){
+        //         cursor.classList.add(attr);
+        //     });
+        //     span.addEventListener("mouseout", function(){
+        //         cursor.classList.remove(attr);
+        //     });
+        // });
     </script>
 </body>
 </html>
