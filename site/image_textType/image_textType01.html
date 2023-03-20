@@ -24,6 +24,17 @@
             vertical-align: top;
             width: 100%;
         }
+        li {
+            list-style: none;
+        }
+        .blind {
+            position:absolute;
+            clip:rect(0 0 0 0);
+            width:1px;
+            height:1px;
+            margin:-1px;
+            overflow:hidden;
+        }
         .mt10 {margin-top: 10px !important;}
         .mt20 {margin-top: 20px !important;}
         .mt30 {margin-top: 30px !important;}
@@ -76,75 +87,109 @@
             font-weight: 300;
             line-height: 1.5;
         }
-        .imagetext__inner {
+        /* imgText__wrap  */
+        .imgText__inner {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .imagetext {
-            width: 32.3333%;
-            height: 500px;
+        .imgText__inner article {
+            width: 31.333%;
         }
-        .imagetext__body .title {
+        .imgText__inner .text span {
+            background-color: #FF4191;
+            font-size: 14px;
+            color: #fff;
+            padding: 1px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .imgText__inner .text h3 {
             font-size: 50px;
-            line-height: 1.2;
-            margin-right: 50px;
-            margin-bottom: 15px;
+            margin-bottom: 17px;
         }
-        .imagetext__body .desc {
+        .imgText__inner .text p{
             font-size: 16px;
             line-height: 1.5;
-            margin-right: 10px;
-            margin-bottom: 15px;
+            color: #666;
+            margin-bottom: 12px;
+            margin-top: 20px;
         }
-        .imagetext__body .nav {
+        
+        .imgText__inner .text li {
+            position: relative;
+            padding-left: 14px;
+        }
+        .imgText__inner .text li::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .imgText__inner .text li a {
+            color: #666;
+            line-height: 1.6;
             font-size: 16px;
-            line-height: 1.5;
-            margin-left: 15px;
         }
-        .imagetext__header {
+        .imgText__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
             border-radius: 10px;
+            position: relative;
         }
-        .imagetext__body .desc2 {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-top: 25px;
+        .imgText__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgText__inner .img.i1 {
+            background-image: url(../asset/img/image_textType01_01.jpg);
+        }
+        .imgText__inner .img.i2 {
+            background-image: url(../asset/img/image_textType01_02.jpg);
+        }
+        .imgText__inner .img.i1 a {
+            background-color: #7B8372;
+        }
+        .imgText__inner .img.i2 a {
+            background-color: #5C5F76;
         }
         </style>
 </head>
 <body>
-    <section class="imagetext__wrap section nexon">
+    <section class="imgText__wrap section nexon">
+        <h2 class="blind">향수의 다양한 원료들</h2>
         <div class="container">
-            <div class="imagetext__inner">
-                <article class="imagetext">
-                    <div class="imagetext__body">
-                        <span class="section__small">notice</span>
-                        <h3 class="title">향수의 다양한 원료들</h3>
-                        <p class="desc">향수의 원료는 여러 가지가 있습니다. 이 중 몇 가지를 예로 들어보면 다음과 같습니다.</p>
-                        <ul class="nav">
-                            <li>꽃: 장미, 라벤더, 철쭉, 백합, 오렌지 꽃</li>
-                            <li>나무: 삼나무, 향나무, 피나무, 쟁반나무, 코나쥬</li>
-                            <li>향신료: 고추, 크로뮴, 페퍼민트, 카르다몸</li>
-                            <li>과일: 레몬, 오렌지, 자몽, 라임, 플럼</li>
-                            <li>즙: 베르가못, 오크 모스, 라벤더</li>
-                            <li>동물 원료: 머스크, 캐스토리움, 비버, 미네랄</li>
+            <div class="imgText__inner">
+                <article class="text">
+                        <span>NOTICE</span>
+                        <h3>향수의 다양한 원료들</h3>
+                        <p class="desc1">향수의 원료는 여러 가지가 있습니다. 이 중 몇 가지를 예로 들어보면 다음과 같습니다.</p>
+                        <ul>
+                            <li><a href="#">꽃: 장미, 라벤더, 철쭉, 백합, 오렌지 꽃</a></li>
+                            <li><a href="#">나무: 삼나무, 향나무, 피나무, 쟁반나무, 코나쥬</a></li>
+                            <li><a href="#">향신료: 고추, 크로뮴, 페퍼민트, 카르다몸</a></li>
+                            <li><a href="#">과일: 레몬, 오렌지, 자몽, 라임, 플럼</a></li>
+                            <li><a href="#">즙: 베르가못, 오크 모스, 라벤더</a></li>
+                            <li><a href="#">동물 원료: 머스크, 캐스토리움, 비버, 미네랄</a></li>
                         </ul>
                         <p class="desc2">물론 이 외에도 다양한 향기 원료가 있으며, 이러한 향기 원료를 조합하여 다양한 종류의 향수를 만들어 낼 수 있습니다.</p>
-                    </div>
                 </article>
-                <article class="imagetext">
-                    <div class="imagetext__body">
-                        <figure class="imagetext__header">
-                            <img src="../asset/img/image_textType01_01@2x.jpg" alt="코튼">
-                        </figure>
-                    </div>
+                <article class="img i1">
+                    <a href="#">꽃 원료</a>
                 </article>
-                <article class="imagetext">
-                    <div class="imagetext__body">
-                        <figure class="imagetext__header">
-                            <img src="../asset/img/image_textType01_02@2x.jpg" alt="시트러스">
-                        </figure>
-                    </div>
+                <article class="img i2">
+                    <a href="#">시트러스 원료</a>
                 </article>
             </div>
         </div>
