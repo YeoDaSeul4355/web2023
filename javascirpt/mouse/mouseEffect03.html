@@ -84,10 +84,10 @@
         // 선택자
         const cursor = document.querySelector(".mouse__cursor");
 
-        // console.log(cursor.clientWidth);        //190(보더 값 포함)
-        // console.log(cursor.clientHeight);       //190(보더 값 포함)
-        // console.log(cursor.offsetWidth);        //200(보더 값 미포함)
-        // console.log(cursor.offsetHeight);       //200(보더 값 미포함)
+        // console.log(cursor.clientWidth);        //190(보더 값 미포함)
+        // console.log(cursor.clientHeight);       //190(보더 값 미포함)
+        // console.log(cursor.offsetWidth);        //200(보더 값 포함)
+        // console.log(cursor.offsetHeight);       //200(보더 값 포함)
 
         window.addEventListener("mousemove", e => {
             gsap.to(cursor, {
