@@ -47,10 +47,10 @@ body.bg01::after {
     background-color: rgba(54, 71, 84, 0.6);
 }
 body.bg02::after {
-    background-color: rgba(160, 102, 116, 0.7);
+    background-color: rgba(59, 27, 35, 0.7);
 }
 body.bg03::after {
-    background-color: rgba(71, 51, 33, 0.7);
+    background-color: rgba(71, 51, 33, 0.95);
 }
 body.bg04::after {
     background-color: rgba(66, 80, 69, 0.7);

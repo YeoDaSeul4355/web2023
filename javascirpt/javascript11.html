@@ -11,6 +11,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
 
+    <style>
+        span {
+            font-size: 22px;
+            color: #0243f1;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -47,6 +53,7 @@
     <main id="main">
         <div class="container">
             <div class="main__menu">
+                <span>마우스</span>
                 <ul>
                     <li>01. 이벤트 메서드 : addEventListener("click") : 클릭 했을 때</li>
                     <li>01. 이벤트 메서드 : addEventListener("dblclick") : 더블 클릭 했을 때</li>
@@ -57,6 +64,7 @@
                     <li>01. 이벤트 메서드 : addEventListener("selectstart") : 텍스트 선택을 시작했을 때</li>
                 </ul>
                 <br>
+                <span>포인터</span>
                 <ul>
                     <li>01. 이벤트 메서드 : addEventListener("mousedown") : 마우스 버튼을 클릭 했을 때</li>
                     <li>01. 이벤트 메서드 : addEventListener("mouseup") : 마우스 버튼을 떼는 경우</li>
@@ -67,6 +75,7 @@
                     <li>01. 이벤트 메서드 : addEventListener("mouseout") : 요소 위에 포인터 요소 위치가 벗어났을 때</li>
                 </ul>
                 <br>
+                <span>폼</span>
                 <ul>
                     <li>01. 이벤트 메서드 : addEventListener("blur") : 폼 요소에 포커스를 잃었을 때</li>
                     <li>01. 이벤트 메서드 : addEventListener("change") : 목록이나 체크 상태 등이 변경되었을 때</li>
@@ -75,6 +84,7 @@
                     <li>01. 이벤트 메서드 : addEventListener("submit") : 폼에 있는 버튼을 클릭했을 때</li>
                 </ul>
                 <br>
+                <span>드래그</span>
                 <ul>
                     <li>01. 이벤트 메서드 : addEventListener("drag") : 드래그 중인 경우</li>
                     <li>01. 이벤트 메서드 : addEventListener("dragstart") : 드래그를 시작 했을 때</li>
@@ -85,12 +95,14 @@
                     <li>01. 이벤트 메서드 : addEventListener("drop") : 요소의 위치에 드롭 했을 때</li>
                 </ul>
                 <br>
+                <span>키보드</span>
                 <ul>
                     <li>01. 이벤트 메서드 : addEventListener("keydown") : 키 눌렀을 때(한 번만 실행)</li>
                     <li>01. 이벤트 메서드 : addEventListener("keypress") : 키 눌렀을 때(누르고 있으면 계속 실행)</li>
                     <li>01. 이벤트 메서드 : addEventListener("keyup") : 키 누르고 뗐을 때</li>
                 </ul>
                 <br>
+                <span>터치</span>
                 <ul>
                     <li>01. 이벤트 메서드 : addEventListener("touchstart") : 터치가 시작 됐을 때</li>
                     <li>01. 이벤트 메서드 : addEventListener("touchmove") : 터치가 움직이고 있을 때</li>
@@ -98,10 +110,12 @@
                 </ul>
                 <br>
                 <ul>
+                    <span>작동 해지</span>
                     <li>01. 이벤트 메서드 : preventDefault() : 이벤트 작동 해지</li>
                     <li>01. 이벤트 메서드 : dispatchDefault() : 이벤트 작동 해지</li>
                 </ul>
                 <br>
+                <span>속성</span>
                 <ul>
                     <li><a href="#">01. 이벤트 속성 : clientX : X좌표 값 : 브라우저 기준</a></li>
                     <li><a href="#">01. 이벤트 속성 : clientY : Y좌표 값 : 브라우저 기준</a></li>
