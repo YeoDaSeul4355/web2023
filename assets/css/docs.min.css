@@ -84,16 +84,6 @@ pre {
 .bs-home-nav .bs-nav-b {
     display: none;
 }
-.bs-docs-nav .navbar-brand, .bs-docs-nav .navbar-nav>li>a {
-}
-.bs-docs-nav .navbar-nav>li>a:hover, .bs-docs-nav .navbar-nav>.active>a, .bs-docs-nav .navbar-nav>.active>a:hover {
-}
-.bs-docs-nav .navbar-toggle .icon-bar {
-}
-.bs-docs-nav .navbar-header .navbar-toggle {
-}
-.bs-docs-nav .navbar-header .navbar-toggle:hover, .bs-docs-nav .navbar-header .navbar-toggle:focus {
-}
 .bs-footer {
     padding-top: 40px;
     padding-bottom: 40px;
