@@ -335,6 +335,9 @@
         const searchBox = document.querySelector(".search__box input");     // 검색 버튼
         const searchList = document.querySelectorAll(".search__list li");    // 목록 리스트
 
+        // 속성 전체 개수
+        document.querySelector(".search__info span").textContent = searchList.length;
+
         // 검색
         searchBox.addEventListener("keyup", () => {
             const userWord = searchBox.value;      // 사용자가 입력한 키워드
