@@ -182,7 +182,7 @@
     "javascript reference".match(/reference/); //reference
     "javascript reference".match(/Reference/); //null
     "javascript reference".match(/Reference/i); //reference
-    "javascript reference".match(/Reference/g); //reference
+    "javascript reference".match(/Reference/g); //null
     "javascript reference".match(/r/); //r
     "javascript reference".match(/r/g); //r r r
     "javascript reference".match(/w/g); //null
@@ -230,23 +230,11 @@
 
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+
     <script>
+        "javascript reference".indexOf("reference");
 
-        "javascript reference".lastIndexOf("javascript");   //0
-        "javascript reference".lastIndexOf("javascripts");   //-1
-        "javascript reference".lastIndexOf("j");   //0
-        "javascript reference".lastIndexOf("a");   //3
-        "javascript reference".lastIndexOf("jv");   //-1
-        "javascript reference".lastIndexOf("reference");   //11
-        "javascript reference".lastIndexOf("r");   //15
-        "javascript reference".lastIndexOf("javascript", 0);   //0
-        "javascript reference".lastIndexOf("javascript", 1);   //0
-        "javascript reference".lastIndexOf("reference", 0);   //-1
-        "javascript reference".lastIndexOf("reference", 1);   //-1
-        "javascript reference".lastIndexOf("reference", 11);   //11
-        "javascript reference".lastIndexOf("reference", 12);   //11
-
-        console.log();
+        console.log("javascript reference".match(/Reference/g));
     </script>
 
 </body>
