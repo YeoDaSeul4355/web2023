@@ -10,65 +10,12 @@
     <script>
         // 1부터 10까지 for문으로 출력
         {
-            for(let i=1; i<=10; i++){
-                document.write(i);
+            let num1 = 3;
+            let num2 = 7;
+            if(++num1 > 5 || num2++ < 1){
+                console.log(num1);
             }
-        }
-        document.write("<br><br>");
-        // 1부터 10까지 짝수만 출력
-        {
-            for(let i=2; i<=10; i++){
-                if(i % 2 == 0){
-                    document.write(i);
-                }
-            }
-        }
-        document.write("<br><br>");
-        // 1부터 10까지 홀수 빨간샋 짝수 파란색
-        {
-            for(let i=1; i<=10; i++){
-                if(i % 2 == 0) {
-                    document.write(`<span style = 'color:blue'>${i}</span>`);
-                } if(i % 2 == 1) {
-                    document.write(`<span style = 'color:red'>${i}</span>`);
-                }
-            }
-        }
-        document.write("<br><br>");
-        // 배열 for문
-        {
-            const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            for(let i=0; i<num.length; i++){
-                document.write(num[i]);
-            }
-        }
-        document.write("<br><br>");
-        // 배열 forEach
-        {
-            const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            num.forEach(function (el){
-                document.write(el);
-            });
-        }
-        document.write("<br><br>");
-        // 배열 for in
-        {
-            const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            for(let a in num){
-                document.write(a);
-            }
-        }
-        document.write("<br><br>");
-        // 배열 for of
-        {
-            const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            for(let a of num){
-                document.write(a);
-            }
+            console.log(num2)
         }
     </script>
 </body>
