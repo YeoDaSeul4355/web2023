@@ -350,7 +350,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #962a5b;
   text-decoration: underline;
 }
 a:focus {
@@ -561,7 +561,7 @@ cite {
   color: #428bca;
 }
 a.text-primary:hover {
-  color: #3071a9;
+  color: #a9304c;
 }
 .text-success {
   color: #3c763d;
