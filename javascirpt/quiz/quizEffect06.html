@@ -33,8 +33,9 @@
                     <div class="quiz__question"></div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
-                            <div class="true">정답입니다!</div>
-                            <div class="false">틀렸습니다!</div>
+                            <div class="true">⭕정답⭕</div>
+                            <div class="false">❌오답❌</div>
+                            <div class="count">총 몇 문제 남았습니다.</div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -150,6 +151,10 @@
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const quizQuestion = quizWrap.querySelector(".quiz__question");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const dogWrapCount = quizWrap.querySelector(".dog__wrap");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");
+        const quizNext = quizWrap.querySelector(".quiz__answer .next");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
         
         let quizCount = 0;
         let quizScore = 0;
@@ -182,10 +187,16 @@
                     <span>${quizInfo[index].infoChoice[3]}</span>
                 </label>
             `;
+            let descTag = `
+                정답은 ${quizInfo[index].infoAnswer}입니다.<br>
+                ${quizInfo[index].infoDesc}
+            `;
 
             quizTitle.innerHTML = typeTag;
-            quizChoice.innerHTML = choiceTag;
             quizQuestion.innerHTML = questionTag;
+            quizChoice.innerHTML = choiceTag;
+            quizDesc.innerHTML = descTag;
+            
             
             // 보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -201,23 +212,40 @@
                 quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
                 // quizChoiceInput[i].disabled = "true";
             }
+
+            // 다음 버튼, 해설 숨기기
+            quizAnswer.style.display = "none";
+            quizDesc.style.display = "none";
             
         };
         updateQuiz(quizCount);
 
+        // 객관식 선택
         function choiceSelected(answer){
             let userAnswer = answer.textContent;    // 사용자 정답
             let currentAnswer = quizInfo[quizCount].infoAnswer;     //문제 정답
 
             if(userAnswer == currentAnswer){
                 dogWrap.classList.add("like");
+                dogWrap.classList.remove("dislike");
             } else {
                 dogWrap.classList.add("dislike");
+                dogWrap.classList.remove("like");
             }
+
+            // 다음 버튼, 해설 나타나기
+            quizAnswer.style.display = "block";
+            quizDesc.style.display = "block";
+            
         };
-        
 
         // 정답 확인
+        quizNext.addEventListener("click", () => {
+            quizCount++;
+            updateQuiz(quizCount);
+
+            dogWrap.classList.remove("like", "dislike");
+        });
 
     </script>
 </body>
