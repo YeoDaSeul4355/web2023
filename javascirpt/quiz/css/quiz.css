@@ -90,6 +90,13 @@
     flex-wrap: wrap;
     align-items: flex-start;
 }
+.quiz__main h4{
+    font-family: 'SCoreDream';
+    text-align: center;
+    background-color:rgb(255, 153, 202);
+    color: #fff;
+    font-size: 20px;
+}
 .quiz__wrap .quiz {
     width: 500px;
     background-color: #fff;
