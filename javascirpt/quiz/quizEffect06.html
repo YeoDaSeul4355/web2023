@@ -144,6 +144,74 @@
             }
         ];
         
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizTitle = quizWrap.querySelector(".quiz__title");
+        const quizChoice = quizWrap.querySelector(".quiz__choice");
+        const quizQuestion = quizWrap.querySelector(".quiz__question");
+        
+        let quizCount = 0;
+        let quizScore = 0;
+
+        // 문제 출력
+        const updateQuiz = (index) => {
+            let typeTag = `
+                <span>${quizInfo[index].infoType}</sapn>
+                <em>${quizInfo[index].infoTime}</em>    
+            `;
+            let questionTag = `
+                <em>${index+1}</em>.
+                <span>${quizInfo[index].infoQuestion}</span>
+            `;
+            let choiceTag = `
+                <label for="choice1">
+                    <input type="radio" id="choice1" name="choice" value="1">
+                    <span>${quizInfo[index].infoChoice[0]}</span>
+                </label>
+                <label for="choice2">
+                    <input type="radio" id="choice2" name="choice" value="2">
+                    <span>${quizInfo[index].infoChoice[1]}</span>
+                </label>
+                <label for="choice3">
+                    <input type="radio" id="choice3" name="choice" value="3">
+                    <span>${quizInfo[index].infoChoice[2]}</span>
+                </label>
+                <label for="choice4">
+                    <input type="radio" id="choice4" name="choice" value="4">
+                    <span>${quizInfo[index].infoChoice[3]}</span>
+                </label>
+            `;
+
+            quizTitle.innerHTML = typeTag;
+            quizChoice.innerHTML = choiceTag;
+            quizQuestion.innerHTML = questionTag;
+            
+            // 보기 선택자
+            const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
+            const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice input");
+            
+            // forEach()
+            // quizChoiceSpan.forEach((span, num) => {
+            //     span.setAttribute("onclick", "choiceSelected(this)");
+            // });
+            
+            // for문
+            for(let i=0; i<quizChoiceSpan.length; i++){
+                quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
+                quizChoiceInput[i].disabled = "true";
+            }
+            
+        };
+
+        function choiceSelected(answer){
+            let userAnswer = answer.textContent;
+            console.log(userAnswer);
+        };
+        
+        updateQuiz(quizCount);
+
+        // 정답 확인
+
     </script>
 </body>
 </html>
