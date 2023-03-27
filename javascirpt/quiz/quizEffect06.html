@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트05</title>
+    <title>퀴즈 이펙트06</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
@@ -99,7 +99,7 @@
                 infoNumber: "20070101",
                 infoQuestion: "8bit를 1word로 이용하는 컴퓨터에서 op-code를 3bit 사용하면 인스트럭션을 몇 개 사용할 수 있는가?",
                 infoChoice: ["4","6","8","16"],
-                infoAnswer: "3",
+                infoAnswer: "8",
                 infoDesc: "<br>op-code가 3비트란 말은 명령어부가 3비트라는 이야기 입니다.<br>3비트로 표현가능한 명령어(인스트럭션)수는 2의 3승개(2^3)는 8입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -107,7 +107,7 @@
                 infoNumber: "20070102",
                 infoQuestion: "중앙처리장치의 제어 부분에 의해서 해독되어 현재 실행중인 명령어를 기억하는 레지스터는?",
                 infoChoice: ["PC(Program Counter)","IR(Instruction Register)","MAR(Memory Address Register)","MBR(Memory Buffer Register)"],
-                infoAnswer: "2",
+                infoAnswer: "IR(Instruction Register)",
                 infoDesc: "<br>명령어를 기억하는 레지스터는 IR(Instruction Register, 명령어레지스터)입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -115,7 +115,7 @@
                 infoNumber: "20070103",
                 infoQuestion: "번지(address)로 지정된 저장위치(storage locations)의 내용이 실제 번지가 되는 주소지정번지는?",
                 infoChoice: ["간접지정번지","완전지정번지","절대지정번지","상대지정번지"],
-                infoAnswer: "1",
+                infoAnswer: "간접지정번지",
                 infoDesc: "<br>번지가 실제 내용의 번지가 되므로 메모리 참조회수 2회, 간접주소지정방식 입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -123,7 +123,7 @@
                 infoNumber: "20070104",
                 infoQuestion: "전가산기(full adder)는 어떤 회로로 구성되는가?",
                 infoChoice: ["반가산기 1개와 OR 게이트로 구성된다.","반가산기 1개와 AND 게이트로 구성된다.","반가산기 2개와 OR 게이트로 구성된다.","반가산기 2개와 AND 게이트로 구성된다."],
-                infoAnswer: "3",
+                infoAnswer: "반가산기 2개와 OR 게이트로 구성된다.",
                 infoDesc: "<br>전가산기는 반가산기 2개 + OR 게이트 1개로 구성 됩니다."
             },{
                 infoType: "정보처리 기능사",
@@ -131,7 +131,7 @@
                 infoNumber: "20070105",
                 infoQuestion: "명령어(Instructions) 형식에서 첫 번째 바이트의 기능이 아닌 것은?",
                 infoChoice: ["자료의 주소지정 기능","제어 기능","자료전달 기능","함수연산 기능"],
-                infoAnswer: "1",
+                infoAnswer: "자료의 주소지정 기능",
                 infoDesc: "<br>명령어 = 명령어 코드부 + 명령어 주소부로 구성됩니다.<br> 첫번째 바이트이므로 명령과 관련된 내용이 기록되는데,주소 지정은 주소부에서 합니다. "
             },{
                 infoType: "정보처리 기능사",
@@ -139,7 +139,7 @@
                 infoNumber: "20070106",
                 infoQuestion: "컴퓨터시스템의 중앙처리장치를 구성하는 하나의 회로로서 산술 및 논리연산을 수행하는 장치는?<br><img style='width:300px' src=''>",
                 infoChoice: ["Arithmetic Logic Unit","Memory Unit","I/O Unit","Associative Memory Unit"],
-                infoAnswer: "1",
+                infoAnswer: "Arithmetic Logic Unit",
                 infoDesc: "<br>Arithmetic: 산술 / Logic: 논리 / Unit: 장치"
             }
         ];
@@ -149,6 +149,7 @@
         const quizTitle = quizWrap.querySelector(".quiz__title");
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const quizQuestion = quizWrap.querySelector(".quiz__question");
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
         
         let quizCount = 0;
         let quizScore = 0;
@@ -198,17 +199,23 @@
             // for문
             for(let i=0; i<quizChoiceSpan.length; i++){
                 quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
-                quizChoiceInput[i].disabled = "true";
+                // quizChoiceInput[i].disabled = "true";
             }
             
         };
+        updateQuiz(quizCount);
 
         function choiceSelected(answer){
-            let userAnswer = answer.textContent;
-            console.log(userAnswer);
+            let userAnswer = answer.textContent;    // 사용자 정답
+            let currentAnswer = quizInfo[quizCount].infoAnswer;     //문제 정답
+
+            if(userAnswer == currentAnswer){
+                dogWrap.classList.add("like");
+            } else {
+                dogWrap.classList.add("dislike");
+            }
         };
         
-        updateQuiz(quizCount);
 
         // 정답 확인
 
