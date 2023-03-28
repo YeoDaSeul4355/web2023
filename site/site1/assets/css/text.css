@@ -85,6 +85,7 @@
 .text__btn:hover::before {
     transform: rotate(360deg);
 }
+/* 미디어쿼리 */
 @media (max-width: 960px){
     .text__inner .text {
         width: 49%;
