@@ -13,7 +13,7 @@
 }
 #header::before {
     content: '';
-    border: 4px ridge #a3a3a3;
+    border: 4px ridge #ffa2d7;
     position: absolute;
     left: 5px;
     top: 5px;
@@ -44,7 +44,7 @@
 #header li a {
     color: #fff;
     font-family: 'DungGeunMo';
-    border: 1px dashed #fff;
+    border: 1px dashed #ffa2d7;
     display: inline-block;
     padding: 5px;
 }
@@ -72,7 +72,7 @@
 }
 #footer::before {
     content: '';
-    border: 4px ridge #a3a3a3;
+    border: 4px ridge #ffa2d7;
     position: absolute;
     left: 5px;
     top: 5px;
@@ -96,6 +96,13 @@
     background-color:rgb(255, 153, 202);
     color: #fff;
     font-size: 20px;
+}
+.quiz__wrap .count {
+    font-family: 'SCoreDream';
+    text-align: center;
+    background-color:rgb(255, 153, 202);
+    color: #fff;
+    font-size: 15px;
 }
 .quiz__wrap .quiz {
     width: 500px;
@@ -270,6 +277,153 @@
     border-top: 10px solid rgb(255, 153, 202);
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
+}
+/* CBT 유형 */
+.quiz__wrap__cbt {
+    padding: 0 20px;
+    font-family: 'SCoreDream';
+}
+.cbt__conts {
+    width: calc(100% - 300px);
+    background-color: #fff;
+}
+.cbt__header {
+    width: calc(100% - 300px);
+    background-color: #ffebf4;
+    border: 5px ridge #ffb8d6;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cbt__time {
+    position: relative;
+    padding-left: 40px !important;
+}
+.cbt__time::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E%0A");
+}
+.cbt__submit {
+    position: relative;
+    padding-left: 40px !important;
+}
+.cbt__submit::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
+}
+.cbt__header > div {
+}
+.cbt__header > div > div {
+    background-color: #484343;
+    display: inline-block;
+    margin-left: 5px;
+    color: #fff;
+    padding: 3px 20px;
+    border-radius: 20px;
+}
+.cbt__quiz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cbt__quiz .cbt {
+    width: 49%;
+    border: 5px ridge #ffb8d6;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.cbt__aside {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    width: 280px;
+    height: 800px;
+    background-color: #fff;
+    border: 5px ridge #ffb8d6;
+}
+.cbt__info {
+    background-color: #ffebf4;
+    border-bottom: 5px ridge #ffb8d6;
+    padding: 20px;
+    text-align: center;
+}
+.cbt__info .title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-bottom: 5px;
+}
+.cbt__info span {
+    display: inline-block;
+}
+.cbt__omr {
+    padding: 20px;
+}
+.cbt__omr .omr {
+    margin: 5px 0;
+    display: grid;
+    grid-template-columns: 50px 38px 38px 38px 38px;
+    grid-template-rows: 20px;
+    align-items: center;
+}
+.cbt__omr .omr input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.cbt__omr .omr strong {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 1px;
+    background: #ffebf4;
+    font-family: 'Helvetica Neue';
+    margin-right: 10px;
+    font-weight: bold;
+}
+.cbt__omr .omr label {
+    box-shadow: 0 0 0 1px #333031;
+    cursor: pointer;
+    line-height: 0.4;
+    text-align: center;
+    width: 28px;
+    height: 8px;
+    position: relative;
+    font-family: 'Helvetica Neue';
+    position: relative;
+}
+.cbt__omr .omr label::after {
+    background-color: #555;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    transition: width 0.1s linear;
+}
+.cbt__omr .omr input[type=radio]:checked + label::after {
+    width: 100%;
+}
+.cbt__omr .omr .label-inner {
+    background: #fff;
+    padding: 0.25em 0.13em;
+    transform: translateY(-0.25em);
+    width: 20px;
+    color: #333031;
 }
 /* dog__wrap */
 .dog .tail, 

@@ -1,0 +1,58 @@
+/* image__type */
+.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.image__inner .image {
+    width: 49%;
+    background-color: #ccc;
+    position: relative;
+}
+.image__body {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    text-align: left;
+    padding: 30px;
+}
+.image__body .title {
+    margin-bottom: 15px;
+    font-size: 32px;
+    line-height: 1;
+}
+.image__body .desc {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding-right: 20%;
+}
+.image__body .btn {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 960px){
+    .image__body .desc {
+        display: none;
+    }
+}   
+@media (max-width: 600px){
+    .image__inner {
+        flex-direction: column;
+    }
+    .image__inner .image {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .image__body .title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .image__body .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,97 @@
+
+/* text__wrap */
+.text__inner {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text__inner .text {
+    width: 32.33333%;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    padding: 90px 20px 20px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.text__inner .text:hover {
+    background-color: #f5f5f5;
+}
+.text__inner .text::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-color: #ff7878;
+    background-image: url(../img/textType01_01.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border-radius: 50%;
+}
+.text__inner .text.t1::before {
+    background-color: rgba(247, 227, 109, 0.3);
+    background-image: url(../img/textType01_01.svg);
+}
+.text__inner .text.t2::before {
+    background-color: rgba(141, 255, 51, 0.2);
+    background-image: url(../img/textType01_02.svg);
+}
+.text__inner .text.t3::before {
+    background-color: rgba(247, 109, 217, 0.2);
+    background-image: url(../img/textType01_03.svg);
+}
+.text__inner .text.t4::before {
+    background-color: rgba(72, 87, 236, 0.2);
+    background-image: url(../img/textType01_04.svg);
+}
+.text__inner .text.t5::before {
+    background-color: rgba(255, 51, 52, 0.2);
+    background-image: url(../img/textType01_05.svg);
+}
+.text__inner .text.t6::before {
+    background-color: rgba(51, 255, 206, 0.2);
+    background-image: url(../img/textType01_06.svg);
+}
+.text__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.text__desc {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.text__btn {
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+.text__btn::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/icon_plus.svg);
+    transition: all 0.3s;
+}
+.text__btn:hover::before {
+    transform: rotate(360deg);
+}
+@media (max-width: 960px){
+    .text__inner .text {
+        width: 49%;
+    }
+}
+@media (max-width: 600px){
+    .text__inner .text {
+        width: 100%;
+    }
+}
