@@ -195,6 +195,21 @@ body {
     left: 0;
     top: 9px;
 }
+.main__sample .table {
+    width: 100%;
+}
+.main__sample .table th {
+    background-color: #ffd2d2;
+    padding: 2px;
+}
+.main__sample .table td {
+    text-align: center;
+    border: 1px solid #ffd2d2;
+}
+.main__sample .table button {
+    cursor: pointer;
+    padding: 3px 20px;
+}
 /* 푸터 영역 */
 #footer {
     padding: 40px;

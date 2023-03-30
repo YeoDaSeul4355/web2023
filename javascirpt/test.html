@@ -8,15 +8,13 @@
 </head>
 <body>
     <script>
-        // 1부터 10까지 for문으로 출력
-        {
-            let num1 = 3;
-            let num2 = 7;
-            if(++num1 > 5 || num2++ < 1){
-                console.log(num1);
-            }
-            console.log(num2)
+        let a=1, b=1, num;
+        for(let i=0; i<6; i++){
+            num = a + b;
+            a = b;
+            b = num;
         }
+        console.log(num);
     </script>
 </body>
 </html>

@@ -250,6 +250,15 @@ mysql> show databases;
     PRIMARY KEY(memberID)
 ) charset=utf8;
 </code></pre>
+
+<pre><code class="language-js">create table reviews(
+    reviewID int(10) unsigned auto_increment,
+    memberID int(10) unsigned,
+    youText tinytext NOT NULL,
+    regTime int(30) NOT NULL,
+    PRIMARY KEY(reviewID)
+) charset=utf8;
+</code></pre>
                     <h4 id="intro5-2" class="page-header">테이블 전체보기</h4>
                     <div class="bs-callout bs-callout-info">show tables;</div>
 <pre><code class="language-js">mysql> show tables;
@@ -328,6 +337,21 @@ INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUE
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("itshena01@gmail.com","조한미","1234","19930211","31","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("aimee00418@gmail.com","권현정","1234","19830211","39","03140316");
 </code></pre>
+
+<div class="bs-callout bs-callout-info"><code>INSERT</code><code>INTO</code> 테이블명 <code>VALUES;</code></div>
+<pre><code class="language-js">
+INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "정말 감사합니다. 잘 봤어요.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("12", "대박 사건!", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "내용 실화냐? 가슴이 웅장해진다.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("5", "정말 감사합니다. 잘 봤어요.", "231333");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("11", "우와! 너무 너무 유용해요!", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("22", "멋진 내용 감사합니다.", "453221");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("8", "이렇게 정리를 깔끔히 하시다니!", "231333");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("19", "내용이 너무 별로에용.", "6767222");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("21", "엥. 이건 사기 아닌가.", "343434");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("17", "돈 내놓으세요 이 사기꾼아", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("27", "감사합니다~ 덕분에 도움이 되었습니다.", "653321");
+</code></pre>
                     <h4 id="intro6-2" class="page-header">데이터 불러오기</h4>
                     <div class="bs-callout bs-callout-info"><code>SELECT</code> 필드명 <code>FROM</code> 테이블명 <code>WHERE</code> 조건</div>
 
@@ -336,9 +360,9 @@ INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUE
                     <h4>memberID가 1번인 경우만 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE memberID = 1;</code></pre>
                     <h4>memberID가 1번이 아닌 경우만 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member WHERE memberID <> 1;</code></pre>
+<pre><code class="language-js">SELECT * FROM member WHERE memberID &lt;> 1;</code></pre>
                     <h4>memberID가 5번~10번 경우만 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member WHERE memberID >= 5 AND memberID <= 10;</code></pre>
+<pre><code class="language-js">SELECT * FROM member WHERE memberID >= 5 AND memberID &lt;= 10;</code></pre>
                     <h4>youAge가 30~40 경우만 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE youAge BETWEEN 30 AND 40;</code></pre>
                     <h4>youAge가 30~40가 아닌 경우만 불러오기</h4>

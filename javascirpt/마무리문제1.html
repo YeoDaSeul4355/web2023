@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마무리 문제1</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        .container {
+            width: 1160px;
+            height: 800px;
+            margin: 0 auto;
+            padding: 120px 0;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'NexonLv1Gothic';
+            font-size: 50px;
+            font-weight: normal;
+        }
+        .img {
+            width: 100%;
+        }
+        .img:hover {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>마우스 오버하면 이미지 바꾸기</h1>
+        <img src="assets/img/img1.jpg" alt="이미지1" class="image">
+    </div>
+</body>
+<script>
+    const img1 = document.querySelector(".container .image");
+
+    img1.addEventListener("mouseover", () => {
+        img1.src = "assets/img/img2.jpg"; 
+    })
+    img1.addEventListener("mouseout", () => {
+        img1.src = "assets/img/img1.jpg"; 
+    })
+</script>
+</html>

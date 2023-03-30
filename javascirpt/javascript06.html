@@ -78,69 +78,107 @@
                     <li><a href="#sample27">27. <strong>array.prototype.shift()</strong>             메서드는 배열 처음 요소를 제거하고, 제거한 요소를 반환합니다.</a></li>
                     <li><a href="#sample28">28. <strong>array.prototype.unshift()</strong>           메서드는 배열 앞에 요소를 추가하고, 배열의 새로운 길이 값을 반환합니다.</a></li>
                     <li><a href="#sample29">29. <strong>array.prototype.slice()</strong>✍             메서드는 배열 시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</a></li>
-                    <li><a href="#sample29">29. <strong>array.prototype.splice()</strong>✍             메서드는 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</a></li>
-                    <li><a href="#sample30">30. <strong>array.prototype.sort()</strong>✍             메서드는 배열의 요소를 적절한 위치에 정렬한 후, 그 배열을 반환합니다.</a></li>
-                    <li><a href="#sample31">31. <strong>array.prototype.toLocaleString()</strong>    메서드는 배열의 요소를 문자열로 반환합니다.</a></li>
-                    <li><a href="#sample32">32. <strong>array.prototype.toString()</strong>          메서드는 데이터를 배열로 변환하고, 새로운 배열을 반환합니다.</a></li>
-                    <li><a href="#sample33">33. <strong>array.prototype.values()</strong>            메서드는 배열 각 인덱스에 대한 값을 객체로 반환합니다.</a></li>
+                    <li><a href="#sample30">30. <strong>array.prototype.splice()</strong>✍             메서드는 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</a></li>
+                    <li><a href="#sample31">31. <strong>array.prototype.sort()</strong>✍             메서드는 배열의 요소를 적절한 위치에 정렬한 후, 그 배열을 반환합니다.</a></li>
+                    <li><a href="#sample32">32. <strong>array.prototype.toLocaleString()</strong>    메서드는 배열의 요소를 문자열로 반환합니다.</a></li>
+                    <li><a href="#sample33">33. <strong>array.prototype.toString()</strong>          메서드는 데이터를 배열로 변환하고, 새로운 배열을 반환합니다.</a></li>
+                    <li><a href="#sample34">34. <strong>array.prototype.values()</strong>            메서드는 배열 각 인덱스에 대한 값을 객체로 반환합니다.</a></li>
                 </ul>
             </div>
             <div class="main__sample">
-                <!-- sample21 -->
-                <div id="sample21" class="sample">
-                    <h3>배열 메서드 : join()</h3>
-                    <p>join() 메서드는 배열 요소를 문자열로 결합합니다. 반환은 문자열입니다.</p>
+                <!-- sample29 -->
+                <div id="sample29" class="sample">
+                    <h3>29. slice()</h3>
+                    <div class="notice">"배열".slice(시작위치, [끝나는 위치])</div>
+                    <ul>
+                        <li>시작 위치에서 종료 위치 값을 추출하여 새로운 배열을 반환합니다.</li>
+                    </ul>
                     <div class="script">
 <pre><code class="Language-js">{
-    const arrNum1 = [100, 200, 300, 400, 500];
-    const text1 = arrNum1.join('');     //100200300400500
-    const text2 = arrNum1.join(' ');    // 100 200 300 400 500
-    const text3 = arrNum1.join('*');    // 100*200*300*400*500
-    const text4 = arrNum1.join('-');    // 100-200-300-400-500
-    const text5 = arrNum1.join('🤐');    // 100🤐200🤐300🤐400🤐500
-
-    console.log(text5);   
+    ['j','a','v','a','s','c','r','i','p','t'];                      //['j','a','v','a','s','c','r','i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(1);             //['a','v','a','s','c','r','i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(2);             //['v','a','s','c','r','i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(0, 1);          //['j']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(1, 2);          //['a']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(0, 2);          //['j','a']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(0, 3);          //['j','a','v']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(5, 10);         //['c','r','i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(5, -1);         //['c','r','i','p']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(5, -2);         //['c','r','i']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-1);            //['t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-2);            //['p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-3);            //['i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-3, -1);        //['i','p']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-3, -2);        //['i']
 }
 </code></pre>
                     </div>
                 </div>
-                <!-- sample21 -->
-                <div id="sample02" class="sample">
-                    <h3>배열 메서드 : push() / pop()</h3>
-                    <p>push() 메서드는 배열 마지막 요소에 요소를 추가하고, pop() 메서드는 배열 마지막 요소를 삭제합니다.</p>
+                <!-- sample29 -->
+                <!-- sample30 -->
+                <div id="sample30" class="sample">
+                    <h3>30. splice()</h3>
+                    <div class="notice">"배열".slice(시작위치, [삭제 갯수], [요소])</div>
+                    <ul>
+                        <li>배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</li>
+                    </ul>
                     <div class="script">
 <pre><code class="Language-js">{
     const arrNum1 = [100, 200, 300, 400, 500];
-    const arrPush1 = arrNum1.push(600);
+    const result1 = arrNum1.splice(1);
 
-    console.log(arrNum1);   // [100, 200, 300, 400, 500, 600]
+    console.log(result1);        //[200, 300, 400, 500]
+    console.log(arrNum1);        //[100]
 
     const arrNum2 = [100, 200, 300, 400, 500];
-    const arrPush2 = arrNum2.pop();
+    const result2 = arrNum2.splice(1, 2);
 
-    console.log(arrNum2);   // [100, 200, 300, 400]
+    console.log(result2);       //[200, 300]
+    console.log(arrNum2);       //[100, 400, 500]
+
+    const arrNum3 = [100, 200, 300, 400, 500];
+    const result3 = arrNum3.splice(1, 4);
+
+    console.log(result3);       //[200, 300, 400, 500]
+    console.log(arrNum3);       //[100]
+
+    const arrNum4 = [100, 200, 300, 400, 500];
+    const result4 = arrNum4.splice(1, 2, "javascript");
+
+    console.log(result4);       //[200, 300]
+    console.log(arrNum4);       //[100, "javascript", 400, 500]
+
+    const arrNum5 = [100, 200, 300, 400, 500];
+    const result5 = arrNum5.splice(1, 0, "javascript");
+
+    console.log(result5);       //[]
+    console.log(arrNum5);       //[100, "javascript", 200, 300, 400, 500]
+
+    const arrNum6 = [100, 200, 300, 400, 500];
+    const result6 = arrNum6.splice(0, 4, "javascript");
+
+    console.log(result6);       //[100, 200, 300, 400]
+    console.log(arrNum6);       //["javascript", 500]
+
+    const arrNum7 = [100, 200, 300, 400, 500];
+    const result7 = arrNum7.splice(2, 2, "javascript", "react");
+
+    console.log(result7);       //[300, 400]
+    console.log(arrNum7);       //[100, 200, "javascript", "react", 500]
+
+    const arrNum8 = [100, 200, 300, 400, 500];
+    const result8 = arrNum8.splice(-2, 2, "javascript");
+
+    console.log(result8);       //[400, 500]
+    console.log(arrNum8);       //[100, 200, 300, "javascript"]
+
+    //result는 삭제된 요소
+    //arrNum은 나머지 + 추가된 요소
 }
 </code></pre>
                     </div>
                 </div>
-                <div id="sample03" class="sample">
-                    <h3>배열 메서드 : unshift() / shift()</h3>
-                    <p>unshift() 메서드는 배열 처음 요소에 요소를 추가하고, shift() 메서드는 배열 처음 요소를 삭제합니다.</p>
-                    <div class="script">
-<pre><code class="Language-js">{
-    const arrNum1 = [100, 200, 300, 400, 500];
-    const arrPush1 = arrNum1.unshift(600);
-    
-    console.log(arrNum1);   // [600, 100, 200, 300, 400, 500]
-
-    const arrNum2 = [100, 200, 300, 400, 500];
-    const arrPush2 = arrNum2.shift();
-    
-    console.log(arrNum2);   // [200, 300, 400, 500]   
-}
-</code></pre>
-                    </div>
-                </div>
+                <!-- sample30 -->
             </div>
         </div>
     </main>
@@ -153,25 +191,56 @@
 
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <script>    
+    <script>
         // const arrNum1 = [100, 200, 300, 400, 500];
-        // const arrPush1 = arrNum1.unshift(600);
-        
-        // console.log(arrNum1);   // [600, 100, 200, 300, 400, 500]
+        // const result1 = arrNum1.splice(1);
+
+        // console.log(result1);        //[200, 300, 400, 500]
+        // console.log(arrNum1);        //[100]
 
         // const arrNum2 = [100, 200, 300, 400, 500];
-        // const arrPush2 = arrNum2.shift();
-        
-        // console.log(arrNum2);   // [200, 300, 400, 500]
-        
-        const arrNum1 = [100, 200, 300, 400, 500];
-        const text1 = arrNum1.join('');     //100200300400500
-        const text2 = arrNum1.join(' ');    // 100 200 300 400 500
-        const text3 = arrNum1.join('*');    // 100*200*300*400*500
-        const text4 = arrNum1.join('-');    // 100-200-300-400-500
-        const text5 = arrNum1.join('🤐');    // 100🤐200🤐300🤐400🤐500
+        // const result2 = arrNum2.splice(1, 2);
 
-        console.log(text5);
+        // console.log(result2);       //[200, 300]
+        // console.log(arrNum2);       //[100, 400, 500]
+
+        // const arrNum3 = [100, 200, 300, 400, 500];
+        // const result3 = arrNum3.splice(1, 4);
+
+        // console.log(result3);       //[200, 300, 400, 500]
+        // console.log(arrNum3);       //[100]
+
+        // const arrNum4 = [100, 200, 300, 400, 500];
+        // const result4 = arrNum4.splice(1, 2, "javascript");
+
+        // console.log(result4);       //[200, 300]
+        // console.log(arrNum4);       //[100, "javascript", 400, 500]
+
+        // const arrNum5 = [100, 200, 300, 400, 500];
+        // const result5 = arrNum5.splice(1, 0, "javascript");
+
+        // console.log(result5);       //[]
+        // console.log(arrNum5);       //[100, "javascript", 200, 300, 400, 500]
+
+        // const arrNum6 = [100, 200, 300, 400, 500];
+        // const result6 = arrNum6.splice(0, 4, "javascript");
+
+        // console.log(result6);       //[100, 200, 300, 400]
+        // console.log(arrNum6);       //["javascript", 500]
+
+        // const arrNum7 = [100, 200, 300, 400, 500];
+        // const result7 = arrNum7.splice(2, 2, "javascript", "react");
+
+        // console.log(result7);       //[300, 400]
+        // console.log(arrNum7);       //[100, 200, "javascript", "react", 500]
+
+        // const arrNum8 = [100, 200, 300, 400, 500];
+        // const result8 = arrNum8.splice(-2, 2, "javascript");
+
+        // console.log(result8);       //[400, 500]
+        // console.log(arrNum8);       //[100, 200, 300, "javascript"]
+
+        
     </script>
 
 </body>
