@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body class="pink">
+    <header id="header">
+        <ul>
+            <li class="active"><a href="searchEffect01.html">1</a></li>
+            <li><a href="searchEffect02.html">2</a></li>
+            <li><a href="searchEffect03.html">3</a></li>
+            <li><a href="searchEffect04.html">4</a></li>
+            <li><a href="searchEffect05.html">5</a></li>
+            <li><a href="searchEffect06.html">6</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="search__wrap">
+            <div class="search__header">
+                <h2 class="title">😁자바스크립트</h2>
+            </div>
+            <div class="search__conts">
+                <hgroup>
+                    <h3>CSS 속성 검색하기🔍</h3>
+                    <h4>indexOf () / search()</h4>
+                </hgroup>
+                <div class="search__box">
+                    <label for="search">검색하기</label>
+                    <input type="text" name="search" id="search" placeholder="CSS 속성을 입력해주세요!">
+                </div>
+                <div class="search__info">
+                    <div>
+                        CSS 속성 갯수 : <span>0</span>개
+                    </div>
+                </div>
+                <div class="search__list">
+                    <ul>
+                        <!-- a -->
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="abbr"><strong>abbr</strong> :</li>
+                        <li data-name="acronym"><strong>acronym</strong> :</li>
+                        <li data-name="address"><strong>address</strong> :</li>
+                        <li data-name="applet"><strong>applet</strong> :</li>
+                        <li data-name="area"><strong>area</strong> :</li>
+                        <li data-name="article"><strong>article</strong> :</li>
+                        <li data-name="aside"><strong>aside</strong> :</li>
+                        <li data-name="b"><strong>b</strong> :</li>
+                        <li data-name="base"><strong>base</strong> :</li>
+                        <li data-name="basefont"><strong>basefont</strong> :</li>
+                        <li data-name="bdi"><strong>bdi</strong> :</li>
+                        <li data-name="bdo"><strong>bdo</strong> :</li>
+                        <li data-name="big"><strong>big</strong> :</li>
+                        <li data-name="blockquote"><strong>blockquote</strong> :</li>
+                        <li data-name="blink"><strong>blink</strong> :</li>
+                        <li data-name="body"><strong>body</strong> :</li>
+                        <li data-name="br"><strong>br</strong> :</li>
+                        <li data-name="button"><strong>button</strong> :</li>
+                        <li data-name="canvas"><strong>canvas</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        <li data-name="a"><strong>a</strong> :</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+    </footer>
+
+    <script>
+        // 선택자
+        const searchBox = document.querySelector(".search__box input");     // 검색 버튼
+        const searchList = document.querySelectorAll(".search__list li");    // 목록 리스트
+
+        // 속성 전체 개수
+        document.querySelector(".search__info span").textContent = searchList.length;
+
+        // 검색
+        searchBox.addEventListener("keyup", () => {
+            const userWord = searchBox.value;      // 사용자가 입력한 키워드
+
+            searchList.forEach(el => {
+                // const cssName = el.getAttribute("data-name");
+                const cssName = el.dataset.name
+
+                if(cssName.indexOf(userWord)){
+                    // 데이터가 있을 때
+                    el.classList.add("hide");
+                } else {
+                    // 데이터가 없을 때
+                    el.classList.remove("hide");
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
