@@ -448,6 +448,11 @@
     width: 20px;
     color: #333031;
 }
+.cbt__selects label.correct span::before {
+    border-color: red;
+    box-shadow: inset 0 0 0 10px red;
+    color: #fff;
+}
 .cbt__question {
     font-size: 1.4rem;
     margin-bottom: 10px;
@@ -517,6 +522,9 @@
     line-height: 1.5;
     margin-bottom: 5px;
     position: relative;
+}
+.cbt__desc.hide {
+    display: none;
 }
 .cbt__desc::before {
     content: '';

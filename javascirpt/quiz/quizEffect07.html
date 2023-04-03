@@ -62,7 +62,7 @@
                     <div>
                         <div class="cbt__title">수험자 : <em>여다슬</em></div>
                         <div class="cbt__score">
-                            <span>전체 문제수 : <em>60</em>문항</span>
+                            <span>전체 문제수 : 60문항</span>
                             <span>남은 문제수 : <em>59</em>문항</span>
                         </div>
                     </div>
@@ -106,12 +106,13 @@
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
+        const cbtScore = document.querySelector(".cbt__score em");
         
         let questionAll = [];       // 모든 퀴즈 정보 
 
         // 데이터 가져오기
         const dataQuestion = () => {
-            fetch("json/gisa2020_01.json")
+            fetch("json/gineungsaWD2023_01.json")
             .then(res => res.json())
             .then(items => {
                 // console.log(items);
@@ -144,12 +145,17 @@
                         formattedQuestion.desc = item.desc;
                     }
 
-                    // console.log(formattedQuestion);
+                    console.log(formattedQuestion);
                     return formattedQuestion;
                 });
                 newQuestion();  // 문제 만들기
             })
             .catch((err) => console.log(err));
+
+            const quizImg = document.querySelectorAll(".cbt__question__img");
+                if(quizImg[number].innerText == "img/undefined.png"){
+                    quizImg[number].classList.add("hide");
+                }
         }
 
         // 문제 만들기
@@ -161,7 +167,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"></div>
+                        <div class="cbt__question__img"><img src="img/${question.questionImg}.jpg" alt=""></div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
                             <label for="select${number}_1"><span>${question.choice1}</span></label>
@@ -172,7 +178,7 @@
                             <input type="radio" id="select${number}_4" name="select${number}" value="${number+1}_4" onclick="answerSelect(this)">
                             <label for="select${number}_4"><span>${question.choice4}</span></label>
                         </div>
-                        <div class="cbt__desc">${question.desc}</div>
+                        <div class="cbt__desc hide">${question.desc}</div>
                     </div>
                 `);
 
@@ -212,7 +218,18 @@
                 } else {
                     console.log("오답입니다");
                     cbtSelects[number].parentElement.classList.add("bad");
-                    
+
+                    // 오답일 경우 정답 표시
+                    const label = cbtSelects[number].querySelectorAll("label");
+                    label[question.answer-1].classList.add("correct");
+                }
+
+                const quizDesc = document.querySelectorAll(".cbt__desc");
+
+                if(quizDesc[number].innerText == "undefined"){
+                    quizDesc[number].classList.add("hide");
+                } else {
+                    quizDesc[number].classList.remove("hide");
                 }
             });
         }
