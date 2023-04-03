@@ -346,7 +346,7 @@
     color: #fff;
     width: 130px;
     margin-left: 3px;
-    padding: 10px 20px 10px 30px;
+    padding: 10px 20px 10px 33px;
     border-radius: 20px;
     position: fixed;
     top: 100px;
@@ -355,18 +355,18 @@
 .cbt__time::before {
     content: '';
     position: absolute;
-    left: 8px;
-    top: 10px;
+    left: 9px;
+    top: 11px;
     width: 22px;
     height: 22px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E%0A");
 }
 .cbt__submit {
-    background-color: #ff4242;
+    background-color: #ff7878;
     text-align: center;
     color: #fff;
     width: 130px;
-    padding: 10px 20px 10px 30px;
+    padding: 10px 20px 10px 31px;
     border-radius: 20px;
     position: fixed;
     right: 30px;
@@ -375,11 +375,14 @@
 .cbt__submit::before {
     content: '';
     position: absolute;
-    left: 10px;
+    left: 13px;
     top: 10px;
     width: 22px;
     height: 22px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
+}
+.cbt__submit:hover {
+    background-color: #ff3939;
 }
 .cbt__title {
     text-decoration: underline;
