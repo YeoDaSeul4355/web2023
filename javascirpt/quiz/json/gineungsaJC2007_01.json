@@ -1,0 +1,609 @@
+[
+    {
+        "subject": "전자 계산기 일반",
+        "question": "8bit를 1word로 이용하는 컴퓨터에서 op-code를 3bit 사용하면 인스트럭션을 몇 개 사용할 수 있는가?",
+        "correct_answer": "8",
+        "incorrect_answers": [
+            "4",
+            "6",
+            "16"
+        ],
+        "desc": "op-code가 3비트란 말은 명령어부가 3비트라는 이야기 입니다.<br>3비트로 표현가능한 명령어(인스트럭션)수는 2의 3승개(2^3)는 8입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "중앙처리장치의 제어 부분에 의해서 해독되어 현재 실행중인 명령어를 기억하는 레지스터는?",
+        "correct_answer": "IR(Instruction Register)",
+        "incorrect_answers": [
+            "PC(Program Counter)",
+            "MAR(Memory Address Register)",
+            "MBR(Memory Buffer Register)"
+        ],
+        "desc": "명령어를 기억하는 레지스터는 IR(Instruction Register, 명령어레지스터)입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "번지(address)로 지정된 저장위치(storage locations)의 내용이 실제 번지가 되는 주소지정번지는?",
+        "correct_answer": "간접지정번지",
+        "incorrect_answers": [
+            "완전지정번지",
+            "절대지정번지",
+            "상대지정번지"
+        ],
+        "desc": "번지가 실제 내용의 번지가 되므로 메모리 참조회수 2회, 간접주소지정방식 입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "전가산기(full adder)는 어떤 회로로 구성되는가?",
+        "correct_answer": "반가산기 2개와 OR 게이트로 구성된다.",
+        "incorrect_answers": [
+            "반가산기 1개와 OR 게이트로 구성된다.",
+            "반가산기 1개와 AND 게이트로 구성된다.",
+            "반가산기 2개와 AND 게이트로 구성된다."
+        ],
+        "desc": "전가산기는 반가산기 2개 + OR 게이트 1개로 구성 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "명령어(Instructions) 형식에서 첫 번째 바이트의 기능이 아닌 것은?",
+        "correct_answer": "자료의 주소지정 기능",
+        "incorrect_answers": [
+            "제어 기능",
+            "자료전달 기능",
+            "함수연산 기능"
+        ],
+        "desc": "명령어 = 명령어 코드부 + 명령어 주소부로 구성됩니다.<br> 첫번째 바이트이므로 명령과 관련된 내용이 기록되는데,주소 지정은 주소부에서 합니다. "
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "컴퓨터시스템의 중앙처리장치를 구성하는 하나의 회로로서 산술 및 논리연산을 수행하는 장치는?",
+        "correct_answer": "Arithmetic Logic Unit",
+        "incorrect_answers": [
+            "Memory Unit",
+            "I/O Unit",
+            "Associative Memory Unit"
+        ],
+        "desc": "Arithmetic: 산술 / Logic: 논리 / Unit: 장치"
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "CPU에서 명령이 실행되는 순서를 제어하거나 특정 프로그램에 관련된 컴퓨터시스템의 상태를 나타내고 유지하기 위한 제어 워드로서 실행 중인 CPU의 상황을 나타내는 것은?",
+        "correct_answer": "PSW",
+        "incorrect_answers": [
+            "MBR",
+            "MAR",
+            "PC"
+        ],
+        "desc": "PSW : CPU의 상태를 나타냅니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "연산 자료 중에서 필요 없는 부분을 지우고 필요한 부분만 가지고 연산을 행하는 것을 마스크(Mask)라고 하는데 마스크의 개념을 사용하여 행해지는 연산은?",
+        "correct_answer": "AND",
+        "incorrect_answers": [
+            "OR",
+            "NOT",
+            "MOVE"
+        ],
+        "desc": "마스크 연산이란 특정 부분을 삭제하는 연산을 말합니다.<br> AND 게이트를 이용하여 특정 부분을 삭제 할수 있습니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "1bit 기억장치로 가장 적합한 것은?",
+        "correct_answer": "플립플롭",
+        "incorrect_answers": [
+            "레지스터",
+            "누산기",
+            "계전기"
+        ],
+        "desc": "플립플롭은 1비트 기억 장치 입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "16진수 FF를 10진수로 나타낸 것은?",
+        "correct_answer": "255",
+        "incorrect_answers": [
+            "265",
+            "256",
+            "245"
+        ],
+        "desc": "16진수 FF를 10진수로 표현하는 방법은 일단 2진수(4자리씩 확장)로 표현한뒤 10진수로 바꾸는 것이 빠릅니다.<br>일단 16진수 FF를 2진수로 표현해 보면 1111 1111 이 됩니다.<br>이를 10진수로 변환하면 255가 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "다음 그림은 어떤 회로를 나타낸 것인가?",
+        "question_img": "gineungsaJC2007_01_01",
+        "correct_answer": "AND 회로",
+        "incorrect_answers": [
+            "Half Adder",
+            "NOT 회로",
+            "OR 회로"
+        ],
+        "desc": "A, B 모두 연결 되어야 꼬마전구에 불이 들어 오므로 둘다 참이어야 참인 AND 게이트에 관한 그림입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "자외선을 이용하여 메모리를 지우고 Writer로 다시 프로그램을 입력할 수 있는 기억소자는?",
+        "correct_answer": "EPROM",
+        "incorrect_answers": [
+            "ROM",
+            "EEPROM",
+            "CMOS"
+        ],
+        "desc": "PSW : CPU의 상태를 나타냅니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "A(AB+C)를 간단히 한 결과로 옳은 것은?",
+        "correct_answer": "A(B+C)",
+        "incorrect_answers": [
+            "A",
+            "B",
+            "C"
+        ],
+        "desc": "일단 분배법칙으로 풀어 내게 되면 A(AB+C) = AAB +AC 입니다.<br>이때 AA=A 이므로 AB + AC 인데, 이때 A를 묶어 내면 A(B+C) 입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "CPU에서 명령이 실행되는 순서를 제어하거나 특정 프로그램에 관련된 컴퓨터시스템의 상태를 나타내고 유지하기 위한 제어 워드로서 실행 중인 CPU의 상황을 나타내는 것은?",
+        "correct_answer": "PSW",
+        "incorrect_answers": [
+            "MBR",
+            "MAR",
+            "PC"
+        ],
+        "desc": "PSW : CPU의 상태를 나타냅니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "그림과 같은 논리회로에서 A=1,B=1, C=0 일 때 X로 출력되는 값은?",
+        "question_img": "gineungsaJC2007_01_02",
+        "correct_answer": "1",
+        "incorrect_answers": [
+            "0",
+            "10",
+            "11"
+        ],
+        "desc": "위 그림을 식으로 나타나면 AB +C 입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "명령어 형식 중 주소부분이 없어 연산자만 존재하는 형식은?",
+        "correct_answer": "0-주소 형식",
+        "incorrect_answers": [
+            "1-주소 형식",
+            "2-주소 형식",
+            "3-주소 형식"
+        ],
+        "desc": "주소부분이 없다는 말은 0 주소라는 말입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "컴퓨터에 의하여 다음에 수행될 명령어의 주소가 저장되어 있는 기억장소는?",
+        "correct_answer": "프로그램카운트(Program Counter)",
+        "incorrect_answers": [
+            "메모리 레지스터(Memory Register)",
+            "명령어 레지스터(Instruction Register)",
+            "인덱스 레지스터(Index Register)"
+        ],
+        "desc": "프로그램카운트(Program Counter) : 다음 수행 명령 번지 기억 , IR : 현재 수행중인 명령어 기억"
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "동시에 여러 개의 입/출력장치가 작동되도록 설계된 것은?",
+        "correct_answer": "Multiplexer channel",
+        "incorrect_answers": [
+            "Simples channel",
+            "Select channel",
+            "Register channel"
+        ],
+        "desc": "동시에 여러개라는 단어를 통해서 멀티 플랙서 임을 알수 있습니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "디스크 팩이 6장으로 구성되었을 때 사용하여 기록할 수 있는 면 수는?",
+        "correct_answer": "10",
+        "incorrect_answers": [
+            "6",
+            "8",
+            "12"
+        ],
+        "desc": "사용가능한 면수 구하는 공식은 2면 * 디스크장수 - 2면(못쓰는부분) 의 공식이 성립합니다.<br>총 6장이므로 2면 * 6장 -2면은 총 10면 사용 가능 합니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "JK플립플롭(flipflop)에서 보수가 출력되기 위한 J, K의 입력 상태는?",
+        "correct_answer": "J =1, K = 1",
+        "incorrect_answers": [
+            "J =1, K = 0",
+            "J =0, K = 1",
+            "J =0, K = 0"
+        ],
+        "desc": "JK 플립플롭에서 입력신호가 1,1 이면 보수가 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "명령어의 구성 중 연산자 부분(operation code)의 구성요소에 해당되지 않은 것은?",
+        "correct_answer": "명령어 순서",
+        "incorrect_answers": [
+            "인스트럭션 형식",
+            "동작코드",
+            "데이터 종류"
+        ],
+        "desc": "JK 플립플롭에서 입력신호가 1,1 이면 보수가 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "데이터베이스관리시스템(DBMS)의 필수 기능에 해당하지 않는 것은?",
+        "correct_answer": "처리기능",
+        "incorrect_answers": [
+            "제어기능",
+            "정의기능",
+            "조작기능"
+        ],
+        "desc": "DBL은 3가지로 나누어 집니다.DDL(정의어), DML(조작어), DCL(제어어)"
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "프레젠테이션의 구성요소 중 프레젠테이션을 구성하는 하나의 화면 단위를 무엇이라고 하는가?",
+        "correct_answer": "슬라이드",
+        "incorrect_answers": [
+            "개체",
+            "시나리오",
+            "개요"
+        ],
+        "desc": "프리젠테이션의 기본단위는 슬라이드 이며 스프레드시트의 기본단위는 셀입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "스프레드시트 작업에서 반복되거나 복잡한 단계를 수행하는 작업을 일괄적으로 자동화시켜 처리하는 방법에 해당하는 것은?",
+        "correct_answer": "매크로",
+        "incorrect_answers": [
+            "정렬",
+            "검색",
+            "필터"
+        ],
+        "desc": "매크로 : 반복되는 작업을 자동으로 처리해 주는 기능입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "테이블 삭제시 사용하는 SQL 명령은?",
+        "correct_answer": "DROP TABLE",
+        "incorrect_answers": [
+            "CRATE TABLE",
+            "DELETE TABLE",
+            "ALTER TABLE"
+        ],
+        "desc": "DROP 은 데이터베이스, 테이블 삭제명령어입니다.<br>DELETE도 삭제 명령어 이지만 DELETE는 튜플(레코드) 삭제 명령어 입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "다음 SQL문을 실행한 결과 검색되지 않는 주문 수량은?",
+        "question_desc": "SELECT 종목명, 주문수량 FROM 주문내역 WHERE 주문수량 >=150 AND 주문수량 <=300",
+        "correct_answer": "350",
+        "incorrect_answers": [
+            "150",
+            "200",
+            "300"
+        ],
+        "desc": "주문 수량이 150이상, 그리고 주문 수량이 300이하이므로 350이 오답입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "SQL SELECT 문에서 특정 열의 값을 기준으로 정렬할 때 사용하는 절은?",
+        "correct_answer": "ORDER BY 절",
+        "incorrect_answers": [
+            "SORT BY 절",
+            "ORDER TO 절",
+            "SORT 절"
+        ],
+        "desc": "암기 방법: 정렬은 오도바이(ORDER BY)를 타고 합니다!!"
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "사원(사원번호, 이름) 테이블에서 “사원번호”가 “200”인 튜플을 삭제하는 SQL 문은?",
+        "correct_answer": "DELETE FROM 사원 WHERE 사원번호=200;",
+        "incorrect_answers": [
+            "REMOVE TABLE 사원 WHERE 사원번호=200;",
+            "KILL 사원번호, 이름 FROM 사원 WHERE 사원번호=200;",
+            "DROP TABLE 사원 WHERE 사원번호=200;"
+        ],
+        "desc": "DROP는 데이터 베이스, 테이블 삭제 명령이며 DELETE는 튜플(레코드)삭제 명령어 입니다.<br>삭제할 조건이 사원번호가 200인 사암이므로 WHERE 사원번호=200 을 하면 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "각종 보고서나 논문 자료를 여러 사람 앞에서 설명하고자 할 때 가장 적당한 것은?",
+        "correct_answer": "프레젠테이션",
+        "incorrect_answers": [
+            "스프레드시트",
+            "DBMS",
+            "언어번역 프로그램"
+        ],
+        "desc": "발표회에 등에 사용하는 것이므로 프리젠테이션이 가장 적당합니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "데이터베이스 구조를 3단계의 스키마로 나눌 경우 포함되지 않는 것은?",
+        "correct_answer": "논리스키마",
+        "incorrect_answers": [
+            "외부스키마",
+            "개념스키마",
+            "내부스키마"
+        ],
+        "desc": "암기 방법 : 외 개 내 입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "다음 <질의>를 SQL 문으로 옳게 표기한 것은?",
+        "question_desc": "<질의><br>상품 테이블에서 단가가 5000 이상인 자료의 상품명, 단가, 수량을 검색하시오.",
+        "correct_answer": "SELECT 상품명, 단가, 수량 FROM 상품 WHERE 단가 >=5000;",
+        "incorrect_answers": [
+            "SELECT 상품 FROM 상품명, 단가, 수량 WHERE 단가 >=5000;",
+            "SELECT 상품명, 단가, 수량 FROM 상품 WHERE 수량 >=5000;",
+            "SELECT 상품명, 단가, 수량 FROM 상품 IF 단가>=5000;"
+        ],
+        "desc": "SELECT 상품명, 단가, 수량을 하면 되고 검색 테이블이 상품 테이블이므로 FROM 상품 을 하여야 하며 조건이 단가가 5000 이상이므로 WHERE 단가>=5000 이면 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "'윈도98'에 대한 설명으로 옳지 않은 것은?",
+        "correct_answer": "데이터를 한 번에 16비트 단위로 처리한다.",
+        "incorrect_answers": [
+            "Plug and Play 기능을 지원한다.",
+            "네트워크와 인터넷을 지원한다.",
+            "멀티태스킹(Multi-tasking)을 지원한다."
+        ],
+        "desc": "윈도우 98은 32비트 운영체제 입니다..데이터를 32비트 단위로 처리를 합니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "도스(MS-DOS)에서 감추어진 파일의 속성을 해제하는 명령은?",
+        "correct_answer": "ATTRIB /-H",
+        "incorrect_answers": [
+            "ATTRIB /+A",
+            "ATTRIB /-A",
+            "ATTRIB /+H"
+        ],
+        "desc": "H 는 숨김 속성이며 R은 읽기 전용 속성입니다.<br>+는 속성을 부여하는 옵션이며 -는 속성을 해제 하는 옵션입니다.<br>감춤 속성을 해제해야 하므로 -H 가 답이 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "다음의 설명이 가장 적합한 것은?",
+        "question_desc": "Before a disk can store data, it must be divided into sectors that the disk controller can read and write.",
+        "correct_answer": "Formating",
+        "incorrect_answers": [
+            "File store",
+            "Backup",
+            "Booting"
+        ],
+        "desc": "디스크에 데이터를 저장하기 전에 섹터를 만들어 주는 작업에 관한 이야기 이므로 FORMAT가 답이 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "'윈도98'의 탐색기에서 이웃하는 파일들을 선택할 때 사용하는 키와 이웃하지 않는 파일들을 선택할 때 사용하는 키의 나열이 순서적으로 옳은 것은?",
+        "correct_answer": "Shift, Ctrl",
+        "incorrect_answers": [
+            "Alt, Ctrl",
+            "Shift, Alt",
+            "Ctrl, Alt"
+        ],
+        "desc": "연속된 데이터는 SHIFT 키로 선택 하며 불연속 데이터는 CTRL 키를 이용하면 됩니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "'윈도98'에서 '시스템 도구' 메뉴에 포함되지 않는 것은?",
+        "correct_answer": "디스크 포맷",
+        "incorrect_answers": [
+            "디스크 검사",
+            "디스크 조각 모음",
+            "디스크 정리"
+        ],
+        "desc": "디스크 포맷은 포함되어 있지 않습니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "유닉스(UNIX) 명령어 'rm'의 설명으로 옳은 것은?",
+        "correct_answer": "파일 삭제",
+        "incorrect_answers": [
+            "디렉토리 생성",
+            "디렉토리 이동",
+            "디스크 포맷"
+        ],
+        "desc": "RM은 REMOVE의 약자로써 삭제의 의미를 가집니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "'윈도98'에서 한 번의 마우스 조작만으로 현재 실행 중인 응용프로그램 사이를 오가며 작업할 수 있는 환경을 제공하는 것은?",
+        "correct_answer": "작업 표시",
+        "incorrect_answers": [
+            "바탕화면",
+            "내 컴퓨터",
+            "시작 버튼"
+        ],
+        "desc": "작업 표시줄에 관한 설명 입니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "유닉스(UNIX)에서 네트워크상의 문제를 진단할 수 있는 명령어는?",
+        "correct_answer": "ping",
+        "incorrect_answers": [
+            "cd",
+            "pwd",
+            "who"
+        ],
+        "desc": "PING : 네트워크의 연결상태를 점검할수 있는 명령어 입니다.흔히들 PING 테스트 라고 합니다."
+    },{
+        "subject": "전자 계산기 일반",
+        "question": "다음 ( ) 안의 내용으로 가장 적절한 것은?",
+        "question_desc": "A(n)(   )is a program that acts an intermediary between a user of computer and the computer hardware.",
+        "correct_answer": "operating system",
+        "incorrect_answers": [
+            "GUI",
+            "compiler",
+            "file system"
+        ],
+        "desc": "BETWEEN, USER, HARDWARE 단어를 통하여 유저(USER)와 하드웨어 사이에 존재한다고 하였으므로 운영체제(OS)에 관한 이야기 입니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "다중 프로그래밍 환경에서 하나 또는 그 이상의 프로세서가 가능하지 못한 특정 사건(Event)을 무한정 기다리는 상태를 무엇이라고 하는가?",
+        "correct_answer": "Dead Lock",
+        "incorrect_answers": [
+            "Swapping",
+            "Overlay",
+            "Pipelining"
+        ],
+        "desc": "Dead Lock : 교착상태에 관한 내용입니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "도스(MS-DOS)에서 외부명령어에 대한 설명으로 옳은 것은?",
+        "correct_answer": "독립된 파일의 형태로 DIR 명령으로 확인이 가능하다.",
+        "incorrect_answers": [
+            "COMMAND.COM이 주기억장치에 올려 져야 사용할 수 있다.",
+            "주기억장치에 항상 올려져 있는 명령어이다.",
+            "DIR은 외부명령어 이다."
+        ],
+        "desc": "외부 명령어는 COMMAND.COM에서 지원해주는 명령어가 아니므로 실행 파일이 별도로 존재 합니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "유닉스(UNIX) 운영체제의 기초가 되는 컴퓨터 언어는?",
+        "correct_answer": "C",
+        "incorrect_answers": [
+            "COBOL",
+            "PASCAL",
+            "BASIC"
+        ],
+        "desc": "유닉스 커널의 90%는 C언어(이식성 향상)로 작성되어 있으며 10%는 어셈블리어(고속동작)로 작성되어 있습니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "유닉스(UNIX) 명령어 중 DOS의 DIR과 같은 역할을 하는 명령은?",
+        "correct_answer": "ls",
+        "incorrect_answers": [
+            "cd",
+            "pwd",
+            "cp"
+        ],
+        "desc": "LS : LIST 약자로 파일 목록을 보여 달라는 뜻입니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "'윈도98'에서 바탕화면에 있는 아이콘들을 정렬하려고 할 때 기본적으로 제공하는 아이콘 정렬 방식이 아닌 것은?",
+        "correct_answer": "계단식 정렬",
+        "incorrect_answers": [
+            "종류별 정렬",
+            "자동 정렬",
+            "크기순 정렬"
+        ],
+        "desc": "계단식 정렬은 없습니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "도스(MS-DOS)에서 실행파일이 존재하지 않고 'COMMAND.COM'이 메모리에 상주하고 있을 경우 항상 사용할 수 있는 명령어를 의미하는 것은?",
+        "correct_answer": "내부명령어",
+        "incorrect_answers": [
+            "외부명령어",
+            "배치명령어",
+            "실행명령어"
+        ],
+        "desc": "COMMAND.COM과 관련이 있으므로 내부 명령어에 관한 이야기 입니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "단말장치 사용자가 일정한 시간간격(Time Slice) 동안 CPU를 사용함으로써 단독으로 중앙처리장치를 이용하는 것과 같은 효과를 가지는 시스템은?",
+        "correct_answer": "시분할 시스템",
+        "incorrect_answers": [
+            "다중프로그래밍 시스템",
+            "일괄처리 시스템",
+            "분산처리 시스템"
+        ],
+        "desc": "시간간격(Time Slice)란 시간을 조각내어 쓴다는 뜻입니다.<br>시분할 처리에 관한 내용입니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "도스(MS-DOS)에서 'config.sys' 파일에 'break=on'을 설정하는 이유는?",
+        "correct_answer": "ctrl + c에 의한 작업 중지 명령을 위하여",
+        "incorrect_answers": [
+            "중첩 확장 메모리 영역의 사용을 위하여",
+            "숨김(hidden) 파일을 만들기 위하여",
+            "드라이브를 읽기 전용(read only)로 만들기 위하여"
+        ],
+        "desc": "break=on 설정을 하며 ctrl + c 버튼을 눌러서 작업 중지 요청을 할수 있습니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "'윈도98'에서 ‘디스크 조각 모음’에 관한 설명으로 옳은 것은?",
+        "correct_answer": "디스크를 효율적으로 사용하기 위해 파일을 정리한다.",
+        "incorrect_answers": [
+            "디스크의 논리적 영역을 할당한다.",
+            "디스크의 삭제된 파일을 복구한다.",
+            "디스크의 물리적 손상부분을 제거한다."
+        ],
+        "desc": "디스크안의 파일들이 조각나 있을경우 데이터 읽는데 오랜 시간이 걸리므로 이를 모아주는 디스크조각모으기 기능을 통하여 디스크의 데이터를 좀더 빨리 읽을수 있습니다"
+    },{
+        "subject": "정보처리 기능사",
+        "question": "하드디스크의 분할을 설정하고 논리적 드라이브 번호를 할당하는 DOS의 외부명령어는?",
+        "correct_answer": "FDISK",
+        "incorrect_answers": [
+            "CHKDSK",
+            "RECOVER",
+            "DISKCOMP"
+        ],
+        "desc": "하드디스크를 분할하고 설정하는것을 파티션을 나눈다고 합니다.<br>파티션 디스크의 약자인 FDISK가 답이 됩니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "다음 중 리얼타임시스템(real time system)으로 처리하는데 가장 적합한 것은?",
+        "correct_answer": "좌석예약",
+        "incorrect_answers": [
+            "급여계산",
+            "월간판매 분석",
+            "성적관리"
+        ],
+        "desc": "좌석예약업무는 즉시 즉시 처리 해야할 일이므로 실시간처리인 리얼타임처리를 해야 합니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "다음 중 LAN과 가장 관계가 없는 것은?",
+        "correct_answer": "DSU",
+        "incorrect_answers": [
+            "CSMA/CD",
+            "Token ring",
+            "FDDI"
+        ],
+        "desc": "DSU : 디지털 신호를 디지털로 전송해 주는 장비명 입니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "전송선로의 조건 중 선로의 감쇄량이 최소로 되는 경우는?(단, R : 선로의 저항 L : 선로의 인덕턴스 C : 선로의 커패시턴스 G : 선로의 누설컨덕턴스)",
+        "correct_answer": "LG = RC",
+        "incorrect_answers": [
+            "RL = GC",
+            "LC = GR",
+            "LR = CR"
+        ],
+        "desc": "무조건 암기해줍시다! 엘지알씨~"
+    },{
+        "subject": "정보처리 기능사",
+        "question": "국제표준화기구인 ISO에서 제시한 프로토콜 모델은?",
+        "correct_answer": "OSI 7계층",
+        "incorrect_answers": [
+            "ITU-X 시리즈",
+            "IBM의 BSC",
+            "ANSI의 HDLC"
+        ],
+        "desc": "OSI 7계층은 ISO에서 제시한 프로토콜 모델 입니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "광섬유 케이블은 코어와 클래드로 구성된다. 케이블에서 빛이 통과하는 주 통로는?",
+        "correct_answer": "코어",
+        "incorrect_answers": [
+            "클래드",
+            "코어와 클래드 양쪽 모두",
+            "코어와 클래드의 중심"
+        ],
+        "desc": "빛이 주로 통과하는 부분은 코어이며 빛이 반사되는 부분이 클래드 입니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "정보통신시스템에서 디지털 신호를 아날로그 신호로, 아날로그 신호를 디지털 신호로 변환시켜주는 것은?",
+        "correct_answer": "변복조기",
+        "incorrect_answers": [
+            "단말기",
+            "다중화기",
+            "접속기"
+        ],
+        "desc": "변조 : 디지털 신호를 아날로그로 변환하는것<br>복조 : 아날로그 신호를 디지털 신호로 복원하는것"
+    },{
+        "subject": "정보처리 기능사",
+        "question": "에러(error)를 검출하기 위하여 1개의 체크 비트(check bit)를 가지는데 이것을 무엇이라 하는가?",
+        "correct_answer": "패리티 비트(parity bit)",
+        "incorrect_answers": [
+            "바이너리 비트(binary bit)",
+            "캐리 비트(carry bit)",
+            "체크 디지트(check digit)"
+        ],
+        "desc": "패리티 비트(parity bit)는 1개의 비트를 이용하여 에러를 검출하는 방식으로 홀수체크, 짝수체크방식이 있습니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "메시지통신시스템(MHS)의 설명으로 적합하지 않은 것은?",
+        "correct_answer": "패킷교환방식으로 운용된다.",
+        "incorrect_answers": [
+            "전자메일 서비스의 일종이다.",
+            "컴퓨터의 축적처리 기능을 이용한 것이다.",
+            "메시지의 양방향 송/수신이 가능하다."
+        ],
+        "desc": "메시지통신시스템이라고 하였으므로 패킷 교환은 적당하지 않습니다."
+    },{
+        "subject": "정보처리 기능사",
+        "question": "RS-232C용 케이블 커넥터인 25핀에서 DTE와 DCE간에 데이터의 송신과 수신용 핀 번호가 순서대로 옳은 것은?",
+        "correct_answer": "2, 3번",
+        "incorrect_answers": [
+            "7, 8번",
+            "14, 16번",
+            "20, 21번"
+        ],
+        "desc": "2번 : 송신, 3번 : 수신"
+    },{
+        "subject": "정보처리 기능사",
+        "question": "다음 중 데이터통신의 목적으로 가장 적합한 것은?",
+        "correct_answer":  "신속 정확한 정보의 전달과 정보지원의 공유 및 이용",
+        "incorrect_answers": [
+            "통신서비스의 표준화",
+            "정보통신기기의 개발 및 발전 촉진",
+            "정보에 대한 비밀 보장"
+        ],
+        "desc": "신속 정확한 정보의 전달과 정보지원의 공유 및 이용 등이 데이터 통신의 목적 입니다."
+    }
+]
