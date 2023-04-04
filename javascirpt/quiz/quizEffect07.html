@@ -159,7 +159,7 @@
 
         //데이터 가져오기
         const dataQuestion = () => {
-            fetch("https://yeodaseul4355.github.io/web2023/javascirpt/quiz/json/gineungsaWD2023_01.json")
+            fetch("json/gineungsaWD2023_01.json")
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
