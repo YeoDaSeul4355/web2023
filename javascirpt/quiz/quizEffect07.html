@@ -63,7 +63,7 @@
                         <div class="cbt__title">수험자 : <em>여다슬</em></div>
                         <div class="cbt__score">
                             <span>전체 문제수 : 60문항</span>
-                            <span>남은 문제수 : <em>59</em>문항</span>
+                            <span>남은 문제수 : <em class="last__count"></em>문항</span>
                         </div>
                         <div class="score"></div>
                     </div>
@@ -108,7 +108,7 @@
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
-        const cbtScore = document.querySelector(".cbt__score");
+        const lastCount = document.querySelector(".last__count");
         
         let quizScore = 0;
         
@@ -157,10 +157,11 @@
             })
             .catch((err) => console.log(err));
 
-            const quizImg = document.querySelectorAll(".cbt__question__img");
-                if(quizImg[number].innerText == "img/undefined.png"){
-                    quizImg[number].classList.add("hide");
+            const quizDesc = document.querySelectorAll(".cbt__question__desc");
+                if(quizDesc[number].innerText == "undefined"){
+                    quizDesc[number].classList.add("hide");
                 }
+ 
         }
 
         // 문제 만들기
@@ -173,6 +174,7 @@
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
                         <div class="cbt__question__img"><img src="img/${question.questionImg}.jpg" alt=""></div>
+                        <div class="cbt__question__desc">${question.questionDesc}</div>
                         <div class="cbt__selects">
                             <div>
                                 <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
@@ -204,14 +206,8 @@
                 `);
             });
 
-            let scoreTag = `
-                전체 문제 수 : ${questionAll.length}문항<br>
-                남은 문제 수 : 59문항
-            `;
-
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
-            cbtScore.innerHTML = scoreTag;
         };
 
         // 정답 확인하기
@@ -248,9 +244,18 @@
 
             document.querySelector(".score").innerHTML = `총 점수는 ${Math.ceil((quizScore / questionAll.length) * 100)}점입니다.`;
         };
+        
         const answerSelect = () => {
-
+            // 사용자가 선택한 갯수를 구하는 방법
+            const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
+            // 남은 문항
+            const remainingCount = questionAll.length - answeredCount;
+            // 남은 문항을 나머지 문항에 넣어놓기
+            lastCount.innerText = remainingCount;
+            // 클릭때 마다 값을 반환시켜주기
+            return remainingCount;
         };
+
 
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();
