@@ -322,40 +322,31 @@
 .cbt__aside {
     position: fixed;
     right: 20px;
-    top: 150px;
-    width: 280px;
+    top: 100px;
+    width: 250px;
     height: calc(100vh - 140px);
     background-color: #fff;
-    border: 5px ridge #ffb8d6;
-    overflow-y: auto;
 }
 .cbt__info {
     background-color: #ffebf4;
-}
-.cbt__info > div {
-    border-bottom: 5px ridge #ffb8d6;
-    padding: 20px;
+    margin-bottom: 10px;
 }
 .cbt__info > div:first-child {
-    background-color: #ffc1d6;
-    text-align: center;
+    border-bottom: 5px ridge #ec93b8;
 }
 .cbt__time {
     background-color: #3f22ff;
     text-align: center;
     color: #fff;
-    width: 130px;
-    margin-left: 3px;
-    padding: 10px 20px 10px 33px;
-    border-radius: 20px;
-    position: fixed;
-    top: 100px;
-    right: 165px; 
+    width: 100%;
+    padding: 10px 20px 10px 30px;
+    border-radius: 40px;
+    position: relative;
 }
 .cbt__time::before {
     content: '';
     position: absolute;
-    left: 9px;
+    left: 40px;
     top: 11px;
     width: 22px;
     height: 22px;
@@ -365,21 +356,39 @@
     background-color: #ff7878;
     text-align: center;
     color: #fff;
-    width: 130px;
-    padding: 10px 20px 10px 31px;
-    border-radius: 20px;
-    position: fixed;
-    right: 30px;
-    top: 100px;
+    cursor: pointer;
+    width: 100%;
+    border: 0;
+    padding: 10px 20px 10px 30px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 16px;
 }
 .cbt__submit::before {
     content: '';
     position: absolute;
-    left: 13px;
+    left: 45px;
     top: 10px;
     width: 22px;
     height: 22px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
+}
+
+.cbt__info {
+    border: 5px ridge #ffb8d6;
+}
+.cbt__omr {
+    border: 5px ridge #ffb8d6;
+    overflow-y: auto;
+    height: 400px;
+}
+.cbt__info > div {
+    padding: 20px;
+}
+.cbt__info > div:first-child {
+    background-color: #ffc1d6;
+    text-align: center;
 }
 .cbt__submit:hover {
     background-color: #ff3939;
