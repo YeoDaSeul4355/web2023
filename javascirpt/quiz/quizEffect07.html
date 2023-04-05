@@ -219,25 +219,6 @@
             .catch((err) => console.log(err));
         }
 
-        let minutes = 60;
-        let seconds = 0;
-
-        function countdown() {
-            const timerElement = document.querySelector(".cbt__time");
-            timerElement.innerHTML = `${minutes}분 ${seconds.toString().padStart(2, '0')}초`;
-
-            if(seconds === 0){
-                seconds = 59;
-                minutes--;
-            } else {
-                seconds--;
-            }
-            if(minutes < 0){
-                clearInterval(timer);
-                alert("시험시간이 끝났습니다. 답안을 제출해주세요.");
-            }
-        }
-    const timer = setInterval(countdown, 1000);
         //문제 만들기
         const newQuestion = () => {
             const exam = [];
