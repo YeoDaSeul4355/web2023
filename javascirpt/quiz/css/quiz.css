@@ -1,3 +1,7 @@
+/* common */
+.hide {
+    display: none !important;
+}
 /* header */
 #header {
     position: fixed;
@@ -606,9 +610,25 @@
     align-items: center;
     justify-content: center;
 }
+.cbt__start p {
+    margin-bottom: 10px;
+}
+.cbt__start__btn {
+    width: 350px;
+    padding: 15px;
+    border: 0;
+    border: 1px solid #ccc;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'DungGeunMo';
+    border: 0;
+    background-color: #ffaeed;
+}
 .cbt__start > div {
     width: 50%;
     height: 50vh;
+    padding: 30px 50px;
     background-color: #fff;
     border: thick double #ff76c3;
     border-radius: 40px;
@@ -618,7 +638,7 @@
     text-align: center;
 }
 .cbt__modal1 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px;
 }
 .cbt__modal1 select {
@@ -628,12 +648,26 @@
     margin-bottom: 20px;
 }
 .cbt__modal1 button {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    font-family: 'DungGeunMo';
-    border: 0;
-    background-color: #ffaeed;
+    
+}
+.cbt__view {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    ;height: 1.8;
+}
+.cbt__view input {
+    border: 1px solid #ccc;
+    padding: 2px 10px;
+    font-family: 'ScoreDream';
+    border-radius: 20px;
+}
+.cbt__view span {
+    position: relative;
+}
+.cbt__view span::before {
+    content: '';
+    position: absolute;
 }
 /* dog__wrap */
 .dog .tail, 
