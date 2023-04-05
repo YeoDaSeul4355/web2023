@@ -66,6 +66,7 @@
                             <span>전체 문제수 : <em class="cbt__length">0</em>문항</span>
                             <span>남은 문제수 : <em class="cbt__rest">0</em>문항</span>
                         </div>
+                        <div class="score"></div>
                     </div>
                 </div>
                 <div class="cbt__omr">
@@ -148,7 +149,7 @@
                         </select>
                     </div>
                     <div class="cbt__view">
-                        이름은 <input type="text" class="name"> 입니다.<br>
+                        이름은 <input type="text" class="name" autofocus placeholder="이름을 적어주세요"> 입니다.<br>
                         당신은 <span class="subject">웹디자인 기능사시험</span>를 선택했습니다.
                     </div>
                     <button class="cbt__start__btn">시작하기</button>
@@ -171,19 +172,30 @@
         const cbtStartBtn = document.querySelector(".cbt__start__btn");     //시작하기 버튼
         const cbtStart = document.querySelector(".cbt__start");
         const cbtTime = document.querySelector(".cbt__time");
+        const cbtName = document.querySelector(".cbt__name");
+        const inputName = document.querySelector(".name");
         
         let questionAll = [];       // 모든 퀴즈 정보
         let questionLength = 0;     // 전체 문제수
         let questionRest = questionLength;     // 남은 문제수
         let questionTime = "";              // 시간
         let questionTimeRemain = "3600";    // 남은 시간
+        let quizScore = 0;``````
 
         // 시작하기
         const startQuiz = () => {
-            cbtStart.classList.add("hide");
-
+            
             // 시간 설정
             questionTime = setInterval(reduceTime, 1000);
+            
+            // 이름 입력
+            
+            cbtName.innerText = `${inputName.value}`;
+            
+            if(inputName == "")return alert("이름 적어주세요.");
+            
+            // 선택 안했을 때
+            cbtStart.classList.add("hide");
         }
 
         //데이터 가져오기
@@ -307,6 +319,7 @@
                 if(numberAnswer == question.answer){
                     console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
+                    quizScore++;
                 } else {
                     console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
@@ -324,6 +337,8 @@
                 } else {
                     quizDesc[number].classList.remove("hide");
                 }
+
+                document.querySelector(".score").innerHTML = `총 점수는 ${Math.ceil((quizScore / questionAll.length) * 100)}점입니다.`;
             });
         }
 
@@ -395,16 +410,15 @@
                 let minutes = Math.floor(questionTimeRemain / 60);
                 let second = questionTimeRemain % 60;
 
+                (second< 10)? second="0"+ second : second;
+
                 return minutes + "분 " + second + "초";
                 // 초의 단위가 한자리 수가 되면 앞에 0을 붙여주기
-
-                (second == second < 10) ? "0" + second : second;
-
             }
         }
 
 
-        // 게임 끝
+        // 퀴즈 끝
         const endquiz = () => {
             alert("시험이 끝났습니다! 고생하셨습니다😎");
         }
