@@ -258,7 +258,7 @@
         "incorrect_answers": [
             "TCP",
             "IP",
-            "FTP"
+            "ARP"
         ],
         "desc": "주소 결정 프로토콜(Address Resolution Protocol, ARP)"
     },{
