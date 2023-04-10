@@ -99,35 +99,45 @@
         let currentIndex = 0;               // 현재 보이는 이미지
         let sliderCount = slider.length;    // 이미지 갯수
         let sliderInterval = 3000;          // 이미지 변경 간격 시간
+    </script>
 
-
+    <!-- javascript -->
+    <!-- <script>
         setInterval(() => {
-            // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0  // currentIndex
-            // 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 1  // nextIndex
+            // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0  //currentIndex
+            // 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 1  //nextIndex
             let nextIndex = (currentIndex + 1) % sliderCount;
-            
             slider[currentIndex].style.opacity = "0";
             slider[nextIndex].style.opacity = "1";
-            
             currentIndex = nextIndex;
-
-            console.log(currentIndex);
         }, sliderInterval);
+    </script> -->
 
-        // slider[0].style.opacity = "0"; // 첫번째 이미지를 안보이게
-        // slider[1].style.opacity = "1"; // 두번째 이미지를 보이게
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1 ) % sliderCount;
 
-        // slider[1].style.opacity = "0"; // 두번째 이미지를 안보이게
-        // slider[2].style.opacity = "1"; // 세번째 이미지를 보이게
+            gsap.to(slider[currentIndex], { opacity: 0, duration: 0.5 }); // 현재 슬라이더 숨기기
+            gsap.to(slider[nextIndex], { opacity: 1, duration: 0.5 }); // 다음 슬라이더 보여주기
 
-        // slider[2].style.opacity = "0"; // 세번째 이미지를 안보이게
-        // slider[3].style.opacity = "1"; // 네번째 이미지를 보이게
-
-        // slider[3].style.opacity = "0"; // 네번째 이미지를 안보이게
-        // slider[4].style.opacity = "1"; // 다섯번째 이미지를 보이게
-
-        // slider[4].style.opacity = "0"; // 다섯번째 이미지를 안보이게
-        // slider[0].style.opacity = "1"; // 첫번째 이미지를 보이게
+            currentIndex = nextIndex;
+        }, sliderInterval);
     </script>
+
+    <!-- jQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;
+          
+            $(slider[currentIndex]).animate({ opacity: 0 }, 500); // 현재 슬라이더 숨기기
+            $(slider[nextIndex]).animate({ opacity: 1 }, 500); // 다음 슬라이더 보여주기
+          
+            currentIndex = nextIndex;
+        }, sliderInterval);
+    </script> -->
 </body>
 </html>
