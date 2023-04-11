@@ -96,25 +96,25 @@
     <!-- javascript -->
     <script>
         // 복사한 첫 번째 이미지 마지막에 붙여넣기
-        sliderInner.appendChild(sliderClone);
+        // sliderInner.appendChild(sliderClone);
         
-        function sliderEffect(){
-            currentIndex++;
+        // function sliderEffect(){
+        //     currentIndex++;
 
-            sliderInner.style.transition = "all 0.6s";
-            sliderInner.style.transform = `translateX(-${sliderWidth * currentIndex}px)`;
+        //     sliderInner.style.transition = "all 0.6s";
+        //     sliderInner.style.transform = `translateX(-${sliderWidth * currentIndex}px)`;
 
-            // 마지막 이미지에 위치했을 때 
-            if(currentIndex == sliderCount){
-                setTimeout(() => {
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = `translateX(0px)`;
-                }, 700);
-                currentIndex = 0;
-            }
-        };
+        //     // 마지막 이미지에 위치했을 때 
+        //     if(currentIndex == sliderCount){
+        //         setTimeout(() => {
+        //             sliderInner.style.transition = "0s";
+        //             sliderInner.style.transform = `translateX(0px)`;
+        //         }, 700);
+        //         currentIndex = 0;
+        //     }
+        // };
 
-        setInterval(sliderEffect, sliderInterval);
+        // setInterval(sliderEffect, sliderInterval);
     </script>
 
     <!-- GSAP -->
@@ -136,9 +136,7 @@
                     gsap.to(".slider__inner", {
                         x: 0,
                         duration: 0
-                    })
-                    // sliderInner.style.transition = "0s";
-                    // sliderInner.style.transform = `translateX(0px)`;
+                    });
                 }, 700);
                 currentIndex = 0;
             }
@@ -147,28 +145,32 @@
     </script> -->
 
     <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script>
-        sliderInner.appendChild(sliderClone);
-        
+
+        sliderInner.append(sliderClone);
+
         function sliderEffect(){
             currentIndex++;
 
-            $(".slider__inner").animate({
-                "transform" : `translateX(-${sliderWidth * currentIndex}px)`
-            }, 600);
+            $(".slider__inner").css({
+                'transition': 'all 0.6s',
+                'transform': `translateX(-${sliderWidth * currentIndex}px)`
+            });
 
-            // 마지막 이미지에 위치했을 때 
             if(currentIndex == sliderCount){
                 setTimeout(() => {
-                    $(".slider__inner").css('transition', '0s');
-                    $(".slider__inner").css("transform", "translateX(0px)");
+                    $(".slider__inner").css({
+                        'transition': '0s',
+                        'transform': 'translateX(0px)'
+                    });
                 }, 700);
                 currentIndex = 0;
             }
         };
-        setInterval(sliderEffect, sliderInterval); -->
+
+        setInterval(sliderEffect, sliderInterval);
     </script>
 </body>
 </html>
