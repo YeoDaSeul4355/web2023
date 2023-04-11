@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    
+    <title>05. 슬라이드 이펙트</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slider.css">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/> 
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png"/> 
+    <link rel="apple-touch-icon" href="img/favicon.png"/>
+    
+    <style>
+        /* slider__wrap */
+        .slider__wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider__img { /* 이미지가 보이는 영역 */
+            position: relative;
+            width: 800px;
+            height: 450px;
+            overflow: hidden;
+        }
+        .slider__inner { /* 이미지 움직이는 영역 */
+            display: flex;
+            flex-wrap: wrap;
+            width: 4800px;  /* 총 이미지가 4800px */
+            height: 450px;
+        }
+        .slider { /* 개별적인 이미지 */
+            position: relative;
+            width: 800px;
+            height: 450px;
+        }
+    </style>
+</head>
+<body class="img08 bg07 font09">
+    <header id="header">
+        <h1>Javascript Slider Effect05</h1>
+        <p>슬라이드 이펙트 : 위로 움직이기(연속적으로)</p>
+        <ul>
+            <li><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li class="active"><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="slider__wrap">
+            <div class="slider__img">
+                <div class="slider__inner">
+                    <div class="slider s1"><img src="./img/sliderEffect04-min.jpg" alt="이미지1"></div>
+                    <div class="slider s2"><img src="./img/sliderEffect08-min.jpg" alt="이미지2"></div>
+                    <div class="slider s3"><img src="./img/sliderEffect03-min.jpg" alt="이미지3"></div>
+                    <div class="slider s4"><img src="./img/sliderEffect06-min.jpg" alt="이미지4"></div>
+                    <div class="slider s5"><img src="./img/sliderEffect10-min.jpg" alt="이미지5"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        // 선택자
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img");             // 보여지는 영역
+        const sliderInner = sliderWrap.querySelector(".slider__inner");         // 움직이는 영역
+        const slider = sliderWrap.querySelectorAll(".slider");                  // 개별 이미지
+
+        let currentIndex = 0;                                                   // 현재 보이는 이미지
+        let sliderCount = slider.length;                                        // 이미지 갯수
+        let sliderInterval = 2000;                                              // 이미지 변경 간격 시간
+        let sliderWidth = slider[0].clientWidth;                                // 이미지 가로값 구하기
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);        // 첫 번째 이미지 복사
+    </script>
+
+    <!-- javascript -->
+    <script>
+        // 복사한 첫 번째 이미지 마지막에 붙여넣기
+        sliderInner.appendChild(sliderClone);
+        
+        function sliderEffect(){
+            currentIndex++;
+
+            sliderInner.style.transition = "all 0.6s";
+            sliderInner.style.transform = `translateX(-${sliderWidth * currentIndex}px)`;
+
+            // 마지막 이미지에 위치했을 때 
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    sliderInner.style.transition = "0s";
+                    sliderInner.style.transform = `translateX(0px)`;
+                }, 700);
+                currentIndex = 0;
+            }
+        };
+
+        setInterval(sliderEffect, sliderInterval);
+    </script>
+
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+
+    </script> -->
+
+    <!-- jQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+
+    </script> -->
+</body>
+</html>
