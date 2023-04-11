@@ -32,10 +32,9 @@
             overflow: hidden;
         }
         .slider__inner { /* 이미지 움직이는 영역 */
-            display: flex;
             flex-wrap: wrap;
-            width: 4800px;  /* 총 이미지가 4800px */
-            height: 450px;
+            width: 800px;  /* 총 이미지가 4800px */
+            height: 2200px;
         }
         .slider { /* 개별적인 이미지 */
             position: relative;
@@ -89,26 +88,83 @@
         let currentIndex = 0;                                                   // 현재 보이는 이미지
         let sliderCount = slider.length;                                        // 이미지 갯수
         let sliderInterval = 2000;                                              // 이미지 변경 간격 시간
-        let sliderWidth = slider[0].clientWidth;                                // 이미지 가로값 구하기
+        let sliderHeight = slider[0].clientHeight;                              // 이미지 세로값 구하기
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);        // 첫 번째 이미지 복사
     </script>
 
     <!-- javascript -->
     <script>
         // 복사한 첫 번째 이미지 마지막에 붙여넣기
+        // sliderInner.appendChild(sliderClone);
+        
+        // function sliderEffect(){
+        //     currentIndex++;
+
+        //     sliderInner.style.transition = "all 0.6s";
+        //     sliderInner.style.transform = `translateY(-${sliderHeight * currentIndex}px)`;
+
+        //     // 마지막 이미지에 위치했을 때 
+        //     if(currentIndex == sliderCount){
+        //         setTimeout(() => {
+        //             sliderInner.style.transition = "0s";
+        //             sliderInner.style.transform = `translateY(0px)`;
+        //         }, 700);
+        //         currentIndex = 0;
+        //     }
+        // };
+
+        // setInterval(sliderEffect, sliderInterval);
+    </script>
+
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
         sliderInner.appendChild(sliderClone);
         
         function sliderEffect(){
             currentIndex++;
 
-            sliderInner.style.transition = "all 0.6s";
-            sliderInner.style.transform = `translateX(-${sliderWidth * currentIndex}px)`;
+            gsap.to(sliderInner, {
+                y: -sliderHeight * currentIndex,
+                duration: 0.6
+            });
 
             // 마지막 이미지에 위치했을 때 
             if(currentIndex == sliderCount){
                 setTimeout(() => {
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = `translateX(0px)`;
+                    gsap.to(sliderInner, {
+                        y: 0,
+                        duration: 0
+                    });
+                }, 700);
+                currentIndex = 0;
+            }
+        };
+
+        setInterval(sliderEffect, sliderInterval);
+    </script> -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+
+        sliderInner.append(sliderClone);
+
+        function sliderEffect(){
+            currentIndex++;
+
+            $(".slider__inner").css({
+                'transition': 'all 0.6s',
+                'transform': `translateY(-${sliderHeight * currentIndex}px)`
+            });
+
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    $(".slider__inner").css({
+                        'transition': '0s',
+                        'transform': 'translateY(0px)'
+                    });
                 }, 700);
                 currentIndex = 0;
             }
@@ -116,18 +172,5 @@
 
         setInterval(sliderEffect, sliderInterval);
     </script>
-
-    <!-- GSAP -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script>
-
-    </script> -->
-
-    <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <script>
-
-    </script> -->
 </body>
 </html>

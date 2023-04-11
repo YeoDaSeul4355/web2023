@@ -179,6 +179,12 @@
             });
         });
         
+        // dot 메뉴 클릭했을 때 넘어가기
+        document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                gotoSlider(index);
+            });
+        });
     </script>
 </body>
 </html>
