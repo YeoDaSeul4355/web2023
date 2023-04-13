@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    
+    <title>07. 슬라이드 이펙트</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slider.css">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/> 
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png"/> 
+    <link rel="apple-touch-icon" href="img/favicon.png"/>
+    
+    <style>
+        /* slider__wrap */
+        .slider__wrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 450px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.4);
+        }
+        .slider__img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .slider__img img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: scale(1.1);
+            transition: all 500ms ease-in-out;
+        }
+        .slider__img img.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .slider__thumb {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 140px);
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .slider__thumb img {
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .slider__thumb img.active {
+            border: 2px solid #fff;
+        }
+        .slider__btn a {
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: all 300ms ease-in-out;
+        }
+        .slider__btn a.next {
+            right: 0;
+        }
+        .slider__btn a:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="img04 bg07 font02">
+    <header id="header">
+        <h1>Javascript Slider Effect07</h1>
+        <p>슬라이드 이펙트 : 썸네일 슬라이드(버튼, 썸네일)</p>
+        <ul>
+            <li><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+            <li class="active"><a href="sliderEffect07.html">7</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="slider__wrap">
+            <div class="slider__img"></div>
+            <div class="slider__thumb"></div>
+            <div class="slider__btn">
+                <a href="#" class="prev" title="이전이미지">prev</a>
+                <a href="#" class="next" title="다음이미지">next</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        let images = [
+            "img/sliderEffect04-min.jpg",
+            "img/sliderEffect05-min.jpg",
+            "img/sliderEffect03-min.jpg",
+            "img/sliderEffect09-min.jpg",
+            "img/sliderEffect10-min.jpg"
+        ];
+
+        function imageSlider(parent, images){
+            let currentIndex = 0;
+
+            // 선택자
+            let slider = {
+                parent: parent,
+                images: parent.querySelector(".slider__img"),
+                thumbnails: parent.querySelector(".slider__thumb"),
+                prevBtn: parent.querySelector(".slider__btn .prev"),
+                nextBtn: parent.querySelector(".slider__btn .next")
+            };
+
+            // 이미지 출력하기
+            slider.images.innerHTML = images.map((image, index) => {
+                return `<img src="${image}" alt="이미지${index}">`;
+            }).join("");
+
+            // 이미지 활성화(active)하기
+            let imageNodes = slider.images.querySelectorAll("img");
+            imageNodes[currentIndex].classList.add("active");
+
+
+            // 썸네일 이미지 출력하기
+            slider.thumbnails.innerHTML = slider.images.innerHTML;
+
+            // 썸네일 활성화(active)하기
+            let thumnailNodes = slider.thumbnails.querySelectorAll("img");
+            thumnailNodes[currentIndex].classList.add("active");
+
+            // 썸네일 이미지 클릭하기_for문
+            // for(let i=0; i<thumnailNodes.length; i++){
+            //     thumnailNodes[i].addEventListener("click", function(){      //this값을 가져올 수 있음
+            //         slider.thumbnails.querySelector("img.active").classList.remove("active");
+            //         thumnailNodes[i].classList.add("active");
+
+            //         imageNodes[currentIndex].classList.remove("active");
+            //         currentIndex = i;
+            //         imageNodes[currentIndex].classList.add("active");
+            //     });
+            // }
+            
+            // 썸네일 이미지 클릭하기_forEach()
+            thumnailNodes.forEach((thumb, index) => {
+                thumb.addEventListener("click", function(){
+                    thumnailNodes[currentIndex].classList.remove("active");
+                    thumnailNodes[index].classList.add("active");
+
+                    imageNodes[currentIndex].classList.remove("active");
+                    currentIndex = index;
+                    imageNodes[currentIndex].classList.add("active");
+                });
+            });
+
+            // 왼쪽 버튼 클릭하기
+            slider.prevBtn.addEventListener("click", () => {
+                imageNodes[currentIndex].classList.remove("active");
+                currentIndex--;
+                
+                // 0 4 3 2 1 0 4 3 2 1...
+                if(currentIndex < 0) currentIndex = images.length - 1;
+
+                imageNodes[currentIndex].classList.add("active");
+
+                // 썸네일 버튼 클릭하기
+                thumnailNodes[currentIndex].classList.remove("active");
+                thumnailNodes[currentIndex].classList.add("active");
+            });
+
+            // 오른쪽 버튼 클릭하기
+            slider.nextBtn.addEventListener("click", () => {
+                imageNodes[currentIndex].classList.remove("active");
+                thumnailNodes[currentIndex].classList.remove("active");
+
+                // 1 2 3 4 0 1 2 3 4...
+                currentIndex = (currentIndex + 1) % images.length;
+
+                imageNodes[currentIndex].classList.add("active");
+                thumnailNodes[currentIndex].classList.add("active");
+
+                
+            });
+
+            
+        };
+
+        imageSlider(document.querySelector(".slider__wrap"), images);
+
+    </script>
+</body>
+</html>
