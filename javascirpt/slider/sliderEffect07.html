@@ -157,16 +157,16 @@
             thumnailNodes[currentIndex].classList.add("active");
 
             // 썸네일 이미지 클릭하기_for문
-            // for(let i=0; i<thumnailNodes.length; i++){
-            //     thumnailNodes[i].addEventListener("click", function(){      //this값을 가져올 수 있음
-            //         slider.thumbnails.querySelector("img.active").classList.remove("active");
-            //         thumnailNodes[i].classList.add("active");
+            for(let i=0; i<thumnailNodes.length; i++){
+                thumnailNodes[i].addEventListener("click", function(){      //this값을 가져올 수 있음
+                    slider.thumbnails.querySelector("img.active").classList.remove("active");
+                    thumnailNodes[i].classList.add("active");
 
-            //         imageNodes[currentIndex].classList.remove("active");
-            //         currentIndex = i;
-            //         imageNodes[currentIndex].classList.add("active");
-            //     });
-            // }
+                    imageNodes[currentIndex].classList.remove("active");
+                    currentIndex = i;
+                    imageNodes[currentIndex].classList.add("active");
+                });
+            }
             
             // 썸네일 이미지 클릭하기_forEach()
             thumnailNodes.forEach((thumb, index) => {
