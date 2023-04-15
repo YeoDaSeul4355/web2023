@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quotes</title>
+  <link rel="stylesheet" href="css/quotes.css">
+</head>
+<body>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div class="shooting_star"></div>
+  <div id="result" class="container">
+    <div class="quote"></div> 
+    <div class="author"></div>
+  </div>
+</body>
+<script>
+    const updateQuote = () => {
+        fetch("http://dummyjson.com/quotes")
+        .then(res => res.json())
+        .then(data => {
+            const result = document.querySelector("#result");
+            const random = Math.floor(Math.random() * data.quotes.length);
+            result.querySelector(".quote").innerHTML = data.quotes[random].quote;
+            result.querySelector(".author").innerHTML = data.quotes[random].author;
+        })
+        .catch(error => console.log(error));
+    }
+    updateQuote();
+
+    const intervalTime = 2000;
+
+    setInterval(() => {
+        updateQuote();
+    }, intervalTime);
+</script>
+</html>

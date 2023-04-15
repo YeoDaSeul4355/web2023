@@ -1,0 +1,215 @@
+@import url('https://webfontworld.github.io/tway/TwayAir.css');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image: url(/img/img.jpg);
+    background-repeat: no-repeat;
+    background-position: center; */
+    overflow: hidden;
+}
+
+#result {
+    color: #fff;
+    padding: 20px;
+    font-family: 'TwayAir';
+}
+
+.quote {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-size: 25px;
+    justify-content: center;
+}
+
+body {
+    height: 100vh;
+    background: #231a4e;
+  }
+  
+  .shooting_star {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(228, 170, 251, 0.35), rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #385897);
+    -webkit-animation: tail 4000ms linear infinite, shooting 4000ms linear infinite;
+            animation: tail 4000ms linear infinite, shooting 4000ms linear infinite;
+  }
+  .shooting_star:nth-child(1) {
+    top: 18%;
+    left: 0;
+    -webkit-animation-delay: 7502ms;
+            animation-delay: 7502ms;
+  }
+  .shooting_star:nth-child(2) {
+    top: 69%;
+    left: 0;
+    -webkit-animation-delay: 6151ms;
+            animation-delay: 6151ms;
+  }
+  .shooting_star:nth-child(3) {
+    top: 81%;
+    left: 0;
+    -webkit-animation-delay: 6493ms;
+            animation-delay: 6493ms;
+  }
+  .shooting_star:nth-child(4) {
+    top: 83%;
+    left: 0;
+    -webkit-animation-delay: 4634ms;
+            animation-delay: 4634ms;
+  }
+  .shooting_star:nth-child(5) {
+    top: 63%;
+    left: 0;
+    -webkit-animation-delay: 8020ms;
+            animation-delay: 8020ms;
+  }
+  .shooting_star:nth-child(6) {
+    top: 54%;
+    left: 0;
+    -webkit-animation-delay: 7644ms;
+            animation-delay: 7644ms;
+  }
+  .shooting_star:nth-child(7) {
+    top: 36%;
+    left: 0;
+    -webkit-animation-delay: 3714ms;
+            animation-delay: 3714ms;
+  }
+  .shooting_star:nth-child(8) {
+    top: 30%;
+    left: 0;
+    -webkit-animation-delay: 2714ms;
+            animation-delay: 2714ms;
+  }
+  .shooting_star:nth-child(9) {
+    top: 39%;
+    left: 0;
+    -webkit-animation-delay: 3159ms;
+            animation-delay: 3159ms;
+  }
+  .shooting_star:nth-child(10) {
+    top: 99%;
+    left: 0;
+    -webkit-animation-delay: 4886ms;
+            animation-delay: 4886ms;
+  }
+  .shooting_star:nth-child(11) {
+    top: 94%;
+    left: 0;
+    -webkit-animation-delay: 2538ms;
+            animation-delay: 2538ms;
+  }
+  .shooting_star:nth-child(12) {
+    top: 79%;
+    left: 0;
+    -webkit-animation-delay: 3493ms;
+            animation-delay: 3493ms;
+  }
+  .shooting_star:nth-child(13) {
+    top: 75%;
+    left: 0;
+    -webkit-animation-delay: 7839ms;
+            animation-delay: 7839ms;
+  }
+  .shooting_star:nth-child(14) {
+    top: 55%;
+    left: 0;
+    -webkit-animation-delay: 8437ms;
+            animation-delay: 8437ms;
+  }
+  .shooting_star:nth-child(15) {
+    top: 2%;
+    left: 0;
+    -webkit-animation-delay: 5940ms;
+            animation-delay: 5940ms;
+  }
+  .shooting_star:nth-child(16) {
+    top: 82%;
+    left: 0;
+    -webkit-animation-delay: 8584ms;
+            animation-delay: 8584ms;
+  }
+  .shooting_star:nth-child(17) {
+    top: 13%;
+    left: 0;
+    -webkit-animation-delay: 7374ms;
+            animation-delay: 7374ms;
+  }
+  .shooting_star:nth-child(18) {
+    top: 31%;
+    left: 0;
+    -webkit-animation-delay: 594ms;
+            animation-delay: 594ms;
+  }
+  .shooting_star:nth-child(19) {
+    top: 45%;
+    left: 0;
+    -webkit-animation-delay: 8800ms;
+            animation-delay: 8800ms;
+  }
+  .shooting_star:nth-child(20) {
+    top: 73%;
+    left: 0;
+    -webkit-animation-delay: 4410ms;
+            animation-delay: 4410ms;
+  }
+  
+  @-webkit-keyframes tail {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    25% {
+      opacity: 100%;
+    }
+    75% {
+      opacity: 100%;
+    }
+    100% {
+      width: 100%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes tail {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    25% {
+      opacity: 100%;
+    }
+    75% {
+      opacity: 100%;
+    }
+    100% {
+      width: 100%;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
