@@ -28,13 +28,13 @@
   <div class="shooting_star"></div>
   <div class="shooting_star"></div>
   <div id="result" class="container">
-    <div class="quote"></div> 
+    <div class="quote"></div>
     <div class="author"></div>
   </div>
 </body>
 <script>
     const updateQuote = () => {
-        fetch("http://dummyjson.com/quotes")
+        fetch("json/dummy01.json")
         .then(res => res.json())
         .then(data => {
             const result = document.querySelector("#result");
