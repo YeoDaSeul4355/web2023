@@ -13,12 +13,16 @@
     <div class="author"></div>
   </div>
   <script>
-    const getRandomBackground = () => {
-        const keywords = ['programming', 'coding'];
-        const randomIndex = Math.floor(Math.random() * keywords.length);
-        const timestamp = new Date().getTime();
-        return `url('https://source.unsplash.com/random/?${keywords[randomIndex]}&_=${timestamp}')`;
+    const changeBackgroundImage = () => {
+      const backgroundImageUrl = `https://source.unsplash.com/random/?programming&t${new Date().getTime()}`;
+      const img = new Image();
+      img.onload = () => {
+        document.body.style.backgroundImage = `url(${backgroundImageUrl})`;
+      };
+      img.src = backgroundImageUrl;
     };
+    changeBackgroundImage();
+
 
     const updateQuote = () => {
         fetch("json/dummy01.json")
@@ -28,7 +32,6 @@
             const random = Math.floor(Math.random() * data.quotes.length);
             result.querySelector(".quote").innerHTML = data.quotes[random].quote;
             result.querySelector(".author").innerHTML = data.quotes[random].author;
-            document.querySelector("body").style.backgroundImage = getRandomBackground();
         })
         .catch(error => console.log(error));
     };
@@ -39,6 +42,7 @@
 
     setInterval(() => {
         updateQuote();
+        changeBackgroundImage();
     }, intervalTime);
 </script>
 </body>
