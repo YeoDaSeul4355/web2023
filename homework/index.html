@@ -8,31 +8,16 @@
   <link rel="stylesheet" href="css/quotes.css">
 </head>
 <body>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
   <div id="result" class="container">
     <div class="quote"></div>
     <div class="author"></div>
   </div>
-</body>
-<script>
+  <script>
+    const getRandomBackground = () => {
+      const keywords = ['programming', 'sea', 'coding'];
+      const randomIndex = Math.floor(Math.random() * keywords.length);
+      return `url('https://source.unsplash.com/random/?${keywords[randomIndex]}')`;
+    }
     const updateQuote = () => {
         fetch("json/dummy01.json")
         .then(res => res.json())
@@ -41,15 +26,18 @@
             const random = Math.floor(Math.random() * data.quotes.length);
             result.querySelector(".quote").innerHTML = data.quotes[random].quote;
             result.querySelector(".author").innerHTML = data.quotes[random].author;
+            document.querySelector("body").style.backgroundImage = getRandomBackground();
         })
         .catch(error => console.log(error));
     }
     updateQuote();
 
-    const intervalTime = 2000;
+    const intervalTime = 5000;
 
     setInterval(() => {
         updateQuote();
+        document.querySelector("body").style.backgroundImage = getRandomBackground();
     }, intervalTime);
 </script>
+</body>
 </html>
