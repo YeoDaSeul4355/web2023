@@ -14,10 +14,12 @@
   </div>
   <script>
     const getRandomBackground = () => {
-      const keywords = ['programming', 'sea', 'coding'];
-      const randomIndex = Math.floor(Math.random() * keywords.length);
-      return `url('https://source.unsplash.com/random/?${keywords[randomIndex]}')`;
-    }
+        const keywords = ['programming', 'coding'];
+        const randomIndex = Math.floor(Math.random() * keywords.length);
+        const timestamp = new Date().getTime();
+        return `url('https://source.unsplash.com/random/?${keywords[randomIndex]}&_=${timestamp}')`;
+    };
+
     const updateQuote = () => {
         fetch("json/dummy01.json")
         .then(res => res.json())
@@ -29,14 +31,14 @@
             document.querySelector("body").style.backgroundImage = getRandomBackground();
         })
         .catch(error => console.log(error));
-    }
+    };
+
     updateQuote();
 
     const intervalTime = 5000;
 
     setInterval(() => {
         updateQuote();
-        document.querySelector("body").style.backgroundImage = getRandomBackground();
     }, intervalTime);
 </script>
 </body>
