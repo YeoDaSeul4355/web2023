@@ -153,6 +153,8 @@
         const parallaxInfo = document.querySelector(".parallax__info");
         const scroll = parallaxInfo.querySelector(".scroll span");
         const parallaxItem = document.querySelectorAll(".parallax__item");
+        const offSet = parallaxInfo.querySelectorAll(".info span");
+
 
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
@@ -177,6 +179,8 @@
 
             scroll.innerText = parseInt(scrollTop);
 
+            // intro
+
             document.querySelector(".info .offset1").innerText = document.getElementById("section1").offsetTop;
             document.querySelector(".info .offset2").innerText = document.getElementById("section2").offsetTop;
             document.querySelector(".info .offset3").innerText = document.getElementById("section3").offsetTop;
@@ -191,12 +195,25 @@
             // for(let i=1; i<=9; i++){
             //     document.querySelector(`.info .offset${i}`).innerText = document.getElementById(`section${i}`).offsetTop;
             // }
-            // forEach
-            document.querySelectorAll(".info .offset").forEach((el, i) => {
-                el.innerText = document.getElementById(`section${i + 1}`).offsetTop;
-            });
+
+            // forEach()
+            // offSet.forEach((el, i) => {
+            //     offSet[i].innerHTML = document.getElementById(`section${i + 1}`).offsetTop;
+            // });
+            
             // for in
+            // for (let i in offSet) {
+            //     offSet[i].innerHTML = document.getElementById(`section${parseInt(i) + 1}`).offsetTop;
+            // }
+
             // for of
+            // let i = 1;
+
+            // for(let e of offSet){
+            //     e.innerHTML = document.getElementById(`section${i}`).offsetTop;
+            //     i++;
+            // }
+
         });
     </script>
 </body>
