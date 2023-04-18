@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. 마우스 이펙트</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mouse.css">
+    
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/> 
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png"/> 
+    <link rel="apple-touch-icon" href="img/favicon.png"/>
+    
+    <style>
+        #header {
+            z-index: 100;
+        }
+        .mouse__wrap {
+            
+        }
+        .mouse__img {
+            width: 100%;
+            height: 100vh;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .mouse__img figure {
+            width: 50vw;
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 100px 100px rgba(0, 0, 0, 0.3);
+            transition: transform 500ms ease;
+            cursor: none;
+        }
+        .mouse__img figure:hover {
+            transform: scale(1.025);
+        }
+        .mouse__img figure img {
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            filter: sepia(30%) saturate(2);
+            border-radius: 5px;
+        }
+        .mouse__img figure figcaption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .mouse__cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="img05 bg02 font06">
+    <header id="header">
+        <h1>Javascript Mouse Effect04</h1>
+        <p>마우스 이펙트</p>
+        <ul>
+            <li><a href="mouseEffect01.html">1</a></li>
+            <li><a href="mouseEffect02.html">2</a></li>
+            <li><a href="mouseEffect03.html">3</a></li>
+            <li class="active"><a href="mouseEffect04.html">4</a></li>
+            <li><a href="mouseEffect05.html">5</a></li>
+            <li><a href="mouseEffect06.html">6</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="mouse__wrap">
+            <div class="mouse__cursor"></div>
+            <div class="mouse__img">
+                <figure>
+                    <img src="img/mouseEffect03-min.jpg" alt="">
+                    <figcaption>
+                        <p>Habit is a second nature.</p>
+                        <p>습관은 제2의 천성이다.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        document.querySelector(".mouse__img figure").addEventListener("mousemove", e => {
+            gsap.to(".mouse__cursor", {
+                duration: .2,
+                left: e.pageX,
+                top: e.pageY
+            });
+            
+            // 마우스 좌표 값
+            let mousePageX = e.pageX;
+            let mousePageY = e.pageY;
+
+            // 전체 화면에 가로 값
+            // window.innerWidth       // 1920 브라우저
+            // window.outerWidth       // 1920 브라우저 크기(스크롤바 포함)
+            // window.screen.width     // 1920 화면 크기
+
+            // 마우스 좌표값 기준점 가운데로 설정
+            let centerPageX = window.innerWidth / 2 - mousePageX;
+            let centerPageY = window.innerHeight / 2 - mousePageY;;
+
+            // 이미지 움직이기
+            const imgMove = document.querySelector(".mouse__img figure img");
+
+            imgMove.style.transform = "translate("+centerPageX/20+"px, "+centerPageY/20+"px)";
+
+            gsap.to(imgMove, {
+                duration: .2,
+                x: centerPageX/20,
+                y: centerPageY/20
+            })
+        });
+    </script>
+</body>
+</html>
