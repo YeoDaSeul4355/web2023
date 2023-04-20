@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>패럴랙스</title>
     <link href="https://webfontworld.github.io/recia/ReciaSerifDisplay.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Rebecca/Rebecca.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "ReciaSerifDisplay";
+            
         }
         body {
             height: 20000px;
@@ -37,6 +38,15 @@
             transform: translate(-50%, -50%);
             z-index: 1;
         }
+        #section1 {
+            font-family: "ReciaSerifDisplay";
+        }
+        #section2 {
+            font-family: "Rebecca";
+        }
+        #section3 {
+            font-family: "ReciaSerifDisplay";
+        }
         .s1-text1 {
             font-size: 30vw;
             line-height: 1;
@@ -47,7 +57,12 @@
             line-height: 1;
             padding-top: 8vh;
         }
-        .s2-text1 {
+        .s1-text3 {
+            font-size: 30vw;
+            line-height: 1;
+            padding-top: 8vh;
+        }
+        .s1-text5 {
             font-size: 30vw;
             line-height: 1;
             padding-top: 8vh;
@@ -69,7 +84,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             border: 5px solid #000;
-            filter: saturate(0%);
+            /* filter: saturate(0%); */
         }
         .s2-img1 {
             width: 50vw;
@@ -79,20 +94,76 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
-        .s1-img1-1 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?cat);}
+        .s3-text5 {
+            text-align: center;
+        }
+        .s1-img1-1 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?cockerspaniel);}
         .s1-img1-1 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?dog);}
 
-        .s1-img1-2 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?rabbit);}
-        .s1-img1-2 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?hamster);}
+        .s1-img1-2 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?malamute);}
+        .s1-img1-2 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?Samoyed);}
 
-        .s1-img1-3 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?hedgehog);}
-        .s1-img1-3 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?flower);}
+        .s1-img1-3 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?Maltese);}
+        .s1-img1-3 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?toypoodle);}
 
-        .s1-img1-4 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?bird);}
-        .s1-img1-4 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?bear);}
+        .s1-img1-4 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?bulldog);}
+        .s1-img1-4 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?pomeranian);}
 
-        .s1-img1-5 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?fish);}
-        .s1-img1-5 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?whale);}
+        .s1-img1-5 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?dachshund);}
+        .s1-img1-5 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?chihuahua);}
+        
+        .s3-img1 {
+            display: grid;
+            grid-template-columns: repeat(13, 10vw);
+            grid-template-rows: repeat(2, 10vw);
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -35%);
+            z-index: 1;
+            gap: 200px 30px;
+        }
+        .s3-img1 > div {
+            background-color: rgba(0,0,0,1);
+            background-size: cover;
+            /* box-shadow: inset 0 0 0 50px #000; */
+            position: relative;
+        }
+        .s3-img1 > div::after {
+            content: "" ;
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            z-index: 1;
+        }
+        #section4 {
+            font-family: 'ReciaSerifDisplay';
+        }
+        .s3-img1 > div:nth-child(1)  {background-image: url(https://siyoenkim.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(2) {background-image: url(https://seolhee313.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(3) {background-image: url(https://kebab000.github.io/web2023/assets/ico/icon01.jpg);}
+        .s3-img1 > div:nth-child(4) {background-image: url(https://dkseho9121.github.io/web2023/assets/ico/icon01.jpg);}
+        .s3-img1 > div:nth-child(5) {background-image: url(https://jinyongjang.github.io/web2023/assets/ico/icon01.jpg);}
+        .s3-img1 > div:nth-child(6) {background-image: url(https://chohena.github.io/web2023/assets/ico/icon01.jpg);}
+        .s3-img1 > div:nth-child(7) {background-image: url(https://kimdohyun2002.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(8) {background-image: url(https://jhwangwoo.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(9) {background-image: url(https://yeodaseul4355.github.io/web2023/assets/ico/icon01.jpg);}
+        .s3-img1 > div:nth-child(10) {background-image: url(https://hyejeong3283.github.io/web2023/assets/ico/icon%2001.jpg);}
+        .s3-img1 > div:nth-child(11) {background-image: url(https://dkdlelw.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(12) {background-image: url(https://lee3ll.github.io/web2023/assets/ico/icon01.jpg);}
+        .s3-img1 > div:nth-child(13) {background-image: url(https://jo0132.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(14) {background-image: url(https://dlgnsrb227.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(15) {background-image: url(https://dongjin6539.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(16) {background-image: url(https://hyeonbeen97.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(17) {background-image: url(https://younajeong.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(18) {background-image: url(https://ehcjswo.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(19) {background-image: url(https://fitalux.github.io/web2023/assets/ico/icon01.jpg);}
+        .s3-img1 > div:nth-child(20) {background-image: url(https://xlsak5.github.io/testAnGyonam/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(21) {background-image: url(https://hyunmijin.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(22) {background-image: url(https://daanbi1345.github.io/web2023/assets/ico/icon11.jpg);}
+        .s3-img1 > div:nth-child(23) {background-image: url(https://ture403.github.io/web2023/assets/ico/icon.jpg);}
+        .s3-img1 > div:nth-child(24) {background-image: url(https://leeyanggoo.github.io/web2023/assets/ico/icon1.jpg);}
     </style>
 </head>
 <body>
@@ -106,19 +177,19 @@
             data-3000="font-size: 0vw; opacity: 0"
         >Web</div>
         <div class="s1-text2 fixed"
-            data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg); opacity: 1"
-            data-3500="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg); opacity: 1"
-            data-7000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg); opacity: 0"
+            data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg); opacity: 1; color: rgba(255,100,100,1)"
+            data-3500="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg); opacity: 1; color: rgba(150,50,100,1)"
+            data-7000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg); opacity: 0; color: rgba(130,80,20,1)"
         >Story</div>
         <div class="s1-img1 fixed"
-            data-3000="width: 100vw; opacity: 1"
-            data-8000="width: 20vw;"
-            data-11000="width: 200vw;"
+            data-3000="width: 100vw"
+            data-8000="width: 20vw"
+            data-11000="width: 200vw"
         >
             <div class="s1-img1-1"
-                data-3000="transform: scale(2);"
-                data-3500="transform: scale(1.5)"
-                data-4000="transform: scale(1)"
+                data-3000="transform: scale(2); filter: saturate(100%)"
+                data-3500="transform: scale(1.5); filter: saturate(0%)"
+                data-4000="transform: scale(1); filter: saturate(100%)"
             >
                 <div></div>
                 <div></div>
@@ -151,28 +222,193 @@
                 data-7000="transform: scale(2)"
                 data-7500="transform: scale(1.5)"
                 data-8000="transform: scale(1)"
-                data-8500="transform: scale(1);"
+                data-8500="transform: scale(1)"
             >
                 <div></div>
                 <div></div>
             </div>
         </div>
+        <div class="s1-text3 fixed"
+            data-8500="font-size: 0vw; opacity: 1; color: rgba(255,100,100,1)"
+            data-9000="font-size: 30vw; opacity: 1; color: rgba(255,550,200,1)"
+            data-9500="font-size: 30vw; opacity: 1; color: rgba(255,700,300,1)"
+            data-10000="font-size: 80vw; opacity: 0; color: rgba(255,100,400,1)"
+        >Boy</div>
+        <div class="s1-text4 fixed"
+            data-8500="font-size: 0vw; opacity: 1; color: rgba(0,0,0,1)"
+            data-9000="font-size: 30vw; opacity: 1; color: rgba(0,0,0,1)"
+            data-9500="font-size: 30vw; opacity: 1; color: rgba(0,0,0,1)"
+            data-10000="font-size: 80vw; opacity: 0; color: rgba(0,0,0,1)"
+        >Boy</div>
+        <div class="s1-text5 fixed"
+            data-10000="font-size: 0vw; opacity: 1; color: rgba(0,0,0,1)"
+            data-10500="font-size: 30vw; opacity: 1; color: rgba(0,0,0,1)"
+            data-11000="font-size: 30vw; opacity: 0; color: rgba(0,0,0,1)"
+        >And</div>
+        
+        
+
     </section>
     <section id="section2">
-        <div class="s2-text1 fixed"
-            data-8500="font-size: 0vw; opacity: 1"
-            data-9000="font-size: 30vw; opacity: 1"
-            data-9500="font-size: 30vw; opacity: 1"
-            data-10000="font-size: 0vw; opacity: 0"
-        >Boy</div>
         <div class="s2-img1 fixed"
-            data-10000="opacity: 0; saturate(0%)"
-            data-11000="opacity: 1; saturate(1%)"
-            data-12000="opacity: 0; saturate(0%)"
+            data-11000="saturate(0%); transform: translate(-50%, -50%) rotate(0deg); opacity: 0;"
+            data-12000="saturate(1%); transform: translate(-50%, -50%) rotate(360deg); opacity: 1;"
+            data-14000="saturate(0%); transform: translate(-50%, -50%) rotate(0); opacity: 0;"
         >
         </div>
     </section>
+    <div id="section3">
+        <div class="s3-text5 fixed"
+            data-12500="font-size: 0vw; opacity: 1; color: rgb(255, 224, 48, 1)"
+            data-12700="font-size: 8vw; opacity: 1; color: rgb(150, 150, 48, 1)"
+            data-13000="font-size: 15vw; opacity: 1; color: rgb(62, 255, 62, 1)"
+            data-13500="font-size: 30vw; opacity: 0; color: rgb(62, 62, 255, 1)"
+        >Coooool Students</div>
+        <div class="s3-text6 fixed"
+            data-12500="font-size: 0vw; opacity: 1; color: rgba(0,0,0,1)"
+            data-12700="font-size: 8vw; opacity: 1; color: rgba(0,0,0,1)"
+            data-13000="font-size: 15vw; opacity: 1; color: rgba(0,0,0,1)"
+            data-13500="font-size: 30vw; opacity: 0; color: rgba(0,0,0,1)"
+        >Coooool Students</div>
 
+        <div class="s3-img1"
+            data-13500="opacity:0"
+            data-13700="opacity:1"
+            data-14500="border-radius: 0"
+        >
+            <div 
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(2); border-radius: 0"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div 
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-13500="opacity: 0; transform: scale(0); border-radius: 0"
+                data-14500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-15000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+            <div
+                data-15000="opacity: 0; transform: scale(0); border-radius: 0"
+                data-15500="opacity: 1; transform: scale(1); border-radius: 50px"
+                data-16000="opacity: 0; transform: scale(1); border-radius: 100px"
+            ></div>
+        </div>
+    </div>
+    <div id="section4">
+        <div class="s4-text1 fixed">
+            <div class="s3-text5 fixed"
+            data-16000="font-size: 0vw; opacity: 1; color: rgb(255, 224, 48, 1)"
+            data-16500="font-size: 8vw; opacity: 1; color: rgb(150, 150, 48, 1)"
+            data-17000="font-size: 15vw; opacity: 1; color: rgb(62, 255, 62, 1)"
+            data-18000="font-size: 30vw; opacity: 0; color: rgb(62, 62, 255, 1)"
+            >Fighting Together</div>
+        </div>
+    </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script type="text/javascript">
         let s = skrollr.init();
