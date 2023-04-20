@@ -84,6 +84,9 @@ body.bg10::after {
 #header h1 {
     margin-bottom: 10px;
 }
+#header h1 a {
+    color: #fff;
+}
 #header p {
     margin-bottom: 10px;
 }

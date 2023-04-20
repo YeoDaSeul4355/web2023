@@ -8,6 +8,10 @@
 }
 #header h1 {
     margin-bottom: 0.3em;
+    
+}
+#header h1 a {
+    color: #fff;
 }
 #header ul {
     margin-top: 0.6em;
