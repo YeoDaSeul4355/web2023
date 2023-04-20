@@ -130,12 +130,12 @@
 
             // 마우스 좌표값 기준점 가운데로 설정
             let centerPageX = window.innerWidth / 2 - mousePageX;
-            let centerPageY = window.innerHeight / 2 - mousePageY;;
+            let centerPageY = window.innerHeight / 2 - mousePageY;
 
             // 이미지 움직이기
             const imgMove = document.querySelector(".mouse__img figure img");
 
-            imgMove.style.transform = "translate("+centerPageX/20+"px, "+centerPageY/20+"px)";
+            // imgMove.style.transform = "translate("+centerPageX/20+"px, "+centerPageY/20+"px)";
 
             gsap.to(imgMove, {
                 duration: .2,

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스</title>
+    <link href="https://webfontworld.github.io/recia/ReciaSerifDisplay.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "ReciaSerifDisplay";
+        }
+        body {
+            height: 20000px;
+            background-color: #E0E4DD;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1 {
+            font-size: 30vw;
+            line-height: 1;
+            padding-top: 8vh;
+        }
+        .s1-text2 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: 8vh;
+        }
+        .s2-text1 {
+            font-size: 30vw;
+            line-height: 1;
+            padding-top: 8vh;
+        }
+        .s1-img1 {
+            width: 200vw;
+            height: 100vh;
+        }
+        .s1-img1 > div {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .s1-img1 > div > div {
+            width: 19vh;
+            height: 19vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #000;
+            filter: saturate(0%);
+        }
+        .s2-img1 {
+            width: 50vw;
+            height: 50vh;
+            background-image: url(img/IMG_6154.JPG);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .s1-img1-1 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?cat);}
+        .s1-img1-1 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?dog);}
+
+        .s1-img1-2 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?rabbit);}
+        .s1-img1-2 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?hamster);}
+
+        .s1-img1-3 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?hedgehog);}
+        .s1-img1-3 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?flower);}
+
+        .s1-img1-4 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?bird);}
+        .s1-img1-4 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?bear);}
+
+        .s1-img1-5 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?fish);}
+        .s1-img1-5 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?whale);}
+    </style>
+</head>
+<body>
+    <div class="scrollTop"></div>
+
+    <section id="section1">
+        <div class="s1-text1 fixed"
+            data-0="font-size: 0vw; opacity: 1"
+            data-1000="font-size: 30vw; opacity: 1"
+            data-2000="font-size: 30vw; opacity: 1"
+            data-3000="font-size: 0vw; opacity: 0"
+        >Web</div>
+        <div class="s1-text2 fixed"
+            data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg); opacity: 1"
+            data-3500="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg); opacity: 1"
+            data-7000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg); opacity: 0"
+        >Story</div>
+        <div class="s1-img1 fixed"
+            data-3000="width: 100vw; opacity: 1"
+            data-8000="width: 20vw;"
+            data-11000="width: 200vw;"
+        >
+            <div class="s1-img1-1"
+                data-3000="transform: scale(2);"
+                data-3500="transform: scale(1.5)"
+                data-4000="transform: scale(1)"
+            >
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-2"
+                data-4000="transform: scale(2)"
+                data-4500="transform: scale(1.5)"
+                data-5000="transform: scale(1)"
+            >
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-3"
+                data-5000="transform: scale(2)"
+                data-5500="transform: scale(1.5)"
+                data-6000="transform: scale(1)"
+            >
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-4"
+                data-6000="transform: scale(2)"
+                data-6500="transform: scale(1.5)"
+                data-7000="transform: scale(1)"
+            >
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-5"
+                data-7000="transform: scale(2)"
+                data-7500="transform: scale(1.5)"
+                data-8000="transform: scale(1)"
+                data-8500="transform: scale(1);"
+            >
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="s2-text1 fixed"
+            data-8500="font-size: 0vw; opacity: 1"
+            data-9000="font-size: 30vw; opacity: 1"
+            data-9500="font-size: 30vw; opacity: 1"
+            data-10000="font-size: 0vw; opacity: 0"
+        >Boy</div>
+        <div class="s2-img1 fixed"
+            data-10000="opacity: 0; saturate(0%)"
+            data-11000="opacity: 1; saturate(1%)"
+            data-12000="opacity: 0; saturate(0%)"
+        >
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        let s = skrollr.init();
+
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageXOffset || window.scrollY;
+            
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+        });    
+    </script>
+</body>
+</html>

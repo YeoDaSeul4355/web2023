@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 이펙트02</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    
+    <style>
+        .container::-webkit-scrollbar {
+            width: 10px;
+        }
+        .container::-webkit-scrollbar-thumb {
+            background-color: #000000;
+            border-radius: 10px;
+        }
+        .container::-webkit-scrollbar-track {
+            background-color: grey;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 5px white;
+        }
+    </style>
+</head>
+<body class="img01 bg01 font05 container">
+    <header id="header">
+        <h1>Javascript Parallax Effect02</h1>
+        <p>패럴랙스 이펙트 : 사이드 메뉴</p>
+        <ul>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li class="active"><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <nav class="parallax__dot">
+        <ul>
+            <li class="active"><a href="#section1">메뉴1</a></li>
+            <li><a href="#section2">메뉴2</a></li>
+            <li><a href="#section3">메뉴3</a></li>
+            <li><a href="#section4">메뉴4</a></li>
+            <li><a href="#section5">메뉴5</a></li>
+            <li><a href="#section6">메뉴6</a></li>
+            <li><a href="#section7">메뉴7</a></li>
+            <li><a href="#section8">메뉴8</a></li>
+            <li><a href="#section9">메뉴9</a></li>
+        </ul>
+    </nav>
+    <!-- //parallax__nav -->
+
+    <main id="main">
+        <div class="parallax__wrap">
+            <section id="section1" class="parallax__item">
+                <span class="parallax__item__num">01</span>
+                <h2 class="parallax__item__title">Section1</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">한 번 포기하면 습관이 된다. 절대 포기하지 말아라.</p>
+            </section>
+            <!-- //section1 -->
+            <section id="section2" class="parallax__item">
+                <span class="parallax__item__num">02</span>
+                <h2 class="parallax__item__title">Section2</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">꿈이 있으면 잡아야 하고 절대 놓지 말아야 한다.</p>
+            </section>
+            <!-- //section2 -->
+            <section id="section3" class="parallax__item">
+                <span class="parallax__item__num">03</span>
+                <h2 class="parallax__item__title">Section3</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">불가능은 오직 의지가 없는 사람에게만 존재한다.</p>
+            </section>
+            <!-- //section3 -->
+            <section id="section4" class="parallax__item">
+                <span class="parallax__item__num">04</span>
+                <h2 class="parallax__item__title">Section4</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">불행한 사람은 다른 사람의 불행에서 위안을 얻는다.</p>
+            </section>
+            <!-- //section4 -->
+            <section id="section5" class="parallax__item">
+                <span class="parallax__item__num">05</span>
+                <h2 class="parallax__item__title">Section5</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">사랑이 없는 삶은 꽃도 열매도 없는 나무와 같다.</p>
+            </section>
+            <!-- //section5 -->
+            <section id="section6" class="parallax__item">
+                <span class="parallax__item__num">06</span>
+                <h2 class="parallax__item__title">Section6</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">무엇이든 사랑하는 방법은 잃어버릴 수 있다는 것을 깨닫는 것입니다.</p>
+            </section>
+            <!-- //section6 -->
+            <section id="section7" class="parallax__item">
+                <span class="parallax__item__num">07</span>
+                <h2 class="parallax__item__title">Section7</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">성공을 얻기 위해 무엇을 포기해야 했는지에 따라 성공을 판단해라.</p>
+            </section>
+            <!-- //section7 -->
+            <section id="section8" class="parallax__item">
+                <span class="parallax__item__num">08</span>
+                <h2 class="parallax__item__title">Section8</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">아름다움은 자신을 결정하는 순간부터 시작된다.</p>
+            </section>
+            <!-- //section8 -->
+            <section id="section9" class="parallax__item">
+                <span class="parallax__item__num">09</span>
+                <h2 class="parallax__item__title">Section9</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">진짜 어려움은 자신에 대해 생각하는 방식을 극복하는 것입니다.</p>
+            </section>
+            <!-- //section9 -->
+        </div>
+    </main>
+    <!-- //main -->
+
+    <aside class="parallax__info">
+        <div class="scroll">scrollTop : <span>0</span>px</div>
+    </aside>
+    <!-- //parallax info -->
+    <footer id="footer">
+        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        document.querySelectorAll(".parallax__dot li a").forEach(dot => {
+            dot.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(dot.getAttribute("href")).scrollIntoView({behavior: "smooth"});
+            });
+        });
+
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageXOffset || window.scrollY;
+
+            document.querySelector(".parallax__info .scroll span").innerText = scrollTop;
+
+            document.querySelectorAll(".parallax__item").forEach((item, num) => {
+                if(scrollTop >= item.offsetTop-2){
+                    document.querySelectorAll(".parallax__dot li").forEach(li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".parallax__dot li:nth-child("+(num+1)+")").classList.add("active");
+                }
+            });
+        })
+        // 스크롤값 설정
+        // window.scroll(0, 10000);
+        // window.scroll({left: 100, top: 4000});
+        // window.scroll({left: 100, top: 4000, behavior: "smooth"});
+
+        // window.scrollTo(0, 1000);
+        // window.scrollTo({left: 0, top: 1000});
+        // window.scrollTo({left: 0, top: 1000, behavior:"smooth"});
+
+        // window.scrollBy(0, 1000);
+        // window.scrollBy({left: 0, top: 1000});
+        // window.scrollBy({left: 0, top: 1000, behavior:"smooth"});
+    </script>
+</body>
+</html>
