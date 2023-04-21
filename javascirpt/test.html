@@ -9,126 +9,20 @@
 <body>
     <script>
         {
-            let data = [10, 6, 7, 9, 3];
-            let temp;
+            let a = 3, b = 4, c = 3, d = 5;
 
-            for(let i=0; i<4; i++){
-                for(let j=i+1; j<5; j++){
-                    if(data[i] > data[j]){
-                        temp = data[i];
-                        data[i] = data[j];
-                        data[j] = temp;
-                    }
+            if( (a == 2 | a == c) & !(c > d) & (1 == b ^ c != d) ){
+                a = b + c;
+                if( 7 == b ^ c != a ){
+                    console.log(a);
+                } else {
+                    console.log(b);
                 }
-            }
-
-            console.log(data)     
-        }
-
-        {
-            let a = func(4);
-
-            for(let i=0; i<a.length; i++){
-                console.log(a[i]);
-            }
-
-            function func(n){
-                let num = [];
-                for(let i=0; i<n; i++){
-                    num[i] = i;
-                }
-                return num;
+            } else {
+                console.log(a + b)
             }
         }
 
-        {
-            let i = 3, k = 1;
-
-            switch(i){
-                case 1: k++;
-                case 2: k += 3;
-                case 3: k = 0;
-                case 4: k += 3;
-                case 5: k -= 10;
-                default: k--;
-            }
-            console.log(k);
-        }
-
-        {
-            let i = 0;
-            let sum = 0;
-
-            while(i < 10){
-                i++;
-                if(i % 2 == 1){
-                    continue;
-                }
-                sum += i;
-            }
-
-            console.log(sum)
-        }
-
-        {
-            function func(a){
-                if( a < 1 ) return 1
-                return a * func(a - 1);
-            }
-            
-            console.log(func(5))
-        }
-
-        {
-            function func(){
-                let a=2, d=6, total=a, n=2;
-                for(let i=0; i<5; i++){
-                    total += a + (n-1) * d;
-                    n++;
-                }
-                console.log(total)
-            }
-            func();
-        }
-
-        {
-            let score = [70, 40, 30, 90, 30]
-            let up80 = 0, m = 0;
-
-            for(let i=0; i<5; i++){
-                if(score[i] > 80) up80++;
-                if(m < score[i]) m = score[i];
-            }
-
-            console.log(up80, m);
-        }
-
-        {
-            let a = 10, b = 15;
-
-            console.log(++a/5 << b/2-1*2);
-        }
-
-        {
-            let a = 2, r = 3, total = a;
-            for(let i=0; i<3; i++){
-                a *= r;
-                total += a;
-            }
-            console.log(total)
-        }
-
-        {
-            let num, i;
-            for(num=2; num<=10; num++){
-                for(i=2; i<num; i++){
-                    if(num % i == 0) break;
-                }
-                if(i==num){
-                    console.log(num)
-                }
-            }
-        }
     </script>
 </body>
 </html>
