@@ -1,0 +1,213 @@
+/* skip */
+#skip {
+    position: relative;
+    z-index: 1000000;
+}
+#skip a {
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    left: -400PX;
+    top: 0;
+    padding: 20px 40px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 0;
+}
+
+/* bg */
+.pink {
+    background-color: var(--bg__pink);
+}
+.black {
+    background-color: var(--bg__black);
+}
+
+/* font */
+body.macintosh {
+    font-family: var(--main__font) !important;
+}
+body.windows {
+    font-family: var(--main__win) !important;
+}
+/* container */
+.container {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+/* 간격 설정 */
+.mt10 {margin-top: 10px !important;}
+.mt20 {margin-top: 20px !important;}
+.mt30 {margin-top: 30px !important;}
+.mt40 {margin-top: 40px !important;}
+.mt50 {margin-top: 50px !important;}
+.mt60 {margin-top: 60px !important;}
+.mt70 {margin-top: 70px !important;}
+
+.mb10 {margin-bottom: 10px !important;}
+.mb20 {margin-bottom: 20px !important;}
+.mb30 {margin-bottom: 30px !important;}
+.mb40 {margin-bottom: 40px !important;}
+.mb50 {margin-bottom: 50px !important;}
+.mb60 {margin-bottom: 60px !important;}
+.mb70 {margin-bottom: 70px !important;}
+
+/* Border Style */
+.bmStyle {
+    border-bottom: 3px solid var(--color__black);
+    position: relative;
+}
+.bmStyle::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: var(--color__black);
+}
+.btStyle {
+    border-top: 3px solid var(--color__black);
+    position: relative;
+}
+.btStyle::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    background-color: var(--color__black);
+}
+
+/* Btn Style */
+.btnStyle {
+    display: block;
+    background-color: var(--color__black);
+    color: var(--color__white);
+    margin: 5em auto;
+    font-size: 1.2em;
+    padding: 0.5em 3em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btnStyle:hover {
+    background-color: #ff5959;
+    color: var(--color__white);
+}
+
+.btnStyle2 {
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: var(--color__black);
+    color: var(--color__white);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5em;
+    transition: all 0.3s ease;
+}
+.btnStyle2:hover {
+    background-color: #ff5959;
+    color: var(--color__white);
+}
+.btnStyle3 {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.5em 2em;
+    border: 0;
+    font-weight: 300;
+}
+.btnStyle4 {
+    background-color: var(--bg__pink);
+    border: 1px solid #ccc;
+    margin-left: -4px;
+    padding: 0.5em 1em;
+    font-weight: 500;
+}
+/* Input Style */
+.inputStyle {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1em 2em;
+    border: 0;
+    font-weight: 300;
+}
+.inputStyle2 {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    border: 0;
+    font-weight: 500;
+}
+/* Select Style */
+.selectStyle {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.6em 1em;
+    border: 0;
+    font-weight: 500;
+}
+/* Label Style */
+label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+label.required::after {
+    content: ' *';
+    color: #FF0000;
+}
+
+/* list Style */
+.listStyle li {
+    padding-left: 16px;
+    position: relative;
+}
+.listStyle li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: var(--color__black);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.listStyle2 li {
+    padding-left: 16px;
+    position: relative;
+}
+.listStyle2 li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--color__black);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* media */
+@media (max-width: 1300px){
+    .container {
+        width: 96%;
+    }
+}
+@media (max-width: 600px){
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- SCRIPT -->
+    <script defer src="assets/js/common.js"></script>
+</head>
+<body class="pink">
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="../index.html" class="home"><span class="blind">메인으로</span></a>
+            </div>
+            <h1 class="logo">
+                <a href="main.html">Jull Coding Blog</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="board.html">게시판</a></li>
+                <li><a href="#">블로그</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main" class="container bmStyle">
+        <div class="boardIntro__inner center bmStyle">
+            <picture class="boardIntro__img">
+                <source srcset="assets/img/board01.png, assets/img/board01@2x.png 2x, assets/img/board01@3x.png 3x" />
+                <img src="assets/img/board01.png" alt="회원가입이미지">
+            </picture>
+            <h2>게시판</h2>
+            <p class="boardIntro__text">
+                웹디자이너, 웹퍼블리셔, 프론트엔드 개발자를 위한 게시판입니다.<br>
+                관련된 문의사항은 여기서 확인하세요!
+            </p>
+        </div>
+        <!-- //boardIntro__inner -->
+
+        <div class="board__inner">
+            <div class="board__search">
+                <form action="#" name="#" method="post">
+                    <h2>*총 <span>1111</span>건의 게시물이 등록되어 있습니다.</h2>
+                    <legend class="blind">게시물 검색🔍</legend>
+                    <fieldset>
+                        <div>
+                            <input type="text" id="text" name="text" class="inputStyle2" placeholder="검색어를 입력하세요!" required>
+                        </div>
+                        <div>
+                            <select name="search" id="search" class="selectStyle">
+                                <option value="title">제목</option>
+                                <option value="board">내용</option>
+                                <option value="writer">작성자</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="btnStyle3">검색</button>
+                        </div>
+                        <div>
+                            <a href="boardWrite.html">글쓰기</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <table class="board__table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>등록자</th>
+                        <th>등록일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><a href="#">게시판 제목 영역입니다. 아직 제목이 없어요!</a></td>
+                        <td>여다슬</td>
+                        <td>2023-04-21</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="page">
+                <button class="btnStyle4"><a href="#">처음으로</a></button>
+                <button class="btnStyle4"><a href="#">이전</a></button>
+                <button class="btnStyle4"><a href="#">1</a></button>
+                <button class="btnStyle4"><a href="#">2</a></button>
+                <button class="btnStyle4"><a href="#">3</a></button>
+                <button class="btnStyle4"><a href="#">4</a></button>
+                <button class="btnStyle4"><a href="#">5</a></button>
+                <button class="btnStyle4"><a href="#">6</a></button>
+                <button class="btnStyle4"><a href="#">7</a></button>
+                <button class="btnStyle4"><a href="#">8</a></button>
+                <button class="btnStyle4"><a href="#">다음</a></button>
+                <button class="btnStyle4"><a href="#">마지막으로</a></button>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer" class="container">
+        <div class="footer__inner">
+            <address>Copyright@2023 YeoDaSeul</address>
+            <p>blog by Jull</p>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    
+</body>
+</html>

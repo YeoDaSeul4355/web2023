@@ -1,0 +1,40 @@
+/* intro__inner */
+.intro__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+.intro__images {
+    width: 27%;
+}
+.intro__text {
+    width: 70%;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.intro__inner.center {
+    flex-direction: column;
+}
+.intro__inner.center .intro__images {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 3%;
+}
+.intro__inner.center .intro__text {
+    text-align: center;
+    padding: 0 10%;
+}
+.intro__btn {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.intro__btn a {
+    font-size: 1.2em;
+    padding: 0.6em 4em;
+    margin: 0.4em;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--color__black);
+    color: var(--color__white);
+}

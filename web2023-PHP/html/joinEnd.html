@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 블로그 만들기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- SCRIPT -->
+    <script defer src="assets/js/common.js"></script>
+</head>
+<body class="pink">
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="../index.html" class="home">
+                    <span class="blind">메인으로</span>
+                </a>
+            </div>
+            <h1 class="logo">
+                <a href="main.html">Jull Coding Blog</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="board.html">게시판</a></li>
+                <li><a href="#">블로그</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main" class="container">
+        <div class="intro__inner center bmStyle">
+            <picture class="intro__images">
+                <source srcset="assets/img/joinEnd01.png, assets/img/joinEnd01@2x.png 2x, assets/img/joinEnd01@3x.png 3x" />
+                <img src="assets/img/joinEnd01.png" alt="회원가입이미지">
+            </picture>
+            <p class="intro__text">
+                회원가입을 축하드립니다! 환영합니다.<br>로그인을 해주세요.
+            </p>
+            <div class="intro__btn">
+                <a href="#">메인으로</a>
+                <a href="#">로그인</a>
+            </div>
+        </div>
+        <!-- //intro__inner -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="footer__inner"></div>
+    </footer>
+    <!-- //footer -->
+
+</body>
+</html>

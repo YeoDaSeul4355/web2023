@@ -1,0 +1,166 @@
+/* 
+    +header
+    +nav
+*/
+
+/* header__inner */
+#header {
+    position: relative;
+}
+.header__inner {
+    border-bottom: 3px solid var(--color__black);
+    position: relative;
+}
+.header__inner::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--color__black);
+    position: absolute;
+    left: 0;
+    top: 49%;
+    z-index: 1;
+}
+.header__inner .left {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    z-index: 10;
+    background-color: var(--bg__pink);
+}
+.header__inner .left .home {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid var(--color__black);
+    border-radius: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.3095 8.60041V13.8457C16.3095 14.9503 15.4141 15.8457 14.3095 15.8457H12.6782C12.8997 15.3846 13.0238 14.8678 13.0238 14.322V12.7978C13.0238 11.7696 12.5747 10.7926 11.7942 10.1232C10.4742 8.99099 8.52573 8.99099 7.20579 10.1232C6.42531 10.7926 5.97617 11.7696 5.97617 12.7978V14.322C5.97617 14.8678 6.10025 15.3846 6.32173 15.8457H4.69046C3.58589 15.8457 2.69046 14.9503 2.69046 13.8457V8.60041C2.69046 8.05457 2.91356 7.53243 3.30801 7.15513L8.11754 2.55472C8.89078 1.81509 10.1092 1.81509 10.8824 2.55471L15.692 7.15513C16.0864 7.53243 16.3095 8.05457 16.3095 8.60041ZM9.51821 15.8457H9.48175C8.64858 15.8359 7.97617 15.1575 7.97617 14.322V12.7978C7.97617 12.3532 8.17039 11.9307 8.5079 11.6412C9.07869 11.1516 9.92128 11.1516 10.4921 11.6412C10.8296 11.9307 11.0238 12.3532 11.0238 12.7978V14.322C11.0238 15.1575 10.3514 15.8359 9.51821 15.8457ZM9.47201 17.8457H4.69046C2.48132 17.8457 0.69046 16.0548 0.69046 13.8457V8.60041C0.69046 7.50872 1.13666 6.46445 1.92557 5.70985L6.73509 1.10943C8.28157 -0.369809 10.7184 -0.369813 12.2649 1.10943L17.0744 5.70984C17.8633 6.46445 18.3095 7.50872 18.3095 8.60041V13.8457C18.3095 16.0548 16.5186 17.8457 14.3095 17.8457H9.52796C9.51864 17.8458 9.50932 17.8458 9.49998 17.8458C9.49065 17.8458 9.48133 17.8458 9.47201 17.8457Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 1s ease-out;
+}
+.header__inner .left .home:hover {
+    transform: rotate(720deg);
+}
+.header__inner .logo {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+.header__inner .logo a {
+    display: inline-block;
+    background-color: var(--bg__pink);
+    position: relative;
+    z-index: 100;
+    padding: 0 10px;
+}
+.header__inner .right {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 10;
+}
+.header__inner .right li {
+    display: inline-block;
+}
+.header__inner .right a {
+    font-size: 0.88rem;
+    border: 1px solid var(--color__black);
+    padding: 4px 12px;
+    border-radius: 30px;
+    transition: all 0.2s;
+    background-color: var(--bg__pink);
+}
+.header__inner .right a:hover {
+    background-color: var(--color__black);
+    color: var(--color__white);
+}
+/* .header__inner::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--color__black);
+    position:absolute;
+    left: 0;
+    top: 49%;
+    z-index: 1;
+}
+.header__inner > * {
+    position: relative;
+    z-index: 10;
+    background-color: var(--bg__pink);
+}
+.header__inner .left {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    text-align: left;
+}
+.header__inner .left .home {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid var(--color__black);
+    border-radius: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.3095 8.60041V13.8457C16.3095 14.9503 15.4141 15.8457 14.3095 15.8457H12.6782C12.8997 15.3846 13.0238 14.8678 13.0238 14.322V12.7978C13.0238 11.7696 12.5747 10.7926 11.7942 10.1232C10.4742 8.99099 8.52573 8.99099 7.20579 10.1232C6.42531 10.7926 5.97617 11.7696 5.97617 12.7978V14.322C5.97617 14.8678 6.10025 15.3846 6.32173 15.8457H4.69046C3.58589 15.8457 2.69046 14.9503 2.69046 13.8457V8.60041C2.69046 8.05457 2.91356 7.53243 3.30801 7.15513L8.11754 2.55472C8.89078 1.81509 10.1092 1.81509 10.8824 2.55471L15.692 7.15513C16.0864 7.53243 16.3095 8.05457 16.3095 8.60041ZM9.51821 15.8457H9.48175C8.64858 15.8359 7.97617 15.1575 7.97617 14.322V12.7978C7.97617 12.3532 8.17039 11.9307 8.5079 11.6412C9.07869 11.1516 9.92128 11.1516 10.4921 11.6412C10.8296 11.9307 11.0238 12.3532 11.0238 12.7978V14.322C11.0238 15.1575 10.3514 15.8359 9.51821 15.8457ZM9.47201 17.8457H4.69046C2.48132 17.8457 0.69046 16.0548 0.69046 13.8457V8.60041C0.69046 7.50872 1.13666 6.46445 1.92557 5.70985L6.73509 1.10943C8.28157 -0.369809 10.7184 -0.369813 12.2649 1.10943L17.0744 5.70984C17.8633 6.46445 18.3095 7.50872 18.3095 8.60041V13.8457C18.3095 16.0548 16.5186 17.8457 14.3095 17.8457H9.52796C9.51864 17.8458 9.50932 17.8458 9.49998 17.8458C9.49065 17.8458 9.48133 17.8458 9.47201 17.8457Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 1s ease-out;
+}
+.header__inner .left .home:hover {
+    transform: rotate(720deg);
+}
+.header__inner .logo {
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+.header__inner .right {
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+.header__inner .right a {
+    font-size: 0.88rem;
+    border: 1px solid  var(--color__black);
+    padding: 4px 15px;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+.header__inner .right a:hover {
+    background-color: var(--color__black);
+    color: var(--color__white);
+} */
+
+/* nav__inner */
+.nav__inner {
+    position: absolute;
+    left: 50%;
+    top: 51px;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+}
+.nav__inner li {
+    display: inline-block;
+}
+.nav__inner li a {
+    background-color: var(--bg__pink);
+    padding: 2px 5px;
+    border: 1px solid var(--color__black);
+    font-size: 0.88rem;
+}
+.nav__inner li a:hover {
+    background-color: var(--color__black);
+    color: var(--color__white);
+}
+
+/* media */
+@media (max-width: 600px){
+    .header__inner .left {
+        display: none;
+    }
+    .header__inner .right {
+        display: none;
+    }
+}

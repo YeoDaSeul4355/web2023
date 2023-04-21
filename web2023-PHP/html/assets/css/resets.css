@@ -1,0 +1,110 @@
+/* 여백 초기화 */
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+table,
+th,
+td,
+input,
+figure,
+figcaption,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+/* box-sizing 초기화 */
+*, * ::after, *::before {
+    box-sizing: border-box;
+}
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: var(--main__win), 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', 'dotum', '돋움';
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+/* 링크 초기화 */
+a {
+    text-decoration: none;
+    color: var(--color__black);
+}
+
+/* 목록 초기화 */
+li, ol, ul {
+    list-style: none;
+}
+
+/* 제목 초기화 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: var(--font__size);
+}
+
+/* 폰트 스타일 */
+em, address {
+    font-style: normal;
+}
+
+/* 이미지 초기화 */
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* 보더 초기화 */
+img, fieldset, button {
+    border: 0;
+}
+
+/* 클리어픽스 */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* 블라인드 효과 */
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* ir 효과 */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
