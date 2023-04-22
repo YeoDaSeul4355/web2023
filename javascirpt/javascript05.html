@@ -85,6 +85,133 @@
                 </ul>
             </div>
             <div class="main__sample">
+                <!-- sample01 -->
+                <div id="sample01" class="sample">
+                    <h3>01. at()</h3>
+                    <div class="notice">"문자열".at(인덱스)</div>
+                    <ul>
+                        <li>문자열에서 지정된 인덱스에 해당하는 문자를 반환합니다.</li>
+                        <li>이 메소드는 문자열의 charAt() 메소드와 유사하지만, 인덱스가 문자열의 범위를 벗어날 경우 undefined를 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "javascript reference".at();         //j
+    "javascript reference".at(0);      //j
+    "javascript reference".at(3);      //a
+    "javascript reference".at(11);     //r
+    "javascript reference".at(20);     //undefined
+
+    "javascript reference".at(-1);     //e
+    "javascript reference".at(-2);     //c
+    "javascript reference".at(-3);     //n
+    "javascript reference".at(-100);   //undefined
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample01 -->
+                <!-- sample02 -->
+                <div id="sample02" class="sample">
+                    <h3>02. charAt()</h3>
+                    <div class="notice">"문자열".charAt(숫자)</div>
+                    <ul>
+                        <li>문자열에서 특정 인덱스에 해당하는 문자를 반환합니다.</li>
+                        <li>지정된 인덱스가 범위를 벗어나면, 빈 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "javascript reference".charAt();         //j
+    "javascript reference".charAt(0);      //j
+    "javascript reference".charAt(1);      //a
+    "javascript reference".charAt(2);      //v
+    "javascript reference".charAt(11);     //r
+    "javascript reference".charAt(20);     //빈문자열
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample02 -->
+                <!-- sample03 -->
+                <div id="sample03" class="sample">
+                    <h3>03. charCodeAt()</h3>
+                    <div class="notice">"문자열".charCodeAt(숫자)</div>
+                    <ul>
+                        <li>문자열에서 지정된 위치에 있는 문자의 유니코드 값을 반환합니다.</li>
+                        <li>유니코드는 UTF-16 코드를 나타내는 0부터 65535 사이의 정수를 말합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "javascript reference".charCodeAt();         //106
+    "javascript reference".charCodeAt(0);      //106
+    "javascript reference".charCodeAt(1);      //97
+    "javascript reference".charCodeAt(2);      //118
+    "javascript reference".charCodeAt(3);      //97
+    "javascript reference".charCodeAt(11);     //114
+    "javascript reference".charCodeAt(12);     //101
+    "javascript reference".charCodeAt(20);     //NaN
+    "javascript reference".charCodeAt(-1);     //NaN
+}
+</code></pre>
+                    </div>
+                    <div class="notice">
+                        자바스크립트에서 유니코드(Unicode)는 전 세계의 문자와 기호를 나타내기 위한 표준 인코딩 시스템입니다. 이는 문자열을 작성하거나 처리할 때 사용됩니다.<br><br>
+                        유니코드는 16진수 값으로 나타내어지며, 각 문자 및 기호에 대해 고유한 코드 포인트를 제공합니다. 이 코드 포인트는 U+XXXX 형식으로 표시됩니다. 여기서 XXXX는 16진수 값입니다.<br><br>
+                        자바스크립트에서는 유니코드를 지원하기 위해 '\uXXXX'와 같은 이스케이프 시퀀스를 사용하여 문자열 내에 특수 문자를 나타냅니다. 이를 통해 자바스크립트에서 다양한 언어의 문자를 표현할 수 있습니다.
+                    </div>
+                </div>
+                <!-- sample03 -->
+                <!-- sample04 -->
+                <div id="sample04" class="sample">
+                    <h3>04. codePointAt()</h3>
+                    <div class="notice">"문자열".codePointAt(숫자)</div>
+                    <ul>
+                        <li>문자열에서 지정된 위치에 있는 유니코드 코드 포인트 값을 반환합니다.</li>
+                        <li>charCodeAt()는 16비트 유니코드 값을 반환하는 데 반해, codePointAt()는 21비트 유니코드 코드 포인트 값을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "javascript reference".codePointAt();         //106
+    "javascript reference".codePointAt(0);      //106
+    "javascript reference".codePointAt(1);      //97
+    "javascript reference".codePointAt(2);      //118
+    "javascript reference".codePointAt(3);      //97
+    "javascript reference".codePointAt(11);     //114
+    "javascript reference".codePointAt(12);     //101
+    "javascript reference".codePointAt(20);     //undefined
+    "javascript reference".codePointAt(-1);     //undefined
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample04 -->
+                <!-- sample05 -->
+                <div id="sample05" class="sample">
+                    <h3>05. concat()</h3>
+                    <div class="notice">"문자열".concat("문자열")</div>
+                    <ul>
+                        <li>문자열이나 배열을 합쳐서 새로운 문자열 또는 배열을 반환하는 메서드입니다.</li>
+                        <li>문자열의 경우, concat() 메서드는 호출된 문자열에 인수로 전달된 문자열을 덧붙인 새로운 문자열을 반환합니다.</li>
+                        <li>배열의 경우, concat() 메서드는 호출된 배열에 인수로 전달된 배열을 덧붙인 새로운 배열을 반환합니다. </li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    const str = "javascript";
+
+    str.concat("reference");                //javascriptreference
+    str.concat(" ","reference");            //javascript reference
+    str.concat("& ","reference");           //javascript& reference
+    str.concat("❣️", "reference")           //javascript❣️reference
+
+    const arr = ["javascript", "reference"];
+
+    arr.concat("react")                 // ['javascript', 'reference', 'react']
+    arr.concat(" ", "react")            // ['javascript', 'reference', ' ', 'react']
+    arr.concat("&", ["react", "jquery"])      // ['javascript', 'reference', '&', 'react', 'jquery']
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample05 -->
                 <!-- sample06 -->
                 <div id="sample06" class="sample">
                     <h3>06. includes()</h3>
@@ -163,6 +290,31 @@
                     </div>
                 </div>
                 <!-- sample08 -->
+                <!-- sample09 -->
+                <div id="sample09" class="sample">
+                    <h3>09. localeCompare()</h3>
+                    <div class="notice">"문자열".localeCompare("문자열")</div>
+                    <ul>
+                        <li>두 개의 문자열을 비교하고, 첫 번째 문자열이 두 번째 문자열보다 정렬 순서상 앞에 오는 경우 음수를 반환하며, 두 번째 문자열이 첫 번째 문자열보다 앞에 오는 경우 양수를 반환합니다. </li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    const str1 = "apple";
+    const str2 = "banana";
+    const str3 = "cat";
+    const str4= "diary";
+    const str5= "apple";
+
+    console.log(str2.localeCompare(str1));  // 1
+    console.log(str3.localeCompare(str1));  // 1
+    console.log(str4.localeCompare(str3));  // 1
+    console.log(str1.localeCompare(str2));  // -1
+    console.log(str1.localeCompare(str5));  // 0
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample09 -->
                  <!-- sample10 -->
                  <div id="sample10" class="sample">
                     <h3>10. match()</h3>
@@ -192,6 +344,95 @@
                     </div>
                 </div>
                 <!-- sample10 -->
+                <!-- sample12 -->
+                <div id="sample12" class="sample">
+                    <h3>12. normalize()</h3>
+                    <div class="notice">"문자열(유니코드 문자열)".normalize("정규화 방식")</div>
+                    <ul>
+                        <li>유니코드 문자열 정규화를 수행합니다.</li>
+                        <li>문자열을 인자로 받아서, 유니코드의 특정 문자들을 같은 문자로 치환하여 문자열을 표준화(normalize)합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    console.log("webstoryboy".normalize("NFC"))     //webstoryboy
+    console.log("webstoryboy".normalize("NFD"))     //webstoryboy
+    console.log("webstoryboy".normalize("NFKC"))    //webstoryboy
+    console.log("webstoryboy".normalize("NFKD"))    //webstoryboy
+}
+</code></pre>
+                    </div>
+                    <div class="notice">
+                        NFC: 정규형 정준 결합(Normalization Form Canonical Composition)<br>
+                        NFD : 정규형 정준 분해(Normalization Form Canonical Decomposition)<br>
+                        NFKC : 정규형 호환성 결합(Normalization Form Compatibility Composition)<br>
+                        NFKD : 정규현 호환성 분해(Normalization Form Compatibility Decomposition)<br>
+                    </div>
+                    <div class="notice">
+                        유니코드 문자열(Unicode string)은 유니코드 문자 집합을 기반으로 구성된 문자열입니다. 유니코드는 전 세계의 모든 문자를 표현하기 위한 국제 표준 문자 코드 규약입니다. 이 규약은 ASCII 문자 집합으로 표현되는 문자 이외에도, 중국어, 한국어, 일본어 등의 문자를 비롯한 수천 가지의 문자를 포함하고 있습니다.
+                    </div>
+                </div>
+                <!-- sample12 -->
+                <!-- sample13 -->
+                <div id="sample13" class="sample">
+                    <h3>13. padEnd()</h3>
+                    <div class="notice">"문자열".padEnd(문자열의 길이, [매개변수])</div>
+                    <ul>
+                        <li>문자열을 지정된 길이만큼 다른 문자열로 채워 넣는 역할을 합니다.</li>
+                        <li>두 개의 매개 변수를 사용합니다. 첫 번째 매개 변수는 원하는 전체 길이이고, 두 번째 매개 변수는 문자열을 채울 다른 문자열입니다.</li>
+                        <li>첫 번째 매개 변수보다 원래 문자열의 길이가 더 작은 경우 두 번째 매개 변수의 문자열이 추가됩니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "javascript reference".padEnd(20);                  //javascript reference
+    "javascript reference".padEnd(21, '-');             //javascript reference-
+    "javascript reference".padEnd(25, '✨');            //javascript reference✨✨✨✨✨
+    "javascript reference".padEnd(30, '@');             //javascript reference@@@@@@@@@@
+    "javascript reference".padEnd(26, " react");        //javascript reference react
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample13 -->
+                <!-- sample14 -->
+                <div id="sample14" class="sample">
+                    <h3>14. padStart()</h3>
+                    <div class="notice">"문자열".padStart(문자열의 길이, [매개변수])</div>
+                    <ul>
+                        <li>문자열의 시작 부분에 다른 문자열을 추가하여 지정된 길이에 도달하도록 만듭니다.</li>
+                        <li>첫 번째 매개 변수는 전체 길이이고, 두 번째 매개 변수는 채울 다른 문자열입니다.</li>
+                        <li>첫 번째 매개 변수보다 원래 문자열의 길이가 더 작은 경우, 두 번째 매개 변수의 문자열이 시작 부분에 추가됩니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "javascript reference".padStart(20);                  //javascript reference
+    "javascript reference".padStart(21, '-');             //-javascript reference
+    "javascript reference".padStart(25, '✨');            //✨✨✨✨✨javascript reference
+    "javascript reference".padStart(30, '@');             //@@@@@@@@@@javascript reference
+    "javascript reference".padStart(26, " react");        //reactjavascript reference
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample14 -->
+                <!-- sample15 -->
+                <div id="sample15" class="sample">
+                    <h3>15. repeat()</h3>
+                    <div class="notice">"문자열".repeat(반복할 횟수)</div>
+                    <ul>
+                        <li>문자열을 지정된 횟수만큼 반복하여 새로운 문자열을 반환합니다.</li>
+                        <li>매개 변수는 반복 횟수를 나타내는 양의 정수입니다. 0 또는 음수가 매개 변수로 전달되면 빈 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "JAVASCRIPT".repeat(3);     //JAVASCRIPTJAVASCRIPTJAVASCRIPT
+    "CSS".repeat(2);            //CSSCSS
+    "HTML ".repeat(3);           //HTML HTML HTML 
+    "REACT".repeat(2);          //REACTREACT
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample15 -->
                 <!-- sample18 -->
                 <div id="sample18" class="sample">
                     <h3>18. search()</h3>
@@ -347,7 +588,15 @@
     <script>hljs.highlightAll();</script>
 
     <script>
-        
+        const arr = ["javascript", "reference"];
+
+        arr.concat("react")         
+        arr.concat(" ", "react") 
+        arr.concat("&", ["react", "jquery"])
+
+        console.log(arr.concat("react") );
+        console.log(arr.concat(" ", "react"));
+        console.log(arr.concat("&", ["react", "jquery"]));
     </script>
 
 </body>
