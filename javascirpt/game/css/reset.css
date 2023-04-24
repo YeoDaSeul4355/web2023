@@ -1,0 +1,30 @@
+@import url('https://webfontworld.github.io/ssf/BeanPole.css');
+@import url('https://webfontworld.github.io/neodgm/NeoDunggeunmo.css');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'BeanPole';
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}

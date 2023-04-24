@@ -9,20 +9,21 @@
 <body>
     <script>
         {
-            let a = 3, b = 4, c = 3, d = 5;
+            let num = [56, 4, 3, 65, 78];
+            let temp;
 
-            if( (a == 2 | a == c) & !(c > d) & (1 == b ^ c != d) ){
-                a = b + c;
-                if( 7 == b ^ c != a ){
-                    console.log(a);
-                } else {
-                    console.log(b);
+            for(let i=0; i<1; i++){
+                for(let j=0; j<num.length-i-1; j++){
+                    if(num[j]>num[j+1]){
+                        temp = num[j];
+                        num[j] = num[j+1];
+                        num[j+1] = temp;
+                    }
                 }
-            } else {
-                console.log(a + b)
             }
-        }
 
+            console.log(num)
+        }
     </script>
 </body>
 </html>

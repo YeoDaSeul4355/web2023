@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Effect</title>
+
+    <link rel="stylesheet" href="css/bg.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <header id="header">
+        <h1>🎮JJUL GAME WORLD🎮</h1>
+        <div class="time">2023년 4월 24일 09시 30분 15초</div>
+    </header>
+    
+    <main>
+        <div class="cursor">
+            <img src="img/game_mouse01.png" alt>
+        </div>
+        <div class="icon__box">
+            <div class="icon1">
+                <img src="img/game_icon01.png" alt="뮤직">
+                <span>MUSIC</span>
+            </div>
+            <div class="icon2">
+                <img src="img/game_icon02.png" alt="뮤직">
+                <span>MUSIC</span>
+            </div>
+            <div class="icon3">
+                <img src="img/game_icon03.png" alt="뮤직">
+                <span>MUSIC</span>
+            </div>
+            <div class="icon4">
+                <img src="img/game_icon04.png" alt="뮤직">
+                <span>MUSIC</span>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="info">현재 윈도우를 사용하고 있으며, 화면 크기는 1920 X 760입니다.</div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    
+    <script>
+        //운영체제 정보 알아내기
+        const os = () => {
+            let os = navigator.userAgent.toLowerCase();
+            let sw = screen.width;
+            let sh = screen.height;
+            let infor = document.querySelector(".info");
+
+            if (os.indexOf("windows") >= 0) {
+                infor.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+            } else if (os.indexOf("macintosh") >= 0) {
+                nfor.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+            } else if (os.indexOf("iphone") >= 0) {
+                infor.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+            } else if (os.indexOf("android") >= 0) {
+                infor.innerHTML = "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+            }
+        }
+        os();
+
+        const classRemove = () => {
+            $("#header").removeClass("red blue green yellow");
+        }
+        
+        $(".icon1").draggable({
+            containment: ".icon__box", scroll:false,
+
+            start: function() {
+                $(".info").html("dd");
+                $(".cursor img").attr("src", "img/game_mouse01.png");
+            },
+            drag: function() {
+                $(".info").html("지금은 <em style='color:red'>빨간색</em> 폴더를 드래그하고 있습니다.");
+                $("#header").addClass("red");
+            },
+            stop: function() {
+                setTimeout(os,3000);
+                setTimeout(classRemove,3000);
+            }
+        });
+        $(".icon2").draggable({
+            containment: ".icon__box", scroll:false,
+
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse02.png");
+            },
+            drag: function() {
+                $(".info").html("지금은 <em style='color:blue'>파란색</em> 폴더를 드래그하고 있습니다.");
+                $("#header").addClass("blue");
+            },
+            stop: function() {
+                setTimeout(os,3000);
+                setTimeout(classRemove,3000);
+            }
+        });
+        $(".icon3").draggable({
+            containment: ".icon__box", scroll:false,
+
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse03.png");
+            },
+            drag: function() {
+                $(".info").html("지금은 <em style='color:green'>초록색</em> 폴더를 드래그하고 있습니다.");
+                $("#header").addClass("green");
+            },
+            stop: function() {
+                setTimeout(os,3000);
+                setTimeout(classRemove,3000);
+            }
+        });
+        $(".icon4").draggable({
+            containment: ".icon__box", scroll:false,
+
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse04.png");
+            },
+            drag: function() {
+                $(".info").html("지금은 <em style='color:yellow'>노란색</em> 폴더를 드래그하고 있습니다.");
+                $("#header").addClass("yellow");
+            },
+            stop: function() {
+                setTimeout(os,classRemove,3000);
+                setTimeout(classRemove,3000);
+            }
+        });
+
+        window.onload = function(){
+            window.addEventListener("mousemove", e => {
+                gsap.to(".cursor", {duration: 0, left: e.pageX - 5, top: e.pageY - 10});
+            });
+
+            printTime();        // 오른쪽 상단 시간
+            printAgent();       // 하단 중앙에 메시지
+        }
+
+        function time(){
+            const now = document.querySelector(".time");
+            
+            const today = new Date();
+            
+            const year = today.getFullYear();
+            const month = today.getMonth()+1;
+            const date = today.getDate();
+            const hours = today.getHours();
+            const minute = today.getMinutes();
+            const seconds = today.getSeconds();
+
+            now.innerHTML = year + "년 " + month +"월 " + date + "일 "+ hours + "시" + minute + "분" + seconds + "초"; 
+        }
+        time();
+
+        setInterval(time,1000);
+
+        let clock = document.querySelector(".time");
+        setInterval(function () {
+            clock.innerHTML = new Date().toLocaleString();
+        }, 1000);
+
+        
+    </script>
+</body>
+</html>
