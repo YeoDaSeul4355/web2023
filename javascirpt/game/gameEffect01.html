@@ -81,10 +81,11 @@
                 $(".cursor img").attr("src", "img/game_mouse01.png");
             },
             drag: function() {
-                $(".info").html("지금은 <em style='color:red'>빨간색</em> 폴더를 드래그하고 있습니다.");
+                $(".info").html("지금은 <span style='color:red'>빨간색</span> 폴더를 드래그하고 있습니다.");
                 $("#header").addClass("red");
             },
             stop: function() {
+                $(".info").html("드래그가 끝났습니다.");
                 setTimeout(os,3000);
                 setTimeout(classRemove,3000);
             }
@@ -96,10 +97,11 @@
                 $(".cursor img").attr("src", "img/game_mouse02.png");
             },
             drag: function() {
-                $(".info").html("지금은 <em style='color:blue'>파란색</em> 폴더를 드래그하고 있습니다.");
+                $(".info").html("지금은 <span style='color:blue'>파란색</span> 폴더를 드래그하고 있습니다.");
                 $("#header").addClass("blue");
             },
             stop: function() {
+                $(".info").html("드래그가 끝났습니다.");
                 setTimeout(os,3000);
                 setTimeout(classRemove,3000);
             }
@@ -111,10 +113,11 @@
                 $(".cursor img").attr("src", "img/game_mouse03.png");
             },
             drag: function() {
-                $(".info").html("지금은 <em style='color:green'>초록색</em> 폴더를 드래그하고 있습니다.");
+                $(".info").html("지금은 <span style='color:green'>초록색</span> 폴더를 드래그하고 있습니다.");
                 $("#header").addClass("green");
             },
             stop: function() {
+                $(".info").html("드래그가 끝났습니다.");
                 setTimeout(os,3000);
                 setTimeout(classRemove,3000);
             }
@@ -126,10 +129,11 @@
                 $(".cursor img").attr("src", "img/game_mouse04.png");
             },
             drag: function() {
-                $(".info").html("지금은 <em style='color:yellow'>노란색</em> 폴더를 드래그하고 있습니다.");
+                $(".info").html("지금은 <span style='color:yellow'>노란색</span> 폴더를 드래그하고 있습니다.");
                 $("#header").addClass("yellow");
             },
             stop: function() {
+                $(".info").html("드래그가 끝났습니다.");
                 setTimeout(os,classRemove,3000);
                 setTimeout(classRemove,3000);
             }
