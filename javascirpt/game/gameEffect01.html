@@ -26,17 +26,20 @@
                 <span>MUSIC</span>
             </div>
             <div class="icon2">
-                <img src="img/game_icon02.png" alt="뮤직">
+                <img src="img/game_icon02.png" alt="게임">
                 <span>MUSIC</span>
             </div>
             <div class="icon3">
-                <img src="img/game_icon03.png" alt="뮤직">
+                <img src="img/game_icon03.png" alt="기타">
                 <span>MUSIC</span>
             </div>
             <div class="icon4">
-                <img src="img/game_icon04.png" alt="뮤직">
+                <img src="img/game_icon04.png" alt="코딩">
                 <span>MUSIC</span>
             </div>
+        </div>
+        <div class="music hide">
+            <p>현재 뮤직 듣기를 클릭했습니다!</p>
         </div>
     </main>
 
@@ -136,6 +139,22 @@
                 setTimeout(os,3000);
                 setTimeout(classRemove,3000);
             }
+        });
+
+        $(".icon1").on("click", function(){
+            $('.music').removeClass("hide");
+        });
+        $(".icon2").on("click", function(){
+            $('.music').addClass("hide");
+        });
+        $(".icon3").on("click", function(){
+            $('.music').addClass("hide");
+        });
+        $(".icon4").on("click", function(){
+            $('.music').addClass("hide");
+        }); 
+        $("#header").on("click", function(){
+            $('.music').addClass("hide");
         });
 
         window.onload = function(){

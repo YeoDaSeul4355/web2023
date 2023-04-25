@@ -31,3 +31,6 @@ em {
 span {
     font-style: normal;
 }
+.hide {
+    display: none;
+}

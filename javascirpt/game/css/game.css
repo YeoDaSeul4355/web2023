@@ -73,6 +73,20 @@ body {
     display: inline-block;
     border-radius: 4px;
 }
+.music {
+    position: fixed;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    border: 3px dashed #ffffff;
+    border-radius: 10px;
+    background-color: #ffa0a0;
+    padding: 40px;
+}
+.music p {
+    font-family: 'NeoDunggeunmo';
+    color: #000;
+}
 /* footer */
 .info {
     position: fixed;
