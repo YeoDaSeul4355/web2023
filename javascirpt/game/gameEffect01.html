@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 </head>
 <body>
     <header id="header">
@@ -38,9 +40,51 @@
                 <span>MUSIC</span>
             </div>
         </div>
-        <div class="music hide">
-            <p>현재 뮤직 듣기를 클릭했습니다!</p>
+
+        <!-- 뮤직 플레이어 -->
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>🎧JJUL'S PLAYLIST🎧</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="img/music__view01.png" alt="1번째 음악">
+                        </div>
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>Bad Guy</h3>
+                            <p>billie eilish</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/y2mate.com - Tetris 99  Main Theme 1 hour.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">3:42</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>전체반복</span>
+                            <span>이전곡 재생</span>
+                            <span>재생</span>
+                            <span>다음곡 재생</span>
+                            <span>재생목록</span>
+                            <!-- <span>셔플</span>
+                            <span>한곡 반복</span>
+                            <span>정지</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="music__footer"></div>
+            </div>
         </div>
+        <!-- //뮤직 플레이어 -->
     </main>
 
     <footer id="footer">
@@ -51,6 +95,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/music.js"></script>
     
     <script>
         //운영체제
@@ -177,22 +222,19 @@
             const date = today.getDate();
             const hours = today.getHours();
             const minute = today.getMinutes();
-            const seconds = today.getSeconds();
 
-            now.innerHTML = year + "년 " + month +"월 " + date + "일 "+ hours + "시" + minute + "분" + seconds + "초"; 
+            now.innerHTML = year + "년 " + month +"월 " + date + "일 "+ hours + "시" + minute + "분";
         }
         time();
 
         setInterval(time,1000);
 
-        // 시간 구현 2
+        // // 시간 구현 2
 
-        let clock = document.querySelector(".time");
-        setInterval(function () {
-            clock.innerHTML = new Date().toLocaleString();
-        }, 1000);
-
-        
+        // let clock = document.querySelector(".time");
+        // setInterval(function () {
+        //     clock.innerHTML = new Date().toLocaleString();
+        // }, 1000);
     </script>
 </body>
 </html>
