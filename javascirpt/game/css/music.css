@@ -39,9 +39,9 @@
     width: 90%;
 }
 .music__view .image {
+    border: 10px double #ff9393;
 }
 .music__view .image img {
-    border-radius: 20px;
     box-shadow: 0 20px 50px rgba(246, 50, 50, 0.4);
 }
 .music__control {
@@ -86,8 +86,50 @@
     margin-top: 3px;
 }
 .music__control .progress .timer span {
-    color:#e63f3f;
+    color:#e68a3f;
     font-size: 12px;
     font-family: 'Poppins';
 }
+.music__control .control {
+    width: 100%;
+    margin-top: 40px;
+    font-family: 'NeoDunggeunmo';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.music__control .control span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.music__control .control span i {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 8px;
+    background-image: url(../img/music_icon.svg);
+}
+.music__control .control span i.repeat {
+    background-position: 0 0;
+}
+.music__control .control span i.prev {
+    background-position: -24px 0;
+}
+.music__control .control span i.play {
+    background-position: -24px -24px;
+}
+.music__control .control span:nth-child(3) {
+    background-image: linear-gradient(to bottom, #ff4d4d, #ffab67);
+    border-radius: 50%;
+}
+.music__control .control span i.next {
+    background-position: -48px 0;
+}
+.music__control .control span i.list {
+    background-position: -72px 0;
+}
+.music__control .control span i.repeat-one {}
+.music__control .control span i.shuffle {}
+.music__control .control span i.stop {}
 .music__footer {}
