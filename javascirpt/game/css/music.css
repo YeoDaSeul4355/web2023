@@ -74,7 +74,7 @@
     border-radius: 3px;
 }
 .music__control .progress .bar {
-    width: 60%;
+    width: 0%;
     height: 5px;
     background-color: #ff5d5d;
     border-radius: 3px;
@@ -104,32 +104,39 @@
     height: 40px;
 }
 .music__control .control span i {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     display: block;
-    margin: 8px;
     background-image: url(../img/music_icon.svg);
+    background-size: 500px;
 }
 .music__control .control span i.repeat {
     background-position: 0 0;
 }
 .music__control .control span i.prev {
-    background-position: -24px 0;
+    background-position: -120px 0;
 }
 .music__control .control span i.play {
-    background-position: -24px -24px;
+    background-position: -160px 0;
 }
 .music__control .control span:nth-child(3) {
     background-image: linear-gradient(to bottom, #ff4d4d, #ffab67);
     border-radius: 50%;
 }
 .music__control .control span i.next {
-    background-position: -48px 0;
+    background-position: -240px 0;
 }
 .music__control .control span i.list {
-    background-position: -72px 0;
+    background-position: -280px 0;
 }
-.music__control .control span i.repeat-one {}
-.music__control .control span i.shuffle {}
-.music__control .control span i.stop {}
+
+.music__control .control span i.repeat_one {
+    background-position: -40px 0;
+}
+.music__control .control span i.shuffle {
+    background-position: -80px 0;
+}
+.music__control .control span i.stop {
+    background-position: -200px 0;
+}
 .music__footer {}
