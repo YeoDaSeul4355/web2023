@@ -9,20 +9,13 @@
 <body>
     <script>
         {
-            let num = [56, 4, 3, 65, 78];
-            let temp;
+            let x = 1;
 
-            for(let i=0; i<1; i++){
-                for(let j=0; j<num.length-i-1; j++){
-                    if(num[j]>num[j+1]){
-                        temp = num[j];
-                        num[j] = num[j+1];
-                        num[j+1] = temp;
-                    }
-                }
-            }
-
-            console.log(num)
+            console.log( !(x>0) );
+            console.log( x>0 || x<4 );
+            console.log( x<<2 );
+            console.log( x&2 );
+            console.log( x%3 );
         }
     </script>
 </body>

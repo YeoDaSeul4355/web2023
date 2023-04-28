@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 E유형 1번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: calc(100vh - 100px);
+            background-color: #ff4747;
+        }
+        #section {
+            width: 400px;
+            height: calc(100vh - 100px);
+            background-color: #4f3bff;
+        }
+        #main {
+            width: calc(100% - 600px);
+            height: calc(100vh - 100px);
+            background-color: #ff5aac;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #ff37ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <main id="main"></main>
+        <footer id="footer">
+            <div class="left"></div>
+            <div class="right">
+                <div class="foot1"></div>
+                <div class="foot2"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

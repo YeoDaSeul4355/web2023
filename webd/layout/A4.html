@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 A유형 4번 레이아웃</title>
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: 'NanumSquare';
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        #header {
+            display: flex;
+            height: 100px;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 20%;
+            background-color: #ffb3b3;
+        }
+        .nav {
+            width: 80%;
+            background-color: #ffa2a2;
+        }
+        #banner {
+            width: 100%;
+        }
+        .slider {
+            background-color: #ffd45c;
+            height: 300px;
+        }
+        #contents {
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+        }
+        .card {
+            width: 33.3333%;
+            height: 200px;
+        }
+        .card:nth-child(1) {
+            background-color: #4bff9c;
+        }
+        .card:nth-child(2) {
+            background-color: #abffd1;
+        }
+        .card:nth-child(3) {
+            background-color: #ff996a;
+        }
+        #footer {
+            display: flex;
+        }
+        .right {
+            width: 20%;
+            height: 100px;
+            background-color: #ffc13b;
+        }
+        .left {
+            width: 80%;
+            height: 100px;
+            display: block;
+        }
+        .copyright {
+            background-color: #ff3a3a;
+            height: 50px;
+        }
+        .sns {
+            background-color: #9e63fd;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">로고</div>
+            <div class="nav">메뉴</div>
+        </header>
+        <banner id="banner">
+            <div class="slider">이미지 슬라이드</div>
+        </banner>
+        <contents id="contents">
+            <div class="card">공지사항</div>
+            <div class="card">공지사항</div>
+            <div class="card">공지사항</div>
+        </contents>
+        <footer id="footer">
+            <div class="left">
+                <div class="copyright">하단 메뉴</div>
+                <div class="sns">copyright</div>
+            </div>
+            <div class="right">
+                <div class="flogo">패밀리 사이트</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

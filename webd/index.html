@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디기</title>
+    <link href="https://webfontworld.github.io/TheJamsil/TheJamsil.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'TheJamsil';
+        }
+        #wrap {
+            display: flex;
+        }
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        li {
+            list-style: none;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+        }
+        #nav {
+            padding: 20px;
+            display: flex;
+        }
+        #nav li a {
+            border: 2px solid #ff71ac;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin-bottom: 2px;
+            text-align: center;
+            line-height: 50px;
+            margin-right: 2px;
+        }
+        #nav li a:hover,
+        #nav li.active a {
+            border-color: #ff71ac;
+            background-color: #ff71ac;
+            color: #fff;
+            transition: all 0.4s;
+        }
+        #main {
+            margin: 20px;
+            margin-left: 0;
+            border: 1px solid #ff71ac;
+            width: calc(100% - 40px);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <nav id="nav">
+            <ul>
+                <li class="active"><a href="layout/A1.html">A-1</a></li>
+                <li><a href="layout/A2.html">A-2</a></li>
+                <li><a href="layout/A3.html">A-3</a></li>
+                <li><a href="layout/A4.html">A-4</a></li>
+
+                <li><a href="layout/B1.html">B-1</a></li>
+                <li><a href="layout/B2.html">B-2</a></li>
+                <li><a href="layout/B3.html">B-3</a></li>
+                <li><a href="layout/B4.html">B-4</a></li>
+
+                <li><a href="layout/C1.html">C-1</a></li>
+                <li><a href="layout/C2.html">C-2</a></li>
+                <li><a href="layout/C3.html">C-3</a></li>
+                <li><a href="layout/C4.html">C-4</a></li>
+
+                <li><a href="layout/D1.html">D-1</a></li>
+                <li><a href="layout/D2.html">D-2</a></li>
+                <li><a href="layout/D3.html">D-3</a></li>
+                <li><a href="layout/D4.html">D-4</a></li>
+
+                <li><a href="layout/E1.html">E-1</a></li>
+                <li><a href="layout/E2.html">E-2</a></li>
+                <li><a href="layout/E3.html">E-3</a></li>
+                <li><a href="layout/E4.html">E-4</a></li>
+            </ul>
+            <ul>
+                <li><a href="menu/m1.html">M-1</a></li>
+                <li><a href="menu/m2.html">M-2</a></li>
+                <li><a href="menu/m3.html">M-3</a></li>
+                <li><a href="menu/m4.html">M-3</a></li>
+                <li><a href="menu/m5.html">M-3</a></li>
+                <li><a href="menu/m6.html">M-3</a></li>
+            </ul>
+            <ul>
+                <li><a href="menu/s1.html">S-1</a></li>
+                <li><a href="menu/s2.html">S-2</a></li>
+                <li><a href="menu/s3.html">S-3</a></li>
+            </ul>
+        </nav>
+        <main id="main">
+            <iframe src="layout/A1.html" frameborder="0"></iframe>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll("#nav ul li").forEach(li => {
+            li.addEventListener("click", e => {
+                e.preventDefault();
+                let href = li.querySelector("a").getAttribute("href");
+
+                document.querySelector("#main iframe").setAttribute("src", href);
+                
+                document.querySelectorAll("#nav ul li").forEach(el => {
+                    el.classList.remove("active");
+                });
+                li.classList.add("active");
+            });
+        });
+        
+    </script>
+</body>
+</html>
