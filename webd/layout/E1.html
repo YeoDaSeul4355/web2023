@@ -1,51 +1,115 @@
 <!DOCTYPE html>
-<html lang="ko ">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹디자인 기능사 실기 E유형 1번 레이아웃</title>
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+        h1 {
+            font-size: 16px;
+            font-style: normal;
+        }
         #wrap {
+            width: 100%;
+            height: 100vh;
+        }
+        .top {
             display: flex;
-            flex-wrap: wrap;
+            width: 100%;
+            height: calc(100vh - 120px);
         }
         #aside {
             width: 200px;
-            height: calc(100vh - 100px);
-            background-color: #ff4747;
+            height: 100%;
         }
-        #section {
+        #aside h1 {
+            width: 200px;
+            height: 20%;
+            background-color: #ffecec;
+        }
+        #aside nav {
+            width: 200px;
+            height: 80%;
+            background-color: #ffe0e0;}
+        #article {
             width: 400px;
-            height: calc(100vh - 100px);
-            background-color: #4f3bff;
+            height: 100%;
         }
+        .card1 {
+            width: 100%;
+            height: 15%;
+            background-color: #ffcdcd;
+        }
+        .card2 {
+            width: 100%;
+            height: 35%;
+            background-color: #ff8e8e;}
+        .card3 {
+            width: 100%;
+            height: 35%;
+            background-color: #e79c9c;}
+        .card4 {
+            width: 100%;
+            height: 15%;
+            background-color: #ffafaf;}
         #main {
             width: calc(100% - 600px);
-            height: calc(100vh - 100px);
-            background-color: #ff5aac;
+            height: 100%;
+            background-color: #ff9dcc;
         }
         #footer {
+            display: flex;
             width: 100%;
-            height: 100px;
-            background-color: #ff37ff;
+            height: 120px;
+            background-color: #813a3a;
+        }
+        .left {
+            width: 200px;
+            height: 100%;
+            background-color: #a47e7e;
+        }
+        .right {
+            width: calc(100% - 200px);
+            height: 100%;
+        }
+        .foot1 {
+            width: 100%;
+            height: 50%;
+            background-color: #907272;
+        }
+        .foot2 {
+            width: 100%;
+            height: 50%;
+            background-color: #3d2a2a;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <aside id="aside"></aside>
-        <section id="section"></section>
-        <main id="main"></main>
+        <div class="top">
+            <aside id="aside">
+                <h1>로고</h1>
+                <nav>메뉴</nav>
+            </aside>
+            <article id="article">
+                <div class="card1">배너</div>
+                <div class="card2">공지사항</div>
+                <div class="card3">갤러리</div>
+                <div class="card4">링크</div>
+            </article>
+            <main id="main">이미지 슬라이드</main>
+        </div>
         <footer id="footer">
-            <div class="left"></div>
+            <div class="left">로고</div>
             <div class="right">
-                <div class="foot1"></div>
-                <div class="foot2"></div>
+                <div class="foot1">하단메뉴</div>
+                <div class="foot2">COPYRIGHT</div>
             </div>
         </footer>
     </div>

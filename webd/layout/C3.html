@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 C유형 3번 레이아웃</title>
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NanumSquare';
+        }
+        h1 {
+            font-style: normal;
+            font-size: 16px;
+        }
+        #wrap {
+            width: 1000px;
+            display: flex;
+        }
+        #aside {
+            width: 20%;
+        }
+        #aside h1 {
+            height: 100px;
+            background-color: #ff6e51;
+        }
+        #aside nav {
+            background-color: #ffb17a;
+            height: 550px;
+        }
+        #main {
+            width: 80%;
+            height: 650px;
+        }
+        #slide {
+            height: 350px;
+            background-color: #ffdc7a;
+        }
+        #contents {
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+        }
+        .card1 {
+            width: 33.3333%;
+            background-color: #e8ff83;
+        }
+        .card2 {
+            width: 33.3333%;
+            background-color: #80ff8e;
+        }
+        .card3 {
+            width: 33.3333%;
+            background-color: #54ffb8;
+        }
+        #footer {
+            display: flex;
+            height: 100px;
+        }
+        .left {
+            width: 30%;
+            height: 100px;
+            background-color: #65f5ff;
+        }
+        .right {
+            width: 70%;
+        }
+        .foot1 {
+            height: 50px;
+            background-color: #748dff;
+        }
+        .foot2 {
+            height: 50px;
+            background-color: #c073ff;
+        }
+    </style>
+</head>
+<body>
+     <div id="wrap">
+        <aside id="aside">
+            <h1>로고</h1>
+            <nav>메뉴</nav>
+        </aside>
+        <main id="main">
+            <div id="slide">이미지 슬라이드</div>
+            <content id="contents">
+                <div class="card1">공지사항</div>
+                <div class="card2">갤러리</div>
+                <div class="card3">바로가기</div>
+            </content>
+            <footer id="footer">
+                <div class="left">로고</div>
+                <div class="right">
+                    <div class="foot1">하단 메뉴</div>
+                    <div class="foot2">COPYRIGHT</div>
+                </div>
+            </footer>
+        </main>
+     </div>
+</body>
+</html>

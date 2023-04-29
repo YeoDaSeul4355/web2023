@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹디자인 기능사 실기 D유형 1번 레이아웃</title>
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
+            font-family: 'NanumSquare';
+        }
+        h1 {
+            font-size: 16px;
+            font-style: normal;
         }
         #wrap {
             display: flex;
@@ -17,27 +23,25 @@
         #aside {
             width: 200px;
             height: 850px;
-            background-color: #ff8787;
         }
         #aside h1 {
             width: 100%;
             height: 100px;
-            background-color: #ff3939;
+            background-color: #c9c9c9;
         }
         #aside nav {
             width: 100%;
             height: 750px;
-            background-color: #ffdcdc;
+            background-color: #969696;
         }
         #main {
             width: calc(100% - 200px);
             height: 850px;
-            background-color: #9492ff;
         }
         #slider {
             width: 100%;
             height: 400px;
-            background-color: #3f3535;
+            background-color: #6a6a6a;
             position: relative;
         }
         #slider .link {
@@ -46,39 +50,54 @@
             top: 0;
             width: 100px;
             height: 300px;
-            background-color: #5818ee;
+            background-color: #ffffff;
         }
         #banner {
             width: 100%;
             height: 200px;
-            background-color: #ffa2a2;
+            background-color: #434343;
         }
         #contents {
             width: 100%;
             height: 250px;
-            background-color: #f265ff;
+            background-color: #2d2d2d;
         }
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #4ff890;
+            display: flex;
         }
+        .foot1 {
+            width: 200px;
+            background-color: #b9acac;
+        }
+        .foot2 {
+            width: calc(100% - 400px);
+            background-color: #514747;
+        }
+        .foot3 {
+            width: 200px;
+            background-color: #908585;}
     </style>
 </head>
 <body>
     <div id="wrap">
         <aside id="aside">
-            <h1></h1>
-            <nav></nav>
+            <h1>로고</h1>
+            <nav>메뉴</nav>
         </aside>
         <main id="main">
-            <article id="slider">
-                <div class="link"></div>
+            <article id="slider">이미지 슬라이드
+                <div class="link">링크</div>
             </article>
-            <article id="banner"></article>
-            <article id="contents"></article>
+            <article id="banner"> 배너</article>
+            <article id="contents">공지사항</article>
         </main>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="foot1">로고</div>
+            <div class="foot2">COPYRIGHT</div>
+            <div class="foot3">SNS</div>
+        </footer>
     </div>
 </body>
 </html>
