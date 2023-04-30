@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 이미지 슬라이드 유형 3번</title>
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: 'NanumSquare';
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        #header {
+            display: flex;
+            height: 100px;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 20%;
+            background-color: #c4e4ff;
+        }
+        .nav {
+            width: 80%;
+            background-color: #a9d8ff;
+        }
+        #banner {
+            width: 100%;
+        }
+        #contents {
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+        }
+        .card {
+            width: 33.3333%;
+            height: 200px;
+        }
+        .card:nth-child(1) {
+            background-color: #8fccfd;
+        }
+        .card:nth-child(2) {
+            background-color: #78c2ff;
+        }
+        .card:nth-child(3) {
+            background-color: #50b0ff;
+        }
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+        }
+        .flogo {
+            width: 20%;
+            background-color: #2d8ddc;
+        }
+        .copyright {
+            width: 60%;
+            background-color: #5f87a8;
+        }
+        .sns {
+            width: 20%;
+            background-color: #0a6fc2;
+        }
+        /* slider__wrap */
+        .slider__wrap {
+            align-items: center;
+            justify-content: center;
+        }
+        .slider__img { /* 이미지가 보이는 영역 */
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .slider__inner { /* 이미지 움직이는 영역 */
+            width: 3600px;
+            height: 900px
+        }
+        .slider { /* 개별적인 이미지 */
+            width: 1200px;
+            height: 300px
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">로고</div>
+            <div class="nav">메뉴</div>
+        </header>
+        <banner id="banner">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider__inner">
+                        <div class="slider"><img src="../img/Frame 10.png" alt="이미지1"></div>
+                        <div class="slider"><img src="../img/Frame 11.png" alt="이미지2"></div>
+                        <div class="slider"><img src="../img/Frame 12.png" alt="이미지3"></div>
+                    </div>
+                </div>
+            </div>
+        </banner>
+        <contents id="contents">
+            <div class="card">공지사항/갤러리</div>
+            <div class="card">배너</div>
+            <div class="card">바로가기</div>
+        </contents>
+        <footer id="footer">
+            <div class="flogo">flogo</div>
+            <div class="copyright">copyright</div>
+            <div class="sns">sns</div>
+        </footer>
+    </div>
+    <script>
+        // 선택자
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img"); 
+        const sliderInner = sliderWrap.querySelector(".slider__inner");
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        
+        sliderInner.style.transition = "all 0.4s";
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % sliderCount;
+
+            sliderInner.style.transform = `translateY(${-300 * currentIndex}px)`;
+        }, 3000);
+    </script>
+</body>
+</html>

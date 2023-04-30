@@ -47,13 +47,13 @@
             height: 200px;
         }
         .card:nth-child(1) {
-            background-color: #4bff9c;
+            background-color: #878787;
         }
         .card:nth-child(2) {
-            background-color: #abffd1;
+            background-color: #727272;
         }
         .card:nth-child(3) {
-            background-color: #ff996a;
+            background-color: #333333;
         }
         #footer {
             display: flex;
@@ -67,11 +67,11 @@
         }
         .copyright {
             width: 60%;
-            background-color: #3c97ff;
+            background-color: #b2b7bc;
         }
         .sns {
             width: 20%;
-            background-color: #ff0f0f;
+            background-color: #8c6f6f;
         }
         a {
             text-decoration: none;
@@ -93,11 +93,11 @@
             position: relative;
         }
         .nav > ul > li > a {
-            background-color: #ff0f0f;
+            background-color: #80ffcc;
             padding: 10px 40px;
         }
         .nav > ul > li > a:hover {
-            background-color: #ffb8b8;
+            background-color: #31c288;
             transition: all 0.3s;
         }
         .nav > ul > li > ul {
@@ -112,6 +112,7 @@
             padding: 10px;
             display: block;
             text-align: center;
+            color: #fff;
         }
         .nav > ul > li > ul > li > a:hover {
             background-color: #353535;
@@ -178,21 +179,30 @@
         </footer>
     </div>
     
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(".nav > ul > li").mouseover(function(){
-            $(this).find(".submenu").stop().slideDown();
-        });
+        // $(".nav > ul > li").mouseover(function(){
+        //     $(this).find(".submenu").stop().slideDown();
+        // });
 
-        $(".nav > ul > li").mouseout(function(){
-            $(this).find(".submenu").stop().slideUp();
-        });
+        // $(".nav > ul > li").mouseout(function(){
+        //     $(this).find(".submenu").stop().slideUp();
+        // });
+    </script>
 
-        document.querySelectorAll(".nav > ul > li").forEach(li => {
-            li.addEventListener("mouseover",() => {
+    <!-- javascript -->
+    <script>
+        const mainMenu = document.querySelectorAll(".nav > ul > li");
 
+        mainMenu.forEach(li => {
+            li.addEventListener("mouseover", () => {
+                li.querySelector(".submenu").style.display = "block";
             });
-        });
+            li.addEventListener("mouseout", () => {
+                li.querySelector(".submenu").style.display = "none";
+            });
+        })
     </script>
 </body>
 </html>
