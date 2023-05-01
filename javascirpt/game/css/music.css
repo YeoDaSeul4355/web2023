@@ -46,7 +46,7 @@
 }
 .music__control {
     background-color: #fff;
-    height: 400px;
+    height: 330px;
     border-radius: 15px;
     margin-top: 200px;
     padding: 20px;
@@ -89,6 +89,7 @@
     color:#e68a3f;
     font-size: 12px;
     font-family: 'Poppins';
+    pointer-events: none;
 }
 .music__control .control {
     width: 100%;
@@ -107,7 +108,7 @@
     width: 40px;
     height: 40px;
     display: block;
-    background-image: url(../img/music_icon.svg);
+    background-image: url(../img/Frame\ 1.svg);
     background-size: 500px;
 }
 .music__control .control span i.repeat {
@@ -130,7 +131,7 @@
     background-position: -280px 0;
 }
 
-.music__control .control span i.repeat_one {
+.music__control .control span i.repeat-one {
     background-position: -40px 0;
 }
 .music__control .control span i.shuffle {
@@ -139,4 +140,83 @@
 .music__control .control span i.stop {
     background-position: -200px 0;
 }
-.music__footer {}
+.music__list {
+    font-family: 'EF_Diary';
+    border-radius: 0 0 15px 15px;
+    padding: 20px 0;
+    display: none;
+}
+.music__list.show {
+    display: block;
+}
+.music__list h3 {
+    color: #fff;
+    position: relative;
+    margin-bottom: 10px;
+}
+.music__list h3 .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-image: url(../img/music_icon.svg);
+    background-position: -320px 0;
+    width: 40px;
+    height: 40px;
+}
+.music__list ul {
+    height: 210px;
+    overflow-y: scroll;
+}
+.music__list ul::-webkit-scrollbar {
+    width: 5px;
+}
+.music__list ul::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: #c2c2c279;
+    border-radius: 10px;
+    margin-left: 2px;
+}
+.music__list ul::-webkit-scrollbar-track {
+    background: rgba(255, 31, 61, 0.1);
+}
+.music__list ul li {
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: rgba(255, 224, 224,0.1);
+}
+.music__list ul li.playing {
+    background-color: rgba(255, 224, 224, 0.5);
+}
+.music__list ul li:hover {
+    transition: all 0.3s;
+}
+.music__list ul li .img {
+    width: 20%;
+}
+.music__list ul li img {
+    width: 50px;
+    border-radius: 10px;
+}
+.music__list ul li .title {
+    width: 60%;
+    margin-left: 10px;
+}
+.music__list ul li .title strong {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+.music__list ul li .title em {
+    font-size: 12px;
+}
+.music__list ul li .time {
+    font-family: 'EF_Diary';
+    width: 20%;
+    font-size: 14px;
+    text-align: right;
+}

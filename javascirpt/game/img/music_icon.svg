@@ -20,4 +20,6 @@
 <path d="M253 12L263 20L253 28V12Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M267 13V27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M291 28.15L293.347 22.45M293.347 22.45L294.325 20.075L297.65 12L300.975 20.075L301.953 22.45M293.347 22.45H301.953M301.953 22.45L304.3 28.15M302.4 12.95H310M304.3 17.7H310M306.2 22.45H310M308.1 27.2H310" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M344.899 15L335 24.8995" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M344.899 24.8995L335 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
