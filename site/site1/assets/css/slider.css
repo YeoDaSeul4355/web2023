@@ -1,12 +1,20 @@
 /* slider__wrap */
 .slider__inner .slider {
-    height: 600px;
     background-image: url(../img/sliderType01_01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     z-index: 1;
+}
+.slider__inner .slider.img1 {
+    background-image: url(../img/sliderType01_01.jpg);
+}
+.slider__inner .slider.img2 {
+    background-image: url(../img/sliderType01_02.jpg);
+}
+.slider__inner .slider.img3 {
+    background-image: url(../img/sliderType01_03.jpg);
 }
 .slider__inner .slider::after {
     content: '';
@@ -105,6 +113,60 @@
     background-position: -161px -1px;
 }
 
+/* swiper */
+.swiper-button-prev, .swiper-button-next {
+    width: 30px;
+    height: 56px;
+    background-image: url(../img/icon_main.svg);
+    background-size: 500px;
+}
+.swiper-button-next {
+    background-position: -52px 0;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 0;
+}
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icon_main.svg);
+    background-size: 500px;
+    background-position: -101px -1px;
+    opacity: 1;
+    background-color: transparent;
+}
+.swiper-pagination-bullet-active {
+    background-position: -121px -1px;
+}
+.swiper-pagination {
+    bottom: 15px !important;
+}
+.swiper-button {
+    position: absolute;
+    left: 50%;
+    bottom: 19px;
+    display: flex;
+    margin-left: 40px;
+    z-index: 1000;
+}
+.swiper-button-play {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    background-image: url(../img/icon_main.svg);
+    background-size: 500px;
+    background-position: -141px -1px;
+    cursor: pointer;
+}
+.swiper-button-stop {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icon_main.svg);
+    background-size: 500px;
+    background-position: -161px -1px;
+    cursor: pointer;
+}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-device-pixel-ratio: 2),
@@ -115,6 +177,50 @@
     }
 
 /* 미디어쿼리 */
+@media (max-width: 1200px){
+    .slider {
+        text-align: center;
+    }
+    .slider__info .desc {
+        width: 100%;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+}
 @media (max-width: 960px){
-    
+    .slider__info .title {
+        font-size: 40px;
+    }
+    .slider__info .btn {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 600px){
+    .slider__info {
+        padding: 50px 0 70px;
+    }
+    .slider__info .title {
+        font-size: 30px;
+    }
+    .slider__info .desc {
+        font-size: 14px;
+    }
+    .slider__info .btn {
+        margin-top: 30px;
+    }
+    .slider__info .btn a {
+        width: 120px;
+        font-size: 14px;
+        padding: 6px 0;
+    }
+    .swiper-pagination {
+        bottom: 10px !important;
+    }
+    .swiper-button { 
+        bottom: 14px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
 }

@@ -21,7 +21,11 @@
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+    </style>
 </head>
 <body>
     <div id="skip">
@@ -45,7 +49,58 @@
         <section id="sliderType" class="nexon">
             <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
-                <div class="slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">Custom making</h3>
+                                    <p class="desc">향기의 원료, 어울리는 향기의 조합, 만드는 방법, 추후 보관 방법 등등 커스텀 향수에 관한 모든 정보를 공유합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">Custom making</h3>
+                                    <p class="desc">향기의 원료, 어울리는 향기의 조합, 만드는 방법, 추후 보관 방법 등등 커스텀 향수에 관한 모든 정보를 공유합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">Custom making</h3>
+                                    <p class="desc">향기의 원료, 어울리는 향기의 조합, 만드는 방법, 추후 보관 방법 등등 커스텀 향수에 관한 모든 정보를 공유합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                
+                <!-- <div class="slider">
                     <div class="slider__info container">
                         <span class="small">event</span>
                         <h3 class="title">Custom making</h3>
@@ -66,9 +121,7 @@
                         <a href="#" class="play"><span class="blind">플레이</span></a>
                         <a href="#" class="stop"><span class="blind">정지</span></a>
                     </div>
-                </div>
-                <!-- <div class="slider"></div>
-                <div class="slider"></div> -->
+                </div> -->
             </div>
         </section>
         <!-- //sliderType -->
@@ -292,5 +345,41 @@
         </div>
     </footer>
     <!-- //footerType -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false
+            }
+        });
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+
+        btnStart.style.display = "none";
+        
+        btnStop.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
+        btnStart.addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        });
+    </script>
 </body>
 </html>
