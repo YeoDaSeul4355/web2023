@@ -215,3 +215,18 @@ body {
     padding: 40px;
     text-align: center;
 }
+
+/* TOP 버튼 */
+.moveTopBtn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    background: #ff568b;
+    color: #fff;
+    line-height: 2.3;
+    font-size: 1.88rem;
+    text-align: center;
+    border-radius: 50%;
+}
