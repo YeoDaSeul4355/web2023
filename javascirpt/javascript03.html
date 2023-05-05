@@ -950,6 +950,155 @@
                     </div>
                 </div>
                 <!-- //sample26 -->
+                <!-- //sample27 -->
+                <div id="sample27" class="sample">
+                    <h3>27. 함수 종류 : 콜백 함수(반복문)</h3>
+                    <p>콜백 함수는 다른 함수에 인자로 전달되어, 그 함수의 작업이 끝난 후에 호출되는 함수를 말합니다.<br>
+                        callback() 함수는 num이라는 매개변수를 받아서 1부터 10까지 반복하면서 num에 전달된 함수를 호출하고 있습니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    function func(index){
+        console.log("함수가 실행되었습니다." + index);
+    }
+    function callback(num){
+        for(let i=1; i&lt;;=10; i++){
+            num(i);
+        }
+    }
+    callback(func);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                함수가 실행되었습니다.1<br>
+                                함수가 실행되었습니다.2<br>
+                                함수가 실행되었습니다.3<br>
+                                함수가 실행되었습니다.4<br>
+                                함수가 실행되었습니다.5<br>
+                                함수가 실행되었습니다.6<br>
+                                함수가 실행되었습니다.7<br>
+                                함수가 실행되었습니다.8<br>
+                                함수가 실행되었습니다.9<br>
+                                함수가 실행되었습니다.10
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample27 -->
+                <!-- //sample28 -->
+                <div id="sample28" class="sample">
+                    <h3>28. 함수 종류 : 콜백 함수(동기/비동기)</h3>
+                    <p>동기적으로 콜백 함수를 호출하면, 해당 함수의 실행이 끝날 때까지 다음 코드의 실행을 멈춥니다. 이는 즉시 값을 반환하는 함수와 달리, 콜백 함수를 실행하는 함수가 값을 반환할 때까지 기다리는 것을 의미합니다.<br><br>
+                        비동기적인 콜백 함수는 비동기 작업이 완료되면 즉시 실행되지 않을 수 있으며, 따라서 다른 작업을 수행할 수 있습니다. 비동기 작업이 완료되면 콜백 함수가 실행되고, 결과를 처리합니다. 이러한 비동기 작업은 대개 콜백 함수를 인수로 사용하는 함수로 처리됩니다.</p>
+                    <div class="script">
+<pre><code class="Language-js">{
+    //01
+    function funcA(){
+        console.log("funcA가 실행되었습니다.");
+    }
+    function funcB(){
+        console.log("funcB가 실행되었습니다.");
+    }
+
+    funcA();
+    funcB();
+
+    //02
+    function funcA(){
+        setTimeout(() => {
+            console.log("funcA가 실행되었습니다.");
+        }, 1000)
+    }
+    function funcB(){
+        console.log("funcB가 실행되었습니다.");
+    }
+    funcA();
+    funcB();
+
+    //03
+    function funcA(callback){
+        setTimeout(() => {
+            console.log("funcA가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funcB(){
+        console.log("funcB가 실행되었습니다.");
+    }
+    funcA(function(){
+        funcB();
+    });
+
+    //04(콜백지옥)
+    function funcA(callback){
+        setTimeout(() => {
+            console.log("funcA가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funcB(callback){
+        setTimeout(() => {
+            console.log("funcB가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funcC(callback){
+        setTimeout(() => {
+            console.log("funcC가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funcD(){
+        setTimeout(() => {
+            console.log("funcD가 실행되었습니다.");
+        }, 1000);
+    }
+    funcA(function(){
+        funcB(function(){
+            funcC(function(){
+                funcD();
+            });
+        });
+    });
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                //01<br>
+                                funcA가 실행되었습니다.<br>
+                                funB가 실행되었습니다.<br><br>
+
+                                //02<br>
+                                funcB가 실행되었습니다.<br>
+                                funcA가 실행되었습니다.<br><br>
+
+                                //03<br>
+                                funcA가 실행되었습니다.<br>
+                                funB가 실행되었습니다.<br><br>
+
+                                //04<br>
+                                funcA가 실행되었습니다.<br>
+                                funB가 실행되었습니다.<br>
+                                funC가 실행되었습니다.<br>
+                                funD가 실행되었습니다.<br>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>
+                            동기적인 콜백 함수를 사용하면 코드의 실행 순서를 보장할 수 있으므로, 복잡한 작업을 수행할 때 유용합니다. 그러나 동기적인 콜백 함수를 사용하면 실행 속도가 느려질 수 있으므로, 비동기적인 콜백 함수를 사용하여 코드의 실행 속도를 높일 수 있습니다.<br><br>
+
+                            비동기적인 콜백 함수를 사용하면 대규모 애플리케이션에서 코드의 실행 속도를 높일 수 있으며, 애플리케이션의 응답성을 향상시킬 수 있습니다. 그러나 비동기적인 코드는 보다 복잡하며, 코드의 실행 순서를 파악하기 어려울 수 있습니다.</p>
+                        </p>
+                    </div>
+                </div>
+                <!-- //sample28 -->
             </div>
         </div>
     </main>
@@ -986,15 +1135,15 @@
         // }
         // 27. 함수 종류 : 콜백 함수 : (반복문)
         {
-            function func(index){
-                console.log("함수가 실행되었습니다." + index);
-            }
-            function callback(num){
-                for(let i=1; i<=10; i++){
-                    num(i);
-                }
-            }
-            callback(func);
+            // function func(index){
+            //     console.log("함수가 실행되었습니다." + index);
+            // }
+            // function callback(num){
+            //     for(let i=1; i<=10; i++){
+            //         num(i);
+            //     }
+            // }
+            // callback(func);
         }
         // 28. 함수 종류 : 콜백 함수(동기/비동기)
         {
@@ -1008,7 +1157,7 @@
 
             // funcA();
             // funcB();
-            // // A, B
+            // A, B
 
             //02
             // function funcA(){
