@@ -380,7 +380,7 @@
 
 /* 도넛 */
 
-.image-wrap .hover-wrap .overlay-img-donut {
+.image-wrap .hover-wrap .overlay-img-animal01 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -396,13 +396,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-donut.black {
+.image-wrap .hover-wrap .overlay-img-animal01.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-donut {
+.image-wrap .hover-wrap .overlay-text-thumb-animal01 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -418,7 +418,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-donut {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal01 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -433,7 +433,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb-donut.bts {
+.image-wrap .hover-wrap .overlay-text-thumb-animal01.bts {
 	background: #a92c76;
 	color: #fff;
 	width: auto;
@@ -449,10 +449,10 @@
 	font-weight: normal;
 	font-size: 20px;
 }
-.image-wrap .hover-wrap .overlay-text-thumb-donut.bts:hover {
+.image-wrap .hover-wrap .overlay-text-thumb-animal01.bts:hover {
 	background: #8b1c5e;
 }
-.image-wrap .hover-wrap .overlay-text-thumb1-donut.bts {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal01.bts {
 	background: #a92c76;
 	background: #a92c76;
 	color: #fff;
@@ -466,10 +466,10 @@
 	line-height: 1;
 	height: auto;
 }
-.image-wrap .hover-wrap .overlay-text-thumb1-donut.bts:hover {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal01.bts:hover {
 	background: #8b1c5e;
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-donut {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal01 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -489,7 +489,7 @@
 
 /* 사과 */
 
-.image-wrap .hover-wrap .overlay-img-apple {
+.image-wrap .hover-wrap .overlay-img-animal02 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -505,13 +505,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-apple.black {
+.image-wrap .hover-wrap .overlay-img-animal02.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-apple {
+.image-wrap .hover-wrap .overlay-text-thumb-animal02 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -527,7 +527,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-apple {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal02 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -543,7 +543,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-apple {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal02 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -562,7 +562,7 @@
 
 /* 토스트 */
 
-.image-wrap .hover-wrap .overlay-img-bread {
+.image-wrap .hover-wrap .overlay-img-animal03 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -578,13 +578,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-bread.black {
+.image-wrap .hover-wrap .overlay-img-animal03.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-bread {
+.image-wrap .hover-wrap .overlay-text-thumb-animal03 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -600,7 +600,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-bread {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal03 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -616,7 +616,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-bread {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal03 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -635,7 +635,7 @@
 
 /* 당근 */
 
-.image-wrap .hover-wrap .overlay-img-carrot {
+.image-wrap .hover-wrap .overlay-img-animal04 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -651,13 +651,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-carrot.black {
+.image-wrap .hover-wrap .overlay-img-animal04.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-carrot {
+.image-wrap .hover-wrap .overlay-text-thumb-animal04 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -673,7 +673,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-carrot {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal04 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -689,7 +689,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-carrot {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal04 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -708,7 +708,7 @@
 
 /* 햄버거 */
 
-.image-wrap .hover-wrap .overlay-img-burger {
+.image-wrap .hover-wrap .overlay-img-animal05 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -724,13 +724,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-burger.black {
+.image-wrap .hover-wrap .overlay-img-animal05.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-burger {
+.image-wrap .hover-wrap .overlay-text-thumb-animal05 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -746,7 +746,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-burger {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal05 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -762,7 +762,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-burger {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal05 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -781,7 +781,7 @@
 
 /* 체리 */
 
-.image-wrap .hover-wrap .overlay-img-cherries {
+.image-wrap .hover-wrap .overlay-img-animal06 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -797,13 +797,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-cherries.black {
+.image-wrap .hover-wrap .overlay-img-animal06.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-cherries {
+.image-wrap .hover-wrap .overlay-text-thumb-animal06 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -819,7 +819,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-cherries {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal06 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -835,7 +835,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-cherries {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal06 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -854,7 +854,7 @@
 
 /* 쿠키 */
 
-.image-wrap .hover-wrap .overlay-img-cookie {
+.image-wrap .hover-wrap .overlay-img-animal07 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -870,13 +870,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-cookie.black {
+.image-wrap .hover-wrap .overlay-img-animal07.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-cookie {
+.image-wrap .hover-wrap .overlay-text-thumb-animal07 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -892,7 +892,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-cookie {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal07 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -908,7 +908,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-cookie {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal07 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -927,7 +927,7 @@
 
 /* 감튀 */
 
-.image-wrap .hover-wrap .overlay-img-french {
+.image-wrap .hover-wrap .overlay-img-animal08 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -943,13 +943,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-french.black {
+.image-wrap .hover-wrap .overlay-img-animal08.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-french {
+.image-wrap .hover-wrap .overlay-text-thumb-animal08 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -965,7 +965,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-french {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal08 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -981,7 +981,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-french {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal08 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -1000,7 +1000,7 @@
 
 /* 치킨 */
 
-.image-wrap .hover-wrap .overlay-img-chicken {
+.image-wrap .hover-wrap .overlay-img-animal09 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1016,13 +1016,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-chicken.black {
+.image-wrap .hover-wrap .overlay-img-animal09.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-chicken {
+.image-wrap .hover-wrap .overlay-text-thumb-animal09 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -1038,7 +1038,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-chicken {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal09 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -1054,7 +1054,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-chicken {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal09 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -1074,7 +1074,7 @@
 
 /* 포도 */
 
-.image-wrap .hover-wrap .overlay-img-grapes {
+.image-wrap .hover-wrap .overlay-img-animal10 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1090,13 +1090,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-grapes.black {
+.image-wrap .hover-wrap .overlay-img-animal10.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-grapes {
+.image-wrap .hover-wrap .overlay-text-thumb-animal10 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -1112,7 +1112,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-grapes {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal10 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -1128,7 +1128,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-grapes {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal10 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -1147,7 +1147,7 @@
 
 /* 핫도그 */
 
-.image-wrap .hover-wrap .overlay-img-hotdog {
+.image-wrap .hover-wrap .overlay-img-animal11 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1163,13 +1163,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-hotdog.black {
+.image-wrap .hover-wrap .overlay-img-animal11.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-hotdog {
+.image-wrap .hover-wrap .overlay-text-thumb-animal11 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -1185,7 +1185,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-hotdog {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal11 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -1201,7 +1201,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-hotdog {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal11 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -1220,7 +1220,7 @@
 
 /* 컵케익 */
 
-.image-wrap .hover-wrap .overlay-img-cupcake {
+.image-wrap .hover-wrap .overlay-img-animal12 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1236,13 +1236,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-cupcake.black {
+.image-wrap .hover-wrap .overlay-img-animal12.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-cupcake {
+.image-wrap .hover-wrap .overlay-text-thumb-animal12 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -1258,7 +1258,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-cupcake {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal12 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -1274,7 +1274,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-cupcake {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal12 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -1293,7 +1293,7 @@
 
 /* 레몬 */
 
-.image-wrap .hover-wrap .overlay-img-lemon {
+.image-wrap .hover-wrap .overlay-img-animal13 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1309,13 +1309,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-lemon.black {
+.image-wrap .hover-wrap .overlay-img-animal13.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-lemon {
+.image-wrap .hover-wrap .overlay-text-thumb-animal13 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -1331,7 +1331,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-lemon {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal13 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -1347,7 +1347,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-lemon {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal13 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -1366,7 +1366,7 @@
 
 /* 마카롱 */
 
-.image-wrap .hover-wrap .overlay-img-macaron {
+.image-wrap .hover-wrap .overlay-img-animal14 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1382,13 +1382,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-macaron.black {
+.image-wrap .hover-wrap .overlay-img-animal14.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-macaron {
+.image-wrap .hover-wrap .overlay-text-thumb-animal14 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -1404,7 +1404,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-macaron {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal14 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -1420,7 +1420,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-macaron {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal14 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -1439,7 +1439,7 @@
 
 /* 배 */
 
-.image-wrap .hover-wrap .overlay-img-pear {
+.image-wrap .hover-wrap .overlay-img-animal15 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1455,13 +1455,13 @@
 	filter: alpha(opacity=100);
 }
 
-.image-wrap .hover-wrap .overlay-img-pear.black {
+.image-wrap .hover-wrap .overlay-img-animal15.black {
 
 	background: #000;
 
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb-pear {
+.image-wrap .hover-wrap .overlay-text-thumb-animal15 {
 	position: absolute;
 	width: 100%;
 	height: 32px;
@@ -1477,7 +1477,7 @@
     text-align: center;
 }
 
-.image-wrap .hover-wrap .overlay-text-thumb1-pear {
+.image-wrap .hover-wrap .overlay-text-thumb1-animal15 {
 	position: absolute;
 	padding-right: 23px;
 	height: 32px;
@@ -1493,7 +1493,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.image-wrap .hover-wrap .overlay-text-thumb2-pear {
+.image-wrap .hover-wrap .overlay-text-thumb2-animal15 {
 	position: absolute;
 	text-align: center;
 	height: 32px;
@@ -2036,7 +2036,7 @@
 .cupcakeImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .lemonImg {text-align: center; }
-.lemonImg h5 {color: #ffd10a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.lemonImg h5 {color: #160aff; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .lemonImg p {color: #565656; font-size: 18px; }
 .lemonImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
@@ -2075,6 +2075,81 @@
 .vanillaImg p {color: #565656; font-size: 18px; }
 .vanillaImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
+/* animal */
+.animal01Img {text-align: center; }
+.animal01Img h5 {color: #f47cc3; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
+.animal01Img p {color: #565656; font-size: 18px; }
+.animal01Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal02Img {text-align: center; }
+.animal02Img h5 {color: #51b224; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal02Img p {color: #565656; font-size: 18px; }
+.animal02Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal03Img {text-align: center; }
+.animal03Img h5 {color: #a46816; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal03Img p {color: #565656; font-size: 18px; }
+.animal03Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal04Img {text-align: center; }
+.animal04Img h5 {color: #ff860d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal04Img p {color: #565656; font-size: 18px; }
+.animal04Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal05Img {text-align: center; }
+.animal05Img h5 {color: #de912a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal05Img p {color: #565656; font-size: 18px; }
+.animal05Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal06Img {text-align: center; }
+.animal06Img h5 {color: #f04b3e; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal06Img p {color: #565656; font-size: 18px; }
+.animal06Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal07Img {text-align: center; }
+.animal07Img h5 {color: #c8801d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal07Img p {color: #565656; font-size: 18px; }
+.animal07Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal08Img {text-align: center; }
+.animal08Img h5 {color: #f04b3e; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal08Img p {color: #565656; font-size: 18px; }
+.animal08Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal09Img {text-align: center; }
+.animal09Img h5 {color: #a35a2d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal09Img p {color: #565656; font-size: 18px; }
+.animal09Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal10Img {text-align: center; }
+.animal10Img h5 {color: #51b224; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal10Img p {color: #565656; font-size: 18px; }
+.animal10Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal11Img {text-align: center; }
+.animal11Img h5 {color: #a64b23; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal11Img p {color: #565656; font-size: 18px; }
+.animal11Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal12Img {text-align: center; }
+.animal12Img h5 {color: #d6bb8d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal12Img p {color: #565656; font-size: 18px; }
+.animal12Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal13Img {text-align: center; }
+.animal13Img h5 {color: #ffb630; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal13Img p {color: #565656; font-size: 18px; }
+.animal13Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal14Img {text-align: center; }
+.animal14Img h5 {color: #824b3d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal14Img p {color: #565656; font-size: 18px; }
+.animal14Img span {color: #999; font-size: 12px; text-transform: uppercase;}
+
+.animal15Img {text-align: center; }
+.animal15Img h5 {color: #ffd10a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.animal15Img p {color: #565656; font-size: 18px; }
+.animal15Img span {color: #999; font-size: 12px; text-transform: uppercase;}
 /* control */
 .control {}
 .control h3 {margin-top:30px;}

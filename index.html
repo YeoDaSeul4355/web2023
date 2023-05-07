@@ -16,6 +16,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/isotope.css" rel="stylesheet">
   <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tiger.css" rel="stylesheet">
 
   <!-- 파비콘 -->
   <link rel="shortcut icon" href="assets/ico/favicon.ico">
@@ -137,22 +138,104 @@
       <div class="row">
         <div class="span12" style="text-align:center;">
           <div class="header_tit">
-            <a href="https://yeodaseul4355.github.io/web2023/"><img src="assets/img/Example 4.svg" alt="main"></a>
+            <div class="tiger-wrap">
+              <input 
+                id="rawr" 
+                aria-label="Flip tiger"
+                class="tiger-control"
+                type="checkbox" 
+              >
+              <label for="rawr" class="tiger">
+                <div class="tiger-front">
+                  <div class="tiger-front-mask">
+                    <div class="tiger-head">
+                      <div class="tiger-face">
+                        <div class="tiger-eyebrow tiger-eyebrow-left"></div>
+                        <div class="tiger-eyebrow tiger-eyebrow-right"></div>
+                        <div class="tiger-eye tiger-eye-left"></div>
+                        <div class="tiger-eye tiger-eye-right"></div>
+                        <div class="tiger-nose"></div>
+                        <div class="tiger-snout"></div>
+                        <div class="tiger-blush tiger-blush-left"></div>
+                        <div class="tiger-blush tiger-blush-right"></div>
+                        <div class="tiger-face-fluff tiger-face-fluff-left"></div>
+                        <div class="tiger-face-fluff tiger-face-fluff-right"></div>
+                        <div class="tiger-face tiger-face-mask">
+                          <div class="tiger-stripes-top"></div>
+                          <div class="tiger-stripes-side tiger-stripes-side-left"></div>
+                          <div class="tiger-stripes-side tiger-stripes-side-right"></div>
+                        </div>
+                      </div>
+                      <div class="tiger-ear tiger-ear-left"></div>
+                      <div class="tiger-ear tiger-ear-right"></div>
+                    </div>
+                    <div class="tiger-body">
+                      <div class="tiger-chest"></div>
+                    </div>
+                  </div>
+                  <div class="tiger-paw tiger-paw-left"></div>
+                  <div class="tiger-paw tiger-paw-right"></div>
+                </div>
+                <div class="tiger-back">
+                  <div class="tiger-back-mask">
+                    <div class="tiger-body-back">
+                      <div class="tiger-rear">
+                        <div class="tiger-rear-stripes tiger-rear-stripes-left"></div>
+                        <div class="tiger-rear-stripes tiger-rear-stripes-right"></div>
+                      </div>
+                      <div class="tiger-tail-wrap">
+                        <div class="tiger-tail">
+                          <div class="tiger-tail-stripes"></div>
+                        </div>
+                      </div>
+                      <div class="tiger-cross"></div>
+                    </div>
+                  </div>
+                  <div class="tiger-paw-back tiger-paw-back-left">
+                    <div class="tiger-toe-beans"></div>
+                    <div class="tiger-toe-beans-main"></div>
+                  </div>
+                  <div class="tiger-paw-back tiger-paw-back-right">
+                    <div class="tiger-toe-beans"></div>
+                    <div class="tiger-toe-beans-main"></div>
+                  </div>
+                </div>
+              </label>
+              <div class="tiger-decor-wrap">
+                <div class="tiger-decor tiger-decor-1"></div>
+                <div class="tiger-decor tiger-decor-2"></div>
+                <div class="tiger-decor tiger-decor-3"></div>
+              </div>
+            </div>
+            <svg class="svg-filter-hide">
+              <defs>
+                <filter id="filterSquiggle1">
+                  <feTurbulence baseFrequency="0.02" numOctaves="3" seed="10" />
+                  <feDisplacementMap in="SourceGraphic" scale="1" />
+                </filter>
+                <filter id="filterSquiggle2">
+                  <feTurbulence baseFrequency="0.05" numOctaves="3" seed="10" />
+                  <feDisplacementMap in="SourceGraphic" scale="2.3" />
+                </filter>
+                <filter id="filterSquiggle3">
+                  <feTurbulence baseFrequency="0.04" numOctaves="3" seed="10" />
+                  <feDisplacementMap in="SourceGraphic" scale="1.5" />
+                </filter>
+                <filter id="filterSquiggle4">
+                  <feTurbulence baseFrequency="0.03" numOctaves="3" seed="10" />
+                  <feDisplacementMap in="SourceGraphic" scale="2" />
+                </filter>
+              </defs>
+            </svg>
             <h1>Professional web publishers</h1>
           </div>
           <div class="header_icon">
             <ul>
-              <li><a href="https://twitter.com/webstoryboy" target="_blank"><i class="fa fa-twitter"
-                    aria-hidden="true"></i><span>twitter</span></a></li>
-              <li><a href="https://codepen.io/webstoryboy/" target="_blank"><i class="fa fa-codepen"
+              <li><a href="https://codepen.io/YeoDaSeul4355/" target="_blank"><i class="fa fa-codepen"
                     aria-hidden="true"></i><span>codepen</span></a></li>
-              <li><a href="https://github.com/webstoryboy" target="_blank"><i class="fa fa-github"
+              <li><a href="https://github.com/YeoDaSeul4355" target="_blank"><i class="fa fa-github"
                     aria-hidden="true"></i><span>github</span></a></li>
-              <li><a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw" target="_blank"><i
-                    class="fa fa-youtube-play" aria-hidden="true"></i><span>youtube</span></a></li>
-              <li><a href="https://dribbble.com/webstoryboy" target="_blank"><i class="fa fa-dribbble"
-                    aria-hidden="true"></i><span>dribbble</span></a></li>
-              <li><a href="https://www.instagram.com/webstoryboy/" target="_blank"><i class="fa fa-instagram"
+              <li><a href="https://www.instagram.com/dottt_1943/" target="_blank"><i class="fa fa-instagram"
                     aria-hidden="true"></i><span>instagram</span></a></li>
             </ul>
           </div>
@@ -194,13 +277,13 @@
             <a href="class/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-cherries">CLASS</span>
-                  <span class="overlay-text-thumb-cherries">클래스</span>
-                  <span class="overlay-text-thumb1-cherries">클래스</span>
-                  <span class="overlay-text-thumb2-cherries">CLASS</span>
+                  <span class="overlay-img-animal01">CLASS</span>
+                  <span class="overlay-text-thumb-animal01">클래스</span>
+                  <span class="overlay-text-thumb1-animal01">클래스</span>
+                  <span class="overlay-text-thumb2-animal01">CLASS</span>
                 </div>
-                <img src="assets/img/svg-cherries.svg" alt="portfolio">
-                <div class="img-text cherriesImg">
+                <img src="assets/img/animal01.svg" alt="portfolio">
+                <div class="img-text animal01Img">
                   <h5>CLASS</h5>
                   <p>클래스</p>
                   <span>CLASS</span>
@@ -215,13 +298,13 @@
             <a href="javascirpt/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-pear">JAVASCRIPT</span>
-                  <span class="overlay-text-thumb-pear">자바스크립트</span>
-                  <span class="overlay-text-thumb1-pear">자바스크립트</span>
-                  <span class="overlay-text-thumb2-pear">JAVASCRIPT</span>
+                  <span class="overlay-img-animal02">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-animal02">자바스크립트</span>
+                  <span class="overlay-text-thumb1-animal02">자바스크립트</span>
+                  <span class="overlay-text-thumb2-animal02">JAVASCRIPT</span>
                 </div>
-                <img src="assets/img/svg-pear.svg" alt="portfolio">
-                <div class="img-text pearImg">
+                <img src="assets/img/animal02.svg" alt="portfolio">
+                <div class="img-text animal02Img">
                   <h5>JAVASCRIPT</h5>
                   <p>자바스크립트</p>
                   <span>JAVASCRIPT</span>
@@ -236,13 +319,13 @@
             <a href="webd/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-apple">HTML</span>
-                  <span class="overlay-text-thumb-apple">레이아웃 연습</span>
-                  <span class="overlay-text-thumb1-apple">레이아웃</span>
-                  <span class="overlay-text-thumb2-apple">HTML</span>
+                  <span class="overlay-img-animal03">HTML</span>
+                  <span class="overlay-text-thumb-animal03">레이아웃 연습</span>
+                  <span class="overlay-text-thumb1-animal03">레이아웃</span>
+                  <span class="overlay-text-thumb2-animal03">HTML</span>
                 </div>
-                <img src="assets/img/svg-apple.svg" alt="portfolio">
-                <div class="img-text appleImg">
+                <img src="assets/img/animal03.svg" alt="portfolio">
+                <div class="img-text animal03Img">
                   <h5>HTML</h5>
                   <p>레이아웃</p>
                   <span>HTML</span>
@@ -257,13 +340,13 @@
             <a href="site/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-carrot">SITE</span>
-                  <span class="overlay-text-thumb-carrot">사이트 만들기</span>
-                  <span class="overlay-text-thumb1-carrot">사이트 만들기</span>
-                  <span class="overlay-text-thumb2-carrot">SITE</span>
+                  <span class="overlay-img-animal04">SITE</span>
+                  <span class="overlay-text-thumb-animal04">사이트 만들기</span>
+                  <span class="overlay-text-thumb1-animal04">사이트 만들기</span>
+                  <span class="overlay-text-thumb2-animal04">SITE</span>
                 </div>
-                <img src="assets/img/svg-carrot.svg" alt="portfolio">
-                <div class="img-text carrotImg">
+                <img src="assets/img/animal04.svg" alt="portfolio">
+                <div class="img-text animal04Img">
                   <h5>SITE</h5>
                   <p>사이트 만들기</p>
                   <span>SITE</span>
@@ -278,13 +361,13 @@
             <a href="site/site1/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-carrot">SITE 1</span>
-                  <span class="overlay-text-thumb-carrot">SITE 1 완성</span>
-                  <span class="overlay-text-thumb1-carrot">SITE 1 완성</span>
-                  <span class="overlay-text-thumb2-carrot">SITE 1</span>
+                  <span class="overlay-img-animal05">SITE 1</span>
+                  <span class="overlay-text-thumb-animal05">SITE 1 완성</span>
+                  <span class="overlay-text-thumb1-animal05">SITE 1 완성</span>
+                  <span class="overlay-text-thumb2-animal05">SITE 1</span>
                 </div>
-                <img src="assets/img/svg-carrot.svg" alt="portfolio">
-                <div class="img-text carrotImg">
+                <img src="assets/img/animal05.svg" alt="portfolio">
+                <div class="img-text animal05Img">
                   <h5>SITE 1</h5>
                   <p>SITE 1 완성</p>
                   <span>SITE 1</span>
@@ -299,13 +382,13 @@
             <a href="javascirpt/parallax/parallaxEffectAA.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-carrot">SITE 2</span>
-                  <span class="overlay-text-thumb-carrot">SITE 2 완성</span>
-                  <span class="overlay-text-thumb1-carrot">SITE 2 완성</span>
-                  <span class="overlay-text-thumb2-carrot">SITE 2</span>
+                  <span class="overlay-img-animal06">SITE 2</span>
+                  <span class="overlay-text-thumb-animal06">SITE 2 완성</span>
+                  <span class="overlay-text-thumb1-animal06">SITE 2 완성</span>
+                  <span class="overlay-text-thumb2-animal06">SITE 2</span>
                 </div>
-                <img src="assets/img/svg-carrot.svg" alt="portfolio">
-                <div class="img-text carrotImg">
+                <img src="assets/img/animal06.svg" alt="portfolio">
+                <div class="img-text animal06Img">
                   <h5>SITE 2</h5>
                   <p>스크롤 이펙트 사이트</p>
                   <span>SITE 2</span>
@@ -320,13 +403,13 @@
             <a href="http://dsy1943.dothome.co.kr/php/main/main.php" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-carrot">SITE 3</span>
-                  <span class="overlay-text-thumb-carrot">SITE 3 완성</span>
-                  <span class="overlay-text-thumb1-carrot">SITE 3 완성</span>
-                  <span class="overlay-text-thumb2-carrot">SITE 3</span>
+                  <span class="overlay-img-animal07">SITE 3</span>
+                  <span class="overlay-text-thumb-animal07">SITE 3 완성</span>
+                  <span class="overlay-text-thumb1-animal07">SITE 3 완성</span>
+                  <span class="overlay-text-thumb2-animal07">SITE 3</span>
                 </div>
-                <img src="assets/img/svg-carrot.svg" alt="portfolio">
-                <div class="img-text carrotImg">
+                <img src="assets/img/animal07.svg" alt="portfolio">
+                <div class="img-text animal07Img">
                   <h5>SITE 3</h5>
                   <p>PHP 블로그 사이트</p>
                   <span>SITE 3</span>
@@ -338,16 +421,16 @@
 
           <!-- box -->
           <section class="color-shape site">
-            <a href="http://dsy1943.dothome.co.kr/php2/main/main.php" target="_blank">
+            <a href="http://dsy1943.dothome.co.kr/php2/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-carrot">SITE 4</span>
-                  <span class="overlay-text-thumb-carrot">SITE 4 완성</span>
-                  <span class="overlay-text-thumb1-carrot">SITE 4 완성</span>
-                  <span class="overlay-text-thumb2-carrot">SITE 4</span>
+                  <span class="overlay-img-animal08">SITE 4</span>
+                  <span class="overlay-text-thumb-animal08">SITE 4 완성</span>
+                  <span class="overlay-text-thumb1-animal08">SITE 4 완성</span>
+                  <span class="overlay-text-thumb2-animal08">SITE 4</span>
                 </div>
-                <img src="assets/img/svg-carrot.svg" alt="portfolio">
-                <div class="img-text carrotImg">
+                <img src="assets/img/animal08.svg" alt="portfolio">
+                <div class="img-text animal08Img">
                   <h5>SITE 4</h5>
                   <p>PHP 팀프로젝트 사이트</p>
                   <span>SITE 4</span>
@@ -362,13 +445,13 @@
             <a href="mysql/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-lemon">MYSQL</span>
-                  <span class="overlay-text-thumb-lemon">MYSQL</span>
-                  <span class="overlay-text-thumb1-lemon">MYSQL</span>
-                  <span class="overlay-text-thumb2-lemon">MYSQL</span>
+                  <span class="overlay-img-animal09">MYSQL</span>
+                  <span class="overlay-text-thumb-animal09">MYSQL</span>
+                  <span class="overlay-text-thumb1-animal09">MYSQL</span>
+                  <span class="overlay-text-thumb2-animal09">MYSQL</span>
                 </div>
-                <img src="assets/img/svg-lemon.svg" alt="portfolio">
-                <div class="img-text lemonImg">
+                <img src="assets/img/animal09.svg" alt="portfolio">
+                <div class="img-text animal09Img">
                   <h5>MYSQL</h5>
                   <p>MYSQL</p>
                   <span>MYSQL</span>
@@ -383,13 +466,13 @@
             <a href="javascirpt/game/gameEffect01.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-lemon">GAME</span>
-                  <span class="overlay-text-thumb-lemon">GAME</span>
-                  <span class="overlay-text-thumb1-lemon">GAME</span>
-                  <span class="overlay-text-thumb2-lemon">GAME</span>
+                  <span class="overlay-img-animal10">GAME</span>
+                  <span class="overlay-text-thumb-animal10">GAME</span>
+                  <span class="overlay-text-thumb1-animal10">GAME</span>
+                  <span class="overlay-text-thumb2-animal10">GAME</span>
                 </div>
-                <img src="assets/img/svg-lemon.svg" alt="portfolio">
-                <div class="img-text lemonImg">
+                <img src="assets/img/animal10.svg" alt="portfolio">
+                <div class="img-text animal10Img">
                   <h5>GAME</h5>
                   <p>GAME</p>
                   <span>GAME</span>
@@ -404,13 +487,13 @@
             <a href="javascirpt/mouse/mouseEffect01.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-lemon">MOUSE</span>
-                  <span class="overlay-text-thumb-lemon">MOUSE</span>
-                  <span class="overlay-text-thumb1-lemon">MOUSE</span>
-                  <span class="overlay-text-thumb2-lemon">MOUSE</span>
+                  <span class="overlay-img-animal11">MOUSE</span>
+                  <span class="overlay-text-thumb-animal11">MOUSE</span>
+                  <span class="overlay-text-thumb1-animal11">MOUSE</span>
+                  <span class="overlay-text-thumb2-animal11">MOUSE</span>
                 </div>
-                <img src="assets/img/svg-lemon.svg" alt="portfolio">
-                <div class="img-text lemonImg">
+                <img src="assets/img/animal11.svg" alt="portfolio">
+                <div class="img-text animal11Img">
                   <h5>MOUSE</h5>
                   <p>MOUSE</p>
                   <span>MOUSE</span>
@@ -425,13 +508,13 @@
             <a href="javascirpt/parallax/parallaxEffect01.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-lemon">PARALLAX</span>
-                  <span class="overlay-text-thumb-lemon">PARALLAX</span>
-                  <span class="overlay-text-thumb1-lemon">PARALLAX</span>
-                  <span class="overlay-text-thumb2-lemon">PARALLAX</span>
+                  <span class="overlay-img-animal12">PARALLAX</span>
+                  <span class="overlay-text-thumb-animal12">PARALLAX</span>
+                  <span class="overlay-text-thumb1-animal12">PARALLAX</span>
+                  <span class="overlay-text-thumb2-animal12">PARALLAX</span>
                 </div>
-                <img src="assets/img/svg-lemon.svg" alt="portfolio">
-                <div class="img-text lemonImg">
+                <img src="assets/img/animal12.svg" alt="portfolio">
+                <div class="img-text animal12Img">
                   <h5>PARALLAX</h5>
                   <p>PARALLAX</p>
                   <span>PARALLAX</span>
@@ -446,13 +529,13 @@
             <a href="javascirpt/quiz/quizEffect01.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-lemon">QUIZ</span>
-                  <span class="overlay-text-thumb-lemon">QUIZ</span>
-                  <span class="overlay-text-thumb1-lemon">QUIZ</span>
-                  <span class="overlay-text-thumb2-lemon">QUIZ</span>
+                  <span class="overlay-img-animal13">QUIZ</span>
+                  <span class="overlay-text-thumb-animal13">QUIZ</span>
+                  <span class="overlay-text-thumb1-animal13">QUIZ</span>
+                  <span class="overlay-text-thumb2-animal13">QUIZ</span>
                 </div>
-                <img src="assets/img/svg-lemon.svg" alt="portfolio">
-                <div class="img-text lemonImg">
+                <img src="assets/img/animal13.svg" alt="portfolio">
+                <div class="img-text animal13Img">
                   <h5>QUIZ</h5>
                   <p>QUIZ</p>
                   <span>QUIZ</span>
@@ -467,13 +550,13 @@
             <a href="javascirpt/search/searchEffect01.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-lemon">SEARCH</span>
-                  <span class="overlay-text-thumb-lemon">SEARCH</span>
-                  <span class="overlay-text-thumb1-lemon">SEARCH</span>
-                  <span class="overlay-text-thumb2-lemon">SEARCH</span>
+                  <span class="overlay-img-animal14">SEARCH</span>
+                  <span class="overlay-text-thumb-animal14">SEARCH</span>
+                  <span class="overlay-text-thumb1-animal14">SEARCH</span>
+                  <span class="overlay-text-thumb2-animal14">SEARCH</span>
                 </div>
-                <img src="assets/img/svg-lemon.svg" alt="portfolio">
-                <div class="img-text lemonImg">
+                <img src="assets/img/animal14.svg" alt="portfolio">
+                <div class="img-text animal14Img">
                   <h5>SEARCH</h5>
                   <p>SEARCH</p>
                   <span>SEARCH</span>
@@ -488,13 +571,13 @@
             <a href="javascirpt/slider/sliderEffect01.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-lemon">SLIDER</span>
-                  <span class="overlay-text-thumb-lemon">SLIDER</span>
-                  <span class="overlay-text-thumb1-lemon">SLIDER</span>
-                  <span class="overlay-text-thumb2-lemon">SLIDER</span>
+                  <span class="overlay-img-animal15">SLIDER</span>
+                  <span class="overlay-text-thumb-animal15">SLIDER</span>
+                  <span class="overlay-text-thumb1-animal15">SLIDER</span>
+                  <span class="overlay-text-thumb2-animal15">SLIDER</span>
                 </div>
-                <img src="assets/img/svg-lemon.svg" alt="portfolio">
-                <div class="img-text lemonImg">
+                <img src="assets/img/animal15.svg" alt="portfolio">
+                <div class="img-text animal15Img">
                   <h5>SLIDER</h5>
                   <p>SLIDER</p>
                   <span>SLIDER</span>
@@ -509,13 +592,13 @@
             <a href="javascirpt/portfolio/portfolioEffect01.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
-                  <span class="overlay-img-lemon">PORTFOLIO</span>
-                  <span class="overlay-text-thumb-lemon">PORTFOLIO</span>
-                  <span class="overlay-text-thumb1-lemon">PORTFOLIO</span>
-                  <span class="overlay-text-thumb2-lemon">PORTFOLIO</span>
+                  <span class="overlay-img-animal01">PORTFOLIO</span>
+                  <span class="overlay-text-thumb-animal01">PORTFOLIO</span>
+                  <span class="overlay-text-thumb1-animal01">PORTFOLIO</span>
+                  <span class="overlay-text-thumb2-animal01">PORTFOLIO</span>
                 </div>
-                <img src="assets/img/svg-lemon.svg" alt="portfolio">
-                <div class="img-text lemonImg">
+                <img src="assets/img/animal01.svg" alt="portfolio">
+                <div class="img-text animal01Img">
                   <h5>PORTFOLIO</h5>
                   <p>PORTFOLIO</p>
                   <span>PORTFOLIO</span>

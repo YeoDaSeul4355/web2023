@@ -1,0 +1,849 @@
+:root {
+    --black: #624a29;
+    --white: #fff;
+    --primary-color: #ff9c6a;
+    --primary-color-dark: #ee7331;
+    --primary-color-tint: #fdb490;
+    --secondary-color: #fff6a4;
+    --secondary-color-tint: #fffcdf;
+    --secondary-color-dark: #f5d79d;
+    --accent-color: #ff6a6a;
+    --background: var(--primary-color-tint);
+    --circle-sizing: 18rem;
+    --circle-rotate: 0deg;
+}
+
+.tiger {
+    position: relative;
+    height: var(--circle-sizing);
+    width: var(--circle-sizing);
+    transform-style: preserve-3d;
+    transform: rotateY(var(--circle-rotate));
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    justify-self: center;
+}
+
+.tiger *,
+.tiger *::before,
+.tiger *::after {
+    position: absolute;
+}
+
+.tiger-eye {
+    border-top-left-radius: 50% 60%;
+    border-top-right-radius: 50% 60%;
+    border-bottom-right-radius: 50% 40%;
+    border-bottom-left-radius: 50% 40%;
+    --position: 3rem;
+    z-index: 5;
+    top: 5.5rem;
+    height: 1.125rem;
+    width: 0.875rem;
+    transform-origin: center 70%;
+    background-color: var(--black);
+    -webkit-animation: blinky 7s infinite;
+    animation: blinky 7s infinite;
+}
+
+.tiger-eye-left {
+    left: var(--position);
+}
+
+.tiger-eye-right {
+    right: var(--position);
+}
+
+.tiger-eyebrow {
+    --position: 2rem;
+    --flip: 1;
+    z-index: 2;
+    top: 3.75rem;
+    height: 1.25rem;
+    width: 1.5rem;
+    transform: rotate(calc(20deg * var(--flip)));
+    border-radius: 100%;
+    background-color: var(--secondary-color);
+}
+
+.tiger-eyebrow-left {
+    left: var(--position);
+}
+
+.tiger-eyebrow-right {
+    right: var(--position);
+}
+
+.tiger-eyebrow-left {
+    --flip: -1;
+}
+
+.tiger-nose {
+    --sizing: 1rem;
+    z-index: 4;
+    top: 6rem;
+    left: calc(50% - (var(--sizing) / 2));
+    height: var(--sizing);
+    width: var(--sizing);
+    transform: rotate(45deg);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 0.125rem;
+    background-color: var(--accent-color);
+}
+
+.tiger-snout {
+    --offset: -0.125rem;
+    --flipper: 1;
+    z-index: 2;
+    top: 6.5rem;
+    left: 50%;
+    height: 2.25rem;
+    width: 2rem;
+}
+
+.tiger-snout::before,
+.tiger-snout::after {
+    content: "";
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    background-color: var(--secondary-color);
+    transform: rotate(calc(50deg * var(--flipper)));
+}
+
+.tiger-snout::before {
+    right: calc(100% + var(--offset));
+}
+
+.tiger-snout::after {
+    --flipper: -1;
+    left: var(--offset);
+}
+
+.tiger-blush {
+    --position: 1.5rem;
+    z-index: 2;
+    top: 6rem;
+    height: 1.75rem;
+    width: 2.25rem;
+    border-radius: 100%;
+    background-color: var(--accent-color);
+    opacity: 0.5;
+}
+
+.tiger-blush-left {
+    left: var(--position);
+}
+
+.tiger-blush-right {
+    right: var(--position);
+}
+
+.tiger-face-fluff {
+    --position: 1.25rem;
+    --flip: 1;
+    --before-pos: -0.75rem;
+    z-index: 1;
+    bottom: 0rem;
+    height: 3rem;
+    width: 1.75rem;
+    transform: rotate(calc(70deg * var(--flip)));
+    transform-origin: center top;
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    background-color: var(--primary-color);
+}
+
+.tiger-face-fluff-left {
+    left: var(--position);
+}
+
+.tiger-face-fluff-right {
+    right: var(--position);
+}
+
+.tiger-face-fluff::before {
+    content: "";
+    bottom: 0.25rem;
+    left: var(--left);
+    right: var(--right);
+    height: 2rem;
+    width: 1.5rem;
+    transform: rotate(calc(-10deg * var(--flip)));
+    border-radius: inherit;
+    background-color: inherit;
+}
+
+.tiger-face-fluff-right {
+    --flip: -1;
+    --right: var(--before-pos);
+}
+
+.tiger-face-fluff-left {
+    --left: var(--before-pos);
+}
+
+.tiger-stripes-top {
+    top: 0;
+    height: 4rem;
+    width: 1rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: var(--black);
+}
+
+.tiger-stripes-top,
+.tiger-stripes-top::before,
+.tiger-stripes-top::after {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--black);
+}
+
+.tiger-stripes-top::before,
+.tiger-stripes-top::after {
+    content: "";
+    height: 0.75rem;
+    border-radius: 50%;
+}
+
+.tiger-stripes-top::before {
+    top: 0.75rem;
+    width: 3rem;
+}
+
+.tiger-stripes-top::after {
+    top: 2rem;
+    width: 2.5rem;
+}
+
+.tiger-stripes-side {
+    --position: -0.5rem;
+    --flip: 1;
+    top: 5.5rem;
+}
+
+.tiger-stripes-side-left {
+    left: var(--position);
+}
+
+.tiger-stripes-side-right {
+    right: var(--position);
+}
+
+.tiger-stripes-side::before,
+.tiger-stripes-side::after {
+    content: "";
+    width: 0.75rem;
+    transform-origin: center top;
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    background-color: var(--black);
+}
+
+.tiger-stripes-side::before {
+    height: 1.25rem;
+    transform: rotate(calc(85deg * var(--flip)));
+}
+
+.tiger-stripes-side::after {
+    top: 1rem;
+    height: 1rem;
+    transform: rotate(calc(90deg * var(--flip)));
+}
+
+.tiger-stripes-side-left {
+    --flip: -1;
+}
+
+.tiger-stripes-side-right::before,
+.tiger-stripes-side-right::after {
+    right: 0;
+}
+
+.tiger-face {
+    border-top-left-radius: 50% 65%;
+    border-top-right-radius: 50% 65%;
+    border-bottom-right-radius: 50% 35%;
+    border-bottom-left-radius: 50% 35%;
+    z-index: 5;
+    inset: 0;
+    background-color: var(--primary-color);
+}
+
+.tiger-face-mask {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.tiger-ear {
+    --position: -0.5rem;
+    --flip: 1;
+    --inner-position: -2rem;
+    z-index: 1;
+    top: 0.75rem;
+    height: 3rem;
+    width: 3.5rem;
+    transform: rotate(calc(50deg * var(--flip)));
+    border-radius: 50%/40%;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.tiger-ear-left {
+    left: var(--position);
+}
+
+.tiger-ear-right {
+    right: var(--position);
+}
+
+.tiger-ear::before,
+.tiger-ear::after {
+    content: "";
+}
+
+.tiger-ear::before {
+    inset: 1rem;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+.tiger-ear::after {
+    top: -1rem;
+    left: var(--inner-left);
+    right: var(--inner-right);
+    height: 2rem;
+    width: 4rem;
+    transform: rotate(calc(-10deg * var(--flip)));
+    border-radius: 100%;
+    background-color: var(--black);
+}
+
+.tiger-ear-left {
+    --flip: -1;
+    --inner-right: var(--inner-position);
+}
+
+.tiger-ear-right {
+    --inner-left: var(--inner-position);
+    -webkit-animation: earTwitch 3s infinite;
+    animation: earTwitch 3s infinite;
+}
+
+.tiger-head {
+    z-index: 2;
+    bottom: 1.5rem;
+    left: 50%;
+    height: 11rem;
+    width: 13rem;
+    transform: translateX(-50%) translateY(var(--head-translate-y, 0));
+    transform-origin: center bottom;
+    transition: 0.4s ease-out;
+}
+
+.tiger-head::before {
+    content: "";
+    left: 50%;
+    bottom: -1rem;
+    height: 3rem;
+    width: 4rem;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    background-color: var(--secondary-color-dark);
+}
+
+.tiger-paw {
+    --position: 1.5rem;
+    --flip: 1;
+    z-index: 6;
+    bottom: 0;
+    height: 3rem;
+    width: 4rem;
+    transform: rotate(calc(20deg * var(--flip)));
+    background-color: var(--secondary-color);
+    border-radius: 2rem;
+}
+
+.tiger-paw-left {
+    left: var(--position);
+}
+
+.tiger-paw-right {
+    right: var(--position);
+}
+
+.tiger-paw::before,
+.tiger-paw::after {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tiger-paw::before {
+    z-index: 1;
+    bottom: -0.25rem;
+    height: 80%;
+    width: 2rem;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+}
+
+.tiger-paw::after {
+    bottom: 0;
+    width: 2.5rem;
+    height: 50%;
+    border-radius: 1.5rem;
+    background-color: var(--secondary-color-dark);
+}
+
+.tiger-paw-right {
+    --flip: -1;
+}
+
+.tiger-chest {
+    border-top-left-radius: 50% 80%;
+    border-top-right-radius: 50% 80%;
+    border-bottom-right-radius: 50% 20%;
+    border-bottom-left-radius: 50% 20%;
+    inset: 0;
+    background-color: var(--primary-color);
+}
+
+.tiger-chest::before {
+    content: "";
+    left: 50%;
+    height: 100%;
+    width: 65%;
+    transform: translateX(-50%);
+    border-radius: inherit;
+    background-color: var(--secondary-color);
+}
+
+.tiger-body {
+    bottom: -2rem;
+    left: 50%;
+    width: 10rem;
+    height: 8rem;
+    transform: translateX(-50%);
+}
+
+.tiger-front {
+    background-color: var(--secondary-color-tint);
+    transform: translateZ(0.25rem);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tiger-front,
+.tiger-front-mask {
+    inset: 0;
+    border-radius: 100%;
+}
+
+.tiger-front-mask {
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.tiger-cross {
+    --flip: 1;
+    top: 4.5rem;
+    left: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    transform: translateX(-50%);
+}
+
+.tiger-cross::before,
+.tiger-cross::after {
+    content: "";
+    left: 50%;
+    height: 100%;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-color-dark);
+    transform: translateX(-50%) rotate(calc(45deg * var(--flip)));
+}
+
+.tiger-cross::before {
+    --flip: -1;
+}
+
+.tiger-tail {
+    inset: 0;
+    transform-origin: 50% 95%;
+    transform: rotate(30deg);
+    border-radius: inherit;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.tiger-tail::before {
+    content: "";
+    height: 1.5rem;
+    width: 150%;
+    left: -50%;
+    border-radius: 100%;
+    background-color: var(--black);
+}
+
+.tiger-tail-stripes {
+    top: 2.5rem;
+    left: -0.25rem;
+    width: 2rem;
+}
+
+.tiger-tail-stripes::before,
+.tiger-tail-stripes::after {
+    content: "";
+    height: 1rem;
+    width: 100%;
+    border-top-right-radius: 100% 50%;
+    border-bottom-right-radius: 100% 50%;
+    background-color: var(--black);
+}
+
+.tiger-tail-stripes::after {
+    top: 1.5rem;
+    left: -0.5rem;
+}
+
+.tiger-tail,
+.tiger-tail-wrap::before {
+    -webkit-animation: tailWiggle 2s ease-in infinite;
+    animation: tailWiggle 2s ease-in infinite;
+}
+
+.tiger-tail-wrap {
+    top: -3.5rem;
+    left: 50%;
+    height: 7.5rem;
+    width: 3rem;
+    transform: translateX(-50%);
+    border-radius: 40% 60% 50% 50%/20% 30% 70% 80%;
+}
+
+.tiger-tail-wrap::before {
+    content: "";
+    z-index: -1;
+    left: 0rem;
+    bottom: 0.25rem;
+    height: 58%;
+    width: 3rem;
+    transform-origin: center bottom;
+    transform: rotate(50deg);
+    border-radius: inherit;
+    background-color: var(--primary-color-dark);
+    -webkit-animation-name: tailWiggleShadow;
+    animation-name: tailWiggleShadow;
+}
+
+.tiger-rear-stripes {
+    --position: -1rem;
+    --flip: 1;
+    top: 4.5rem;
+    height: 2.5rem;
+}
+
+.tiger-rear-stripes-left {
+    left: var(--position);
+}
+
+.tiger-rear-stripes-right {
+    right: var(--position);
+}
+
+.tiger-rear-stripes::before,
+.tiger-rear-stripes::after {
+    content: "";
+    height: 100%;
+    width: 1rem;
+    transform-origin: center top;
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    background-color: var(--black);
+}
+
+.tiger-rear-stripes::before {
+    transform: rotate(calc(80deg * var(--flip)));
+}
+
+.tiger-rear-stripes::after {
+    top: 2rem;
+    transform: rotate(calc(95deg * var(--flip)));
+}
+
+.tiger-rear-stripes-left {
+    --flip: -1;
+}
+
+.tiger-rear-stripes-right::before,
+.tiger-rear-stripes-right::after {
+    right: 0;
+}
+
+.tiger-rear {
+    border-top-left-radius: 50% 55%;
+    border-top-right-radius: 50% 55%;
+    border-bottom-right-radius: 50% 45%;
+    border-bottom-left-radius: 50% 45%;
+    inset: 0;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.tiger-rear::before {
+    content: "";
+    bottom: -2rem;
+    left: 50%;
+    height: 60%;
+    width: 70%;
+    transform: translateX(-50%);
+    border-radius: inherit;
+    background-color: var(--secondary-color);
+}
+
+.tiger-body-back {
+    bottom: -1rem;
+    left: 50%;
+    height: 11rem;
+    width: 13.5rem;
+    transform: translateX(-50%);
+}
+
+.tiger-toe-beans {
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tiger-toe-beans,
+.tiger-toe-beans::before,
+.tiger-toe-beans::after {
+    height: 0.625rem;
+    width: 0.5rem;
+    border-radius: 100%;
+    background-color: var(--accent-color);
+}
+
+.tiger-toe-beans::before,
+.tiger-toe-beans::after {
+    content: "";
+    bottom: 0.25rem;
+}
+
+.tiger-toe-beans::before {
+    left: -0.75rem;
+}
+
+.tiger-toe-beans::after {
+    right: -0.75rem;
+}
+
+.tiger-toe-beans-main {
+    bottom: 1.25rem;
+    left: 50%;
+    height: 1.5rem;
+    width: 1.75rem;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    background-color: var(--accent-color);
+}
+
+.tiger-paw-back {
+    --position: 2.5rem;
+    border-top-left-radius: 50% 70%;
+    border-top-right-radius: 50% 70%;
+    border-bottom-right-radius: 50% 30%;
+    border-bottom-left-radius: 50% 30%;
+    --flip: 1;
+    bottom: -0.25rem;
+    height: 4rem;
+    width: 3rem;
+    background-color: var(--secondary-color);
+    transform-origin: 50% 10%;
+    transform: rotate(calc(30deg * var(--flip)));
+    -webkit-animation: pawRotate 5s ease-in-out infinite;
+    animation: pawRotate 5s ease-in-out infinite;
+}
+
+.tiger-paw-back-left {
+    left: var(--position);
+}
+
+.tiger-paw-back-right {
+    right: var(--position);
+}
+
+.tiger-paw-back::before {
+    content: "";
+    left: 50%;
+    bottom: -0.25rem;
+    height: 2rem;
+    width: 2rem;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    background-color: inherit;
+}
+
+.tiger-paw-back-left {
+    --flip: -1;
+}
+
+.tiger-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    border-radius: 100%;
+    background-color: var(--secondary-color-tint);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tiger-back,
+.tiger-back-mask {
+    inset: 0;
+    border-radius: 100%;
+}
+
+.tiger-back-mask {
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.tiger-decor,
+.tiger-decor::before,
+.tiger-decor::after {
+    position: absolute;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: var(--secondary-color);
+}
+
+.tiger-decor-1 {
+    top: 3rem;
+    left: 0rem;
+    width: 20rem;
+    border-bottom-right-radius: 0;
+}
+
+.tiger-decor-1::before {
+    content: "";
+    top: 2rem;
+    right: -5rem;
+    width: 11rem;
+    border-top-left-radius: 0;
+}
+
+.tiger-decor-2 {
+    top: 9rem;
+    left: -9rem;
+    width: 14rem;
+    border-bottom-right-radius: 0;
+}
+
+.tiger-decor-2::before {
+    content: "";
+    top: -4rem;
+    left: 2rem;
+    width: 6rem;
+}
+
+.tiger-decor-2::after {
+    content: "";
+    top: 2rem;
+    left: 5rem;
+    width: 26rem;
+    border-top-left-radius: 0;
+}
+
+.tiger-decor-3 {
+    top: 17rem;
+    right: -4rem;
+    width: 6rem;
+}
+
+.tiger-decor-wrap {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    height: var(--circle-sizing);
+    width: var(--circle-sizing);
+    transform: translateX(-50%);
+    opacity: 0.2;
+}
+
+.tiger-control {
+    position: absolute;
+    opacity: 0;
+}
+
+.tiger-control:checked+.tiger {
+    --circle-rotate: 180deg;
+}
+
+.tiger:hover .tiger-head {
+    --head-translate-y: 2rem;
+}
+
+.tiger-wrap {
+    display: grid;
+    -webkit-animation: squiggleVision 0.3s infinite alternate;
+    animation: squiggleVision 0.3s infinite alternate;
+}
+
+.svg-filter-hide {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes tailWiggle {
+    50% {
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes tailWiggleShadow {
+    50% {
+        transform: rotate(52deg) scaleY(0.95);
+    }
+}
+
+@keyframes earTwitch {
+
+    0%,
+    70%,
+    85% {
+        transform: rotate(calc(50deg * var(--flip)));
+    }
+
+    80%,
+    90% {
+        transform: rotate(calc(60deg * var(--flip))) scaleX(0.9);
+    }
+}
+
+@keyframes squiggleVision {
+
+    0%,
+    100% {
+        filter: url("#filterSquiggle1");
+    }
+
+    25% {
+        filter: url("#filterSquiggle2");
+    }
+
+    50% {
+        filter: url("#filterSquiggle3");
+    }
+
+    75% {
+        filter: url("#filterSquiggle4");
+    }
+}
