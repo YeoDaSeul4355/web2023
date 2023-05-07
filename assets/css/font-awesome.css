@@ -4,6 +4,56 @@
  */
 /* FONT PATH
  * -------------------------- */
+ @font-face{
+  font-family: 'PPNeueWorld-CondensedRegular';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/PPNeueWorld-CondensedRegular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'PPNeueWorld-ExtendedThin';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/PPNeueWorld-ExtendedThin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'PPNeueWorld-Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/PPNeueWorld-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'PPNeueWorld-SemiCondensedUltrabold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/PPNeueWorld-SemiCondensedUltrabold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'PPNeueWorld-SemiExtendedBlack';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/PPNeueWorld-SemiExtendedBlack.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'PPNeueWorld-SuperCondensedLight';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/PPNeueWorld-SuperCondensedLight.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'PPNeueWorld-Thin';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/PPNeueWorld-Thin.woff2') format('woff2');
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');

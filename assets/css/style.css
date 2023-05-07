@@ -220,7 +220,7 @@
 }
 #contents_tit p {
 	padding:35px 0; 
-	font-family: 'Gaegu', cursive; font-size: 40px;
+	font-family: 'PPNeueWorld-SemiExtendedBlack', cursive; font-size: 40px;
 }
 #contents_tit p a {
 	color:#ff8295; 
@@ -365,7 +365,6 @@
 			transform: rotateY(180deg) scale(0.5,0.5);	
 */
 }
-
 .image-wrap:hover .hover-wrap,
 .image-wrap.active .hover-wrap {
 	opacity: 0.9;
@@ -374,9 +373,6 @@
 }
 
 .image-wrap:hover .hover-wrap, overlay-text-thumb {color: #fff;}
-
-
-
 
 /* 도넛 */
 
@@ -1562,7 +1558,7 @@
 	font-size: 14px;
 	line-height: 22px;
 	font-weight: 200px;
-
+	transition: all 0.3s;
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
