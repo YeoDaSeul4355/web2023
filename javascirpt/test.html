@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="selbox" name="selbox">
+        <option value="">선택</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="direct">직접입력</option>
+    </select>
+
+    <input type="text" id="selboxDirect" name="selboxDirect"/>
+    <script>
+        $(function(){
+            //직접입력 인풋박스 기존에는 숨어있다가
+            $("#selboxDirect").hide();
+            $("#selbox").change(function() {
+                    //직접입력을 누를 때 나타남
+                if($("#selbox").val() == "direct") {
+                    $("#selboxDirect").show();
+                }  else {
+                    $("#selboxDirect").hide();
+                }
+            }) 
+        });​
+    </script>
+</body>
+</html>
