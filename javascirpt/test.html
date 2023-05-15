@@ -1,34 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <select id="selbox" name="selbox">
-        <option value="">선택</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="direct">직접입력</option>
-    </select>
+    <style>
+        body {
+            background: #111;
+        }
 
-    <input type="text" id="selboxDirect" name="selboxDirect"/>
+        .c-exp-gallery__slider {
+            position: relative;
+        }
+
+        .proxy {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .c-exp-gallery {
+            padding-bottom: calc(500 * (100vw / 1440));
+        }
+
+        .c-exp-gallery__slider {
+            width: 100vw;
+        }
+
+        .c-exp-gallery__inner {
+            white-space: nowrap;
+        }
+
+        .c-exp-gallery-slide {
+            display: inline-block;
+            position: relative;
+            padding: 0 calc(60 * (100vw / 1440));
+        }
+
+        .c-exp-gallery-slide__img {
+            width: 50vw;
+        }
+
+        .c-exp-gallery-slide__content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            padding-top: calc(35 * (100vw / 1440));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Not mine -->
+    <div class="c-exp-gallery__slider js-experience-slider">
+        <div class="c-exp-gallery__inner js-experience-slider__inner">
+            <div class="c-exp-gallery__content js-experience-slider__content">
+
+                <div class="c-exp-gallery-slide js-experience-slide">
+                    <div class="c-exp-gallery-slide__proxy"></div>
+                    <figure class="c-exp-gallery-slide__img">
+                        <a href="#"><img
+                                src="https://images.unsplash.com/photo-1534256009774-91785b13a331?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=400&q=60"
+                                alt=""></a>
+                    </figure>
+                </div>
+
+                <div class="c-exp-gallery-slide js-experience-slide">
+                    <div class="c-exp-gallery-slide__proxy"></div>
+                    <figure class="c-exp-gallery-slide__img">
+                        <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=400&q=60"
+                            alt="">
+                    </figure>
+                </div>
+
+                <div class="c-exp-gallery-slide js-experience-slide">
+                    <div class="c-exp-gallery-slide__proxy"></div>
+                    <figure class="c-exp-gallery-slide__img">
+                        <img src="https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=400&q=60"
+                            alt="">
+                    </figure>
+                </div>
+
+                <div class="c-exp-gallery-slide js-experience-slide">
+                    <div class="c-exp-gallery-slide__proxy"></div>
+                    <figure class="c-exp-gallery-slide__img">
+                        <a href="#"><img
+                                src="https://images.unsplash.com/photo-1534256009774-91785b13a331?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=400&q=60"
+                                alt=""></a>
+                    </figure>
+                </div>
+
+                <div class="c-exp-gallery-slide js-experience-slide">
+                    <div class="c-exp-gallery-slide__proxy"></div>
+                    <figure class="c-exp-gallery-slide__img">
+                        <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=400&q=60"
+                            alt="">
+                    </figure>
+                </div>
+
+                <div class="c-exp-gallery-slide js-experience-slide">
+                    <div class="c-exp-gallery-slide__proxy"></div>
+                    <figure class="c-exp-gallery-slide__img">
+                        <img src="https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=400&q=60"
+                            alt="">
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+        <div class="proxy"></div>
+    </div>
     <script>
-        $(function(){
-            //직접입력 인풋박스 기존에는 숨어있다가
-            $("#selboxDirect").hide();
-            $("#selbox").change(function() {
-                    //직접입력을 누를 때 나타남
-                if($("#selbox").val() == "direct") {
-                    $("#selboxDirect").show();
-                }  else {
-                    $("#selboxDirect").hide();
-                }
-            }) 
-        });​
+        class DraggableSlider {
+            constructor() {
+                this.container = document.querySelector(".js-experience-slider");
+                this.proxy = this.container.querySelector(".proxy");
+                this.slider = document.querySelector(".js-experience-slider__inner");
+                this.sliderContent = document.querySelector(
+                    ".js-experience-slider__content"
+                );
+                this.slides = [...this.container.querySelectorAll(".js-experience-slide")];
+                this.slidesNumb = this.slides.length;
+                this.sliderWidth = 0;
+
+                this.draggable = null;
+
+                this.current = 0;
+                this.last = 0;
+
+                this.init();
+            }
+
+            setBounds() {
+                this.sliderWidth = this.slides[0].offsetWidth * this.slidesNumb + 1;
+
+                TweenMax.set([this.slider, this.proxy], {
+                    width: this.sliderWidth,
+                    x: "+=0",
+                    skewType: "simple"
+                });
+            }
+
+            createDraggable() {
+                var slider = this.slider,
+                    tracker = ThrowPropsPlugin.track(slider, "x"),
+                    pressedTop; //when the users presses down, if the mouse is in the top half of the image, pressedTop will be true. We use this to make the skewing more natural, like the mouse is "pulling" that part of the image
+                this.draggable = Draggable.create(this.proxy, {
+                    type: "x",
+                    edgeResistance: 0.75,
+                    onPress: function (e) {
+                        var bounds = this.target.getBoundingClientRect();
+                        pressedTop = e.clientY < bounds.y + bounds.height / 2;
+                        //keep track of how far apart the proxy is from the slider because when the user presses down, we want to IMMEDIATELY stop any motion, thus this offset value becomes baked in until release.
+                        this.offset = this.x - slider._gsTransform.x;
+                        TweenLite.killTweensOf(slider); //in case it's moving
+                        TweenLite.to(slider, 0.2, {
+                            skewX: 0
+                        });
+                    },
+                    onDrag: function () {
+                        TweenLite.to(slider, 0.8, {
+                            x: this.x - this.offset,
+                            ease: Power2.easeOut
+                        });
+                    },
+                    onRelease: function () {
+                        //if the user just presses down and releases without really moving much at all, there's no need to do a throwProps tween.
+                        if (this.tween && Math.abs(tracker.getVelocity("x")) > 20) {
+                            TweenLite.to(slider, this.tween.duration(), {
+                                throwProps: {
+                                    x: {
+                                        end: this.endX
+                                    }
+                                },
+                                ease: Power3.easeOut
+                            });
+                        }
+                        TweenLite.to(slider, 0.5, {
+                            skewX: 0,
+                            ease: Power1.easeOut
+                        });
+                    },
+                    //dragResistance: 0.5,
+                    bounds: this.container,
+                    throwProps: true
+                })[0];
+            }
+
+            scrollwheel() {
+                var slider = this.slider;
+                var container = this.container;
+
+                this.container.addEventListener("wheel", function (e) {
+                    e.preventDefault();
+
+                    TweenLite.to(slider, 0.5, {
+                        x: "+=" + -e.deltaY * 2,
+                        ease: Power3.easeOut,
+                        modifiers: {
+                            x: function (x) {
+                                if (x > 0) {
+                                    x = 0;
+                                } else if (x < -(slider.clientWidth - container.clientWidth)) {
+                                    x = -(slider.clientWidth - container.clientWidth);
+                                }
+                                return x;
+                            }
+                        }
+                    });
+                });
+            }
+
+            destroy() {
+                this.draggable.kill();
+            }
+
+            init() {
+                this.setBounds();
+                this.createDraggable();
+                this.scrollwheel();
+            }
+        }
+
+        const slider = new DraggableSlider();
+
     </script>
 </body>
+
 </html>

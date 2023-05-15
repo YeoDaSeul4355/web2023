@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 이펙트05</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallax.css">
+</head>
+<body class="img01 bg01 font05">
+    <header id="header">
+        <h1><a href="../javascript17.html">Javascript Parallax Effect05</a></h1>
+        <p>패럴랙스 이펙트 : 이질감 효과</p>
+        <ul>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li class="active"><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="parallax__wrap">
+            <section id="section1" class="parallax__item">
+                <span class="parallax__item__num">01</span>
+                <h2 class="parallax__item__title">Section1</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">한 번 포기하면 습관이 된다. 절대 포기하지 말아라.</p>
+            </section>
+            <!-- //section1 -->
+            <section id="section2" class="parallax__item">
+                <span class="parallax__item__num">02</span>
+                <h2 class="parallax__item__title">Section2</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">꿈이 있으면 잡아야 하고 절대 놓지 말아야 한다.</p>
+            </section>
+            <!-- //section2 -->
+            <section id="section3" class="parallax__item">
+                <span class="parallax__item__num">03</span>
+                <h2 class="parallax__item__title">Section3</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">불가능은 오직 의지가 없는 사람에게만 존재한다.</p>
+            </section>
+            <!-- //section3 -->
+            <section id="section4" class="parallax__item">
+                <span class="parallax__item__num">04</span>
+                <h2 class="parallax__item__title">Section4</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">불행한 사람은 다른 사람의 불행에서 위안을 얻는다.</p>
+            </section>
+            <!-- //section4 -->
+            <section id="section5" class="parallax__item">
+                <span class="parallax__item__num">05</span>
+                <h2 class="parallax__item__title">Section5</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">사랑이 없는 삶은 꽃도 열매도 없는 나무와 같다.</p>
+            </section>
+            <!-- //section5 -->
+            <section id="section6" class="parallax__item">
+                <span class="parallax__item__num">06</span>
+                <h2 class="parallax__item__title">Section6</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">무엇이든 사랑하는 방법은 잃어버릴 수 있다는 것을 깨닫는 것입니다.</p>
+            </section>
+            <!-- //section6 -->
+            <section id="section7" class="parallax__item">
+                <span class="parallax__item__num">07</span>
+                <h2 class="parallax__item__title">Section7</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">성공을 얻기 위해 무엇을 포기해야 했는지에 따라 성공을 판단해라.</p>
+            </section>
+            <!-- //section7 -->
+            <section id="section8" class="parallax__item">
+                <span class="parallax__item__num">08</span>
+                <h2 class="parallax__item__title">Section8</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">아름다움은 자신을 결정하는 순간부터 시작된다.</p>
+            </section>
+            <!-- //section8 -->
+            <section id="section9" class="parallax__item">
+                <span class="parallax__item__num">09</span>
+                <h2 class="parallax__item__title">Section9</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">진짜 어려움은 자신에 대해 생각하는 방식을 극복하는 것입니다.</p>
+            </section>
+            <!-- //section9 -->
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        function scroll(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            document.querySelectorAll(".parallax__item").forEach(item => {
+                const target1 = item.querySelector(".parallax__item__img");
+                const target2 = item.querySelector(".parallax__item__desc");
+                const target3 = item.querySelector(".parallax__item__num");
+
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.15;
+                let offset3 = (scrollTop - item.offsetTop) * 0.2;
+
+                // target1.style.transform = `translateY(${offset2}px)`;
+                gsap.to(target1, {duration: .3, y:offset1});
+                gsap.to(target2, {duration: .3, y:offset2});
+                gsap.to(target3, {duration: .3, y:offset3, ease: "expo.out"});
+            });
+
+            requestAnimationFrame(scroll);
+
+            
+        }   
+        scroll();
+    </script>
+</body>
+</html>
