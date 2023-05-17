@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 이펙트07</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <style>
+        .reveal > div,
+        .reveal > span {
+            opacity: 0;
+        }
+        .reveal.show > div,
+        .reveal.show > span {
+            animation: opacity 1s linear forwards;
+        }
+        .reveal {
+            position: relative;
+        }
+        .reveal::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1;
+        }
+        /* 하나짜리!! */
+        .reveal.reveal-TWO::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 1;
+            background-color: #ff53ac;
+        }
+        .reveal.show::before {
+            animation: reveal 1s ease-in-out;
+        }
+        .reveal.reveal-RTL.show::before {
+            animation: reveal-RTL 1s;
+        }
+        .reveal.reveal-TTB.show::before {
+            animation: reveal-TTB 1s;
+        }
+        .reveal.reveal-BTT.show::before {
+            animation: reveal-BTT 1s;
+        }
+
+        /* 두개 짜ㅣ리!! */
+        .reveal.show::after {
+            animation: reveal 1s 0.3s cubic-bezier(0, 0.78, 0.58, 1);
+        }
+        .reveal.reveal-RTL.show::after {
+            animation: reveal-RTL 1s 0.3s cubic-bezier(0, 0.78, 0.58, 1);
+        }
+        .reveal.reveal-TTB.show::after {
+            animation: reveal-TTB 1s 0.3s cubic-bezier(0, 0.78, 0.58, 1);
+        }
+        .reveal.reveal-BTT.show::after {
+            animation: reveal-BTT 1s 0.3s cubic-bezier(0, 0.78, 0.58, 1);
+        }
+        /* animation */
+        @keyframes opacity {
+            0% {opacity: 0;}
+            60% {opacity: 0;}
+            70% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+        @keyframes reveal {
+            0% {width: 0; left: 0;}
+            50% {width: 100%; left: 0;}
+            80% {width: 100%; left: 0;}
+            100% {width: 0; left: 100%;}
+        }
+        @keyframes reveal-RTL {
+            0% {width: 0; left: auto; right: 0;}
+            50% {width: 100%; left: auto; right: 0;}
+            80% {width: 100%; left: auto; right: 0;}
+            100% {width: 0; right: 100%;}
+        }
+        @keyframes reveal-TTB {
+            0% {width: 100%; height: 0; top: 0;}
+            50% {width: 100%; height: 100%; top: 0;}
+            80% {width: 100%; height: 100%; top: 0;}
+            100% {width: 100%; height: 0; top: 100%;}
+        }
+        @keyframes reveal-BTT {
+            0% {width: 100%; height: 0; top: auto; bottom: 0;}
+            50% {width: 100%; height: 100%; top: auto; bottom: 0;}
+            80% {width: 100%; height: 100%; top: auto; bottom: 0;}
+            100% {width: 100%; height: 0; bottom: 100%;}
+        }
+        .parallax__item__num,
+        .parallax__item__title {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="img01 bg01 font05">
+    <header id="header">
+        <h1><a href="../javascript17.html">Javascript Parallax Effect07</a></h1>
+        <p>패럴랙스 이펙트 : 리빌 효과</p>
+        <ul>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li class="active"><a href="parallaxEffect07.html">7</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="parallax__wrap">
+            <section id="section1" class="parallax__item">
+                <span class="parallax__item__num">01</span>
+                <h2 class="parallax__item__title">Section1</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">바쁜 꿀벌은 슬퍼할 겨를이 없다.</p>
+            </section>
+            <!-- //section1 -->
+            <section id="section2" class="parallax__item">
+                <span class="parallax__item__num">02</span>
+                <h2 class="parallax__item__title">Section2</h2>
+                <figure class="parallax__item__imgWrap reveal">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc reveal">꿈이 있으면 잡아야 하고 절대 놓지 말아야 한다.</p>
+            </section>
+            <!-- //section2 -->
+            <section id="section3" class="parallax__item">
+                <span class="parallax__item__num">03</span>
+                <h2 class="parallax__item__title">Section3</h2>
+                <figure class="parallax__item__imgWrap reveal reveal-RTL">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc reveal reveal-RTL">불가능은 오직 의지가 없는 사람에게만 존재한다.</p>
+            </section>
+            <!-- //section3 -->
+            <section id="section4" class="parallax__item">
+                <span class="parallax__item__num">04</span>
+                <h2 class="parallax__item__title">Section4</h2>
+                <figure class="parallax__item__imgWrap reveal reveal-TTB">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc reveal reveal-TTB">불행한 사람은 다른 사람의 불행에서 위안을 얻는다.</p>
+            </section>
+            <!-- //section4 -->
+            <section id="section5" class="parallax__item">
+                <span class="parallax__item__num">05</span>
+                <h2 class="parallax__item__title">Section5</h2>
+                <figure class="parallax__item__imgWrap reveal reveal-BTT">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc reveal reveal-BTT">사랑이 없는 삶은 꽃도 열매도 없는 나무와 같다.</p>
+            </section>
+            <!-- //section5 -->
+            <section id="section6" class="parallax__item">
+                <span class="parallax__item__num">06</span>
+                <h2 class="parallax__item__title">Section6</h2>
+                <figure class="parallax__item__imgWrap reveal reveal-TWO">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc reveal reveal-TWO" data-delay="1500">무엇이든 사랑하는 방법은 잃어버릴 수 있다는 것을 깨닫는 것입니다.</p>
+            </section>
+            <!-- //section6 -->
+            <section id="section7" class="parallax__item">
+                <span class="parallax__item__num">07</span>
+                <h2 class="parallax__item__title">Section7</h2>
+                <figure class="parallax__item__imgWrap reveal reveal-TWO reveal-RTL">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc reveal reveal reveal-TWO reveal-RTL" data-delay="1500">성공을 얻기 위해 무엇을 포기해야 했는지에 따라 성공을 판단해라.</p>
+            </section>
+            <!-- //section7 -->
+            <section id="section8" class="parallax__item">
+                <span class="parallax__item__num">08</span>
+                <h2 class="parallax__item__title">Section8</h2>
+                <figure class="parallax__item__imgWrap reveal reveal-TWO reveal-TTB">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc reveal reveal-TWO reveal-TTB" data-delay="1500">아름다움은 자신을 결정하는 순간부터 시작된다.</p>
+            </section>
+            <!-- //section8 -->
+            <section id="section9" class="parallax__item">
+                <span class="parallax__item__num">09</span>
+                <h2 class="parallax__item__title">Section9</h2>
+                <figure class="parallax__item__imgWrap reveal reveal-TWO reveal-BTT">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc reveal reveal-TWO reveal-BTT" data-delay="1500">진짜 어려움은 자신에 대해 생각하는 방식을 극복하는 것입니다.</p>
+            </section>
+            <!-- //section9 -->
+        </div>
+    </main>
+    <!-- //main -->
+    <aside class="parallax__info">
+        <div class="scroll">scrollTop : <span>0</span>px</div>
+    </aside>
+    <!-- //parallax info -->
+
+    <footer id="footer">
+        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // 만약에 reveal class를 추가하면 자식 요소에 span으로 감싸주세요
+
+        document.querySelectorAll("p.reveal").forEach(el => {
+            el.innerHTML = `<span>${el.innerHTML}</span>`;
+        })
+
+
+        function scroll(){
+            let scrollTop = window.scrollY || window.pageYOffset;
+
+            const reveals = document.querySelectorAll(".reveal");
+
+            reveals.forEach(reveal => {
+                let revealOffset = reveal.offsetTop + reveal.parentElement.offsetTop;
+                let revealDelay = reveal.dataset.delay;
+
+                if(scrollTop >= revealOffset - window.innerHeight){
+                    if(revealDelay == undefined){
+                        reveal.classList.add("show");
+                    } else {
+                        setTimeout(() => {
+                            reveal.classList.add("show");
+                        },revealDelay)
+                    }
+                }
+                
+
+                // if(scrollTop >= revealOffset - window.innerHeight){
+                //     reveal.classList.add("show");
+                // }
+            });
+            document.querySelector(".scroll span").innerText = Math.round(scrollTop);
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+    </script>
+</body>
+
+</html>
