@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+#wrap {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    height: 650px;
+    position: relative;
+}
+/* 팝업 */
+.popup-btn {
+    background-color: rgba(255,255,255,0.4);
+    padding: 10px;
+}
+.popup-view {
+    padding: 0 10px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: #D0AEF0;
+    display: none;
+    border: 4px solid rgb(71, 10, 93);
+}
+.popup-view h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.popup-view p {
+    line-height: 1.5;
+    text-align: left;
+    
+}
+.popup-view a {
+    display: inline-block;
+    background-color: #fff;
+    align-items: right;
+}
+#aside {
+    width: 20%;
+    background-color: #f3cbff;
+}
+#aside .logo {
+    width: 100%;
+    height: 15%;
+}
+#aside .logo a {
+    display: inline-block;
+    padding: 30px 10px;
+}
+/* nav */
+
+.nav > ul > li {
+    position: relative;
+}
+.nav > ul > li > a {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    background-color: #f6e0ff;
+}
+.nav > ul > li > a:hover {
+    background-color: #eec3ff;
+    transition: all 0.3s;
+}
+.nav > ul > li > ul {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    width: 200px;
+    background-color: #ffebd5;
+    display: none;
+    z-index: 1000;
+}
+.nav > ul > li > ul > li > a {
+    padding: 10px;
+    display: block;
+}
+.nav > ul > li > ul > li > a:hover {
+    background-color: #ffe0be;
+    transition: all 0.3s;
+}
+#main {
+    width: 80%;
+}
+#main > .sliders {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+#main .sliders .sliderWrap {
+    width: 100%;
+    height: 1050px;
+}
+#main .sliders .sliderWrap .slider {
+    position: relative;
+}
+#main .sliders .sliderWrap .slider .text {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+}
+#main .sliders .sliderWrap .slider .text h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+#main .sliders .sliderWrap .slider .text p {
+    color: #fff;
+}
+#main .article {
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+#main .article > div {
+}
+#main .article .notice {
+    width: 40%;
+    padding: 20px;
+    background-color: #f6e6ff;
+}
+#main .article .notice > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #785998;
+}
+#main .article .notice > div > h3 {
+    color: #fff;
+}
+#main .article .notice > div > a {
+    color: #fff;
+}
+#main .article .notice > ul {
+    
+}
+#main .article .notice > ul > li {
+    padding: 5px 0;
+    display: flex;
+    position: relative;
+}
+#main .article .notice li a {
+    width: 75%;
+}
+#main .article .notice li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+#main .article .notice li span {
+    width: 25%;
+    text-align: right;
+    color: #666;
+}
+#main .article .gallery {
+    width: 30%;
+    background-color: #daa0f9;
+    padding: 20px;
+}
+#main .article .gallery > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#main .article .gallery > ul {
+    display: flex;
+    justify-content: space-between;
+}
+#main .article .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-image: url(../images/link01.jpg);
+}
+#main .article .link a {
+    margin: 0 auto;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 30px;
+}
+
+#main .footer {
+    display: flex;
+    height: 100px;
+    background-color: #56485b;
+    color: #fff;
+}
+#main .footer .flogo {
+    text-align: center;
+    width: 20%;
+    padding: 15px 0;
+}
+#main .footer .flogo a {
+    color: #fff;
+    font-size: 25px;
+}
+#main .footer .copy {
+    width: 60%;
+    padding: 15px 0;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 14px;
+}
+#main .footer .family {
+    width: 20%;
+    padding: 32px 0;
+}
+#main .footer .family select {
+    height: 30px;
+}

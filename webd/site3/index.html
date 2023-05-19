@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallery Festival</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo"><a href="#">Vallery Festival</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="#">축제소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">축제 라인업</a></li>
+                            <li><a href="#">축제 기간</a></li>
+                            <li><a href="#">주변 맛집</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">예약안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">인터넷 예매</a></li>
+                            <li><a href="#">현장 예매</a></li>
+                            <li><a href="#">예약 안내사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">정보서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#">혼잡도</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <div class="sliders">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <img src="images/slider01.jpg" alt="축제소개 배너">
+                        <div class="text">
+                            <h2>Vallery Festival</h2>
+                            <p>신나는 축제를 즐겨보세요!</p>
+                        </div>
+                    </div>
+                    <div class="slider s2">
+                        <img src="images/slider02.jpg" alt="축제소개 배너">
+                        <div class="text">
+                            <h2>Vallery Festival</h2>
+                            <p>지금 당장 예매하세요!</p>
+                        </div>
+                    </div>
+                    <div class="slider s3">
+                        <img src="images/slider03.jpg" alt="축제소개 배너">
+                        <div class="text">
+                            <h2>Vallery Festival</h2>
+                            <p>신나는 축제를 즐겨보세요!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article">
+                <div class="notice">
+                    <div>
+                        <h3>공지사항</h3>
+                        <a href="#">더보기</a>
+                    </div>
+                    <ul>
+                        <li><a href="#">티켓 예매 일정 변경</a><span>2023.05.19</span></li>
+                        <li><a href="#">지역 축제 소개 안내</a><span>2023.05.19</span></li>
+                        <li><a href="#">지역 맛집 소개 안내</a><span>2023.05.19</span></li>
+                        <li><a href="#">예약 접수 방법 안내</a><span>2023.05.19</span></li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <div>
+                        <h3>갤러리</h3>
+                        <a href="#">더보기</a>
+                    </div>
+                    <ul>
+                        <li><a href="#"><img src="images/gallery01.jpg" alt="갤러리"></a></li>
+                        <li><a href="#"><img src="images/gallery02.jpg" alt="갤러리"></a></li>
+                    </ul>
+                </div>
+
+                <div class="link">
+                    <a href="#" class="popup-btn">예약하기</a>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="flogo">
+                    <h3><a href="#">Vallery<br>Festival</a></h3>
+                </div>
+                <div class="copy">
+                    발레리 페스티벌<br>
+                    Copyright © 2023 Vallery Festival<br>
+                    All rights reserved. Designed by Vallery Festival
+                </div>
+                <div class="family">
+                    <select name="#" id="#">
+                        <option>패밀리 사이트</option>
+                        <option value="1">어쩌고 페스티벌</option>
+                        <option value="2">저쩌고 페스티벌</option>
+                    </select>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- 팝업 -->
+    <div class="popup-view">
+        <h2>Vallery Festival<br>
+            2023 티켓 예매 일정 변경 안내</h2>
+        <p>
+            안녕하세요, Vallery Festival 운영팀입니다. 2023년 Vallery Festival 티켓 예매 일정에 변경이 있어 안내드립니다.
+            기존 예매 일정에 따르면 6월 1일부터 6월 30일까지 티켓 예매가 가능하였으나, 운영상의 문제로 인해 일정이 변경되었습니다.
+        </p>
+        <a href="#" class="popup-close">닫기</a>
+    </div>
+    <script>
+        window.onload = function () {
+            document.querySelector(".popup-btn").addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(".popup-view").style.display = "block";
+            });
+            document.querySelector(".popup-close").addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(".popup-view").style.display = "none";
+            });
+        };
+    </script>
+</body>
+
+</html>
