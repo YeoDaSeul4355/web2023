@@ -1,0 +1,316 @@
+@charset "UTF-8";
+@import url('https://webfontworld.github.io/PyeongChang/PyeongChang.css');
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'PyeongChang';
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+#wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+#aside {
+    width: 200px;
+    height: 650px;
+}
+#aside h1 {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    background-color: #e5e5fd;
+    box-sizing: border-box;
+}
+#aside h1.logo {
+    padding: 20px 0;
+}
+#aside .nav {
+    background-color: #fae2e2;
+    height: 80%;
+}
+.nav > ul > li > a {
+    display: block;
+    padding: 10px;
+    background-color: #ffe1e1;
+    text-align: center;
+}
+.nav > ul > li > a:hover {
+    background-color: #ffcccc;
+}
+.nav > ul > li > ul {
+    display: none;
+}
+.nav > ul > li > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    background-color: #ffeeee;
+}
+.nav > ul > li > ul > li > a:hover {
+    background-color: #ffe8e8;
+}
+#main {
+    width: calc(100% - 200px);
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#main #slider {
+    width: calc(100% - 230px);
+    height: 400px;
+    overflow: hidden;
+}
+#main #slider .sliderWrap {
+    width: 100%;
+    height: 1200px;
+}
+#main #slider .sliderWrap .slider {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+#main #slider .sliderWrap .slider .text {
+    background-color: rgba(32, 32, 42, 0.848);
+    width: 400px;
+    height: 120px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+}
+#main #slider .sliderWrap .slider .text h3 {
+    padding: 30px 0 5px 0;
+    color: #fff;
+}
+#main #slider .sliderWrap .slider .text p {
+    
+    color: #fff;
+}
+#main #slider .sliderWrap .slider.s1{
+    background-image: url(../images/slider01.jpg);
+}
+#main #slider .sliderWrap .slider.s2{
+    background-image: url(../images/slider02.jpg);
+}
+#main #slider .sliderWrap .slider.s3{
+    background-image: url(../images/slider03.jpg);
+}
+#main #banner {
+    width: 230px;
+    height: 400px;
+}
+#banner .banner {
+    width: 100%;
+    height: 400px;
+    background: url(../images/banner01.jpg) no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#banner .banner h3 {
+    color: #fff;
+    font-size: 25px;
+}
+#banner .banner a {
+    color: #fff;
+    background-color: #807ddcd2;
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+
+#main #contents {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+#contents .notice {
+    width: 49%;
+    background-color: #e5e8ff93;
+    padding: 30px;
+    position: relative;
+}
+#contents .notice h3 {
+    
+}
+#contents .notice .more {
+    position: absolute;
+    right: 26px;
+    top: 30px;
+}
+
+#contents .gallery .more {
+    position: absolute;
+    right: 26px;
+    top: 30px;
+}
+#contents .gallery .more a {
+    color: #fff;
+}
+#contents .gallery .more a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+#contents .notice .more a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+#contents .notice > ul {
+    margin-top: 10px;
+}
+#contents .notice > ul > li {
+    padding: 8px 0;
+    display: flex;
+}
+#contents .notice > ul > li > a {
+    width: 70%;
+}
+#contents .notice > ul > li > a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+#contents .notice ul > li span {
+    width: 30%;
+    text-align: right;
+}
+#contents .gallery {
+    width:49%;
+    background-color: #dfd2fd;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #bfd5ff;
+    overflow: hidden;
+    position: relative;
+}
+#contents .gallery h3 {
+    background-color: #5f60af;
+    color: #fff;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+}
+#contents .gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+#contents .gallery li {
+    width: 200px;
+    height: 150px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#contents .gallery li a {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contents .gallery li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+#contents .gallery li:nth-child(1) {
+    background-image: url(../images/gallery01.jpg);
+}
+#contents .gallery li:nth-child(2) {
+    background-image: url(../images/gallery02.jpg);
+
+}
+#contents .gallery li:nth-child(3) {
+    background-image: url(../images/gallery03.jpg);
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #9192ae;
+}
+.footer1 {
+    width: 200px;
+}
+.footer1 h4 {
+    padding: 35px 0;
+    text-align: center;
+}
+.footer2 {
+    width: calc(100% - 230px);
+    padding: 20px;
+    text-align: center;
+}
+.footer2-1 > ul {
+}
+.footer2-1 > ul > li {
+    display: inline-block;
+}
+.footer2-1 > ul > li > a {
+    padding: 20px 10px;
+}
+.footer2-1 li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.footer3 {
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .footer3 select {
+    width: 90%;
+    height: 30px;
+}
+
+/* 팝업 */
+
+.popup-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: #e8e7ffdf;
+    border: 3px solid #000;
+    z-index: 2000;
+    display: none;
+    border-radius: 20px;
+} 
+.popup-view .popup_cont {
+    margin-top: 80px;
+    text-align: center;
+}
+.popup-view .popup_cont h3 {
+    margin-bottom: 20px;
+}
+.popup-close {
+    padding: 10px;
+    display: inline-block;
+}
+.popup-close a {
+    align-items: right;
+}
