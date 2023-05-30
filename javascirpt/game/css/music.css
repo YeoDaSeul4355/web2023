@@ -6,17 +6,23 @@
             + music__control
         + music__footer
 */
+body {
+    background-image: url(https://64.media.tumblr.com/8ffd18b6f9eb54c2476120a2862a215c/tumblr_pk2x4vn2XV1xqbpm5o1_500.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* https://64.media.tumblr.com/92d18204db1da70eb06837f33f882c4b/c3f36df63c8c4bd8-f4/s1280x1920/e8af37819571eca313b3d33bf40416fc91e336ef.gif */
+    /* https://i.pinimg.com/originals/0d/31/3e/0d313e0741d24a50edaf3ff5e10509fe.gif */
+}
 .music__inner {
     width: 350px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    right: 10px;
+    top: 60px;
     padding: 20px 22px;
     border-radius: 20px;
-    box-shadow: 0 60px 100px rgba(0,0,0,0.4);
+    box-shadow: 0 60px 100px rgba(0, 0, 0, 0.4);
 }
 .music__header {
 }
@@ -24,12 +30,23 @@
     text-align: center;
     font-size: 14px;
     padding-top: 3px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 200;
+    position: relative;
 }
-.music__header .left {}
-.music__header .right {}
-.music__contents {}
+.music__header .left {
+}
+.music__header .right {
+}
+.right .music__close {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.music__contents {
+}
 .music__view {
     position: absolute;
     left: 50%;
@@ -60,12 +77,12 @@
     color: #000;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Poppins';
+    font-family: "Poppins";
 }
 .music__control .title p {
     color: #666;
     font-size: 16px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     margin-bottom: 20px;
 }
 .music__control .progress {
@@ -86,15 +103,15 @@
     margin-top: 3px;
 }
 .music__control .progress .timer span {
-    color:#e68a3f;
+    color: #e68a3f;
     font-size: 12px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     pointer-events: none;
 }
 .music__control .control {
     width: 100%;
     margin-top: 40px;
-    font-family: 'NeoDunggeunmo';
+    font-family: "NeoDunggeunmo";
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -141,7 +158,7 @@
     background-position: -200px 0;
 }
 .music__list {
-    font-family: 'EF_Diary';
+    font-family: "EF_Diary";
     border-radius: 0 0 15px 15px;
     padding: 20px 0;
     display: none;
@@ -187,7 +204,7 @@
     display: flex;
     align-items: center;
     box-sizing: content-box;
-    background-color: rgba(255, 224, 224,0.1);
+    background-color: rgba(255, 224, 224, 0.1);
 }
 .music__list ul li.playing {
     background-color: rgba(255, 224, 224, 0.5);
@@ -215,7 +232,7 @@
     font-size: 12px;
 }
 .music__list ul li .time {
-    font-family: 'EF_Diary';
+    font-family: "EF_Diary";
     width: 20%;
     font-size: 14px;
     text-align: right;

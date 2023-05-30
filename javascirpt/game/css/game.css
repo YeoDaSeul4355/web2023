@@ -1,11 +1,13 @@
 * {
     cursor: none;
 }
+
 body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
+
 .cursor {
     width: 20px;
     position: absolute;
@@ -16,6 +18,7 @@ body {
     user-select: none;
     cursor: none;
 }
+
 #header {
     position: fixed;
     left: 0;
@@ -28,30 +31,37 @@ body {
     justify-content: space-between;
     font-size: 14px;
     transition: background-color 0.5s ease-in-out;
-    font-family: 'BeanPole';
+    font-family: "BeanPole";
 }
+
 #header.red {
     background-color: #ff5c5c;
 }
+
 #header.blue {
     background-color: #4c7bff;
 }
+
 #header.green {
     background-color: #7fff5b;
 }
+
 #header.yellow {
     background-color: #ffc250;
 }
+
 #header h1 {
     font-size: 30px;
     font-weight: bold;
     line-height: 1;
     padding-top: 3px;
 }
+
 .time {
-    font-family: 'NeoDunggeunmo';
+    font-family: "NeoDunggeunmo";
     font-size: 20px;
 }
+
 /* icon__box */
 .icon__box {
     position: absolute;
@@ -61,19 +71,38 @@ body {
     height: 100vh;
     padding: 80px 10px;
 }
+
 .icon__box > div {
     width: 50px;
     margin-bottom: 20px;
 }
+
 .icon__box > div img {
     margin-bottom: 10px;
 }
+
 .icon__box > div span {
-    background-color: #000000;
     padding: 8px 4px;
     display: inline-block;
     border-radius: 4px;
 }
+
+.icon1 > span {
+    background-color: #ff5c5c;
+}
+
+.icon2 > span {
+    background-color: #4c7bff;
+}
+
+.icon3 > span {
+    background-color: #7fff5b;
+}
+
+.icon4 > span {
+    background-color: #ffc250;
+}
+
 .music {
     position: fixed;
     left: 50%;
@@ -84,18 +113,20 @@ body {
     background-color: #ffa0a0;
     padding: 40px;
 }
+
 .music p {
-    font-family: 'NeoDunggeunmo';
+    font-family: "NeoDunggeunmo";
     color: #000;
 }
+
 /* footer */
 .info {
     position: fixed;
     left: 50%;
     bottom: 10px;
-    font-size: 14px;
-    color: #fff;
+    font-size: 18px;
+    color: #000000;
     transform: translateX(-50%);
     text-align: center;
-    font-family: 'NeoDunggeunmo';
+    font-family: "NeoDunggeunmo";
 }
