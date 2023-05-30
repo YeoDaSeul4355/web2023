@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준 사이트 만들기</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/webs.svg" />
+
+    <meta name="author" content="웹스토리보이">
+    <meta name="description" content="웹스토리보이와 함께 만드는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="웹스토리보이, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+</head>
+<body class="dream5">
+    <div id="skip">
+        <a href="#introSection">소개 영역 바로가기</a>
+        <a href="#imagesSection">이미지 영역 바로가기</a>
+        <a href="#cardsSection">카드 영역 바로가기</a>
+        <a href="#youtubeSection">youtube 영역 바로가기</a>
+        <a href="#unsplashSection">unsplash 영역 바로가기</a>
+        <a href="#moviesSection">movies 영역 바로가기</a>
+        <a href="#reviewSection">리뷰 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" class="header__wrap bg-blue" role="heading">
+        <div class="header__inner container">
+            <h1 class="header__logo">
+                <a href="#">web <em>site</em></a>
+            </h1>
+            <div class="header__nav" role="navigation">
+                <ul>
+                    <li><a href="#introSection">소개</a></li>
+                    <li><a href="#imagesSection">멤버</a></li>
+                    <li><a href="#cardsSection">포트폴리오</a></li>
+                    <li><a href="#youtubeSection">유튜브</a></li>
+                    <li><a href="#unsplashSection">이미지</a></li>
+                    <li><a href="#moviesSection">영화</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main" role="main">
+        <section id="sliderSection" class="slider__wrap section">
+            <div class="slider__inner">
+                <h2 class="blind">배너 슬라이드</h2>
+                <div class="slider__img">
+                    <div class="slider s1 container">
+                        <div class="text">
+                            <h3>New<br>Portfolio</h3>
+                            <p>재능은! 노력 끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                            <a href="#" class="more button-red">더 알아보기</a>
+                        </div>
+                        <div class="img" aria-label="hidden">
+                            <img src="images/icon01.png" alt="이미지1">
+                            <img src="images/icon02.png" alt="이미지2">
+                            <img src="images/icon03.png" alt="이미지3">
+                        </div>
+                        <div class="circle" aria-label="hidden">
+                            <span class="circle c1"></span>
+                            <span class="circle c2"></span>
+                            <span class="circle c3"></span>
+                            <span class="circle c4"></span>
+                            <span class="circle c5"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="slider s2">
+                        <h3>New<br>Portfolio</h3>
+                        <p>재능은! 노력 끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                        <a href="#">더 알아보기</a>
+                    </div>
+                    <div class="slider s3">
+                        <h3>New<br>Portfolio</h3>
+                        <p>재능은! 노력 끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                        <a href="#">더 알아보기</a>
+                    </div> -->
+                </div>
+                <div class="slider__btn">
+                    <a href="#" class="left"><span class="ir">이전이미지</span></a>
+                    <a href="#" class="right"><span class="ir">다음이미지</span></a>
+                </div>
+                <div class="slider__dot">
+                    <a href="#" class="dot active"><span class="ir">1번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">2번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">3번 이미지</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- //slider -->
+
+        <section id="introSection" class="intro__wrap section bg-blue">
+            <h3 class="blind">프론트앤드 커리큘럼 과정 소개</h3>
+            <div class="intro__inner container">
+                <div class="intro__title">
+                    <span>FRONTEND</span>
+                    <h3>프론트앤드<br>전문과정</h3>
+                    <p>프론트앤드 개발자로 취업하기 위한<br> 전문 과정입니다. <br>여러분들도 도전해보세요!</p>
+                </div>
+                <div class="intro__desc">
+                    <div>
+                        <h4 class="icon-bg1">웹 디자인</h4>
+                        <p>웹디자이너가 포함된 웹 및 멀티미디어 디자이너는 다른 직업과 비교하여 임금과 복리후생이 낮은 퍼블리싱은 웹 사이트를 제작할 </p>
+                    </div>
+                    <div>
+                        <h4 class="icon-bg2">웹 퍼블리셔</h4>
+                        <p>퍼블리싱은 웹 사이트를 제작할 때, 웹 디자이너가 디자인한 것을 웹 표준성과 접근성에 부합하도록 재정하였다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-bg3">프론트앤드 개발자</h4>
+                        <p>사이트와 상호작용하는 모든 부분에 대한 개발, 관리, 유지 보수를 하는 것 솔루션의 프로세스를 개발합니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-bg4">백앤드 개발자</h4>
+                        <p>용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //intro -->
+        <section id="imagesSection" class="images__wrap">
+            <div class="images__inner">
+                <h3>이미지</h3>
+            </div>
+        </section>
+        <!-- //images -->
+        <section id="cardsSection" class="cards__wrap">
+            <div class="cards__inner">
+                <h3>카드</h3>
+            </div>
+        </section>
+        <!-- //card -->
+        <section id="youtubeSection" class="youtube__wrap">
+            <div class="youtube__inner">
+                <h3>유튜브</h3>
+            </div>
+        </section>
+        <!-- //youtube -->
+        <section id="unsplashSection" class="unsplash__wrap">
+            <div class="unsplash__inner">
+                <h3>언스플래쉬 이미지</h3>
+            </div>
+        </section>
+        <!-- //unsplash -->
+        <section id="moviesSection" class="movies__wrap">
+            <div class="movies__inner">
+                <h3>영화</h3>
+            </div>
+        </section>
+        <!-- //movies -->
+        <section id="reviewSection" class="review__wrap">
+            <div class="review__inner">
+                <h3>후기</h3>
+            </div>
+        </section>
+        <!-- //review -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer" class="footer__wrap" role="contentinfo">
+        
+    </footer>
+    <!-- //footer -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>

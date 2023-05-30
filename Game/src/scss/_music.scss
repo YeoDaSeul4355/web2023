@@ -1,0 +1,237 @@
+/* music__wrap 
+    + music__inner
+        + music__header
+        + music__contents
+            + music__view
+            + music__control
+        + music__footer
+*/
+body {
+    background-image: url(https://64.media.tumblr.com/8ffd18b6f9eb54c2476120a2862a215c/tumblr_pk2x4vn2XV1xqbpm5o1_500.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* https://64.media.tumblr.com/92d18204db1da70eb06837f33f882c4b/c3f36df63c8c4bd8-f4/s1280x1920/e8af37819571eca313b3d33bf40416fc91e336ef.gif */
+    /* https://i.pinimg.com/originals/0d/31/3e/0d313e0741d24a50edaf3ff5e10509fe.gif */
+}
+.music__inner {
+    width: 350px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    padding: 20px 22px;
+    border-radius: 20px;
+    box-shadow: 0 60px 100px rgba(0,0,0,0.4);
+}
+.music__header {
+}
+.music__header h2 {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 3px;
+    font-family: 'Poppins';
+    font-weight: 200;
+    position: relative;
+}
+.music__header .left {}
+.music__header .right {
+}
+.right .music__close {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.music__contents {}
+.music__view {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 50px;
+    padding: 0 20px 20px 20px;
+    width: 90%;
+}
+.music__view .image {
+    border: 10px double #ff9393;
+}
+.music__view .image img {
+    box-shadow: 0 20px 50px rgba(246, 50, 50, 0.4);
+}
+.music__control {
+    background-color: #fff;
+    height: 330px;
+    border-radius: 15px;
+    margin-top: 200px;
+    padding: 20px;
+}
+.music__control .title {
+    text-align: center;
+    padding-top: 120px;
+}
+.music__control .title h3 {
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+.music__control .title p {
+    color: #666;
+    font-size: 16px;
+    font-family: 'Poppins';
+    margin-bottom: 20px;
+}
+.music__control .progress {
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 3px;
+}
+.music__control .progress .bar {
+    width: 0%;
+    height: 5px;
+    background-color: #ff5d5d;
+    border-radius: 3px;
+}
+.music__control .progress .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+.music__control .progress .timer span {
+    color:#e68a3f;
+    font-size: 12px;
+    font-family: 'Poppins';
+    pointer-events: none;
+}
+.music__control .control {
+    width: 100%;
+    margin-top: 40px;
+    font-family: 'NeoDunggeunmo';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.music__control .control span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.music__control .control span i {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../images/Frame\ 1.svg);
+    background-size: 500px;
+}
+.music__control .control span i.repeat {
+    background-position: 0 0;
+}
+.music__control .control span i.prev {
+    background-position: -120px 0;
+}
+.music__control .control span i.play {
+    background-position: -160px 0;
+}
+.music__control .control span:nth-child(3) {
+    background-image: linear-gradient(to bottom, #ff4d4d, #ffab67);
+    border-radius: 50%;
+}
+.music__control .control span i.next {
+    background-position: -240px 0;
+}
+.music__control .control span i.list {
+    background-position: -280px 0;
+}
+
+.music__control .control span i.repeat-one {
+    background-position: -40px 0;
+}
+.music__control .control span i.shuffle {
+    background-position: -80px 0;
+}
+.music__control .control span i.stop {
+    background-position: -200px 0;
+}
+.music__list {
+    font-family: 'EF_Diary';
+    border-radius: 0 0 15px 15px;
+    padding: 20px 0;
+    display: none;
+}
+.music__list.show {
+    display: block;
+}
+.music__list h3 {
+    color: #fff;
+    position: relative;
+    margin-bottom: 10px;
+}
+.music__list h3 .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-image: url(../images/music_icon.svg);
+    background-position: -320px 0;
+    width: 40px;
+    height: 40px;
+}
+.music__list ul {
+    height: 210px;
+    overflow-y: scroll;
+}
+.music__list ul::-webkit-scrollbar {
+    width: 5px;
+}
+.music__list ul::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: #c2c2c279;
+    border-radius: 10px;
+    margin-left: 2px;
+}
+.music__list ul::-webkit-scrollbar-track {
+    background: rgba(255, 31, 61, 0.1);
+}
+.music__list ul li {
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: rgba(255, 224, 224,0.1);
+}
+.music__list ul li.playing {
+    background-color: rgba(255, 224, 224, 0.5);
+}
+.music__list ul li:hover {
+    transition: all 0.3s;
+}
+.music__list ul li .img {
+    width: 20%;
+}
+.music__list ul li img {
+    width: 50px;
+    border-radius: 10px;
+}
+.music__list ul li .title {
+    width: 60%;
+    margin-left: 10px;
+}
+.music__list ul li .title strong {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+.music__list ul li .title em {
+    font-size: 12px;
+}
+.music__list ul li .time {
+    font-family: 'EF_Diary';
+    width: 20%;
+    font-size: 14px;
+    text-align: right;
+}
