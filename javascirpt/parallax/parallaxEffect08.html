@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>패럴랙스 이펙트08</title>
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/parallax.css" />
+        <style>
+            #header {
+                z-index: 10000;
+                position: fixed;
+            }
+            .parallaxs__wrap {
+                position: fixed;
+                display: flex;
+                left: 0;
+                top: 0;
+            }
+            .parallaxs__item {
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+            }
+            #section1 {background-color: #111;}
+            #section2 {background-color: #222;}
+            #section3 {background-color: #333;}
+            #section4 {background-color: #444;}
+            #section5 {background-color: #555;}
+            #section6 {background-color: #666;}
+            #section7 {background-color: #777;}
+            #section8 {background-color: #888;}
+            #section9 {background-color: #999;}
+
+            .parallaxs__item__num {
+                position: absolute;
+                bottom: 20px;
+                right: 60px;
+                color: #fff;
+                font-size: 10vw;
+                z-index: 1000;
+            }
+        </style>
+    </head>
+
+    <body class="img01 bg01 font05">
+        <header id="header">
+            <h1>
+                <a href="../javascript17.html">Javascript Parallax Effect08</a>
+            </h1>
+            <p>패럴랙스 이펙트 : 가로효과</p>
+            <ul>
+                <li><a href="parallaxEffect01.html">1</a></li>
+                <li><a href="parallaxEffect02.html">2</a></li>
+                <li><a href="parallaxEffect03.html">3</a></li>
+                <li><a href="parallaxEffect04.html">4</a></li>
+                <li><a href="parallaxEffect05.html">5</a></li>
+                <li><a href="parallaxEffect06.html">6</a></li>
+                <li><a href="parallaxEffect07.html">7</a></li>
+                <li class="active"><a href="parallaxEffect08.html">8</a></li>
+                <li><a href="parallaxEffect09.html">9</a></li>
+            </ul>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <div class="parallaxs__wrap">
+                <section id="section1" class="parallaxs__item">
+                    <span class="parallaxs__item__num">01</span>
+                </section>
+                <!-- //section1 -->
+                <section id="section2" class="parallaxs__item">
+                    <span class="parallaxs__item__num">02</span>
+                </section>
+                <!-- //section2 -->
+                <section id="section3" class="parallaxs__item">
+                    <span class="parallaxs__item__num">03</span>
+                </section>
+                <!-- //section3 -->
+                <section id="section4" class="parallaxs__item">
+                    <span class="parallaxs__item__num">04</span>
+                </section>
+                <!-- //section4 -->
+                <section id="section5" class="parallaxs__item">
+                    <span class="parallaxs__item__num">05</span>
+                </section>
+                <!-- //section5 -->
+                <section id="section6" class="parallaxs__item">
+                    <span class="parallaxs__item__num">06</span>
+                </section>
+                <!-- //section6 -->
+                <section id="section7" class="parallaxs__item">
+                    <span class="parallaxs__item__num">07</span>
+                </section>
+                <!-- //section7 -->
+                <section id="section8" class="parallaxs__item">
+                    <span class="parallaxs__item__num">08</span>
+                </section>
+                <!-- //section8 -->
+                <section id="section9" class="parallaxs__item">
+                    <span class="parallaxs__item__num">09</span>
+                </section>
+                <!-- //section9 -->
+            </div>
+        </main>
+        <!-- //main -->
+        <aside class="parallax__info">
+            <div class="scroll">scrollTop : <span>0</span>px</div>
+        </aside>
+        <!-- //parallax info -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script>
+            const parallaxCont = document.querySelector(".parallaxs__wrap");
+
+            function scroll(){
+                let scrollTop = window.pageYOffset;
+
+                let parallaxWidth = parallaxCont.offsetWidth;
+                document.body.style.height = parallaxWidth + "px";
+
+                let viewWidth = parallaxWidth - window.innerWidth;
+                let viewHeight = parallaxWidth - window.innerHeight;
+                
+                let goLeft = scrollTop * (viewWidth / viewHeight);
+
+                gsap.to(parallaxCont, {left: -goLeft, ease: "power4"});
+
+                document.querySelector(".scroll span").innerText = Math.round(scrollTop);
+                requestAnimationFrame(scroll);
+            }
+            scroll();
+        </script>
+    </body>
+</html>
