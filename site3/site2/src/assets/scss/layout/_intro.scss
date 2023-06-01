@@ -1,0 +1,50 @@
+// intro__wrap
+.intro__wrap {}
+.intro__inner {
+   display: flex;
+   justify-content: space-between;
+}
+.intro__title {
+    width: 33%;
+    span {
+        background-color: #FF3344;
+        font-size: 14px;
+        padding: 4px 30px 2px;
+        color: #fff;
+        border-radius: 40px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    h3 {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+}
+.intro__desc {
+    width: 66%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > div {
+        width: 48%;
+        margin-bottom: 40px;
+        h4 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        &:nth-child(3){
+            margin-bottom: 0;
+        }
+        &:nth-child(4){
+            margin-bottom: 0;
+        }
+    }
+}
