@@ -1,0 +1,446 @@
+@import url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'NanumSquareNeo';
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+#wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#header {
+    width: 200px;
+    height: 850px;
+    background-color: #ccc;
+}
+
+
+/* 로고 */
+.logo {
+    width: 100%;
+    height: 15%;
+    background-color: #a5e9a4;
+    display: flex;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.logo a {
+    padding: 40px 30px;
+    color: #077a63;
+}
+
+/* 메인 메뉴 */
+.nav {
+    width: 100%;
+    background-color: #ecffde;
+    height: 85%;
+}
+
+.nav>ul {
+    padding: 43px 0;
+}
+
+.nav>ul>li {
+    position: relative;
+}
+
+.nav>ul>li>a {
+    display: block;
+    padding: 20px 0;
+    background-color: #c3e8c6;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.nav>ul>li>a:hover {
+    transition: background-color 0.3s;
+    background-color: #9ccda0;
+}
+
+/* 서브 메뉴 */
+.nav>ul>li>ul {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 500px;
+    z-index: 1000;
+    display: none;
+}
+
+.nav>ul>li>ul>li {
+    display: inline;
+}
+
+.nav>ul>li>ul>li>a {
+    padding: 20px 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.nav>ul>li>ul>li>a:hover {
+    background-color: #3aba69a8;
+}
+
+/* 메인 */
+#main {
+    width: calc(100% - 200px);
+    height: 850px;
+    position: relative;
+}
+
+/* 서브 메뉴 나올 때 */
+#main::after {
+    content: '';
+    width: 100%;
+    height: 230px;
+    background-color: #5f8a6ed1;
+    position: absolute;
+    left: 0;
+    top: 170px;
+    transition: all 300ms;
+    z-index: 1;
+    display: none;
+}
+
+#main.on::after {
+    width: 100%;
+    display: block;
+}
+
+/* 슬라이드 */
+#slider {
+    width: 100%;
+    height: 400px;
+    background-color: #999;
+    overflow: hidden;
+}
+
+.slider__wrap {
+    width: 100%;
+    height: 1200px;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slider.s1 {
+    background-image: url(../images/slider01.jpg);
+}
+
+.slider.s2 {
+    background-image: url(../images/slider02.jpg);
+}
+
+.slider.s3 {
+    background-image: url(../images/slider03.jpg);
+}
+
+.text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 120px;
+    background-color: #f3f86d98;
+
+}
+
+.text h3 {
+    padding: 15px 20px;
+    font-size: 30px;
+}
+
+.text p {
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+/* 링크 */
+.link {
+    width: 150px;
+    height: 300px;
+    background-color: #cfffc2;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.link>ul {
+    background-color: #65ff6f;
+}
+
+.link>ul>li {
+    width: 100%;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.link>ul>li:nth-child(1) {
+    background-image: url(../images/link01.jpg);
+}
+
+.link>ul>li:nth-child(2) {
+    background-image: url(../images/link02.jpg);
+}
+
+.link>ul>li:nth-child(3) {
+    background-image: url(../images/link03.jpg);
+}
+
+.link>ul>li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.link>ul>li:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 배너 */
+#banner {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background-image: url(../images/banner01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner__text {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#banner h3 {
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+#banner a {
+    color: #000000;
+    background-color: #97f698;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #10a012;
+    transition: all 0.3s;
+}
+
+#banner a:hover {
+    background-color: #439744;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+/* 탭 */
+#tab {
+    width: 100%;
+    height: 250px;
+    background-color: #e0ebb5;
+}
+
+.tab-menu {
+    padding: 20px;
+}
+
+.tab-btn {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.tab-btn>ul {
+    display: flex;
+}
+
+.tab-btn>ul>li {
+    padding: 0 10px;
+}
+
+.tab-btn>ul>li.active a {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.tab-btn>ul>li a {
+    display: block;
+    padding: 10px;
+    background-color: #b0d5ad;
+    border-radius: 20px;
+}
+
+.tab-cont>div {
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.notice {
+    padding: 0 10px;
+}
+
+.notice>li {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice>li>a {
+    font-size: 18px;
+}
+
+.notice>li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.notice>li>span {
+    align-items: flex-end;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery li {
+    width: 180px;
+    height: 130px;
+    background-repeat: no-repeat;
+}
+
+.gallery>li:nth-child(1) {
+    background-image: url(../images/gallery01.jpg);
+}
+
+.gallery>li:nth-child(2) {
+    background-image: url(../images/gallery02.jpg);
+}
+
+.gallery>li:nth-child(3) {
+    background-image: url(../images/gallery03.jpg);
+}
+
+.gallery>li:nth-child(4) {
+    background-image: url(../images/gallery04.jpg);
+}
+
+.gallery>li:nth-child(5) {
+    background-image: url(../images/gallery05.jpg);
+}
+
+.gallery>li:nth-child(6) {
+    background-image: url(../images/gallery06.jpg);
+}
+
+#footer {
+    width: 100%;
+    height: 120px;
+    background-color: #73886f;
+    display: flex;
+}
+
+#footer h2 {
+    width: 200px;
+}
+
+.flogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer1-2 {
+    padding-left: 40px;
+}
+
+.footer1>ul {
+    display: flex;
+    padding: 20px 30px;
+    text-align: left;
+}
+
+.footer1>ul>li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* 팝업 */
+.popup-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #b6ca64;
+    width: 700px;
+    height: 400px;
+    display: none;
+}
+
+.popup-cont {
+    padding: 80px;
+}
+
+.popup-close {
+    background-color: #fff;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+}
+
+.popup-close:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.popup-cont h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.popup-cont p {
+    line-height: 1.5;
+    font-size: 18px;
+}
