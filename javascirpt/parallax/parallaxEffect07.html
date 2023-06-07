@@ -344,8 +344,7 @@
                 const reveals = document.querySelectorAll(".reveal");
 
                 reveals.forEach((reveal) => {
-                    let revealOffset =
-                        reveal.offsetTop + reveal.parentElement.offsetTop;
+                    let revealOffset = reveal.offsetTop + reveal.parentElement.offsetTop;
                     let revealDelay = reveal.dataset.delay;
 
                     if (scrollTop >= revealOffset - window.innerHeight) {

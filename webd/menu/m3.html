@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>메뉴 유형 3</title>
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
+            font-family: 'NanumSquare';
         }
         li {
             list-style: none;
@@ -35,7 +37,7 @@
             transition: all 400ms;
         }
         #header.on::after {
-            height: 160px;
+            height: 164px;
         }
         #header .logo {
             width: 20%;
@@ -197,11 +199,11 @@
     <script>
         $(function(){
             $(".nav > ul > li").mouseover(function(){
-                $(".nav > ul > li > ul").stop().slideDown(900);
+                $(".nav > ul > li > ul").stop().slideDown(300);
                 $("#header").addClass("on");
             })
             $(".nav > ul > li").mouseout(function(){
-                $(".nav > ul > li > ul").stop().slideUp(900);
+                $(".nav > ul > li > ul").stop().slideUp(300);
                 $("#header").removeClass("on");
             })
         })
