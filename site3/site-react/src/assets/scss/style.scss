@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// setting
+@import "setting/fonts";
+@import "setting/base";
+@import "setting/mixins";
+
+// 공통요소
+@import "commons/commons";
+
+// 레이아웃
+@import "layout/header";
+@import "layout/slider";
+@import "layout/intro";
+@import "layout/images";
+@import "layout/cards";
+@import "layout/youtube";
+@import "layout/unsplash";
+@import "layout/movies";
+@import "layout/review";
+@import "layout/footer";

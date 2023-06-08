@@ -1,0 +1,120 @@
+// container
+.container {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    // background-color: rgb(177, 228, 255);
+}
+// section
+.section.center {
+    text-align: center;
+}
+.section {
+    padding: 120px 0;
+
+    > h3 {
+        font-size: 50px;
+        
+    }
+    > p {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
+}
+
+// background
+.bg-blue {
+    background-color: var(--bg_section);
+}
+// icon
+.icon-bg1 {@include icon (#D3F5E9, url(../../images/intro/intro01.svg));}
+.icon-bg2 {@include icon (#E1F9D4, url(../../images/intro/intro02.svg));}
+.icon-bg3 {@include icon (#F6DCE0, url(../../images/intro/intro03.svg));}
+.icon-bg4 {@include icon (#D3D7F9, url(../../images/intro/intro04.svg));}
+.icon-bg5 {@include icon (#F9D3F1, url(../../images/intro/intro05.svg));}
+.icon-bg6 {@include icon (#FFEDBD, url(../../images/intro/intro06.svg));}
+// blind 효과
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// ir 효과
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+// skip
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+#skip a {
+    background-color: var(--color_body);
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+$interval: (
+    0: 0,
+    10: 10px,
+    20: 20px,
+    30: 30px,
+    40: 40px,
+    50: 50px,
+    60: 60px,
+    70: 70px,
+    80: 80px,
+    90: 90px,
+    100: 100px,
+);
+
+@each $value, $size in $interval {
+    .mb#{$value}{
+        margin-bottom: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .mt#{$value}{
+        margin-top: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .ml#{$value}{
+        margin-left: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .mr#{$value}{
+        margin-right: $size !important;
+    }
+}
+
+// 버튼
+.button-blue {
+    @include button(#4857EC, #ffffff);
+}
+.button-red {
+    @include button(#FF3344, #ffffff);
+}
+.button-green {
+    @include button(#00a973, #ffffff);
+}
+.button-yellow {
+    @include button(#ffbe45, #ffffff);
+}
