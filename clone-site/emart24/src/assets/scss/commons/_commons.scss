@@ -1,0 +1,81 @@
+// container
+.container {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    // background-color: rgb(177, 228, 255);
+}
+.section {
+    padding: 120px 0;
+
+}
+// blind 효과
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// ir 효과
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+// skip
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+#skip a {
+    background-color: var(--color_body);
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+$interval: (
+    0: 0,
+    10: 10px,
+    20: 20px,
+    30: 30px,
+    40: 40px,
+    50: 50px,
+    60: 60px,
+    70: 70px,
+    80: 80px,
+    90: 90px,
+    100: 100px,
+);
+
+@each $value, $size in $interval {
+    .mb#{$value}{
+        margin-bottom: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .mt#{$value}{
+        margin-top: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .ml#{$value}{
+        margin-left: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .mr#{$value}{
+        margin-right: $size !important;
+    }
+}

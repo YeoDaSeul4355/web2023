@@ -23,6 +23,15 @@
     }
 }
 
+// cont__title
+.cont__title > h2 {
+    text-align: center;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5%;
+}
+
 // background
 .bg-blue {
     background-color: var(--bg_section);

@@ -1,0 +1,60 @@
+// onlyEmart__wrap
+
+.onlyEmart__wrap {
+    .onlyEmart__inner {
+        padding: 0 50px;
+        .titleWrap {
+            .title {
+                h3 {
+                    font-size: 35px;
+                    margin-bottom: 20px;
+                    font-weight: 700;
+                }
+                p {
+                    color: #FABA03;
+                    margin-bottom: 70px;
+                }
+            }
+        }
+        .contentWrap {
+            ul {
+                display: flex;
+
+                li {
+                    margin-left: 20px;
+                    border: 1px solid #d9d9d9;
+                    border-radius: 25px;
+                    text-align: center;
+                    height: 430px;
+                    &:nth-child(1) {
+                        margin-left: 0;
+                    }
+                    a {
+                        .imgWrap img {
+                            width: 250px;
+                            border-radius: 25px;
+                            object-fit: cover;
+                        }
+                        .desc {
+                            .pbLogo {
+                                height: 70px;
+                                img {
+                                    width: 30px;
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            p {
+                                font-size: 14px;
+                                color:#bbb;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        border: 1px solid #FABA03;
+                    }
+                }
+            }
+        }
+    }
+}

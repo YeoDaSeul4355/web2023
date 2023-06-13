@@ -36,3 +36,67 @@
         }
     }
 }
+
+
+// youtube__page
+.youtube__page {
+    .youtube__slider {
+        display: none;
+    }
+    .youtube__search {
+        text-align: center;
+        margin-bottom: 50px;
+        input {
+            border: 1px solid #e8ecf2;
+            font-size: 16px;
+            padding: 10px 20px;
+            @include border(50px);
+            min-width: 300px;
+            margin-right: 10px;
+        }
+        button {
+            @include border(50px);
+        }
+    }
+    .youtube__tag {
+        ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            li {
+                a {
+                    border: 1px solid #8b99ad;
+                    padding: 10px 20px;
+                    margin: 0 10px;
+                    color: #8b99ad;
+                    transition: all 0.5s;
+                    &:hover {
+                        border-radius: 30px;
+                        color: #fff;
+                        background-color: #8b99ad;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    .youtube__cont {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 100px;
+
+            li {
+                width: 31.3333%;
+                margin-bottom: 4%;
+
+                span {
+                    display: block;
+                    margin: 4px 0;
+                }
+            }
+        }
+    }
+}

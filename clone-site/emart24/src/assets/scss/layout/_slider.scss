@@ -1,0 +1,16 @@
+// slider__wrap
+
+.slider__wrap {
+    .sliderWrap {
+        overflow: hidden;
+        .sliderImg {
+            width: 300%;
+            display: flex;
+            
+            .slider img {
+                width: 100%;
+                border-radius: 0 0 50px 50px;
+            }
+        }
+    }
+}
