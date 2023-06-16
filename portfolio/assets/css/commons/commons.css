@@ -1,0 +1,71 @@
+/* container */
+.container {
+    position: relative;
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+/* blind 효과 */
+.blind {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* ir효과 */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* skip */
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+
+#skip a {
+    background-color: var(--color_body);
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+
+/* 배경색 */
+.bg-yellow {
+    background-color: #F8E02C;
+}
+
+.bg-red {
+    background-color: #EA5C36;
+}
+
+.bg-green {
+    background-color: #79FA66;
+}
+
+.bg-purple {
+    background-color: #A07FF6;
+}
+
+/* 글씨 색 */
+.color-red {
+    color: #F14D2E;
+}
