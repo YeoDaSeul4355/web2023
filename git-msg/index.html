@@ -174,27 +174,272 @@
     <div class="bs-header bgs1" id="content">
       <div class="container">
         <h1>Git 명령어</h1>
-        <p>
-          <a href="https://duektmf34.tistory.com/" target="_blank"
-            >git 명령어를 익혀둡시다!
-          </a>
-        </p>
+        <p>git 명령어를 익혀둡시다!</p>
       </div>
     </div>
+    ㄴ
     <div class="container bs-docs-container">
       <div class="row">
         <div class="col-md-9">
-          <h2 class="page-header">Git 명령어</h2>
+          <h2 class="page-header">Git</h2>
+          <p>
+            Git은 소스 코드 버전 관리 시스템(VCS, Version Control System) 중
+            하나로, 소프트웨어 개발에서 코드의 변경 이력을 효과적으로 관리할 수
+            있게 해주는 도구입니다. Git을 사용하면 여러 개발자들이 동시에
+            작업하고 있는 프로젝트에서 발생하는 코드의 수정, 추가, 삭제 등의
+            변경 사항을 효율적으로 추적하고 관리할 수 있습니다.
+          </p>
 
+          <p class="lead">✍️ Git과 Github의 차이</p>
+          <p>
+            Git은 로컬에서 코드를 관리하는 도구이고, GitHub은 Git 저장소를
+            온라인에서 호스팅하고 협업하는 플랫폼입니다.
+          </p>
+
+          <h2 class="page-header">Git 명령어</h2>
           <div class="bs-docs-section">
-            <h3 id="intro1">😊이미지 유형01</h3>
+            <!-- intro1 -->
+            <h3 id="intro1">❤️Git 초기설정❤️</h3>
+            <p>
+              초기 설정을 통해 Git은 커밋할 때마다 사용자 정보를 기록하고,
+              편집기 설정에 따라 커밋 메시지를 작성할 수 있습니다.
+            </p>
+            <h4>현재 위치에서 지역 저장소를 생성하기</h4>
+            <div class="bs-callout bs-callout-info">git init</div>
+            <h4>git 환경에서 [사용자명]으로 지정하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git config --global user.name "[사용자명]"
+            </div>
+            <h4>git 환경에서 [사용자 이메일]로 지정하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git config --global user.email "[사용자 이메일]"
+            </div>
+            <br />
+            <!-- //intro1 -->
+
+            <!-- intro2 -->
+            <h3 id="intro2">🩷Git 스테이징🩷</h3>
+            <p>
+              Git의 스테이징(Staging)은 변경된 파일 중에서 어떤 파일들을 다음
+              커밋에 포함시킬지를 선택하는 단계를 의미합니다. 스테이징을 통해
+              원하는 변경 사항만을 기록하고 커밋할 수 있습니다.
+            </p>
+            <h4>모든 파일을 스테이지에 올리기</h4>
+            <div class="bs-callout bs-callout-info">git add .</div>
+            <h4>특정 파일을 스테이지에 올리기</h4>
+            <div class="bs-callout bs-callout-info">
+              git add [파일명.확장자명]
+            </div>
+            <h4>상태 확인하기</h4>
+            <div class="bs-callout bs-callout-info">git status</div>
+            <h4>파일 add 취소하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git restore --staged 파일명
+            </div>
+            <h4>모든 파일을 스테이지에 올리기</h4>
+            <div class="bs-callout bs-callout-info">git reset HEAD</div>
+            <br />
+            <!-- //intro2 -->
+
+            <!-- intro3 -->
+            <h3 id="intro3">Git 커밋🧡</h3>
+            <p>
+              git commit은 Git에서 변경 사항을 저장하는 작업을 의미합니다. 이
+              명령어를 사용하면 스테이징 영역에 있는 파일들의 변경 내용을 로컬
+              저장소에 기록하여 새로운 버전(커밋)을 생성합니다.
+            </p>
+
+            <h4>[메시지]를 붙여 커밋하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git commit -m "[메시지]"
+            </div>
+            <h4>최근 순서대로 커밋 취소하기</h4>
+            <div class="bs-callout bs-callout-info">git reset HEAD^</div>
+            <h4>롤백할 커밋을 지정하기</h4>
+            <div class="bs-callout bs-callout-info">git reset [커밋 해시]</div>
+            <h4>reset의 3가지 옵션</h4>
+            <div class="bs-callout bs-callout-info">
+              git reset --soft [커밋ID] ➡️ head 만 바뀜<br />
+              git reset --mixed [커밋ID] ➡️ staging도 바뀜<br />
+              git reset --hard [커밋ID] ➡️ working디렉토리/staging 모두 바꿈<br />
+            </div>
+            <br />
+            <!-- //intro3 -->
+
+            <!-- intro4 -->
+            <h3 id="intro4">💛Git 이력💛</h3>
+            <p>
+              Git 이력 확인은 프로젝트의 변경 이력을 살펴보는 것을 의미합니다.
+              Git을 사용하면 어떤 작업이 언제, 누가, 어떤 변경을 했는지에 대한
+              정보를 확인할 수 있습니다.
+            </p>
+
+            <h4>커밋 내역 확인하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git log ➡️ 전체 이력을 보여줌<br />
+              git shortlog<br />
+              git log --online ➡️ 커밋, 커밋메세지를 보여줌<br /><br />
+              git log -p ➡️ 변경된 데이터를 함께 보여줌<br />
+              git log [파일명] ➡️ 특정 파일에 대한 이력을 보여줌<br />
+              git log -p [파일명] ➡️ 특정 파일에 대한 이력과 변경된 데이터를
+              함께 보여줌<br /><br />
+              git log --stat ➡️ 커밋마다 파일의 추가/삭제된 통계데이터를
+              보여줌<br />
+              git log --graph ➡️ 브랜치 분기 및 병합 내용을 그래프로 보여줌<br />
+            </div>
+
+            <h4>특정 커밋 내역 확인하기</h4>
+            <div class="bs-callout bs-callout-info">git show [커밋 id]</div>
+
+            <h4>최근 버전과 작업 폴더의 수정 파일 사이의 차이를 출력하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git diff ➡️ modified 상태의 file과 마지막 commit 비교<br />
+              git diff --staged ➡️ staged 상태의 file과 마지막 commit 비교<br />
+              git diff [브랜치명] ➡️ 현재브랜치와 선택된 브랜치와 차이점 비교<br />
+            </div>
+            <br />
+            <!-- //intro4 -->
+
+            <!-- intro5 -->
+            <h3 id="intro5">💚원격 저장소💚</h3>
+            <p>
+              Git에서 원격 저장소는 프로젝트의 중앙 서버로, 여러 개발자가
+              협업하고 변경 사항을 공유하는 공간입니다. 가장 많이 사용되는 원격
+              저장소 호스팅 서비스에는 GitHub, GitLab, Bitbucket 등이 있습니다.
+            </p>
+
+            <h4>원격 저장소에 연결하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git remote add origin [레포지토리 주소]
+            </div>
+
+            <h4>옵션 종류 보기</h4>
+            <div class="bs-callout bs-callout-info">git remote --help</div>
+
+            <h4>추가한 원격저장소의 목록 확인하기</h4>
+            <div class="bs-callout bs-callout-info">git remote</div>
+
+            <h4>커밋을 맨 처음 브랜치에 올리기</h4>
+            <div class="bs-callout bs-callout-info">
+              git push -u origin [branchname]
+            </div>
+
+            <h4>커밋을 브랜치에 올리기</h4>
+            <div class="bs-callout bs-callout-info">
+              git push<br />git push origin [branchname]
+            </div>
+
+            <h4>특정 브랜치의 커밋을 지역 저장소로 가져오기</h4>
+            <div class="bs-callout bs-callout-info">
+              git pull origin [branchname]
+            </div>
+
+            <h4>특정 브랜치 복사하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git clone [레포지토리 주소]
+            </div>
+
+            <h4>특정 브랜치의 커밋만 가져오기(merge X)</h4>
+            <div class="bs-callout bs-callout-info">git fetch</div>
+
+            <h4>브랜치 삭제(연결 끊기)</h4>
+            <div class="bs-callout bs-callout-info">
+              git remote remove origin
+            </div>
+            <br />
+            <!-- //intro5 -->
+
+            <!-- intro6 -->
+            <h3 id="intro6">💙Git 브랜치</h3>
+            <p>
+              Git에서 원격 저장소는 프로젝트의 중앙 서버로, 여러 개발자가
+              협업하고 변경 사항을 공유하는 공간입니다. 가장 많이 사용되는 원격
+              저장소 호스팅 서비스에는 GitHub, GitLab, Bitbucket 등이 있습니다.
+            </p>
+
+            <h4>브랜치 확인하기</h4>
+            <div class="bs-callout bs-callout-info">git branch</div>
+
+            <h4>브랜치 추가 / 삭제하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git branch [branchname] ➡️ 추가 <br />
+              git branch -d [branchname] ➡️ 삭제
+            </div>
+
+            <h4>특정 브랜치로 이동하기</h4>
+            <div class="bs-callout bs-callout-info">
+              git switch [branchname] <br />
+              git checkout [branchname] ➡️ 브랜치 나가기
+            </div>
+
+            <h4>현재 브랜치에서 다른 브랜치를 merge하기</h4>
+            <div class="bs-callout bs-callout-info">git merge [branchname]</div>
+            <br />
+            <!-- //intro6 -->
+
+            <!-- intro7 -->
+            <h3 id="intro7">💜Git stash💜</h3>
+            <p>
+              git stash는 현재 작업 디렉토리의 변경 사항을 일시적으로 저장하고,
+              깨끗한 상태로 돌아갈 수 있는 기능을 제공하는 Git 명령어입니다.
+              주로 아직 완료되지 않은 작업을 갑작스럽게 다른 브랜치로
+              이동하거나, 다른 작업을 해야할 때 유용하게 사용됩니다.
+            </p>
+
+            <h4>staged, modified 상태의 파일을 저장하기</h4>
+            <div class="bs-callout bs-callout-info">git stash</div>
+
+            <h4>stash 적용하기</h4>
+            <div class="bs-callout bs-callout-info">git stash apply</div>
+
+            <h4>stash를 반영하고 자동 삭제하기</h4>
+            <div class="bs-callout bs-callout-info">git stash pop</div>
+
+            <br />
+            <!-- //intro7 -->
+
+            <!-- intro8 -->
+            <h3 id="intro8">🖤Git blame</h3>
+            <p>
+              git blame 명령어는 파일의 각 라인이 어떤 커밋에서 기인하는지를
+              확인하는 데 사용됩니다. 다시 말해, 파일의 각 라인에 대해 어떤
+              커밋에서 수정되었는지, 그리고 해당 수정을 어떤 개발자가 했는지를
+              확인할 수 있습니다.
+            </p>
+
+            <h4>해당되는 파일의 모든 수정 내역 확인하기</h4>
+            <div class="bs-callout bs-callout-info">git blame [파일명]</div>
+
+            <br />
+            <!-- //intro8 -->
           </div>
         </div>
         <div class="col-md-3">
           <div class="bs-sidebar hidden-print affix-top" role="complementary">
             <ul class="nav bs-sidenav">
               <li class="active">
-                <a href="#intro1">이미지 유형</a>
+                <a href="#intro1">git 초기설정</a>
+              </li>
+              <li>
+                <a href="#intro2">git 스테이징</a>
+              </li>
+              <li>
+                <a href="#intro3">git 커밋</a>
+              </li>
+              <li>
+                <a href="#intro4">git 이력</a>
+              </li>
+              <li>
+                <a href="#intro5">원격 저장소</a>
+              </li>
+              <li>
+                <a href="#intro6">git 브랜치</a>
+              </li>
+              <li>
+                <a href="#intro7">git stash</a>
+              </li>
+              <li>
+                <a href="#intro8">git blame</a>
               </li>
             </ul>
           </div>
