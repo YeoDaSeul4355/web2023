@@ -1,109 +1,234 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript : 요소 객체</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/ico/javascript.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/ico/javascript.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/ico/javascript192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/ico/javascript192x192.png"
+    />
 
     <style>
-        span {
-            font-size: 22px;
-            color: #ff559c;
-        }
+      span {
+        font-size: 22px;
+        color: #ff559c;
+      }
     </style>
-
-</head>
-<body>
+  </head>
+  <body>
     <header id="header">
-        <div class="moveTopBtn">🔝</div>
-        <h1><a href="index.html">javascript</a></h1>
-        <nav>
-            <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러오기</a></li>
-                <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li><a href="javascript04.html">데이터 제어하기</a></li>
-            </ul>
-            <ul>
-                <li><a href="javascript05.html">문자열 객체</a></li>
-                <li><a href="javascript06.html">배열 객체</a></li>
-                <li><a href="javascript07.html">수학 객체</a></li>
-                <li><a href="javascript08.html">숫자 객체</a></li>
-                <li><a href="javascript09.html">브라우저 객체</a></li>
-                <li class="active"><a href="javascript10.html">요소 객체</a></li>
-                <li><a href="javascript11.html">이벤트 객체</a></li>
-            </ul>
-            <ul class="last">
-                <li><a href="javascript12.html">데이터 효과</a></li>
-                <li><a href="javascript13.html">검색 효과</a></li>
-                <li><a href="javascript14.html">퀴즈 효과</a></li>
-                <li><a href="javascript15.html">마우스 효과</a></li>
-                <li><a href="javascript16.html">슬라이드 효과</a></li>
-                <li><a href="javascript17.html">패럴랙스 효과</a></li>
-                <li><a href="javascript18.html">게임 효과</a></li>
-            </ul>
-        </nav>
+      <div class="moveTopBtn">🔝</div>
+      <h1><a href="index.html">javascript</a></h1>
+      <nav>
+        <ul>
+          <li><a href="javascript01.html">데이터 저장하기</a></li>
+          <li><a href="javascript02.html">데이터 불러오기</a></li>
+          <li><a href="javascript03.html">데이터 실행하기</a></li>
+          <li><a href="javascript04.html">데이터 제어하기</a></li>
+          <li><a href="javascript19.html">간단한 프로젝트</a></li>
+        </ul>
+        <ul>
+          <li><a href="javascript05.html">문자열 객체</a></li>
+          <li><a href="javascript06.html">배열 객체</a></li>
+          <li><a href="javascript07.html">수학 객체</a></li>
+          <li><a href="javascript08.html">숫자 객체</a></li>
+          <li><a href="javascript09.html">브라우저 객체</a></li>
+          <li class="active"><a href="javascript10.html">요소 객체</a></li>
+          <li><a href="javascript11.html">이벤트 객체</a></li>
+        </ul>
+        <ul class="last">
+          <li><a href="javascript12.html">데이터 효과</a></li>
+          <li><a href="javascript13.html">검색 효과</a></li>
+          <li><a href="javascript14.html">퀴즈 효과</a></li>
+          <li><a href="javascript15.html">마우스 효과</a></li>
+          <li><a href="javascript16.html">슬라이드 효과</a></li>
+          <li><a href="javascript17.html">패럴랙스 효과</a></li>
+          <li><a href="javascript18.html">게임 효과</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- //header -->
-    
+
     <main id="main">
-        <div class="container">
-            <div class="main__menu">
-                <span>선택자</span>
-                <ul>
-                    <li><a href="#">01. 요소 메서드 : 선택자 : document.querySelector() : 요소 선택자</a></li>
-                    <li><a href="#">01. 요소 메서드 : 선택자 : document.querySelectorAll() : 모든 요소 선택자</a></li>
-                    <li><a href="#">01. 요소 메서드 : 선택자 : document.getElementById() : 아이디 요소 선택자</a></li>
-                    <li><a href="#">01. 요소 메서드 : 선택자 : document.getElementsByClassName() : 클래스 요소 선택자</a></li>
-                    <li><a href="#">01. 요소 메서드 : 선택자 : document.getElementsByTagName() : 태그 요소 선택자</a></li>
-                </ul>
-                <br>
-                <span>텍스트</span>
-                <ul>
-                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.innerText() : 요소 텍스트 설정하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.textContent() : 요소 텍스트 설정하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.innerHTML() : 요소 텍스트(태그 포함) 설정하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.outerHTML() : 요소 텍스트(태그 포함, 자식 포함) 설정하기</a></li>
-                </ul>
-                <br>
-                <span>클래스</span>
-                <ul>
-                    <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.add() : 클래스 추가하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.remove() : 클래스 삭제하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.toggle() : 클래스 추가/삭제하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.contains() : 클래스 존재 여부 확인</a></li>
-                    <li><a href="#">01. 요소 메서드 : 클래스 : element.style.속성명 : CSS 스타일 설정</a></li>
-                </ul>
-                <br>
-                <span>요소의 크기</span>
-                <ul>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientWidth : 요소의 가로값(마진/보더 미포함)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientHeight : 요소의 세로값(마진/보더 미포함)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientTop : 요소의 Y축 값(부모 기준)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientLeft : 요소의 X축 값(부모 기준)</a></li>
-                    <br>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetWidth : 요소의 가로값(보더/패딩 포함)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetHeight : 요소의 세로값(보더/패딩 포함)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetTop : 요소의 Y축 값(문서 기준)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetLeft : 요소의 X축 값(문서 기준)</a></li>
-                    <br>
-                    <li><a href="#">01. 요소 메서드 : 크기 및 위치 : element.getBoundingClientRect() : 요소의 크기 및 위치 값을 설정</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="main__menu">
+          <span>선택자</span>
+          <ul>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 선택자 : document.querySelector() : 요소
+                선택자</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 선택자 : document.querySelectorAll() : 모든
+                요소 선택자</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 선택자 : document.getElementById() : 아이디
+                요소 선택자</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 선택자 : document.getElementsByClassName() :
+                클래스 요소 선택자</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 선택자 : document.getElementsByTagName() :
+                태그 요소 선택자</a
+              >
+            </li>
+          </ul>
+          <br />
+          <span>텍스트</span>
+          <ul>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 텍스트 : element.innerText() : 요소 텍스트
+                설정하기</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 텍스트 : element.textContent() : 요소 텍스트
+                설정하기</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 텍스트 : element.innerHTML() : 요소
+                텍스트(태그 포함) 설정하기</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 텍스트 : element.outerHTML() : 요소
+                텍스트(태그 포함, 자식 포함) 설정하기</a
+              >
+            </li>
+          </ul>
+          <br />
+          <span>클래스</span>
+          <ul>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 클래스 : element.classList.add() : 클래스
+                추가하기</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 클래스 : element.classList.remove() : 클래스
+                삭제하기</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 클래스 : element.classList.toggle() : 클래스
+                추가/삭제하기</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 클래스 : element.classList.contains() :
+                클래스 존재 여부 확인</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 클래스 : element.style.속성명 : CSS 스타일
+                설정</a
+              >
+            </li>
+          </ul>
+          <br />
+          <span>요소의 크기</span>
+          <ul>
+            <li>
+              <a href="#"
+                >01. 요소 속성 : 크기 및 위치 : element.clientWidth : 요소의
+                가로값(마진/보더 미포함)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 속성 : 크기 및 위치 : element.clientHeight : 요소의
+                세로값(마진/보더 미포함)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 속성 : 크기 및 위치 : element.clientTop : 요소의 Y축
+                값(부모 기준)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 속성 : 크기 및 위치 : element.clientLeft : 요소의 X축
+                값(부모 기준)</a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="#"
+                >01. 요소 속성 : 크기 및 위치 : element.offsetWidth : 요소의
+                가로값(보더/패딩 포함)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 속성 : 크기 및 위치 : element.offsetHeight : 요소의
+                세로값(보더/패딩 포함)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 속성 : 크기 및 위치 : element.offsetTop : 요소의 Y축
+                값(문서 기준)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 요소 속성 : 크기 및 위치 : element.offsetLeft : 요소의 X축
+                값(문서 기준)</a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="#"
+                >01. 요소 메서드 : 크기 및 위치 :
+                element.getBoundingClientRect() : 요소의 크기 및 위치 값을
+                설정</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </main>
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+      <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
     </footer>
     <!-- //footer -->
     <script src="assets/js/top.js"></script>
-</body>
+  </body>
 </html>

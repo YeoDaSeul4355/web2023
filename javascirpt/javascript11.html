@@ -1,141 +1,266 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript : 이벤트 객체</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/ico/javascript.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/ico/javascript.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/ico/javascript192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/ico/javascript192x192.png"
+    />
 
     <style>
-        span {
-            font-size: 22px;
-            color: #ff559c;
-        }
+      span {
+        font-size: 22px;
+        color: #ff559c;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header id="header">
-        <div class="moveTopBtn">🔝</div>
-        <h1><a href="index.html">javascript</a></h1>
-        <nav>
-            <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러오기</a></li>
-                <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li><a href="javascript04.html">데이터 제어하기</a></li>
-            </ul>
-            <ul>
-                <li><a href="javascript05.html">문자열 객체</a></li>
-                <li><a href="javascript06.html">배열 객체</a></li>
-                <li><a href="javascript07.html">수학 객체</a></li>
-                <li><a href="javascript08.html">숫자 객체</a></li>
-                <li><a href="javascript09.html">브라우저 객체</a></li>
-                <li><a href="javascript10.html">요소 객체</a></li>
-                <li class="active"><a href="javascript11.html">이벤트 객체</a></li>
-            </ul>
-            <ul class="last">
-                <li><a href="javascript12.html">데이터 효과</a></li>
-                <li><a href="javascript13.html">검색 효과</a></li>
-                <li><a href="javascript14.html">퀴즈 효과</a></li>
-                <li><a href="javascript15.html">마우스 효과</a></li>
-                <li><a href="javascript16.html">슬라이드 효과</a></li>
-                <li><a href="javascript17.html">패럴랙스 효과</a></li>
-                <li><a href="javascript18.html">게임 효과</a></li>
-            </ul>
-        </nav>
+      <div class="moveTopBtn">🔝</div>
+      <h1><a href="index.html">javascript</a></h1>
+      <nav>
+        <ul>
+          <li><a href="javascript01.html">데이터 저장하기</a></li>
+          <li><a href="javascript02.html">데이터 불러오기</a></li>
+          <li><a href="javascript03.html">데이터 실행하기</a></li>
+          <li><a href="javascript04.html">데이터 제어하기</a></li>
+          <li><a href="javascript19.html">간단한 프로젝트</a></li>
+        </ul>
+        <ul>
+          <li><a href="javascript05.html">문자열 객체</a></li>
+          <li><a href="javascript06.html">배열 객체</a></li>
+          <li><a href="javascript07.html">수학 객체</a></li>
+          <li><a href="javascript08.html">숫자 객체</a></li>
+          <li><a href="javascript09.html">브라우저 객체</a></li>
+          <li><a href="javascript10.html">요소 객체</a></li>
+          <li class="active"><a href="javascript11.html">이벤트 객체</a></li>
+        </ul>
+        <ul class="last">
+          <li><a href="javascript12.html">데이터 효과</a></li>
+          <li><a href="javascript13.html">검색 효과</a></li>
+          <li><a href="javascript14.html">퀴즈 효과</a></li>
+          <li><a href="javascript15.html">마우스 효과</a></li>
+          <li><a href="javascript16.html">슬라이드 효과</a></li>
+          <li><a href="javascript17.html">패럴랙스 효과</a></li>
+          <li><a href="javascript18.html">게임 효과</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- //header -->
-    
+
     <main id="main">
-        <div class="container">
-            <div class="main__menu">
-                <span>마우스</span>
-                <ul>
-                    <li>01. 이벤트 메서드 : addEventListener("click") : 클릭 했을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("dblclick") : 더블 클릭 했을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("load") : 문서 로딩이 끝났을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("error") : 문서가 정확히 로딩되지 않았을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("scroll") : 스크롤 했을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("resize") : 브라우저 사이즈 변경 됐을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("selectstart") : 텍스트 선택을 시작했을 때</li>
-                </ul>
-                <br>
-                <span>포인터</span>
-                <ul>
-                    <li>01. 이벤트 메서드 : addEventListener("mousedown") : 마우스 버튼을 클릭 했을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("mouseup") : 마우스 버튼을 떼는 경우</li>
-                    <li>01. 이벤트 메서드 : addEventListener("mousemove") : 마우스를 움직이는 경우</li>
-                    <li>01. 이벤트 메서드 : addEventListener("mouseenter") : 요소 위에 포인터 요소 위치가 있을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("mouseleave") : 요소 위에 포인터 요소 위치가 벗어 났을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("mouseover") : 요소 위에 포인터 요소 위치가 있을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("mouseout") : 요소 위에 포인터 요소 위치가 벗어났을 때</li>
-                </ul>
-                <br>
-                <span>폼</span>
-                <ul>
-                    <li>01. 이벤트 메서드 : addEventListener("blur") : 폼 요소에 포커스를 잃었을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("change") : 목록이나 체크 상태 등이 변경되었을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("focus") : 폼 요소에 포커스를 놓았을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("reset") : 폼이 리셋 되었을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("submit") : 폼에 있는 버튼을 클릭했을 때</li>
-                </ul>
-                <br>
-                <span>드래그</span>
-                <ul>
-                    <li>01. 이벤트 메서드 : addEventListener("drag") : 드래그 중인 경우</li>
-                    <li>01. 이벤트 메서드 : addEventListener("dragstart") : 드래그를 시작 했을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("dragend") : 드래그 끝났을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("dragenter") : 요소의 위치에 드래그 했을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("dragover") : 요소의 위치 위에 있을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("dragleave") : 요소의 위치 위에서 벗어 났을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("drop") : 요소의 위치에 드롭 했을 때</li>
-                </ul>
-                <br>
-                <span>키보드</span>
-                <ul>
-                    <li>01. 이벤트 메서드 : addEventListener("keydown") : 키 눌렀을 때(한 번만 실행)</li>
-                    <li>01. 이벤트 메서드 : addEventListener("keypress") : 키 눌렀을 때(누르고 있으면 계속 실행)</li>
-                    <li>01. 이벤트 메서드 : addEventListener("keyup") : 키 누르고 뗐을 때</li>
-                </ul>
-                <br>
-                <span>터치</span>
-                <ul>
-                    <li>01. 이벤트 메서드 : addEventListener("touchstart") : 터치가 시작 됐을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("touchmove") : 터치가 움직이고 있을 때</li>
-                    <li>01. 이벤트 메서드 : addEventListener("touchend") : 터치가 끝났을 때</li>
-                </ul>
-                <br>
-                <ul>
-                    <span>작동 해지</span>
-                    <li>01. 이벤트 메서드 : preventDefault() : 이벤트 작동 해지</li>
-                    <li>01. 이벤트 메서드 : dispatchDefault() : 이벤트 작동 해지</li>
-                </ul>
-                <br>
-                <span>속성</span>
-                <ul>
-                    <li><a href="#">01. 이벤트 속성 : clientX : X좌표 값 : 브라우저 기준</a></li>
-                    <li><a href="#">01. 이벤트 속성 : clientY : Y좌표 값 : 브라우저 기준</a></li>
-                    <li><a href="#">01. 이벤트 속성 : offsetX : X좌표 값 : 요소 기준</a></li>
-                    <li><a href="#">01. 이벤트 속성 : offsetY : Y좌표 값 : 요소 기준</a></li>
-                    <li><a href="#">01. 이벤트 속성 : pageX : X좌표 값 : 페이지 기준</a></li>
-                    <li><a href="#">01. 이벤트 속성 : pageY : Y좌표 값 : 페이지 기준</a></li>
-                    <li><a href="#">01. 이벤트 속성 : screenX : X좌표 값 : 디바이스 기준</a></li>
-                    <li><a href="#">01. 이벤트 속성 : screenY : Y좌표 값 : 디바이스 기준</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="main__menu">
+          <span>마우스</span>
+          <ul>
+            <li>
+              01. 이벤트 메서드 : addEventListener("click") : 클릭 했을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("dblclick") : 더블 클릭 했을
+              때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("load") : 문서 로딩이 끝났을
+              때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("error") : 문서가 정확히
+              로딩되지 않았을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("scroll") : 스크롤 했을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("resize") : 브라우저 사이즈
+              변경 됐을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("selectstart") : 텍스트
+              선택을 시작했을 때
+            </li>
+          </ul>
+          <br />
+          <span>포인터</span>
+          <ul>
+            <li>
+              01. 이벤트 메서드 : addEventListener("mousedown") : 마우스 버튼을
+              클릭 했을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("mouseup") : 마우스 버튼을
+              떼는 경우
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("mousemove") : 마우스를
+              움직이는 경우
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("mouseenter") : 요소 위에
+              포인터 요소 위치가 있을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("mouseleave") : 요소 위에
+              포인터 요소 위치가 벗어 났을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("mouseover") : 요소 위에
+              포인터 요소 위치가 있을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("mouseout") : 요소 위에
+              포인터 요소 위치가 벗어났을 때
+            </li>
+          </ul>
+          <br />
+          <span>폼</span>
+          <ul>
+            <li>
+              01. 이벤트 메서드 : addEventListener("blur") : 폼 요소에 포커스를
+              잃었을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("change") : 목록이나 체크
+              상태 등이 변경되었을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("focus") : 폼 요소에 포커스를
+              놓았을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("reset") : 폼이 리셋 되었을
+              때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("submit") : 폼에 있는 버튼을
+              클릭했을 때
+            </li>
+          </ul>
+          <br />
+          <span>드래그</span>
+          <ul>
+            <li>
+              01. 이벤트 메서드 : addEventListener("drag") : 드래그 중인 경우
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("dragstart") : 드래그를 시작
+              했을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("dragend") : 드래그 끝났을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("dragenter") : 요소의 위치에
+              드래그 했을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("dragover") : 요소의 위치
+              위에 있을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("dragleave") : 요소의 위치
+              위에서 벗어 났을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("drop") : 요소의 위치에 드롭
+              했을 때
+            </li>
+          </ul>
+          <br />
+          <span>키보드</span>
+          <ul>
+            <li>
+              01. 이벤트 메서드 : addEventListener("keydown") : 키 눌렀을 때(한
+              번만 실행)
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("keypress") : 키 눌렀을
+              때(누르고 있으면 계속 실행)
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("keyup") : 키 누르고 뗐을 때
+            </li>
+          </ul>
+          <br />
+          <span>터치</span>
+          <ul>
+            <li>
+              01. 이벤트 메서드 : addEventListener("touchstart") : 터치가 시작
+              됐을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("touchmove") : 터치가
+              움직이고 있을 때
+            </li>
+            <li>
+              01. 이벤트 메서드 : addEventListener("touchend") : 터치가 끝났을
+              때
+            </li>
+          </ul>
+          <br />
+          <ul>
+            <span>작동 해지</span>
+            <li>01. 이벤트 메서드 : preventDefault() : 이벤트 작동 해지</li>
+            <li>01. 이벤트 메서드 : dispatchDefault() : 이벤트 작동 해지</li>
+          </ul>
+          <br />
+          <span>속성</span>
+          <ul>
+            <li>
+              <a href="#"
+                >01. 이벤트 속성 : clientX : X좌표 값 : 브라우저 기준</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 이벤트 속성 : clientY : Y좌표 값 : 브라우저 기준</a
+              >
+            </li>
+            <li>
+              <a href="#">01. 이벤트 속성 : offsetX : X좌표 값 : 요소 기준</a>
+            </li>
+            <li>
+              <a href="#">01. 이벤트 속성 : offsetY : Y좌표 값 : 요소 기준</a>
+            </li>
+            <li>
+              <a href="#">01. 이벤트 속성 : pageX : X좌표 값 : 페이지 기준</a>
+            </li>
+            <li>
+              <a href="#">01. 이벤트 속성 : pageY : Y좌표 값 : 페이지 기준</a>
+            </li>
+            <li>
+              <a href="#"
+                >01. 이벤트 속성 : screenX : X좌표 값 : 디바이스 기준</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >01. 이벤트 속성 : screenY : Y좌표 값 : 디바이스 기준</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </main>
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+      <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
     </footer>
     <!-- //footer -->
     <script src="assets/js/top.js"></script>
-</body>
+  </body>
 </html>

@@ -1,101 +1,294 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript : 배열 객체</title>
 
-    <link rel="stylesheet" href="assets/css/default.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/ico/javascript.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
-
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/default.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/ico/javascript.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/ico/javascript192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/ico/javascript192x192.png"
+    />
+  </head>
+  <body>
     <header id="header">
-        <div class="moveTopBtn">🔝</div>
-        <h1><a href="index.html">javascript</a></h1>
-        <nav>
-            <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러오기</a></li>
-                <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li><a href="javascript04.html">데이터 제어하기</a></li>
-            </ul>
-            <ul>
-                <li><a href="javascript05.html">문자열 객체</a></li>
-                <li class="active"><a href="javascript06.html">배열 객체</a></li>
-                <li><a href="javascript07.html">수학 객체</a></li>
-                <li><a href="javascript08.html">숫자 객체</a></li>
-                <li><a href="javascript09.html">브라우저 객체</a></li>
-                <li><a href="javascript10.html">요소 객체</a></li>
-                <li><a href="javascript11.html">이벤트 객체</a></li>
-            </ul>
-            <ul class="last">
-                <li><a href="javascript12.html">데이터 효과</a></li>
-                <li><a href="javascript13.html">검색 효과</a></li>
-                <li><a href="javascript14.html">퀴즈 효과</a></li>
-                <li><a href="javascript15.html">마우스 효과</a></li>
-                <li><a href="javascript16.html">슬라이드 효과</a></li>
-                <li><a href="javascript17.html">패럴랙스 효과</a></li>
-                <li><a href="javascript18.html">게임 효과</a></li>
-            </ul>
-        </nav>
+      <div class="moveTopBtn">🔝</div>
+      <h1><a href="index.html">javascript</a></h1>
+      <nav>
+        <ul>
+          <li><a href="javascript01.html">데이터 저장하기</a></li>
+          <li><a href="javascript02.html">데이터 불러오기</a></li>
+          <li><a href="javascript03.html">데이터 실행하기</a></li>
+          <li><a href="javascript04.html">데이터 제어하기</a></li>
+          <li><a href="javascript19.html">간단한 프로젝트</a></li>
+        </ul>
+        <ul>
+          <li><a href="javascript05.html">문자열 객체</a></li>
+          <li class="active"><a href="javascript06.html">배열 객체</a></li>
+          <li><a href="javascript07.html">수학 객체</a></li>
+          <li><a href="javascript08.html">숫자 객체</a></li>
+          <li><a href="javascript09.html">브라우저 객체</a></li>
+          <li><a href="javascript10.html">요소 객체</a></li>
+          <li><a href="javascript11.html">이벤트 객체</a></li>
+        </ul>
+        <ul class="last">
+          <li><a href="javascript12.html">데이터 효과</a></li>
+          <li><a href="javascript13.html">검색 효과</a></li>
+          <li><a href="javascript14.html">퀴즈 효과</a></li>
+          <li><a href="javascript15.html">마우스 효과</a></li>
+          <li><a href="javascript16.html">슬라이드 효과</a></li>
+          <li><a href="javascript17.html">패럴랙스 효과</a></li>
+          <li><a href="javascript18.html">게임 효과</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- //header -->
-    
+
     <main id="main">
-        <div class="container">
-            <div class="main__menu">
-                <ul>
-                    <li><a href="#sample01">01. <strong>array.prototype.at()</strong>                메서드는 지정한 숫자(index)를 받아, 배열에서 해당 되는 인덱스의 요소를 반환합니다.</a></li>
-                    <li><a href="#sample02">02. <strong>array.prototype.concat()</strong>            메서드는 둘 이상의 배열을 결합하여, 새로운 배열을 반환합니다.</a></li>
-                    <li><a href="#sample03">03. <strong>array.prototype.copyWithin()</strong>        메서드는 배열의 일부를 얕게 복사한 뒤, 동일한 배열의 다른 위치에 덮어쓰고 그 배열을 반환합니다</a></li>
-                    <li><a href="#sample04">04. <strong>array.prototype.entries()</strong>           메서드는 배열의 각 인덱스에 대한 속성 값을 반환합니다</a></li>
-                    <li><a href="#sample05">05. <strong>array.prototype.keys()</strong>              메서드는 배열의 각 인덱스에 대한 키 값을 반환합니다.</a></li>
-                    <li><a href="#sample06">06. <strong>array.prototype.fill()</strong>              메서드는 배열의 시작 인덱스부터 끝 인덱스까지 하나의 값으로 반환합니다.</a></li>
-                    <li><a href="#sample07">07. <strong>array.prototype.find()</strong>✍              메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다</a></li>
-                    <li><a href="#sample08">08. <strong>array.prototype.findIndex()</strong>         메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 인덱스로 반환합니다</a></li>
-                    <li><a href="#sample09">09. <strong>array.prototype.findLast()</strong>          메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 역순으로 반환합니다</a></li>
-                    <li><a href="#sample10">10. <strong>array.prototype.findLastIndex()</strong>     메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 역순 인덱스로 반환합니다</a></li>
-                    <li><a href="#sample11">11. <strong>array.prototype.flat()</strong>              메서드는 중첩된 배열을 하나의 배열로 반환합니다.</a></li>
-                    <li><a href="#sample12">12. <strong>array.prototype.flatMap()</strong>           메서드는 먼저 매핑함수를 사용해 각 엘리먼트에 대해 map 수행 후, 결과를 새로운 배열로 평탄화합니다.</a></li>
-                    <li><a href="#sample13">13. <strong>array.prototype.forEach()</strong>✍✍✍           메서드는 주어진 함수 조건을 배열 요소 각각에 대해 실행하고, 그 결과를 반환합니다.</a></li>
-                    <li><a href="#sample14">14. <strong>array.prototype.filter()</strong>            메서드는 주어진 함수 조건에 맞는 모든 요소를 새로운 배열로 반환합니다.</a></li>
-                    <li><a href="#sample15">15. <strong>array.prototype.every()</strong>             메서드는 주어진 함수를 모두 통과하는지 확인하고, 불린(true, false)로 반환합니다.</a></li>
-                    <li><a href="#sample16">16. <strong>array.prototype.map()</strong>✍✍✍               메서드는 주어진 함수를 호출하고, 그 결과를 모아서 만든 새로운 배열을 반환합니다.</a></li>
-                    <li><a href="#sample17">17. <strong>array.prototype.some()</strong>              메서드는 주어진 판별 함수를 통과하는지 테스트하여, 그 그결과를 불린(true, false)로 반환합니다.</a></li>
-                    <li><a href="#sample18">18. <strong>array.prototype.includes()</strong>          메서드는 배열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</a></li>
-                    <li><a href="#sample19">19. <strong>array.prototype.indexOf()</strong>✍           메서드는 배열을 검색하고, 위치값(숫자)을 반환합니다.</a></li>
-                    <li><a href="#sample20">20. <strong>array.prototype.lastIndexOf()</strong>       메서드는 역순으로 배열을 검색하고, 위치값(숫자)을 반환합니다.</a></li>
-                    <li><a href="#sample21">21. <strong>array.prototype.join()</strong>✍              메서드는 배열의 요소를 추가하여, 하나의 문자열로 반환합니다.</a></li>
-                    <li><a href="#sample22">22. <strong>array.prototype.pop()</strong>               메서드는 배열 마지막 요소를 제거하고, 제거한 요소를 반환합니다.</a></li>
-                    <li><a href="#sample23">23. <strong>array.prototype.push()</strong>✍             메서드는 배열 끝에 요소를 추가하고, 배열의 새로운 길이값을 반환합니다.</a></li>
-                    <li><a href="#sample24">24. <strong>array.prototype.reduce()</strong>            메서드는 배열의 각 요소를 실행하고, 하나의 결과값을 반환합니다.</a></li>
-                    <li><a href="#sample25">25. <strong>array.prototype.reduceRight()</strong>       메서드는 배열의 각 요소를 마지막부터 실행하고, 하나의 결과값을 반환합니다.</a></li>
-                    <li><a href="#sample26">26. <strong>array.prototype.reverse()</strong>           메서드는 배열 요소의 순서를 반대로 하고, 반대로 된 배열을 반환합니다.</a></li>
-                    <li><a href="#sample27">27. <strong>array.prototype.shift()</strong>             메서드는 배열 처음 요소를 제거하고, 제거한 요소를 반환합니다.</a></li>
-                    <li><a href="#sample28">28. <strong>array.prototype.unshift()</strong>           메서드는 배열 앞에 요소를 추가하고, 배열의 새로운 길이 값을 반환합니다.</a></li>
-                    <li><a href="#sample29">29. <strong>array.prototype.slice()</strong>✍             메서드는 배열 시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</a></li>
-                    <li><a href="#sample30">30. <strong>array.prototype.splice()</strong>✍             메서드는 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</a></li>
-                    <li><a href="#sample31">31. <strong>array.prototype.sort()</strong>✍             메서드는 배열의 요소를 적절한 위치에 정렬한 후, 그 배열을 반환합니다.</a></li>
-                    <li><a href="#sample32">32. <strong>array.prototype.toLocaleString()</strong>    메서드는 배열의 요소를 문자열로 반환합니다.</a></li>
-                    <li><a href="#sample33">33. <strong>array.prototype.toString()</strong>          메서드는 데이터를 배열로 변환하고, 새로운 배열을 반환합니다.</a></li>
-                    <li><a href="#sample34">34. <strong>array.prototype.values()</strong>            메서드는 배열 각 인덱스에 대한 값을 객체로 반환합니다.</a></li>
-                </ul>
-            </div>
-            <div class="main__sample">
-                <!-- sample29 -->
-                <div id="sample29" class="sample">
-                    <h3>29. slice()</h3>
-                    <div class="notice">"배열".slice(시작위치, [끝나는 위치])</div>
-                    <ul>
-                        <li>시작 위치에서 종료 위치 값을 추출하여 새로운 배열을 반환합니다.</li>
-                    </ul>
-                    <div class="script">
-<pre><code class="Language-js">{
+      <div class="container">
+        <div class="main__menu">
+          <ul>
+            <li>
+              <a href="#sample01"
+                >01. <strong>array.prototype.at()</strong> 메서드는 지정한
+                숫자(index)를 받아, 배열에서 해당 되는 인덱스의 요소를
+                반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample02"
+                >02. <strong>array.prototype.concat()</strong> 메서드는 둘
+                이상의 배열을 결합하여, 새로운 배열을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample03"
+                >03. <strong>array.prototype.copyWithin()</strong> 메서드는
+                배열의 일부를 얕게 복사한 뒤, 동일한 배열의 다른 위치에 덮어쓰고
+                그 배열을 반환합니다</a
+              >
+            </li>
+            <li>
+              <a href="#sample04"
+                >04. <strong>array.prototype.entries()</strong> 메서드는 배열의
+                각 인덱스에 대한 속성 값을 반환합니다</a
+              >
+            </li>
+            <li>
+              <a href="#sample05"
+                >05. <strong>array.prototype.keys()</strong> 메서드는 배열의 각
+                인덱스에 대한 키 값을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample06"
+                >06. <strong>array.prototype.fill()</strong> 메서드는 배열의
+                시작 인덱스부터 끝 인덱스까지 하나의 값으로 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample07"
+                >07. <strong>array.prototype.find()</strong>✍ 메서드는 주어진
+                판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다</a
+              >
+            </li>
+            <li>
+              <a href="#sample08"
+                >08. <strong>array.prototype.findIndex()</strong> 메서드는
+                주어진 판별 함수를 만족하는 첫 번째 요소의 값을 인덱스로
+                반환합니다</a
+              >
+            </li>
+            <li>
+              <a href="#sample09"
+                >09. <strong>array.prototype.findLast()</strong> 메서드는 주어진
+                판별 함수를 만족하는 첫 번째 요소의 값을 역순으로 반환합니다</a
+              >
+            </li>
+            <li>
+              <a href="#sample10"
+                >10. <strong>array.prototype.findLastIndex()</strong> 메서드는
+                주어진 판별 함수를 만족하는 첫 번째 요소의 값을 역순 인덱스로
+                반환합니다</a
+              >
+            </li>
+            <li>
+              <a href="#sample11"
+                >11. <strong>array.prototype.flat()</strong> 메서드는 중첩된
+                배열을 하나의 배열로 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample12"
+                >12. <strong>array.prototype.flatMap()</strong> 메서드는 먼저
+                매핑함수를 사용해 각 엘리먼트에 대해 map 수행 후, 결과를 새로운
+                배열로 평탄화합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample13"
+                >13. <strong>array.prototype.forEach()</strong>✍✍✍ 메서드는
+                주어진 함수 조건을 배열 요소 각각에 대해 실행하고, 그 결과를
+                반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample14"
+                >14. <strong>array.prototype.filter()</strong> 메서드는 주어진
+                함수 조건에 맞는 모든 요소를 새로운 배열로 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample15"
+                >15. <strong>array.prototype.every()</strong> 메서드는 주어진
+                함수를 모두 통과하는지 확인하고, 불린(true, false)로
+                반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample16"
+                >16. <strong>array.prototype.map()</strong>✍✍✍ 메서드는
+                주어진 함수를 호출하고, 그 결과를 모아서 만든 새로운 배열을
+                반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample17"
+                >17. <strong>array.prototype.some()</strong> 메서드는 주어진
+                판별 함수를 통과하는지 테스트하여, 그 그결과를 불린(true,
+                false)로 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample18"
+                >18. <strong>array.prototype.includes()</strong> 메서드는 배열
+                포함 여부를 검색하여, 불린(true, false)을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample19"
+                >19. <strong>array.prototype.indexOf()</strong>✍ 메서드는
+                배열을 검색하고, 위치값(숫자)을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample20"
+                >20. <strong>array.prototype.lastIndexOf()</strong> 메서드는
+                역순으로 배열을 검색하고, 위치값(숫자)을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample21"
+                >21. <strong>array.prototype.join()</strong>✍ 메서드는 배열의
+                요소를 추가하여, 하나의 문자열로 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample22"
+                >22. <strong>array.prototype.pop()</strong> 메서드는 배열 마지막
+                요소를 제거하고, 제거한 요소를 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample23"
+                >23. <strong>array.prototype.push()</strong>✍ 메서드는 배열
+                끝에 요소를 추가하고, 배열의 새로운 길이값을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample24"
+                >24. <strong>array.prototype.reduce()</strong> 메서드는 배열의
+                각 요소를 실행하고, 하나의 결과값을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample25"
+                >25. <strong>array.prototype.reduceRight()</strong> 메서드는
+                배열의 각 요소를 마지막부터 실행하고, 하나의 결과값을
+                반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample26"
+                >26. <strong>array.prototype.reverse()</strong> 메서드는 배열
+                요소의 순서를 반대로 하고, 반대로 된 배열을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample27"
+                >27. <strong>array.prototype.shift()</strong> 메서드는 배열 처음
+                요소를 제거하고, 제거한 요소를 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample28"
+                >28. <strong>array.prototype.unshift()</strong> 메서드는 배열
+                앞에 요소를 추가하고, 배열의 새로운 길이 값을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample29"
+                >29. <strong>array.prototype.slice()</strong>✍ 메서드는 배열
+                시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을
+                반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample30"
+                >30. <strong>array.prototype.splice()</strong>✍ 메서드는 배열의
+                기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의
+                내용을 변경합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample31"
+                >31. <strong>array.prototype.sort()</strong>✍ 메서드는 배열의
+                요소를 적절한 위치에 정렬한 후, 그 배열을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample32"
+                >32. <strong>array.prototype.toLocaleString()</strong> 메서드는
+                배열의 요소를 문자열로 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample33"
+                >33. <strong>array.prototype.toString()</strong> 메서드는
+                데이터를 배열로 변환하고, 새로운 배열을 반환합니다.</a
+              >
+            </li>
+            <li>
+              <a href="#sample34"
+                >34. <strong>array.prototype.values()</strong> 메서드는 배열 각
+                인덱스에 대한 값을 객체로 반환합니다.</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="main__sample">
+          <!-- sample29 -->
+          <div id="sample29" class="sample">
+            <h3>29. slice()</h3>
+            <div class="notice">"배열".slice(시작위치, [끝나는 위치])</div>
+            <ul>
+              <li>
+                시작 위치에서 종료 위치 값을 추출하여 새로운 배열을 반환합니다.
+              </li>
+            </ul>
+            <div class="script">
+              <pre><code class="Language-js">{
     ['j','a','v','a','s','c','r','i','p','t'];                      //['j','a','v','a','s','c','r','i','p','t']
     ['j','a','v','a','s','c','r','i','p','t'].slice(1);             //['a','v','a','s','c','r','i','p','t']
     ['j','a','v','a','s','c','r','i','p','t'].slice(2);             //['v','a','s','c','r','i','p','t']
@@ -113,18 +306,23 @@
     ['j','a','v','a','s','c','r','i','p','t'].slice(-3, -2);        //['i']
 }
 </code></pre>
-                    </div>
-                </div>
-                <!-- sample29 -->
-                <!-- sample30 -->
-                <div id="sample30" class="sample">
-                    <h3>30. splice()</h3>
-                    <div class="notice">"배열".slice(시작위치, [삭제 갯수], [요소])</div>
-                    <ul>
-                        <li>배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</li>
-                    </ul>
-                    <div class="script">
-<pre><code class="Language-js">{
+            </div>
+          </div>
+          <!-- sample29 -->
+          <!-- sample30 -->
+          <div id="sample30" class="sample">
+            <h3>30. splice()</h3>
+            <div class="notice">
+              "배열".slice(시작위치, [삭제 갯수], [요소])
+            </div>
+            <ul>
+              <li>
+                배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여
+                배열의 내용을 변경합니다.
+              </li>
+            </ul>
+            <div class="script">
+              <pre><code class="Language-js">{
     const arrNum1 = [100, 200, 300, 400, 500];
     const result1 = arrNum1.splice(1);
 
@@ -177,21 +375,23 @@
     //arrNum은 나머지 + 추가된 요소
 }
 </code></pre>
-                    </div>
-                </div>
-                <!-- sample30 -->
             </div>
+          </div>
+          <!-- sample30 -->
         </div>
+      </div>
     </main>
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+      <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
     </footer>
     <!-- //footer -->
 
     <script src="assets/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <script src="assets/js/top.js"></script>
-</body>
+  </body>
 </html>

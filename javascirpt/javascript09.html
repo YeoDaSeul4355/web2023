@@ -1,85 +1,184 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript : 브라우저 객체</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/ico/javascript.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
-
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/ico/javascript.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/ico/javascript192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/ico/javascript192x192.png"
+    />
+  </head>
+  <body>
     <header id="header">
-        <div class="moveTopBtn">🔝</div>
-        <h1><a href="index.html">javascript</a></h1>
-        <nav>
-            <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러오기</a></li>
-                <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li><a href="javascript04.html">데이터 제어하기</a></li>
-            </ul>
-            <ul>
-                <li><a href="javascript05.html">문자열 객체</a></li>
-                <li><a href="javascript06.html">배열 객체</a></li>
-                <li><a href="javascript07.html">수학 객체</a></li>
-                <li><a href="javascript08.html">숫자 객체</a></li>
-                <li class="active"><a href="javascript09.html">브라우저 객체</a></li>
-                <li><a href="javascript10.html">요소 객체</a></li>
-                <li><a href="javascript11.html">이벤트 객체</a></li>
-            </ul>
-            <ul class="last">
-                <li><a href="javascript12.html">데이터 효과</a></li>
-                <li><a href="javascript13.html">검색 효과</a></li>
-                <li><a href="javascript14.html">퀴즈 효과</a></li>
-                <li><a href="javascript15.html">마우스 효과</a></li>
-                <li><a href="javascript16.html">슬라이드 효과</a></li>
-                <li><a href="javascript17.html">패럴랙스 효과</a></li>
-                <li><a href="javascript18.html">게임 효과</a></li>
-            </ul>
-        </nav>
+      <div class="moveTopBtn">🔝</div>
+      <h1><a href="index.html">javascript</a></h1>
+      <nav>
+        <ul>
+          <li><a href="javascript01.html">데이터 저장하기</a></li>
+          <li><a href="javascript02.html">데이터 불러오기</a></li>
+          <li><a href="javascript03.html">데이터 실행하기</a></li>
+          <li><a href="javascript04.html">데이터 제어하기</a></li>
+          <li><a href="javascript19.html">간단한 프로젝트</a></li>
+        </ul>
+        <ul>
+          <li><a href="javascript05.html">문자열 객체</a></li>
+          <li><a href="javascript06.html">배열 객체</a></li>
+          <li><a href="javascript07.html">수학 객체</a></li>
+          <li><a href="javascript08.html">숫자 객체</a></li>
+          <li class="active"><a href="javascript09.html">브라우저 객체</a></li>
+          <li><a href="javascript10.html">요소 객체</a></li>
+          <li><a href="javascript11.html">이벤트 객체</a></li>
+        </ul>
+        <ul class="last">
+          <li><a href="javascript12.html">데이터 효과</a></li>
+          <li><a href="javascript13.html">검색 효과</a></li>
+          <li><a href="javascript14.html">퀴즈 효과</a></li>
+          <li><a href="javascript15.html">마우스 효과</a></li>
+          <li><a href="javascript16.html">슬라이드 효과</a></li>
+          <li><a href="javascript17.html">패럴랙스 효과</a></li>
+          <li><a href="javascript18.html">게임 효과</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- //header -->
-    
+
     <main id="main">
-        <div class="container">
-            <div class="main__menu">
-                <ul>
-                    <li><a href="#">브라우저 속성 : <strong>window.innerWidth</strong> : 브라우저 가로값(스크롤바 미포함)</a></li>
-                    <li><a href="#">브라우저 속성 : <strong>window.innerHeight</strong> : 브라우저 세로값(스크롤바 미포함)</a></li>
-                    <li><a href="#">브라우저 속성 : <strong>window.outerWidth</strong> : 브라우저 가로값(스크롤바 포함)</a></li>
-                    <li><a href="#">브라우저 속성 : <strong>window.outerHeight</strong> : 브라우저 세로값(스크롤바 포함)</a></li>
-                    <li><a href="#">브라우저 속성 : <strong>window.screen.width</strong> : 모니터의 가로값</a></li>
-                    <li><a href="#">브라우저 속성 : <strong>window.screen.height</strong> : 모니터의 세로값</a></li>
+      <div class="container">
+        <div class="main__menu">
+          <ul>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.innerWidth</strong> : 브라우저
+                가로값(스크롤바 미포함)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.innerHeight</strong> : 브라우저
+                세로값(스크롤바 미포함)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.outerWidth</strong> : 브라우저
+                가로값(스크롤바 포함)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.outerHeight</strong> : 브라우저
+                세로값(스크롤바 포함)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.screen.width</strong> : 모니터의
+                가로값</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.screen.height</strong> :
+                모니터의 세로값</a
+              >
+            </li>
 
-                    <li><a href="#">브라우저 속성 : <strong>window.pageXOffset</strong> : 가로 스크롤 값(브라우저 기준)</a></li>
-                    <li><a href="#">브라우저 속성 : <strong>window.pageYOffset</strong> : 세로 스크롤 값(브라우저 기준)</a></li>
-                    <li><a href="#">브라우저 속성 : <strong>window.scrollX</strong> : 가로 스크롤 값(브라우저 기준)</a></li>
-                    <li><a href="#">브라우저 속성 : <strong>window.scrollY</strong> : 세로 스크롤 값(브라우저 기준)</a></li>
-                    <li><a href="#">문서 속성 : <strong>document.documentElement.scrollY</strong> : 세로 스크롤 값(브라우저 기준)</a></li>
-                    <li><a href="#">문서 속성 : <strong>document.documentElement.scrollX</strong> : 가로 스크롤 값(브라우저 기준)</a></li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.pageXOffset</strong> : 가로
+                스크롤 값(브라우저 기준)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.pageYOffset</strong> : 세로
+                스크롤 값(브라우저 기준)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.scrollX</strong> : 가로 스크롤
+                값(브라우저 기준)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 속성 : <strong>window.scrollY</strong> : 세로 스크롤
+                값(브라우저 기준)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >문서 속성 : <strong>document.documentElement.scrollY</strong> :
+                세로 스크롤 값(브라우저 기준)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >문서 속성 : <strong>document.documentElement.scrollX</strong> :
+                가로 스크롤 값(브라우저 기준)</a
+              >
+            </li>
 
-                    <li><a href="#">브라우저 메서드 : <strong>window.scroll()</strong> : 스크롤 값 설정</a></li>
-                    <li><a href="#">브라우저 메서드 : <strong>window.scrollTo()</strong> : 스크롤 값 설정(절대 기준)</a></li>
-                    <li><a href="#">브라우저 메서드 : <strong>window.scrollBy()</strong> : 스크롤 값 설정(상대 기준)</a></li>
+            <li>
+              <a href="#"
+                >브라우저 메서드 : <strong>window.scroll()</strong> : 스크롤 값
+                설정</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 메서드 : <strong>window.scrollTo()</strong> : 스크롤
+                값 설정(절대 기준)</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >브라우저 메서드 : <strong>window.scrollBy()</strong> : 스크롤
+                값 설정(상대 기준)</a
+              >
+            </li>
 
-                    <li><a href="#">요소 속성 : <strong>element.scrollLeft</strong> : 가로 스크롤 값</a></li>
-                    <li><a href="#">요소 속성 : <strong>element.scrollTop</strong> : 가로 스크롤 값</a></li>
-                    <li><a href="#">요소 메서드 : <strong>element.scrollIntoView</strong>() : 스크롤 이동 및 설정</a></li>
-                </ul>
-            </div>
+            <li>
+              <a href="#"
+                >요소 속성 : <strong>element.scrollLeft</strong> : 가로 스크롤
+                값</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >요소 속성 : <strong>element.scrollTop</strong> : 가로 스크롤
+                값</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >요소 메서드 : <strong>element.scrollIntoView</strong>() :
+                스크롤 이동 및 설정</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </main>
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
+      <a href="mailto:dsy1943@naver.com">dsy1943@naver.com</a>
     </footer>
     <!-- //footer -->
     <script src="assets/js/top.js"></script>
-</body>
+  </body>
 </html>
