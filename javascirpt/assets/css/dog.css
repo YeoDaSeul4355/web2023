@@ -1,0 +1,336 @@
+/* dog */
+.dog .wrap {
+  width: 300px;
+  height: 300px;
+  background: #bfeeb3;
+  position: relative;
+  box-shadow: 0 -10px 0 0 #bfeeb3;
+  border-radius: 50%;
+}
+.dog .body {
+  width: 150px;
+  height: 60px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 75px);
+  border-radius: 40px 40px 0 0;
+  z-index: 4;
+  -webkit-animation: squiggly-anim 0.4s infinite;
+  animation: squiggly-anim 0.4s infinite;
+}
+@-webkit-keyframes squiggly-anim {
+  0% {
+    filter: url("#squiggly-0");
+  }
+  25% {
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+  }
+  75% {
+    filter: url("#squiggly-3");
+  }
+  100% {
+    filter: url("#squiggly-4");
+  }
+}
+@keyframes squiggly-anim {
+  0% {
+    filter: url("#squiggly-0");
+  }
+  25% {
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+  }
+  75% {
+    filter: url("#squiggly-3");
+  }
+  100% {
+    filter: url("#squiggly-4");
+  }
+}
+.dog .body .leg {
+  width: 45px;
+  height: 60px;
+  position: absolute;
+  background: #fff;
+  transform-style: preserve-3d;
+  z-index: 2;
+  left: -15px;
+  transform: translateZ(3px);
+  border-radius: 60px 30px 30px 30px;
+  transform-origin: 130% 0%;
+  top: 0px;
+}
+.dog .body .leg.r {
+  left: auto;
+  right: -15px;
+  border-radius: 30px 60px 30px 30px;
+  transform-origin: -30% 0%;
+}
+.dog .body .leg.r .paw {
+  transform-origin: 100% 0%;
+}
+.dog .body .leg .paw {
+  width: 45px;
+  height: 40px;
+  position: absolute;
+  background: #ffdcdc;
+  border-radius: 15px;
+  bottom: 0px;
+  overflow: hidden;
+  left: -2.5px;
+  transform-origin: 0% 0%;
+}
+.dog .body .leg .paw:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background: #010101;
+  bottom: 0;
+  left: 12.5px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 15px 0 0 #010101;
+}
+.dog .body .head {
+  position: absolute;
+  width: 150px;
+  height: 130px;
+  top: -120px;
+  z-index: 3;
+  border-radius: 1600px 1600px 1500px 1500px/2400px 2400px 1200px 1200px;
+  transform-style: preserve-3d;
+  transform: translateZ(1px);
+}
+.dog .body .head .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1600px 1600px 1500px 1500px/2400px 2400px 1200px 1200px;
+  transform: translateZ(-2px);
+  overflow: hidden;
+}
+.dog .body .head .inner .spot {
+  position: absolute;
+  background: #c48d3b;
+  width: 100px;
+  height: 110px;
+  border-radius: 100%;
+  left: -25px;
+  top: -25px;
+  box-shadow: 0 0 0 150px #fff;
+}
+.dog .body .head .ear {
+  position: absolute;
+  width: 65px;
+  height: 100px;
+  background: #ffa191;
+  box-shadow: inset -5px 0 0 15px #a58049;
+  top: -50px;
+  z-index: -5;
+  left: -10px;
+  transform-style: preserve-3d;
+  transform: translateZ(-2px);
+  transform-origin: 100% 100%;
+  border-radius: 100px 300px 50px 150px/100px 600px 50px 350px;
+}
+.dog .body .head .ear:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 55px;
+  background: #835d25;
+  z-index: -1;
+  transform: translateZ(-3px) rotate(-20deg);
+  border-radius: 0 0 100% 100%;
+  bottom: -35px;
+  left: 20px;
+}
+.dog .body .head .ear.right {
+  left: auto;
+  right: -10px;
+  border-radius: 300px 100px 150px 50px/600px 100px 350px 50px;
+  background: #ffa191;
+  box-shadow: inset 5px 0 0 15px #fff;
+  transform-origin: 0% 100%;
+}
+.dog .body .head .ear.right:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 55px;
+  background: #fff;
+  z-index: -1;
+  transform: translateZ(-3px) rotate(20deg);
+  border-radius: 0 0 100% 100%;
+  bottom: -35px;
+  left: auto;
+  right: 20px;
+}
+.dog .body .head .eyes {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 100%;
+  top: 35px;
+  left: 30px;
+  overflow: hidden;
+  transform: translateZ(2px);
+}
+.dog .body .head .eyes:before,
+.dog .body .head .eyes:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: #252510;
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  -webkit-animation: blink 5s ease-in-out infinite;
+  animation: blink 5s ease-in-out infinite;
+}
+@-webkit-keyframes blink {
+  90% {
+    transform: translateY(-120%);
+  }
+  92% {
+    transform: translateY(0);
+  }
+  94% {
+    transform: translateY(-120%);
+  }
+  96% {
+    transform: translateY(0);
+  }
+  98% {
+    transform: translateY(-120%);
+  }
+}
+@keyframes blink {
+  90% {
+    transform: translateY(-120%);
+  }
+  92% {
+    transform: translateY(0);
+  }
+  94% {
+    transform: translateY(-120%);
+  }
+  96% {
+    transform: translateY(0);
+  }
+  98% {
+    transform: translateY(-120%);
+  }
+}
+.dog .body .head .eyes:after {
+  top: auto;
+  bottom: 0;
+  transform: translateY(120%);
+  -webkit-animation: blink2 5s ease-in-out infinite;
+  animation: blink2 5s ease-in-out infinite;
+}
+@-webkit-keyframes blink2 {
+  90% {
+    transform: translateY(120%);
+  }
+  92% {
+    transform: translateY(0);
+  }
+  94% {
+    transform: translateY(120%);
+  }
+  96% {
+    transform: translateY(0);
+  }
+  98% {
+    transform: translateY(120%);
+  }
+}
+@keyframes blink2 {
+  90% {
+    transform: translateY(120%);
+  }
+  92% {
+    transform: translateY(0);
+  }
+  94% {
+    transform: translateY(120%);
+  }
+  96% {
+    transform: translateY(0);
+  }
+  98% {
+    transform: translateY(120%);
+  }
+}
+.dog .body .head .eyes:nth-of-type(2) {
+  left: auto;
+  right: 30px;
+}
+.dog .body .head .eyes:nth-of-type(2):before,
+.dog .body .head .eyes:nth-of-type(2):after {
+  background: #fff;
+}
+.dog .body .head .snout {
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  background: #fff;
+  border-radius: 45%;
+  left: calc(50% - 40px);
+  bottom: 20px;
+  transform: translateZ(2px);
+}
+.dog .body .head .snout .nose {
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  background: black;
+  left: calc(50% - 15px);
+  bottom: 30px;
+  border-radius: 10px;
+}
+.dog .body .head .snout .nose:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background: black;
+  bottom: -8px;
+  left: calc(50% + 1px);
+}
+.dog .body .head .snout .nose:after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 20px;
+  border: 2px solid;
+  border-color: black transparent transparent transparent;
+  bottom: -30px;
+  left: 15%;
+  border-radius: 50%;
+}
+@media (max-height: 700px) {
+  main::before {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  main {
+    min-height: 700px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  nav ul:nth-child(2) {
+    display: none;
+  }
+}
