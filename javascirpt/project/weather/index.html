@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="star.css" />
+  </head>
+  <body>
+    <!-- 배경 -->
+    <div class="star">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+    </div>
+    <!-- // 배경 -->
+
+    <!-- 날씨 -->
+    <div class="card">
+      <!-- 서치 -->
+      <div class="search">
+        <input type="text" placeholder="Enter City Name!" spellcheck="false" />
+        <button><img src="images/search.png" alt="search" /></button>
+      </div>
+      <!-- // 서치 -->
+
+      <!-- 날씨 -->
+      <div class="weather">
+        <img src="" class="weather-icon" />
+        <h1 class="temp"></h1>
+        <p class="status"></h2>
+        <h2 class="city"></h2>
+
+        <div class="details">
+          <div class="col">
+            <img src="images/humidity.png" alt="humidity" />
+            <div>
+              <p class="humidity"></p>
+              <p>습도</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/wind.png" alt="wind" />
+            <div>
+              <p class="wind"></p>
+              <p>풍속</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // 날씨 -->
+    </div>
+    <!-- //날씨 -->
+
+    
+    <script src="https://unpkg.com/gsap@3.9.1/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="weatherDescKo.js"></script>
+    
+  </body>
+</html>
