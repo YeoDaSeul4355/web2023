@@ -1,4 +1,16 @@
+document
+  .querySelector("#newtask input")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      addNewTask();
+    }
+  });
+
 document.querySelector("#push").onclick = function () {
+  addNewTask();
+};
+
+function addNewTask() {
   if (document.querySelector("#newtask input").value.length == 0) {
     alert("리스트를 작성해주세요!");
   } else {
@@ -40,4 +52,4 @@ document.querySelector("#push").onclick = function () {
     // 입력 필드 초기화
     document.querySelector("#newtask input").value = "";
   }
-};
+}
