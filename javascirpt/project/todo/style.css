@@ -5,6 +5,13 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 *,
 *:before,
 *:after {
@@ -33,6 +40,58 @@ body {
 }
 .container h1 {
   margin-bottom: 20px;
+}
+h1 span {
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  animation: bounce 0.3s ease infinite alternate;
+  font-family: "PyeongChangPeace-Bold";
+  font-size: 30px;
+  color: #000000;
+  text-shadow: 0 0.5px 0 #d6a8ff, 0 2px 0 #d6a8ff, 0 3px 0 #d6a8ff,
+    0 4px 0 #d6a8ff, 0 5px 0 #d6a8ff, 0 6px 0 transparent, 0 7px 0 transparent,
+    0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.07s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.09s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.11s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.13s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 0.15s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 0.17s;
+}
+h1 span:nth-child(9) {
+  animation-delay: 0.19s;
+}
+h1 span:nth-child(10) {
+  animation-delay: 0.21s;
+}
+h1 span:nth-child(11) {
+  animation-delay: 0.23s;
+}
+
+@keyframes bounce {
+  100% {
+    top: -3px;
+    text-shadow: 0 1px 0 #fff, 0 2px 0 #fff, 0 3px 0 #fff, 0 4px 0 #fff,
+      0 5px 0 #fff, 0 6px 0 #fff, 0 7px 0 #fff, 0 8px 0 #fff, 0 9px 0 #fff,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
 }
 #newtask {
   position: relative;
