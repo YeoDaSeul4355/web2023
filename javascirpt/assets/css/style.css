@@ -1,232 +1,240 @@
 /* 웹폰트 */
-@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
 
 /* 여백 초기화 */
 * {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.6;
-    font-family: "NexonLv1Gothic";
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "NexonLv1Gothic";
 }
 
 /* 링크 초기화 */
 a {
-    text-decoration: none;
-    color: #222;
+  text-decoration: none;
+  color: #222;
 }
 
 /* 제목 초기화 */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
 }
 
 /* 목록 초기화 */
-ul, li, ol {
-    list-style: none;
+ul,
+li,
+ol {
+  list-style: none;
 }
 
 /* 전체 영역 */
 body {
-    padding: 40px;
+  padding: 40px;
 }
 
 /* 헤더 영역 */
 #header {
-    text-align: center;
-    padding-bottom: 40px;
-    border-bottom: 1px dashed #dcdcdc;
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px dashed #dcdcdc;
 }
 #header h1 a {
-    font-size: 80px;
-    font-weight: 800;
-    color: #ff568b;
+  font-size: 80px;
+  font-weight: 800;
+  color: #ff568b;
 }
 #header nav ul li {
-    display: inline;
+  display: inline;
 }
 #header nav ul li a {
-    border: 1px dashed #ff568b;
-    color: #ff568b;
-    padding: 10px 20px;
-    margin: 6px 3px;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s
+  border: 1px dashed #ff568b;
+  color: #ff568b;
+  padding: 10px 20px;
+  margin: 6px 3px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
 }
 #header nav ul li a:hover {
-    background-color: #ff568b;
-    color: #fff;
+  background-color: #ff568b;
+  color: #fff;
 }
 #header nav ul li.active a {
-    background-color: #ff568b;
-    color: #fff;
+  background-color: #ff568b;
+  color: #fff;
 }
 
-@media (max-width: 600px){
-    body {
-        padding: 20px;
-    }
-    #header h1 {
-        margin-bottom: 10px;
-    }
-    #header h1 a {
-        font-size: 40px;
-    }
-    #header nav ul li a {
-        padding: 5px 10px;
-        margin: 3px 1px;
-        font-size: 14px;
-    }
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+  #header h1 {
+    margin-bottom: 10px;
+  }
+  #header h1 a {
+    font-size: 40px;
+  }
+  #header nav ul li a {
+    padding: 5px 10px;
+    margin: 3px 1px;
+    font-size: 14px;
+  }
 }
 
 /* 메인 영역 */
 #main {
-    padding: 40px 0;
-    border-bottom: 1px dashed #dcdcdc;
+  padding: 40px 0;
+  border-bottom: 1px dashed #dcdcdc;
 }
 .main__menu {
-    padding-bottom: 40px;
-    border-bottom: 1px dashed #dcdcdc;
+  padding-bottom: 40px;
+  border-bottom: 1px dashed #dcdcdc;
 }
 .main__menu li {
-    line-height: 2;
+  line-height: 2;
 }
 .main__menu li strong {
-    position: relative;
+  position: relative;
 }
 .main__menu li strong::before {
-    content: '';
-    background-color: #ffd2d2;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    z-index: -1;
-    border-radius: 20px;
-    transition: all 0.3s;
+  content: "";
+  background-color: #ffd2d2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  border-radius: 20px;
+  transition: all 0.3s;
 }
 .main__menu li:hover strong::before {
-    height: 100%;
+  height: 100%;
 }
-.main__desc h3{
-    font-size: 24px;
-    margin-bottom: 5px;
+.main__desc h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 .main__desc p {
-    margin-bottom: 15px;
-    border-left: 5px solid #ff568b;
-    padding-left: 10px;
-    background-color: #f5f5f5;
-    padding: 12px 10px 10px 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid #ff568b;
+  padding-left: 10px;
+  background-color: #f5f5f5;
+  padding: 12px 10px 10px 20px;
 }
 .main__desc ul {
-    padding-left: 15px;
-    margin-bottom: 5px;
+  padding-left: 15px;
+  margin-bottom: 5px;
 }
 .main__desc li {
-    list-style: square;
+  list-style: square;
 }
 .main__desc a {
-    display: block;
-    border: 1px dotted #ccc;
-    margin: 10px 0;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 50px;
-    transition: all 0.2s;
+  display: block;
+  border: 1px dotted #ccc;
+  margin: 10px 0;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 50px;
+  transition: all 0.2s;
 }
 .main__desc a:hover {
-    border-color: #ff568b;
-    background-color: #ffcfe9;
+  border-color: #ff568b;
+  background-color: #ffcfe9;
 }
 .main__sample {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 .main__sample .sample {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 .main__sample .sample:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 .main__sample .sample h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 .main__sample .sample p {
-    margin-bottom: 10px;
-    color: #666;
+  margin-bottom: 10px;
+  color: #666;
 }
 .main__sample .result {
-    margin-top: 10px;
-    background-color: #282936;
-    color: #f6f6f6;
-    padding: 1em;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #282936;
+  color: #f6f6f6;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 .main__sample .notice {
-    border-left: 5px solid #ff568b;
-    padding: 13px 10px 10px 15px;
-    background-color: #282936;
-    color: #f6f6f6;
+  border-left: 5px solid #ff568b;
+  padding: 13px 10px 10px 15px;
+  background-color: #282936;
+  color: #f6f6f6;
 }
 .main__sample .notice h4 {
-    margin-bottom: 5px;
-    color: #f5f5f5;
+  margin-bottom: 5px;
+  color: #f5f5f5;
 }
 .main__sample .notice p {
-    margin-bottom: 0;
-    color: #a5a5a5;
+  margin-bottom: 0;
+  color: #a5a5a5;
 }
 .main__sample ul {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 .main__sample li {
-    position: relative;
-    padding-left: 10px;
+  position: relative;
+  padding-left: 10px;
 }
 .main__sample li::before {
-    content: '';
-    width: 5px;
-    height: 5px;
-    background-color: #ff568b;
-    position: absolute;
-    left: 0;
-    top: 9px;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #ff568b;
+  position: absolute;
+  left: 0;
+  top: 9px;
 }
 .main__sample .table {
-    width: 100%;
+  width: 100%;
 }
 .main__sample .table th {
-    background-color: #ffd2d2;
-    padding: 2px;
+  background-color: #ffd2d2;
+  padding: 2px;
 }
 .main__sample .table td {
-    text-align: center;
-    border: 1px solid #ffd2d2;
+  text-align: center;
+  border: 1px solid #ffd2d2;
 }
 .main__sample .table button {
-    cursor: pointer;
-    padding: 3px 20px;
+  cursor: pointer;
+  padding: 3px 20px;
 }
 /* 푸터 영역 */
 #footer {
-    padding: 40px;
-    text-align: center;
+  padding: 40px;
+  text-align: center;
 }
 
 /* TOP 버튼 */
 .moveTopBtn {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: 4rem;
-    height: 4rem;
-    background: #ff568b;
-    color: #fff;
-    line-height: 2.3;
-    font-size: 1.88rem;
-    text-align: center;
-    border-radius: 50%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  background: #ff568b;
+  color: #fff;
+  line-height: 2.3;
+  font-size: 1.88rem;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
