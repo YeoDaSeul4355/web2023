@@ -29,20 +29,21 @@ function addNewTask() {
         </div>
     `;
 
-    // 기존의 tasks에 새로운 항목을 맨 앞에 삽입
+    // 기존의 tasks에 최신순으로 쌓기
     document
       .querySelector("#tasks")
       .insertAdjacentHTML("afterbegin", newTaskHTML);
 
-    // 삭제 버튼과 완료 토글 기능 추가
-    let current_tasks = document.querySelectorAll(".delete");
+    // 삭제 버튼
+    const current_tasks = document.querySelectorAll(".delete");
     for (let i = 0; i < current_tasks.length; i++) {
       current_tasks[i].onclick = function () {
         this.parentNode.remove();
       };
     }
 
-    let tasks = document.querySelectorAll(".task");
+    // 완료 토글 기능
+    const tasks = document.querySelectorAll(".task");
     for (let i = 0; i < tasks.length; i++) {
       tasks[i].onclick = function () {
         this.classList.toggle("completed");
