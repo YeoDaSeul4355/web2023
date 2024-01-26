@@ -19,6 +19,11 @@
       sizes="192x192"
       href="assets/ico/javascript192x192.png"
     />
+    <style>
+      .menu_title {
+        font-size: 25px;
+      }
+    </style>
   </head>
   <body>
     <header id="header">
@@ -57,11 +62,148 @@
     <main id="main">
       <div class="container">
         <div class="main__menu">
+          <h2 class="menu_title">💯숫자 메서드</h2>
           <ul>
-            <li><a href="#">01. 변수 : 데이터 저장</a></li>
-            <li><a href="#">01. 상수 : 데이터 저장</a></li>
-            <li><a href="#">01. 배열 : 데이터 저장</a></li>
-            <li><a href="#">01. 객체 : 데이터 저장</a></li>
+            <li>
+              01. Number.MAX_VALUE : JavaScript가 표현할 수 있는 제일 큰 양의
+              숫자 값을 나타냅니다.
+            </li>
+            <li>
+              02. Number.MIN_VALUE : 표현할 수 있는 제일 작은 양의 숫자 값을
+              나타냅니다.
+            </li>
+            <li>
+              03. Number.MAX_SAFE_INTEGER : 안전한 최대 정수값을 나타냅니다.
+            </li>
+            <li>
+              04. Number.MIN_SAFE_INTEGER : 안전한 최소 정수값을 나타냅니다.
+            </li>
+            <li>05. Number.Nan : Not-A-Number(숫자가 아님)를 나타냅니다.</li>
+            <li>06. Number.isFinite : 주어진 값이 유한수인지 판별</li>
+            <li>07. Number.isInteger : 정수인지 판별</li>
+            <li>08. Number.isNan : 어떤 값이 NaN인지 판별</li>
+            <li>
+              09. Number.prototype.toFixed : 숫자를 고정 소수점
+              표기법(fixed-point notation)으로 표시
+            </li>
+            <li>
+              10. Number.prototype.toPrecision : 객체를 지정된 정밀도로 나타내는
+              문자열을 반환
+            </li>
+            <li>
+              11. Number.prototype.toString : 문자열을 반환하는 object의
+              대표적인 방법
+            </li>
+          </ul>
+          <br /><br />
+          <h2 class="menu_title">🌞데이트 메서드</h2>
+          <ul>
+            <li>
+              01. new Date() : Date 객체는 1970년 1월 1일 UTC(협정 세계시)
+              자정과의 시간 차이를 밀리초로 나타내는 정수 값을 담습니다
+            </li>
+            <li>
+              02. Date.now() : UTC 기준으로 1970년 1월 1일 0시 0분 0초부터
+              현재까지 경과된 밀리 초를 반환
+            </li>
+            <li>
+              03. Date.parse() : 날짜의 문자열 표현을 구문 분석하고 1970 년 1 월
+              1 일 00:00:00 UTC 이후의 밀리 초 수를 반환하거나 문자열이 인식되지
+              않거나 경우에 따라 잘못된 날짜 값을 포함하는 경우 NaN을 반환
+            </li>
+            <li>
+              04. Date.UTC() : 1970년 1월 1일 00:00:00 UTC부터 매개변수가
+              나타내는 시간의 차이를 밀리초로 나타낸 수
+            </li>
+            <li>
+              05. Date.prototype.getFullYear() : 주어진 날짜의 현지 시간 기준
+              연도를 반환
+            </li>
+            <li>
+              06. Date.prototype.setFullYear() : 현지 시간에 따라 지정된 날짜의
+              전체 연도를 설정
+            </li>
+            <li>
+              07. Date.prototype.getMonth() : Date 객체의 월 값을 현지 시간에
+              맞춰 반환합니다. 월은 0부터 시작
+            </li>
+            <li>
+              08. Date.prototype.setMonth() : 현재 설정된 연도에 따라 지정된
+              날짜의 월을 설정
+            </li>
+            <li>
+              09. Date.prototype.getDate() : 주어진 날짜의 현지 시간 기준 일을
+              반환
+            </li>
+            <li>
+              10. Date.prototype.setDate() : 현재 설정된 월의 시작 부분을
+              기준으로 Date 객체의 날짜를 설정
+            </li>
+            <li>
+              11. Date.prototype.getDay() : 주어진 날짜의 현지 시간 기준 요일을
+              반환합니다. 0은 일요일을 나타냅니다.
+            </li>
+            <li>
+              12. Date.prototype.getHours() : 주어진 날짜의 현지 시간 기준 시를
+              반환
+            </li>
+            <li>
+              13. Date.prototype.setHours() : 메서드는 현지 시간에 따라 지정된
+              날짜의 시간을 설정하고 1970 년 1 월 1 일 00:00:00 UTC 이후
+              업데이트 된 Date에 의해 표시되는 시간 (밀리 초)을 반환
+            </li>
+            <li>
+              14. Date.prototype.getMinutes() : 인스턴스의 분을 현지 시간
+              기준으로 반환
+            </li>
+            <li>
+              15. Date.prototype.setMinutes() : 현지 시간에 따라 지정된 날짜의
+              분을 설정
+            </li>
+            <li>
+              16. Date.prototype.getSeconds() : Date 객체의 초 값을 현지 시간에
+              맞춰 반환
+            </li>
+            <li>
+              17. Date.prototype.setSeconds() : 현지 시간에 따라 지정된 날짜의
+              초를 설정
+            </li>
+            <li>
+              18. Date.prototype.getMilliSeconds() : Date 인스턴스의 밀리초를
+              현지 시간 기준으로 반환합니다.
+            </li>
+            <li>
+              19. Date.prototype.setMilliSeconds() : 현지 시간에 따라 지정된
+              날짜의 밀리 초를 설정
+            </li>
+            <li>
+              20. Date.prototype.getTime() : 지정된 날짜의 시간에 해당하는 숫자
+              값을 반환
+            </li>
+            <li>
+              21. Date.prototype.setTime() : 만료된 후 함수나 지정한 코드 조각을
+              실행하는 타이머를 설정
+            </li>
+            <li>
+              22. Date.prototype.getTimezoneOffset() : 현재 로케일 (즉, 호스트
+              시스템 설정)에 대한 시간대 오프셋 (UTC)을 분 단위로 반환
+            </li>
+            <li>
+              23. Date.prototype.toDateString() : 미국 영어로 사람이 읽을 수있는
+              형태로 Date 객체의 날짜 부분을 반환
+            </li>
+            <li>
+              24. Date.prototype.toISOString() : 단순화한 확장 ISO 형식(ISO
+              8601)의 문자열을 반환
+            </li>
+            <li>
+              25. Date.prototype.toLocaleString() : 배열의 요소를 나타내는
+              문자열을 반환
+            </li>
+            <li>
+              26. Date.prototype.toLocaleTimeString() : 배열의 요소를 나타내는
+              문자열을 반환
+            </li>
           </ul>
         </div>
       </div>
