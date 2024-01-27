@@ -1,0 +1,32 @@
+{
+  "people": [
+    {
+      "firstName": "Yeo",
+      "lastName": "Da Seul",
+      "gender": "female",
+      "age": "24",
+      "job": "Developer"
+    },
+    {
+      "firstName": "Yeo",
+      "lastName": "Da Seul",
+      "gender": "female",
+      "age": "24",
+      "job": "Developer"
+    },
+    {
+      "firstName": "Yeo",
+      "lastName": "Da Seul",
+      "gender": "female",
+      "age": "24",
+      "job": "Developer"
+    },
+    {
+      "firstName": "Yeo",
+      "lastName": "Da Seul",
+      "gender": "female",
+      "age": "24",
+      "job": "Developer"
+    }
+  ]
+}

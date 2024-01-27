@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Parser App</title>
+    <link rel="stylesheet" href="background.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="blur"></div>
+
+    <h1>JSON Reader</h1>
+    <div class="container">
+      <textarea name="jsonInput" id="jsonInput" cols="30" rows="10"></textarea>
+      <div class="buttons">
+        <button onclick="displayJson()" class="learn-more">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">변환</span>
+        </button>
+        <!-- <input type="file" id="fileInput" accept=".json, .txt" /> -->
+      </div>
+      <div id="jsonViewer"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="background.js"></script>
+    <script src="sript.js"></script>
+  </body>
+</html>
