@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "LINESeedKR-Bd";
+  text-align: center;
+  border: 8px solid #ff568b;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 20px;
+}
+main::before {
+  content: "";
+  border: 8px solid #ff9cf3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  z-index: -1;
+  border-radius: 4px;
+}
+h1 {
+  color: #ff568b;
+  font-size: 5vw;
+  margin-bottom: 4vw;
+}
+nav ul li {
+  list-style: none;
+  display: inline;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ff568b;
+  border: 1px dashed #ff568b;
+  padding: 10px 20px;
+  margin: 6px 3px;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+nav ul li a:hover {
+  background-color: #ff568b;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+  nav {
+    margin: 16px;
+  }
+}
